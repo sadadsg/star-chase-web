@@ -29,12 +29,12 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-[#EDF0F5] mt-10">
+        <footer className="mt-10" style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}>
           <div className="max-w-6xl mx-auto px-5 py-8 text-center">
-            <p className="text-[#B0BEC5] text-[13px]">
+            <p className="text-[13px]" style={{ color: '#9CA3AF' }}>
               嘉期如梦 — 你的爱豆行程助手
             </p>
-            <p className="text-[#D3DAE6] text-[13px] mt-1">
+            <p className="text-[13px] mt-1" style={{ color: '#D1D5DB' }}>
               数据仅供参考，实际行程以官方发布为准
             </p>
           </div>
