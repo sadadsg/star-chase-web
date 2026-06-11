@@ -1,9 +1,3 @@
-/**
- * 路线卡片组件
- * 用于显示单条航班或高铁班次
- */
-
-// 城市 → 12306 车站代码
 const stationCodes = {
   '北京': 'BJP', '上海': 'SHH', '广州': 'GZQ', '深圳': 'SZQ',
   '成都': 'CDW', '杭州': 'HZH', '南京': 'NJH', '武汉': 'WHN',
@@ -12,7 +6,6 @@ const stationCodes = {
   '昆明': 'KMM', '厦门': 'XMS', '福州': 'FZS', '合肥': 'HFH',
 }
 
-// 城市 → 携程三字码
 const flightCodes = {
   '北京': 'BJS', '上海': 'SHA', '广州': 'CAN', '深圳': 'SZX',
   '成都': 'CTU', '杭州': 'HGH', '南京': 'NKG', '武汉': 'WUH',
@@ -37,53 +30,42 @@ export default function RouteCard({ route, fromCity, destCity, date }) {
   const bookUrl = isFlight ? ctripFlightUrl(fromCity, destCity, date) : train12306Url(fromCity, destCity, date)
 
   return (
-    <div className="border border-[#EDF0F5] rounded-xl overflow-hidden">
+    <div className="glass rounded-2xl overflow-hidden">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-4">
-          {/* 航司/铁路局 */}
           <div className="min-w-[60px]">
-            <div className="text-[13px] text-[#8E99A8]">{route.airline || (isFlight ? '航班' : route.type)}</div>
-            <span className={`text-[14px] font-bold px-2 py-0.5 rounded-md ${isFlight ? 'bg-[#EEF3FD] text-[#5B8DEF]' : 'bg-[#EAF6F0] text-[#4AA87C]'}`}>
+            <div className="text-[13px]" style={{ color: '#6B7280' }}>{route.airline || (isFlight ? '航班' : route.type)}</div>
+            <span className="text-[14px] font-bold px-2 py-0.5 rounded-lg"
+              style={{ background: isFlight ? 'rgba(139,92,246,0.1)' : 'rgba(16,185,129,0.1)', color: isFlight ? '#7C3AED' : '#059669' }}>
               {no}
             </span>
           </div>
-
-          {/* 时间线 */}
           <div className="flex items-center gap-3">
             <div className="text-center">
-              <div className="font-bold text-[#1E293B] text-[17px] leading-tight">{route.depart}</div>
-              <div className="text-[12px] text-[#B0BEC5] mt-0.5">{route.from || fromCity}</div>
+              <div className="font-bold text-[17px] leading-tight" style={{ color: '#1E1B4B' }}>{route.depart}</div>
+              <div className="text-[12px] mt-0.5" style={{ color: '#9CA3AF' }}>{route.from || fromCity}</div>
             </div>
-            <div className="flex flex-col items-center text-[12px] text-[#B0BEC5] min-w-[70px]">
+            <div className="flex flex-col items-center text-[12px] min-w-[70px]" style={{ color: '#9CA3AF' }}>
               <span>{route.duration}</span>
-              <div className="w-16 h-px bg-[#D3DAE6] relative my-1">
-                <div className="absolute -right-0.5 -top-[3px] w-0 h-0 border-l-[4px] border-l-[#B0BEC5] border-y-[2px] border-y-transparent" />
+              <div className="w-16 h-px relative my-1" style={{ background: '#D1D5DB' }}>
+                <div className="absolute -right-0.5 -top-[3px] w-0 h-0 border-l-[4px] border-y-[2px] border-y-transparent" style={{ borderLeftColor: '#9CA3AF' }} />
               </div>
               <span>{isFlight ? '直飞' : '直达'}</span>
             </div>
             <div className="text-center">
-              <div className="font-bold text-[#1E293B] text-[17px] leading-tight">{route.arrive}</div>
-              <div className="text-[12px] text-[#B0BEC5] mt-0.5">{destCity}</div>
+              <div className="font-bold text-[17px] leading-tight" style={{ color: '#1E1B4B' }}>{route.arrive}</div>
+              <div className="text-[12px] mt-0.5" style={{ color: '#9CA3AF' }}>{destCity}</div>
             </div>
           </div>
         </div>
-
-        {/* 价格 + 购票 */}
         <div className="text-right flex items-center gap-3">
           <div>
-            <div className="text-[17px] font-bold text-[#E85D3A]">¥{route.price}</div>
-            <div className="text-[12px] text-[#B0BEC5]">{route.seats || ''}</div>
+            <div className="text-[17px] font-bold" style={{ color: '#E11D48' }}>¥{route.price}</div>
+            <div className="text-[12px]" style={{ color: '#9CA3AF' }}>{route.seats || ''}</div>
           </div>
-          <a
-            href={bookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`text-[13px] font-medium px-4 py-2 rounded-lg no-underline transition-colors whitespace-nowrap
-              ${isFlight
-                ? 'bg-[#5B8DEF] text-white hover:bg-[#4A7DE0]'
-                : 'bg-[#4AA87C] text-white hover:bg-[#3D9B6A]'
-              }`}
-          >
+          <a href={bookUrl} target="_blank" rel="noopener noreferrer"
+            className="text-[13px] font-medium px-4 py-2 rounded-xl no-underline text-white whitespace-nowrap"
+            style={{ background: isFlight ? '#7C3AED' : '#059669' }}>
             {isFlight ? '订机票' : '订车票'}
           </a>
         </div>
