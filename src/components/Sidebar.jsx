@@ -8,20 +8,20 @@ export default function Sidebar() {
 
   return (
     <aside className="sticky top-[68px]">
-      <div className="bg-white rounded-2xl border border-[#EDF0F5] p-5">
+      <div className="bg-white rounded-2xl border border-[#FECDD3] p-5">
         <div className="text-center mb-4">
-          <div className="w-24 h-24 rounded-2xl mx-auto mb-3 bg-gradient-to-br from-[#EEF2FF] to-[#F3E8FF] flex items-center justify-center ring-3 ring-[#EEF3FD]">
-            <span className="text-[32px]" style={{ fontFamily: "'ZCOOL XiaoWei', serif" }}>伦</span>
+          <div className="w-24 h-24 rounded-2xl mx-auto mb-3 bg-gradient-to-br from-[#FFF1F2] to-[#FCE7F3] flex items-center justify-center ring-3 ring-[#FFF1F2]">
+            <span className="text-[32px] gradient-text" style={{ fontFamily: "'Newsreader', serif" }}>伦</span>
           </div>
           <h2
-            className="text-xl font-bold text-[#1E293B]"
-            style={{ fontFamily: "'ZCOOL XiaoWei', serif" }}
+            className="text-xl font-bold"
+            style={{ fontFamily: "'Newsreader', serif", color: '#881337' }}
           >
             {artistInfo.name}
           </h2>
-          <p className="text-[#8E99A8] text-[14px] mt-0.5">{artistInfo.englishName}</p>
+          <p className="text-[14px] mt-0.5" style={{ color: '#6B7280' }}>{artistInfo.englishName}</p>
           {artistInfo.realName && (
-            <p className="text-[#B0BEC5] text-[13px]">本名：{artistInfo.realName}</p>
+            <p className="text-[13px]" style={{ color: '#9CA3AF' }}>本名：{artistInfo.realName}</p>
           )}
         </div>
 

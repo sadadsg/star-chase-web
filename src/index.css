@@ -1,28 +1,29 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 @theme {
-  --color-primary: #5B8DEF;
-  --color-primary-light: #93B4F5;
-  --color-primary-soft: #EEF3FD;
-  --color-accent: #7EC8A8;
-  --color-accent-soft: #EAF6F0;
-  --color-warm: #F5A882;
-  --color-warm-soft: #FDF0EB;
-  --color-rose: #E8A0BF;
-  --color-rose-soft: #FBE9F2;
+  --color-primary: #E11D48;
+  --color-primary-light: #FB7185;
+  --color-primary-soft: #FFF1F2;
+  --color-accent: #2563EB;
+  --color-accent-soft: #EFF6FF;
+  --color-warm: #F59E0B;
+  --color-warm-soft: #FFFBEB;
+  --color-rose: #E11D48;
+  --color-rose-soft: #FFF1F2;
   --color-surface: #FFFFFF;
-  --color-bg: #F7F9FC;
-  --color-text: #2D3748;
-  --color-text-secondary: #8E99A8;
-  --color-border: #EDF0F5;
-  --color-border-hover: #D3DAE6;
+  --color-bg: #FFF1F2;
+  --color-text: #881337;
+  --color-text-secondary: #6B7280;
+  --color-border: #FECDD3;
+  --color-border-hover: #FDA4AF;
 }
 
 body {
   margin: 0;
-  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
-  background-color: #F7F9FC;
-  color: #2D3748;
+  font-family: 'Roboto', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+  background-color: #FFF1F2;
+  color: #881337;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,11 +41,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D3DAE6;
+  background: #FDA4AF;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B0BEC5;
+  background: #FB7185;
 }
 
 /* 卡片悬浮 */
@@ -53,12 +54,12 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -8px rgba(91, 141, 239, 0.10);
+  box-shadow: 0 8px 24px -8px rgba(225, 29, 72, 0.12);
 }
 
-/* 渐变文字 — 梦幻蓝紫粉 */
+/* 渐变文字 — Rose + Blue */
 .gradient-text {
-  background: linear-gradient(135deg, #6366F1, #8B5CF6, #EC4899);
+  background: linear-gradient(135deg, #E11D48, #FB7185, #2563EB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -68,35 +69,35 @@ body {
 .section-title {
   font-size: 17px;
   font-weight: 700;
-  color: #1E293B;
+  color: #881337;
   letter-spacing: -0.3px;
 }
 
 /* 柔和背景渐变 */
 .gradient-soft {
-  background: linear-gradient(135deg, #EEF3FD 0%, #F3E8FF 50%, #FDF2F8 100%);
+  background: linear-gradient(135deg, #FFF1F2 0%, #FCE7F3 50%, #EFF6FF 100%);
 }
 
 .gradient-hero {
-  background: linear-gradient(160deg, #EEF2FF 0%, #F3E8FF 35%, #FDF2F8 70%, #FEF3E2 100%);
+  background: linear-gradient(160deg, #FFF1F2 0%, #FCE7F3 35%, #EFF6FF 70%, #FFFBEB 100%);
 }
 
 /* 状态标签 */
 .tag-filming {
-  background: #EEF3FD;
-  color: #5B8DEF;
+  background: #EFF6FF;
+  color: #2563EB;
 }
 .tag-variety {
-  background: #EAF6F0;
-  color: #3D9B74;
+  background: #ECFDF5;
+  color: #059669;
 }
 .tag-business {
-  background: #FDF0EB;
-  color: #D4845A;
+  background: #FFFBEB;
+  color: #D97706;
 }
 .tag-fanmeeting {
-  background: #FBE9F2;
-  color: #C47A9C;
+  background: #FFF1F2;
+  color: #E11D48;
 }
 
 /* 日历有行程的日期 */
@@ -112,7 +113,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #5B8DEF;
+  background: #E11D48;
 }
 
 /* 文本截断 */
@@ -125,8 +126,8 @@ body {
 
 /* 选中态 */
 ::selection {
-  background: #EDE9FE;
-  color: #6366F1;
+  background: #FECDD3;
+  color: #E11D48;
 }
 
 /* 减弱动画 */
