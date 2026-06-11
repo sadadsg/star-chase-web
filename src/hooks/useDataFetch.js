@@ -137,9 +137,9 @@ export function useDataFetch(fetchFn, options = {}) {
 
   useEffect(() => {
     if (immediate) {
-      fetchData()
+      fetchData() // eslint-disable-line react-hooks/set-state-in-effect
     }
-  }, [immediate])
+  }, [immediate]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     mountedRef.current = true
@@ -202,7 +202,7 @@ export function usePolling(fetchFn, interval = 60000, options = {}) {
     }, interval)
 
     return () => clearInterval(timer)
-  }, [enabled, interval])
+  }, [enabled, interval]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return result
 }

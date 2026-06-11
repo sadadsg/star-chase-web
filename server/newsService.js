@@ -1,9 +1,4 @@
-import { readFileSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 
 // 严格的艺人关键词 - 必须包含这些词才算艺人新闻
 const ARTIST_KEYWORDS = ['任嘉伦', 'Allen Ren', '任国超', '佳偶天成', '陆千乔', '暮色心约', '风与潮', '37·单枪匹马', '无忧渡']
@@ -79,7 +74,7 @@ async function fetchBaiduHot() {
     const html = await res.text()
     
     const matches = html.match(/"word":"([^"]+)"/g) || []
-    const results = matches.map((match, i) => {
+    const results = matches.map((match) => {
       const word = match.replace(/"word":"/, '').replace(/"$/, '')
       return {
         title: word,
@@ -203,7 +198,7 @@ function matchesArtist(item) {
 
 // ========== 核心导出 ==========
 
-export async function fetchNews(uid = DEFAULT_UID, count = 30) {
+export async function fetchNews(_uid = DEFAULT_UID, count = 30) {
   console.log('[news] 获取新闻...')
 
   if (isCacheValid('news')) {
@@ -244,7 +239,7 @@ export async function fetchNews(uid = DEFAULT_UID, count = 30) {
 }
 
 // 获取行程（只从艺人相关新闻中提取）
-export async function fetchSchedule(uid = DEFAULT_UID) {
+export async function fetchSchedule(_uid = DEFAULT_UID) {
   console.log('[news] 从艺人新闻提取行程...')
 
   if (isCacheValid('schedule')) {
@@ -274,7 +269,7 @@ export async function fetchSchedule(uid = DEFAULT_UID) {
 }
 
 // 获取活动门票（从行程数据中筛选活动类）
-export async function fetchEvents(uid = DEFAULT_UID) {
+export async function fetchEvents(_uid = DEFAULT_UID) {
   console.log('[news] 获取活动门票...')
 
   const scheduleResult = await fetchSchedule()

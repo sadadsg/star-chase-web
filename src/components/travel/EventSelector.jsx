@@ -3,7 +3,7 @@
  * 用于选择要参加的活动
  */
 
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { scheduleList } from '../../data/rjlData'
 
 const typeIcon = {
@@ -17,7 +17,6 @@ export default function EventSelector({
   selectedEventIndex,
   onEventSelect,
   compactMode = false,
-  showAllEvents = false,
   onShowAllEvents,
 }) {
   const upcomingEvents = useMemo(() => {
@@ -104,5 +103,3 @@ export default function EventSelector({
 
   return null
 }
-
-export { typeIcon }

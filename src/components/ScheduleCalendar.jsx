@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { SkeletonCalendar } from './ui'
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
@@ -24,13 +23,11 @@ function shortTitle(title) {
 
 export default function ScheduleCalendar() {
   const today = new Date()
-  const navigate = useNavigate()
   const [year, setYear] = useState(today.getFullYear())
   const [month, setMonth] = useState(today.getMonth() + 1)
   const [selectedDate, setSelectedDate] = useState(null)
   const [schedule, setSchedule] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
 
   // 获取行程数据
   useEffect(() => {
@@ -52,7 +49,6 @@ export default function ScheduleCalendar() {
           console.error('[schedule] 获取行程失败:', err.message)
           setSchedule([])
           setLoading(false)
-          setError(err.message)
         }
       }
     }

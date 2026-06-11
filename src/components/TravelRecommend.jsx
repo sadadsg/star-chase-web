@@ -19,25 +19,6 @@ const stationCodes = {
   '昆明': 'KMM', '厦门': 'XMS', '福州': 'FZS', '合肥': 'HFH',
 }
 
-// 城市 → 携程三字码
-const flightCodes = {
-  '北京': 'BJS', '上海': 'SHA', '广州': 'CAN', '深圳': 'SZX',
-  '成都': 'CTU', '杭州': 'HGH', '南京': 'NKG', '武汉': 'WUH',
-  '重庆': 'CKG', '西安': 'SIA', '长沙': 'CSX', '天津': 'TSN',
-  '苏州': 'SZV', '青岛': 'TAO', '大连': 'DLC', '郑州': 'CGO',
-  '昆明': 'KMG', '厦门': 'XMN', '福州': 'FOC', '合肥': 'HFE',
-}
-
-function ctripFlightUrl(from, to, date) {
-  return `https://flights.ctrip.com/online/list/oneway-${flightCodes[from] || from}-${flightCodes[to] || to}?depdate=${date}`
-}
-
-function train12306Url(from, to, date) {
-  const f = stationCodes[from] || ''
-  const t = stationCodes[to] || ''
-  return `https://kyfw.12306.cn/otn/leftTicket/init?leftTicketDTO.train_date=${date}&leftTicketDTO.from_station=${f}&leftTicketDTO.to_station=${t}&purpose_codes=ADULT`
-}
-
 const typeIcon = {
   filming: { color: 'text-[#5B8DEF]', bg: 'bg-[#EEF3FD]', label: '影视' },
   variety: { color: 'text-[#4AA87C]', bg: 'bg-[#EAF6F0]', label: '综艺' },
@@ -45,7 +26,7 @@ const typeIcon = {
   fanmeeting: { color: 'text-[#C96A9A]', bg: 'bg-[#FBE9F2]', label: '演出' },
 }
 
-export default function TravelRecommend({ initialEventId }) {
+export default function TravelRecommend() {
   const [searchParams] = useSearchParams()
   const eventId = searchParams.get('eventId')
 
@@ -89,7 +70,7 @@ export default function TravelRecommend({ initialEventId }) {
   useEffect(() => {
     if (eventId && events.length > 0) {
       const idx = events.findIndex(e => e.id === Number(eventId))
-      if (idx >= 0) setSelectedEvent(idx)
+      if (idx >= 0) setSelectedEvent(idx) // eslint-disable-line react-hooks/set-state-in-effect
     }
   }, [eventId, events])
 
