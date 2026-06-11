@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5B8DEF;
+  --color-primary-light: #93B4F5;
+  --color-primary-soft: #EEF3FD;
+  --color-accent: #7EC8A8;
+  --color-accent-soft: #EAF6F0;
+  --color-warm: #F5A882;
+  --color-warm-soft: #FDF0EB;
+  --color-rose: #E8A0BF;
+  --color-rose-soft: #FBE9F2;
+  --color-surface: #FFFFFF;
+  --color-bg: #F7F9FC;
+  --color-text: #2D3748;
+  --color-text-secondary: #8E99A8;
+  --color-border: #EDF0F5;
+  --color-border-hover: #D3DAE6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+  background-color: #F7F9FC;
+  color: #2D3748;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D3DAE6;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B0BEC5;
+}
+
+/* 卡片悬浮 */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -8px rgba(91, 141, 239, 0.10);
+}
+
+/* 渐变文字 — 梦幻蓝紫粉 */
+.gradient-text {
+  background: linear-gradient(135deg, #6366F1, #8B5CF6, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 区块标题醒目 */
+.section-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1E293B;
+  letter-spacing: -0.3px;
+}
+
+/* 柔和背景渐变 */
+.gradient-soft {
+  background: linear-gradient(135deg, #EEF3FD 0%, #F3E8FF 50%, #FDF2F8 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(160deg, #EEF2FF 0%, #F3E8FF 35%, #FDF2F8 70%, #FEF3E2 100%);
+}
+
+/* 状态标签 */
+.tag-filming {
+  background: #EEF3FD;
+  color: #5B8DEF;
+}
+.tag-variety {
+  background: #EAF6F0;
+  color: #3D9B74;
+}
+.tag-business {
+  background: #FDF0EB;
+  color: #D4845A;
+}
+.tag-fanmeeting {
+  background: #FBE9F2;
+  color: #C47A9C;
+}
+
+/* 日历有行程的日期 */
+.cal-has-event {
+  position: relative;
+}
+.cal-has-event::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #5B8DEF;
+}
+
+/* 文本截断 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 选中态 */
+::selection {
+  background: #EDE9FE;
+  color: #6366F1;
+}
+
+/* 减弱动画 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
