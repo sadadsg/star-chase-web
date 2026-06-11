@@ -2,10 +2,11 @@ import { artistInfo } from '../data/rjlData'
 
 export default function HeroBanner() {
   return (
-    <div className="gradient-hero rounded-2xl mb-8 overflow-hidden">
+    <div className="glass rounded-3xl mb-8 overflow-hidden">
       <div className="px-6 py-8 sm:px-10 sm:py-10">
         <div className="flex items-center gap-5 sm:gap-8">
-          <div className="w-24 h-24 sm:w-[130px] sm:h-[130px] rounded-2xl bg-white/60 backdrop-blur-sm flex items-center justify-center ring-4 ring-white/60 flex-shrink-0">
+          <div className="w-24 h-24 sm:w-[130px] sm:h-[130px] rounded-3xl flex items-center justify-center flex-shrink-0"
+            style={{ background: 'linear-gradient(135deg, rgba(167,139,250,0.2), rgba(192,132,252,0.15))' }}>
             <span
               className="text-[36px] sm:text-[48px] font-bold gradient-text"
               style={{ fontFamily: "'Newsreader', serif" }}
@@ -17,7 +18,7 @@ export default function HeroBanner() {
           <div className="min-w-0">
             <h1
               className="text-[30px] sm:text-[38px] font-bold tracking-tight mb-1 leading-tight"
-              style={{ fontFamily: "'Newsreader', serif", color: '#881337' }}
+              style={{ fontFamily: "'Newsreader', serif", color: '#1E1B4B' }}
             >
               {artistInfo.name}
             </h1>
@@ -29,17 +30,21 @@ export default function HeroBanner() {
               {artistInfo.bio}
             </p>
             <div className="flex flex-wrap gap-2 mt-3">
-              <span className="bg-white/80 text-[14px] font-semibold px-3 py-1 rounded-full" style={{ color: '#E11D48' }}>
+              <span className="text-[14px] font-semibold px-3 py-1 rounded-full"
+                style={{ color: '#7C3AED', background: 'rgba(139,92,246,0.1)' }}>
                 {artistInfo.fansCount} 粉丝
               </span>
-              <span className="bg-white/80 text-[14px] font-semibold px-3 py-1 rounded-full" style={{ color: '#2563EB' }}>
+              <span className="text-[14px] font-semibold px-3 py-1 rounded-full"
+                style={{ color: '#2563EB', background: 'rgba(37,99,235,0.08)' }}>
                 {artistInfo.birthplace}
               </span>
-              <span className="bg-white/80 text-[14px] font-semibold px-3 py-1 rounded-full" style={{ color: '#D97706' }}>
+              <span className="text-[14px] font-semibold px-3 py-1 rounded-full"
+                style={{ color: '#D97706', background: 'rgba(245,158,11,0.08)' }}>
                 {artistInfo.constellation}
               </span>
               {artistInfo.height && (
-                <span className="bg-white/80 text-[14px] font-semibold px-3 py-1 rounded-full" style={{ color: '#059669' }}>
+                <span className="text-[14px] font-semibold px-3 py-1 rounded-full"
+                  style={{ color: '#059669', background: 'rgba(16,185,129,0.08)' }}>
                   {artistInfo.height}
                 </span>
               )}
