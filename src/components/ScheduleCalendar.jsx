@@ -1,17 +1,16 @@
 import { useState, useEffect, useMemo } from 'react'
 import { SkeletonCalendar } from './ui'
+import { API_BASE } from '../config'
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
 const MONTHS = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
 
 const typeColor = {
-  filming: { bg: 'bg-[#EEF3FD]', text: 'text-[#5B8DEF]', dot: 'bg-[#5B8DEF]', border: 'border-[#D4E2FA]' },
-  variety: { bg: 'bg-[#EAF6F0]', text: 'text-[#4AA87C]', dot: 'bg-[#7EC8A8]', border: 'border-[#C8E6D9]' },
-  business: { bg: 'bg-[#FDF0EB]', text: 'text-[#D4845A]', dot: 'bg-[#F5A882]', border: 'border-[#F0D4C4]' },
-  fanmeeting: { bg: 'bg-[#FBE9F2]', text: 'text-[#C96A9A]', dot: 'bg-[#E8A0BF]', border: 'border-[#F0D0E0]' },
+  filming: { bg: 'rgba(139,92,246,0.1)', text: 'text-[#7C3AED]', dot: 'bg-[#7C3AED]' },
+  variety: { bg: 'rgba(16,185,129,0.1)', text: 'text-[#059669]', dot: 'bg-[#059669]' },
+  business: { bg: 'rgba(245,158,11,0.1)', text: 'text-[#D97706]', dot: 'bg-[#D97706]' },
+  fanmeeting: { bg: 'rgba(236,72,153,0.1)', text: 'text-[#DB2777]', dot: 'bg-[#DB2777]' },
 }
-
-const API_BASE = 'http://localhost:3001/api'
 
 function shortTitle(title) {
   const cleaned = title

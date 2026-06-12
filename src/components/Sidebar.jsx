@@ -67,7 +67,7 @@ export default function Sidebar() {
 
         {/* 代表作品 */}
         {artistInfo.works && (
-          <div className="mt-4 pt-3.5 style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}">
+          <div className="mt-4 pt-3.5" style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}>
             <h3 className="text-[13px] font-semibold uppercase tracking-wider mb-2.5" style={{ color: '#9CA3AF' }}>代表作品</h3>
             <div className="space-y-1.5">
               {artistInfo.works.map((work, i) => (
@@ -85,11 +85,11 @@ export default function Sidebar() {
 
         {/* 获奖记录 */}
         {artistInfo.awards && (
-          <div className="mt-4 pt-3.5 style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}">
-            <h3 className="text-[13px] font-semibold text-[#8E99A8] uppercase tracking-wider mb-2.5">获奖记录</h3>
+          <div className="mt-4 pt-3.5" style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}>
+            <h3 className="text-[13px] font-semibold uppercase tracking-wider mb-2.5" style={{ color: '#9CA3AF' }}>获奖记录</h3>
             <div className="space-y-1.5">
               {artistInfo.awards.map((award, i) => (
-                <div key={i} className="text-[13px] text-[#5A6577] leading-relaxed">
+                <div key={i} className="text-[13px] leading-relaxed" style={{ color: '#4B5563' }}>
                   {award}
                 </div>
               ))}
@@ -98,10 +98,11 @@ export default function Sidebar() {
         )}
 
         {/* 标签 */}
-        <div className="mt-4 pt-3.5 style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}">
+        <div className="mt-4 pt-3.5" style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}>
           <div className="flex flex-wrap gap-1.5">
             {artistInfo.tags.map((tag, i) => (
-              <span key={i} className="bg-[#F7F9FC] text-[#5A6577] px-2.5 py-1 rounded-md text-[13px]">
+              <span key={i} className="px-2.5 py-1 rounded-md text-[13px]"
+                style={{ background: 'rgba(139,92,246,0.06)', color: '#4B5563' }}>
                 {tag}
               </span>
             ))}
@@ -110,12 +111,13 @@ export default function Sidebar() {
 
         {/* 夸克百科来源 */}
         {artistInfo.quarkUrl && (
-          <div className="mt-4 pt-3.5 style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}">
+          <div className="mt-4 pt-3.5" style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}>
             <a
               href={artistInfo.quarkUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[13px] text-[#8E99A8] hover:text-[#6366F1] transition-colors no-underline"
+              className="flex items-center gap-2 text-[13px] transition-colors no-underline"
+              style={{ color: '#9CA3AF' }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />

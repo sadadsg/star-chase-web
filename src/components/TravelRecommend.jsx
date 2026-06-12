@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-
-const API_BASE = 'http://localhost:3001/api'
+import { API_BASE } from '../config'
 
 const CITIES = [
   '北京', '上海', '广州', '深圳', '成都', '杭州', '南京', '武汉',

@@ -4,8 +4,8 @@ import HeroBanner from '../components/HeroBanner'
 import Sidebar from '../components/Sidebar'
 import NewsFeed from '../components/NewsFeed'
 import EventCard from '../components/EventCard'
-
-const API_BASE = 'http://localhost:3001/api'
+import { API_BASE } from '../config'
+import { scheduleList } from '../data/rjlData'
 
 const typeColor = {
   filming: '#7C3AED',
@@ -23,7 +23,7 @@ export default function HomePage() {
     async function fetchSchedule() {
       try {
         const res = await fetch(`${API_BASE}/weibo/schedule`)
-        if (!res.ok) return
+        if (!res.ok) throw new Error('API error')
         const json = await res.json()
         if (!cancelled) {
           const now = new Date()
@@ -31,11 +31,28 @@ export default function HomePage() {
             .filter(s => new Date(s.date) >= now)
             .sort((a, b) => new Date(a.date) - new Date(b.date))
             .slice(0, 4)
-          setSchedule(upcoming)
+          if (upcoming.length > 0) {
+            setSchedule(upcoming)
+          } else {
+            const now2 = new Date()
+            const fallback = scheduleList
+              .filter(s => new Date(s.date) >= now2)
+              .sort((a, b) => new Date(a.date) - new Date(b.date))
+              .slice(0, 4)
+            setSchedule(fallback)
+          }
           setLoading(false)
         }
       } catch {
-        if (!cancelled) { setSchedule([]); setLoading(false) }
+        if (!cancelled) {
+          const now = new Date()
+          const fallback = scheduleList
+            .filter(s => new Date(s.date) >= now)
+            .sort((a, b) => new Date(a.date) - new Date(b.date))
+            .slice(0, 4)
+          setSchedule(fallback)
+          setLoading(false)
+        }
       }
     }
     fetchSchedule()

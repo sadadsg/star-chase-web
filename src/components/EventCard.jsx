@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { EmptyState } from './ui'
-
-const API_BASE = 'http://localhost:3001/api'
+import { API_BASE } from '../config'
 
 const statusStyles = {
   hot: { bg: 'rgba(236,72,153,0.1)', color: '#DB2777' },
