@@ -17,7 +17,7 @@ jobs:
           node-version: '20'
 
       - name: Fetch and process data
-        run: node scripts/fetch-data.js
+        run: node scripts/fetch-data.cjs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
