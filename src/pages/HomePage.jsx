@@ -5,7 +5,6 @@ import Sidebar from '../components/Sidebar'
 import NewsFeed from '../components/NewsFeed'
 import EventCard from '../components/EventCard'
 import { API_BASE } from '../config'
-import { scheduleList } from '../data/rjlData'
 
 const typeColor = {
   filming: '#7C3AED',
@@ -31,28 +30,11 @@ export default function HomePage() {
             .filter(s => new Date(s.date) >= now)
             .sort((a, b) => new Date(a.date) - new Date(b.date))
             .slice(0, 4)
-          if (upcoming.length > 0) {
-            setSchedule(upcoming)
-          } else {
-            const now2 = new Date()
-            const fallback = scheduleList
-              .filter(s => new Date(s.date) >= now2)
-              .sort((a, b) => new Date(a.date) - new Date(b.date))
-              .slice(0, 4)
-            setSchedule(fallback)
-          }
+          setSchedule(upcoming)
           setLoading(false)
         }
       } catch {
-        if (!cancelled) {
-          const now = new Date()
-          const fallback = scheduleList
-            .filter(s => new Date(s.date) >= now)
-            .sort((a, b) => new Date(a.date) - new Date(b.date))
-            .slice(0, 4)
-          setSchedule(fallback)
-          setLoading(false)
-        }
+        if (!cancelled) { setSchedule([]); setLoading(false) }
       }
     }
     fetchSchedule()
@@ -91,6 +73,7 @@ export default function HomePage() {
           ) : schedule.length === 0 ? (
             <div className="text-center py-8">
               <p className="text-[14px]" style={{ color: '#6B7280' }}>暂无近期行程</p>
+              <p className="text-[12px] mt-1" style={{ color: '#9CA3AF' }}>数据来源于实时热搜，无相关内容时不显示</p>
             </div>
           ) : (
             <div className="grid grid-cols-2 gap-3">
