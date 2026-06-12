@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { SkeletonCalendar } from './ui'
-import { API_BASE } from '../config'
+import { fetchSchedule } from '../api/dataApi'
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
 const MONTHS = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -32,15 +32,13 @@ export default function ScheduleCalendar() {
   useEffect(() => {
     let cancelled = false
     
-    async function fetchSchedule() {
+    async function loadData() {
       try {
         setLoading(true)
-        const res = await fetch(`${API_BASE}/weibo/schedule`)
-        if (!res.ok) throw new Error('请求失败')
-        const json = await res.json()
+        const result = await fetchSchedule()
         
         if (!cancelled) {
-          setSchedule(json.data || [])
+          setSchedule(result.data || [])
           setLoading(false)
         }
       } catch (err) {
@@ -52,7 +50,7 @@ export default function ScheduleCalendar() {
       }
     }
     
-    fetchSchedule()
+    loadData()
     return () => { cancelled = true }
   }, [])
 

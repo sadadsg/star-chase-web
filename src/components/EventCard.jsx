@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { EmptyState } from './ui'
-import { API_BASE } from '../config'
+import { fetchEvents } from '../api/dataApi'
 
 const statusStyles = {
   hot: { bg: 'rgba(236,72,153,0.1)', color: '#DB2777' },
@@ -15,26 +15,12 @@ export default function EventCard({ limit }) {
 
   useEffect(() => {
     let cancelled = false
-    async function fetchEvents() {
+    async function loadEvents() {
       try {
-        const res = await fetch(`${API_BASE}/weibo/schedule`)
-        if (!res.ok) return
-        const json = await res.json()
-
+        const result = await fetchEvents()
         if (!cancelled) {
-          const activityEvents = (json.data || [])
-            .filter(s => s.type === 'fanmeeting' || s.type === 'business')
-            .map(s => ({
-              ...s,
-              name: s.title,
-              venue: s.location,
-              status: 'onsale',
-              statusText: '查看来源',
-              cover: `https://picsum.photos/seed/event${s.id}/600/400`,
-            }))
-            .slice(0, limit || 10)
-
-          setEvents(activityEvents)
+          const events = (result.data || []).slice(0, limit || 10)
+          setEvents(events)
           setLoading(false)
         }
       } catch {
@@ -44,7 +30,7 @@ export default function EventCard({ limit }) {
         }
       }
     }
-    fetchEvents()
+    loadEvents()
     return () => { cancelled = true }
   }, [limit])
 

@@ -1,0 +1,7 @@
+{
+  "name": "star-chase-api",
+  "version": "1.0.0",
+  "description": "嘉期如梦 API - 腾讯云云函数",
+  "main": "index.js",
+  "dependencies": {}
+}

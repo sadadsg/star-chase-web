@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { API_BASE } from '../config'
+import { fetchSchedule } from '../api/dataApi'
 
 const CITIES = [
   '北京', '上海', '广州', '深圳', '成都', '杭州', '南京', '武汉',
@@ -33,13 +33,11 @@ export default function TravelRecommend() {
 
   useEffect(() => {
     let cancelled = false
-    async function fetchEvents() {
+    async function loadData() {
       try {
-        const res = await fetch(`${API_BASE}/weibo/schedule`)
-        if (!res.ok) return
-        const json = await res.json()
+        const result = await fetchSchedule()
         if (!cancelled) {
-          const activityEvents = (json.data || [])
+          const activityEvents = (result.data || [])
             .filter(s => s.type === 'fanmeeting' || s.type === 'business')
             .map(s => ({ ...s, name: s.title, venue: s.location }))
           setEvents(activityEvents)
@@ -49,7 +47,7 @@ export default function TravelRecommend() {
         if (!cancelled) { setEvents([]); setLoading(false) }
       }
     }
-    fetchEvents()
+    loadData()
     return () => { cancelled = true }
   }, [])
 

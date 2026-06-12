@@ -4,7 +4,7 @@ import HeroBanner from '../components/HeroBanner'
 import Sidebar from '../components/Sidebar'
 import NewsFeed from '../components/NewsFeed'
 import EventCard from '../components/EventCard'
-import { API_BASE } from '../config'
+import { fetchSchedule } from '../api/dataApi'
 
 const typeColor = {
   filming: '#7C3AED',
@@ -19,14 +19,12 @@ export default function HomePage() {
 
   useEffect(() => {
     let cancelled = false
-    async function fetchSchedule() {
+    async function loadData() {
       try {
-        const res = await fetch(`${API_BASE}/weibo/schedule`)
-        if (!res.ok) throw new Error('API error')
-        const json = await res.json()
+        const result = await fetchSchedule()
         if (!cancelled) {
           const now = new Date()
-          const upcoming = (json.data || [])
+          const upcoming = (result.data || [])
             .filter(s => new Date(s.date) >= now)
             .sort((a, b) => new Date(a.date) - new Date(b.date))
             .slice(0, 4)
@@ -37,7 +35,7 @@ export default function HomePage() {
         if (!cancelled) { setSchedule([]); setLoading(false) }
       }
     }
-    fetchSchedule()
+    loadData()
     return () => { cancelled = true }
   }, [])
 

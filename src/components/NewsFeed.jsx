@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { fetchWeiboNews } from '../api/weiboApi'
+import { fetchNews } from '../api/dataApi'
 
 const categories = ['全部', '影视', '综艺', '时尚', '日常']
 
@@ -30,9 +30,9 @@ export default function NewsFeed({ limit }) {
   useEffect(() => {
     let cancelled = false
     setLoading(true)
-    fetchWeiboNews(30).then(data => {
+    fetchNews(30).then(result => {
       if (!cancelled) {
-        setLiveNews(data || [])
+        setLiveNews(result.data || [])
         setLoading(false)
       }
     }).catch(() => {
