@@ -7,11 +7,11 @@ import EventCard from '../components/EventCard'
 
 const API_BASE = 'http://localhost:3001/api'
 
-const typeDots = {
-  filming: 'bg-[#5B8DEF]',
-  variety: 'bg-[#7EC8A8]',
-  business: 'bg-[#F5A882]',
-  fanmeeting: 'bg-[#E8A0BF]',
+const typeColor = {
+  filming: '#7C3AED',
+  variety: '#059669',
+  business: '#D97706',
+  fanmeeting: '#DB2777',
 }
 
 export default function HomePage() {
@@ -30,15 +30,12 @@ export default function HomePage() {
           const upcoming = (json.data || [])
             .filter(s => new Date(s.date) >= now)
             .sort((a, b) => new Date(a.date) - new Date(b.date))
-            .slice(0, 5)
+            .slice(0, 4)
           setSchedule(upcoming)
           setLoading(false)
         }
       } catch {
-        if (!cancelled) {
-          setSchedule([])
-          setLoading(false)
-        }
+        if (!cancelled) { setSchedule([]); setLoading(false) }
       }
     }
     fetchSchedule()
@@ -46,121 +43,113 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div>
+    <div className="space-y-5">
       <HeroBanner />
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
-        <div className="lg:col-span-1 order-2 lg:order-1">
+      {/* Bento Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto">
+
+        {/* 近期行程 - 大卡片 (2列) */}
+        <div className="md:col-span-2 glass rounded-3xl p-5">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-5 rounded-full" style={{ background: '#A78BFA' }} />
+              <h2 className="text-[16px] font-bold" style={{ color: '#1E1B4B' }}>近期行程</h2>
+            </div>
+            <Link to="/schedule" className="text-[13px] font-medium no-underline" style={{ color: '#7C3AED' }}>
+              查看全部 →
+            </Link>
+          </div>
+
+          {loading ? (
+            <div className="grid grid-cols-2 gap-3">
+              {[1, 2, 3, 4].map(i => (
+                <div key={i} className="rounded-2xl p-3 animate-pulse" style={{ background: 'rgba(139,92,246,0.04)' }}>
+                  <div className="h-3 rounded-lg mb-2" style={{ background: 'rgba(139,92,246,0.06)', width: '40%' }} />
+                  <div className="h-4 rounded-lg mb-1" style={{ background: 'rgba(139,92,246,0.08)', width: '80%' }} />
+                  <div className="h-3 rounded-lg" style={{ background: 'rgba(139,92,246,0.05)', width: '60%' }} />
+                </div>
+              ))}
+            </div>
+          ) : schedule.length === 0 ? (
+            <div className="text-center py-8">
+              <p className="text-[14px]" style={{ color: '#6B7280' }}>暂无近期行程</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-3">
+              {schedule.map(s => (
+                <Link key={s.id} to="/schedule" className="block rounded-2xl p-3 transition-all no-underline"
+                  style={{ background: 'rgba(255,255,255,0.3)', border: '1px solid rgba(255,255,255,0.3)' }}>
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <div className="w-2 h-2 rounded-full" style={{ background: typeColor[s.type] || '#7C3AED' }} />
+                    <span className="text-[11px] font-medium" style={{ color: typeColor[s.type] || '#7C3AED' }}>{s.typeName}</span>
+                  </div>
+                  <h3 className="text-[14px] font-semibold truncate mb-1" style={{ color: '#1E1B4B' }}>{s.title}</h3>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[12px]" style={{ color: '#9CA3AF' }}>{new Date(s.date).getMonth() + 1}/{new Date(s.date).getDate()}</span>
+                    <span className="text-[12px]" style={{ color: '#9CA3AF' }}>{s.city}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* 艺人信息 - 侧边栏 */}
+        <div className="lg:row-span-2">
           <Sidebar />
         </div>
 
-        <div className="lg:col-span-3 order-1 lg:order-2 space-y-7">
-          {/* 近期行程 */}
-          <section>
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="section-title">近期行程</h2>
-              <Link to="/schedule" className="text-[#6366F1] text-[14px] font-medium hover:text-[#4F46E5] no-underline">
-                查看全部
-              </Link>
+        {/* 最新资讯 (2列) */}
+        <div className="md:col-span-2 glass rounded-3xl p-5">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-5 rounded-full" style={{ background: '#60A5FA' }} />
+              <h2 className="text-[16px] font-bold" style={{ color: '#1E1B4B' }}>最新资讯</h2>
             </div>
-            
-            {loading ? (
-              <div className="space-y-2">
-                {[1, 2, 3].map(i => (
-                  <div key={i} className="bg-white rounded-xl p-4 border border-[#EDF0F5] animate-pulse">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[#F0F3F8] rounded-lg" />
-                      <div className="flex-1 space-y-2">
-                        <div className="h-4 bg-[#F0F3F8] rounded w-1/3" />
-                        <div className="h-3 bg-[#F0F3F8] rounded w-2/3" />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : schedule.length === 0 ? (
-              <div className="bg-white rounded-xl p-8 border border-[#EDF0F5] text-center">
-                <svg className="w-10 h-10 mx-auto text-[#D3DAE6] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-[#2D3748] font-semibold text-[15px] mb-1">暂无近期行程</p>
-                <p className="text-[#8E99A8] text-[14px]">行程会从新闻中自动提取</p>
-              </div>
-            ) : (
-              <div className="space-y-2">
-                {schedule.map(s => (
-                  <div key={s.id} className="bg-white rounded-xl p-4 border border-[#EDF0F5] card-hover flex items-center gap-4">
-                    <div className="text-center min-w-[52px]">
-                      <div className="text-2xl font-bold text-[#6366F1]">
-                        {new Date(s.date).getDate()}
-                      </div>
-                      <div className="text-[13px] text-[#B0BEC5]">
-                        {new Date(s.date).getMonth() + 1}月
-                      </div>
-                    </div>
-                    <div className={`w-0.5 h-10 rounded-full ${typeDots[s.type] || 'bg-[#F5A882]'}`} />
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-1.5 mb-1">
-                        <span className={`w-2 h-2 rounded-full ${typeDots[s.type] || 'bg-[#F5A882]'}`} />
-                        <span className="text-[13px] text-[#8E99A8]">{s.typeName}</span>
-                      </div>
-                      <h3 className="font-bold text-[#1E293B] text-[16px] truncate">{s.title}</h3>
-                      <p className="text-[13px] text-[#B0BEC5] mt-0.5">
-                        {s.location} · {s.time}
-                      </p>
-                    </div>
-                    {s.newsUrl && s.newsUrl !== '#' && (
-                      <a
-                        href={s.newsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[13px] font-medium text-[#6366F1] hover:text-[#4F46E5] bg-[#EEF2FF] hover:bg-[#E0E7FF] px-3 py-1.5 rounded-lg transition-colors no-underline whitespace-nowrap"
-                      >
-                        查看来源
-                      </a>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </section>
-
-          {/* 最新资讯 */}
-          <section>
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="section-title">最新资讯</h2>
-              <Link to="/news" className="text-[#6366F1] text-[14px] font-medium hover:text-[#4F46E5] no-underline">
-                查看全部
-              </Link>
-            </div>
-            <NewsFeed limit={3} />
-          </section>
-
-          {/* 活动门票 */}
-          <section>
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="section-title">活动门票</h2>
-              <Link to="/events" className="text-[#6366F1] text-[14px] font-medium hover:text-[#4F46E5] no-underline">
-                查看全部
-              </Link>
-            </div>
-            <EventCard limit={2} />
-          </section>
-
-          {/* 出行推荐 */}
-          <section className="gradient-soft rounded-2xl p-6">
-            <h2 className="section-title mb-1">出行推荐</h2>
-            <p className="text-[#8E99A8] text-[14px] mb-4">
-              输入出发城市，自动匹配去爱豆活动的机票和高铁
-            </p>
-            <Link
-              to="/travel"
-              className="inline-block bg-[#6366F1] text-white text-[14px] font-semibold px-5 py-2.5 rounded-xl hover:bg-[#4F46E5] transition no-underline"
-            >
-              查看出行方案
+            <Link to="/news" className="text-[13px] font-medium no-underline" style={{ color: '#7C3AED' }}>
+              查看全部 →
             </Link>
-          </section>
+          </div>
+          <NewsFeed limit={3} />
         </div>
+
+        {/* 活动门票 */}
+        <div className="glass rounded-3xl p-5">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-5 rounded-full" style={{ background: '#F472B6' }} />
+              <h2 className="text-[16px] font-bold" style={{ color: '#1E1B4B' }}>活动门票</h2>
+            </div>
+            <Link to="/events" className="text-[13px] font-medium no-underline" style={{ color: '#7C3AED' }}>
+              查看全部 →
+            </Link>
+          </div>
+          <EventCard limit={2} />
+        </div>
+
+        {/* 出行推荐 - CTA 卡片 */}
+        <div className="glass rounded-3xl p-5 flex flex-col justify-between"
+          style={{ background: 'linear-gradient(135deg, rgba(139,92,246,0.08), rgba(96,165,250,0.06))' }}>
+          <div>
+            <div className="w-10 h-10 rounded-2xl flex items-center justify-center mb-3"
+              style={{ background: 'rgba(139,92,246,0.12)' }}>
+              <svg className="w-5 h-5" style={{ color: '#7C3AED' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </div>
+            <h2 className="text-[16px] font-bold mb-1" style={{ color: '#1E1B4B' }}>出行推荐</h2>
+            <p className="text-[13px] leading-relaxed" style={{ color: '#6B7280' }}>
+              自动匹配去爱豆活动的机票和高铁方案
+            </p>
+          </div>
+          <Link to="/travel"
+            className="inline-flex items-center justify-center mt-4 text-white text-[14px] font-semibold px-5 py-2.5 rounded-xl no-underline"
+            style={{ background: '#7C3AED' }}>
+            查看出行方案
+          </Link>
+        </div>
+
       </div>
     </div>
   )
