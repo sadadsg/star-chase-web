@@ -15,18 +15,11 @@ const CITIES = [
   '昆明', '厦门', '福州', '合肥', '大理', '横店', '澳门'
 ]
 
-function fetchUrl(url) {
+function fetchUrl(hostname, pathStr) {
   return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'top.baidu.com',
-      path: '/board?tab=realtime',
-      method: 'GET',
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-      },
-      timeout: 15000
-    }
-    const req = https.request(options, (res) => {
+    const req = https.request({ hostname, path: pathStr, method: 'GET', timeout: 15000,
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    }, (res) => {
       let data = ''
       res.on('data', (chunk) => { data += chunk })
       res.on('end', () => resolve(data))
@@ -86,9 +79,14 @@ function extractEvents(schedules) {
 
 async function main() {
   console.log('Fetching Baidu hot search...')
-  const html = await fetchUrl('https://top.baidu.com/board?tab=realtime')
-  const matches = html.match(/"word":"([^"]+)"/g) || []
-  const hotWords = matches.map(m => m.replace(/"word":"/, '').replace(/"$/, ''))
+  let hotWords = []
+  try {
+    const html = await fetchUrl('top.baidu.com', '/board?tab=realtime')
+    const matches = html.match(/"word":"([^"]+)"/g) || []
+    hotWords = matches.map(m => m.replace(/"word":"/, '').replace(/"$/, ''))
+  } catch (err) {
+    console.error('Baidu fetch failed:', err.message)
+  }
   console.log(`Got ${hotWords.length} hot words`)
 
   const artistNews = hotWords.filter(w => matchesArtist(w))
@@ -101,9 +99,10 @@ async function main() {
   const news = extractNews(hotWords)
   const events = extractEvents(schedule)
 
-  fs.writeFileSync(path.join(dataDir, 'schedule.json'), JSON.stringify({ data: schedule, total: schedule.length, updatedAt: new Date().toISOString() }, null, 2))
-  fs.writeFileSync(path.join(dataDir, 'news.json'), JSON.stringify({ data: news, total: news.length, updatedAt: new Date().toISOString() }, null, 2))
-  fs.writeFileSync(path.join(dataDir, 'events.json'), JSON.stringify({ data: events, total: events.length, updatedAt: new Date().toISOString() }, null, 2))
+  const now = new Date().toISOString()
+  fs.writeFileSync(path.join(dataDir, 'schedule.json'), JSON.stringify({ data: schedule, total: schedule.length, updatedAt: now }, null, 2))
+  fs.writeFileSync(path.join(dataDir, 'news.json'), JSON.stringify({ data: news, total: news.length, updatedAt: now }, null, 2))
+  fs.writeFileSync(path.join(dataDir, 'events.json'), JSON.stringify({ data: events, total: events.length, updatedAt: now }, null, 2))
 
   console.log('Data saved:')
   console.log(`  schedule: ${schedule.length} items`)
@@ -111,7 +110,4 @@ async function main() {
   console.log(`  events: ${events.length} items`)
 }
 
-main().catch(err => {
-  console.error('Error:', err)
-  process.exit(1)
-})
+main().catch(err => { console.error('Error:', err); process.exit(1) })
