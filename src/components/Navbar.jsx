@@ -47,12 +47,12 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="flex items-center gap-1 overflow-x-auto pb-1 -mx-1 px-1">
+          <div className="flex items-center justify-around">
             {navItems.map(item => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-2.5 py-1 rounded-xl text-[12px] font-medium whitespace-nowrap transition-all no-underline
+                className={`px-1 py-1 rounded-xl text-[12px] font-medium whitespace-nowrap transition-all no-underline text-center flex-1
                   ${location.pathname === item.path
                     ? 'text-[#7C3AED] bg-[rgba(139,92,246,0.1)]'
                     : 'text-[#9CA3AF]'
