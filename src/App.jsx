@@ -12,7 +12,7 @@ export default function App() {
   const isOnline = useNetworkStatus()
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/star-chase-web">
       <div className="min-h-screen">
         {/* 全局网络状态提示 */}
         <NetworkStatus isOnline={isOnline} />
