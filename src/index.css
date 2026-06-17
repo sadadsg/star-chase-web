@@ -156,6 +156,14 @@ body {
   color: #1E1B4B;
 }
 
+/* 手机端日历格子缩小 */
+@media (max-width: 639px) {
+  .cal-cell-mobile {
+    min-height: 56px !important;
+    padding: 4px !important;
+  }
+}
+
 /* 减弱动画 */
 @media (prefers-reduced-motion: reduce) {
   * {

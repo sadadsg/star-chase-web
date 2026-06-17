@@ -42,7 +42,7 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-1.5 rounded-xl text-[13px] font-medium whitespace-nowrap transition-all no-underline
+                className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl text-[12px] sm:text-[13px] font-medium whitespace-nowrap transition-all no-underline
                   ${location.pathname === item.path
                     ? 'text-[#7C3AED] bg-[rgba(139,92,246,0.1)]'
                     : 'text-[#9CA3AF]'

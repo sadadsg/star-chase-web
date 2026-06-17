@@ -74,10 +74,10 @@ export default function TravelRecommend() {
   }
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4 sm:space-y-5">
       {/* 活动选择 */}
-      <div className="glass rounded-3xl p-5">
-        <div className="flex items-center gap-2 mb-4">
+      <div className="glass rounded-3xl p-4 sm:p-5">
+        <div className="flex items-center gap-2 mb-3 sm:mb-4">
           <span className="w-6 h-6 rounded-full text-white text-[13px] font-bold flex items-center justify-center" style={{ background: '#7C3AED' }}>1</span>
           <h3 className="text-[16px] font-semibold" style={{ color: '#1E1B4B' }}>选择你想参加的活动</h3>
         </div>
@@ -120,8 +120,8 @@ export default function TravelRecommend() {
 
       {/* 出发城市 */}
       {activeEvent && (
-        <div className="glass rounded-3xl p-5">
-          <div className="flex items-center gap-2 mb-4">
+        <div className="glass rounded-3xl p-4 sm:p-5">
+          <div className="flex items-center gap-2 mb-3 sm:mb-4">
             <span className="w-6 h-6 rounded-full text-white text-[13px] font-bold flex items-center justify-center" style={{ background: '#7C3AED' }}>2</span>
             <h3 className="text-[16px] font-semibold" style={{ color: '#1E1B4B' }}>选择你的出发城市</h3>
           </div>
@@ -139,20 +139,20 @@ export default function TravelRecommend() {
       {/* 出行方案 */}
       {activeEvent && fromCity !== (activeEvent.city || activeEvent.location) && (
         <div className="glass rounded-3xl overflow-hidden">
-          <div className="p-5" style={{ background: 'rgba(139,92,246,0.06)' }}>
+          <div className="p-4 sm:p-5" style={{ background: 'rgba(139,92,246,0.06)' }}>
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-bold text-[18px]" style={{ color: '#1E1B4B' }}>{fromCity} → {activeEvent.city || activeEvent.location}</h3>
-                <p className="text-[14px] mt-0.5" style={{ color: '#6B7280' }}>{activeEvent.title}</p>
+                <h3 className="font-bold text-[16px] sm:text-[18px]" style={{ color: '#1E1B4B' }}>{fromCity} → {activeEvent.city || activeEvent.location}</h3>
+                <p className="text-[13px] sm:text-[14px] mt-0.5" style={{ color: '#6B7280' }}>{activeEvent.title}</p>
               </div>
-              <div className="text-right text-[14px]">
+              <div className="text-right text-[13px] sm:text-[14px]">
                 <div className="font-medium" style={{ color: '#7C3AED' }}>{activeEvent.date}</div>
               </div>
             </div>
           </div>
-          <div className="p-5">
-            <h4 className="font-semibold text-[15px] mb-3" style={{ color: '#1E1B4B' }}>出行方案</h4>
-            <div className="grid gap-3 sm:grid-cols-2">
+          <div className="p-4 sm:p-5">
+            <h4 className="font-semibold text-[14px] sm:text-[15px] mb-2 sm:mb-3" style={{ color: '#1E1B4B' }}>出行方案</h4>
+            <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
               <a href={`https://flights.ctrip.com/online/list/oneway-${fromCity.substring(0,2)}-${(activeEvent.city || activeEvent.location).substring(0,2)}?depdate=${activeEvent.date}`}
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 rounded-2xl transition-all no-underline group"

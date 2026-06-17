@@ -129,14 +129,14 @@ export default function ScheduleCalendar() {
       )}
 
       {/* Month Navigation */}
-      <div className="flex items-center justify-between mb-4">
-        <button onClick={prevMonth} className="p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
+      <div className="flex items-center justify-between mb-3 sm:mb-4">
+        <button onClick={prevMonth} className="p-1.5 sm:p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <h3 className="text-lg font-semibold text-[#2D3748]">{year}年 {MONTHS[month - 1]}</h3>
-        <button onClick={nextMonth} className="p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
+        <h3 className="text-[15px] sm:text-lg font-semibold text-[#2D3748]">{year}年 {MONTHS[month - 1]}</h3>
+        <button onClick={nextMonth} className="p-1.5 sm:p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
@@ -145,7 +145,7 @@ export default function ScheduleCalendar() {
 
       {/* 月度统计条 */}
       {monthSchedule.length > 0 && (
-        <div className="flex gap-3 mb-3 text-[13px]">
+        <div className="flex gap-2 sm:gap-3 mb-2 sm:mb-3 text-[11px] sm:text-[13px]">
           {[
             { type: 'filming', label: '影视' },
             { type: 'variety', label: '综艺' },
@@ -163,9 +163,9 @@ export default function ScheduleCalendar() {
       )}
 
       {/* Weekday Headers */}
-      <div className="grid grid-cols-7 mb-0.5">
+        <div className="grid grid-cols-7 mb-0.5">
         {WEEKDAYS.map(d => (
-          <div key={d} className="text-center text-[13px] font-semibold text-[#8E99A8] py-2">{d}</div>
+          <div key={d} className="text-center text-[11px] sm:text-[13px] font-semibold text-[#8E99A8] py-1 sm:py-2">{d}</div>
         ))}
       </div>
 
@@ -183,17 +183,17 @@ export default function ScheduleCalendar() {
               onClick={() => handleDayClick(day)}
               disabled={!day}
               className={`
-                min-h-[80px] p-1.5 text-left transition-all relative
+                min-h-[56px] sm:min-h-[80px] p-1 sm:p-1.5 text-left transition-all relative
                 ${!day ? 'bg-[#FAFBFC] cursor-default' : 'bg-white cursor-pointer hover:bg-[#FAFBFC]'}
                 ${isSelected ? 'ring-2 ring-inset ring-[#5B8DEF]' : ''}
               `}
             >
               {day && (
                 <>
-                  <div className="flex items-center justify-between mb-1">
+                  <div className="flex items-center justify-between mb-0.5 sm:mb-1">
                     <span className={`
-                      text-[14px] leading-none
-                      ${todayFlag ? 'bg-[#5B8DEF] text-white w-6 h-6 rounded-full flex items-center justify-center font-bold' : 'text-[#5A6577]'}
+                      text-[12px] sm:text-[14px] leading-none
+                      ${todayFlag ? 'bg-[#5B8DEF] text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold' : 'text-[#5A6577]'}
                       ${isSelected && !todayFlag ? 'text-[#5B8DEF] font-bold' : ''}
                     `}>
                       {day}
@@ -204,7 +204,7 @@ export default function ScheduleCalendar() {
                     {events.slice(0, 2).map((ev, j) => {
                       const c = typeColor[ev.type] || typeColor.business
                       return (
-                        <div key={j} className={`${c.bg} ${c.text} text-[11px] leading-tight px-1 py-0.5 rounded truncate font-medium`}>
+                        <div key={j} className={`${c.bg} ${c.text} text-[10px] sm:text-[11px] leading-tight px-0.5 sm:px-1 py-0.5 rounded truncate font-medium`}>
                           {shortTitle(ev.title)}
                         </div>
                       )
@@ -221,15 +221,15 @@ export default function ScheduleCalendar() {
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-4 mt-3">
+      <div className="flex flex-wrap gap-3 sm:gap-4 mt-2 sm:mt-3">
         {[
           { type: 'filming', label: '影视拍摄' },
           { type: 'variety', label: '综艺录制' },
           { type: 'business', label: '商务活动' },
           { type: 'fanmeeting', label: '演出活动' },
         ].map(item => (
-          <div key={item.type} className="flex items-center gap-1.5 text-[13px] text-[#8E99A8]">
-            <span className={`w-2.5 h-2.5 rounded-sm ${typeColor[item.type].dot}`} />
+          <div key={item.type} className="flex items-center gap-1 sm:gap-1.5 text-[12px] sm:text-[13px] text-[#8E99A8]">
+            <span className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-sm ${typeColor[item.type].dot}`} />
             {item.label}
           </div>
         ))}

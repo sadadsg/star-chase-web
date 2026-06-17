@@ -7,7 +7,7 @@ export default function Sidebar() {
   const bioLines = artistInfo.bioFull ? artistInfo.bioFull.split('\n\n') : [artistInfo.bio]
 
   return (
-    <aside className="sticky top-[68px]">
+    <aside className="sm:sticky sm:top-[68px]">
       <div className="glass-strong p-5">
         <div className="text-center mb-4">
           <div className="w-24 h-24 rounded-3xl mx-auto mb-3 flex items-center justify-center"

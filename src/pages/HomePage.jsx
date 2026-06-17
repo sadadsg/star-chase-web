@@ -40,18 +40,18 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4 sm:space-y-5">
       <HeroBanner />
 
       {/* Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 auto-rows-auto">
 
         {/* 近期行程 - 大卡片 (2列) */}
-        <div className="md:col-span-2 glass rounded-3xl p-5">
-          <div className="flex items-center justify-between mb-4">
+        <div className="md:col-span-2 glass rounded-3xl p-4 sm:p-5">
+          <div className="flex items-center justify-between mb-3 sm:mb-4">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-5 rounded-full" style={{ background: '#A78BFA' }} />
-              <h2 className="text-[16px] font-bold" style={{ color: '#1E1B4B' }}>近期行程</h2>
+              <h2 className="text-[15px] sm:text-[16px] font-bold" style={{ color: '#1E1B4B' }}>近期行程</h2>
             </div>
             <Link to="/schedule" className="text-[13px] font-medium no-underline" style={{ color: '#7C3AED' }}>
               查看全部 →
@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
 
           {loading ? (
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {[1, 2, 3, 4].map(i => (
                 <div key={i} className="rounded-2xl p-3 animate-pulse" style={{ background: 'rgba(139,92,246,0.04)' }}>
                   <div className="h-3 rounded-lg mb-2" style={{ background: 'rgba(139,92,246,0.06)', width: '40%' }} />
@@ -74,7 +74,7 @@ export default function HomePage() {
               <p className="text-[12px] mt-1" style={{ color: '#9CA3AF' }}>数据来源于实时热搜，无相关内容时不显示</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {schedule.map(s => (
                 <Link key={s.id} to="/schedule" className="block rounded-2xl p-3 transition-all no-underline"
                   style={{ background: 'rgba(255,255,255,0.3)', border: '1px solid rgba(255,255,255,0.3)' }}>
@@ -99,11 +99,11 @@ export default function HomePage() {
         </div>
 
         {/* 最新资讯 (2列) */}
-        <div className="md:col-span-2 glass rounded-3xl p-5">
-          <div className="flex items-center justify-between mb-4">
+        <div className="md:col-span-2 glass rounded-3xl p-4 sm:p-5">
+          <div className="flex items-center justify-between mb-3 sm:mb-4">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-5 rounded-full" style={{ background: '#60A5FA' }} />
-              <h2 className="text-[16px] font-bold" style={{ color: '#1E1B4B' }}>最新资讯</h2>
+              <h2 className="text-[15px] sm:text-[16px] font-bold" style={{ color: '#1E1B4B' }}>最新资讯</h2>
             </div>
             <Link to="/news" className="text-[13px] font-medium no-underline" style={{ color: '#7C3AED' }}>
               查看全部 →
@@ -113,11 +113,11 @@ export default function HomePage() {
         </div>
 
         {/* 活动门票 */}
-        <div className="glass rounded-3xl p-5">
-          <div className="flex items-center justify-between mb-4">
+        <div className="glass rounded-3xl p-4 sm:p-5">
+          <div className="flex items-center justify-between mb-3 sm:mb-4">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-5 rounded-full" style={{ background: '#F472B6' }} />
-              <h2 className="text-[16px] font-bold" style={{ color: '#1E1B4B' }}>活动门票</h2>
+              <h2 className="text-[15px] sm:text-[16px] font-bold" style={{ color: '#1E1B4B' }}>活动门票</h2>
             </div>
             <Link to="/events" className="text-[13px] font-medium no-underline" style={{ color: '#7C3AED' }}>
               查看全部 →
@@ -127,7 +127,7 @@ export default function HomePage() {
         </div>
 
         {/* 出行推荐 - CTA 卡片 */}
-        <div className="glass rounded-3xl p-5 flex flex-col justify-between"
+        <div className="glass rounded-3xl p-4 sm:p-5 flex flex-col justify-between"
           style={{ background: 'linear-gradient(135deg, rgba(139,92,246,0.08), rgba(96,165,250,0.06))' }}>
           <div>
             <div className="w-10 h-10 rounded-2xl flex items-center justify-center mb-3"
@@ -136,7 +136,7 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
             </div>
-            <h2 className="text-[16px] font-bold mb-1" style={{ color: '#1E1B4B' }}>出行推荐</h2>
+            <h2 className="text-[15px] sm:text-[16px] font-bold mb-1" style={{ color: '#1E1B4B' }}>出行推荐</h2>
             <p className="text-[13px] leading-relaxed" style={{ color: '#6B7280' }}>
               自动匹配去爱豆活动的机票和高铁方案
             </p>

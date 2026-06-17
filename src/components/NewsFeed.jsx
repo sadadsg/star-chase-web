@@ -127,12 +127,12 @@ export default function NewsFeed({ limit }) {
   return (
     <div>
       {!limit && (
-        <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
+        <div className="flex gap-1.5 sm:gap-2 mb-4 sm:mb-5 overflow-x-auto pb-1">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className="px-4 py-2 rounded-xl text-[14px] font-medium whitespace-nowrap transition-all"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[13px] sm:text-[14px] font-medium whitespace-nowrap transition-all"
               style={{
                 color: activeCategory === cat ? '#7C3AED' : '#6B7280',
                 background: activeCategory === cat ? 'rgba(139,92,246,0.1)' : 'rgba(255,255,255,0.4)',

@@ -79,8 +79,8 @@ export default function EventCard({ limit }) {
               </span>
             </div>
 
-            <div className="p-4">
-              <h3 className="font-semibold text-[16px] mb-3" style={{ color: '#1E1B4B' }}>{event.name}</h3>
+              <div className="p-3 sm:p-4">
+              <h3 className="font-semibold text-[15px] sm:text-[16px] mb-2 sm:mb-3" style={{ color: '#1E1B4B' }}>{event.name}</h3>
 
               <div className="space-y-2.5 text-[14px] mb-3" style={{ color: '#4B5563' }}>
                 <div className="flex items-center gap-2">
