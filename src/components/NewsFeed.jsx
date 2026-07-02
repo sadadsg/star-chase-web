@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { fetchNews } from '../api/dataApi'
+import { AnimateOnScroll } from './ui'
 
 const categories = ['全部', '影视', '综艺', '时尚', '日常']
 
@@ -8,7 +9,7 @@ const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月',
 
 function SkeletonCard() {
   return (
-    <div className="glass rounded-3xl overflow-hidden animate-pulse">
+    <div className="glass rounded-3xl overflow-hidden skeleton-shimmer">
       <div className="aspect-video" style={{ background: 'rgba(139,92,246,0.05)' }} />
       <div className="p-4 space-y-3">
         <div className="h-4 rounded-lg" style={{ background: 'rgba(139,92,246,0.06)', width: '75%' }} />
@@ -97,7 +98,7 @@ export default function NewsFeed({ limit }) {
           <img
             src={news.cover}
             alt={news.title}
-            className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-300 will-change-transform"
             loading="lazy"
           />
           <span className="absolute top-2.5 left-2.5 backdrop-blur-sm text-[13px] font-medium px-2.5 py-1 rounded-xl"
@@ -132,10 +133,11 @@ export default function NewsFeed({ limit }) {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[13px] sm:text-[14px] font-medium whitespace-nowrap transition-all"
+              className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap transition-all cursor-pointer"
               style={{
-                color: activeCategory === cat ? '#7C3AED' : '#6B7280',
+                color: activeCategory === cat ? '#7C3AED' : '#78716C',
                 background: activeCategory === cat ? 'rgba(139,92,246,0.1)' : 'rgba(255,255,255,0.4)',
+                border: `1px solid ${activeCategory === cat ? 'rgba(139,92,246,0.2)' : 'rgba(255,255,255,0.35)'}`,
               }}
             >
               {cat}
@@ -150,17 +152,19 @@ export default function NewsFeed({ limit }) {
         </div>
       ) : displayNews.length === 0 ? (
         <div className="glass rounded-3xl py-16 text-center">
-          <svg className="w-12 h-12 mx-auto mb-3" style={{ color: '#D1D5DB' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-12 h-12 mx-auto mb-3" style={{ color: '#D6D3D1' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
           </svg>
-          <p className="font-semibold text-[16px] mb-1" style={{ color: '#1E1B4B' }}>暂无相关新闻</p>
-          <p className="text-[14px]" style={{ color: '#6B7280' }}>当前热搜榜上没有任嘉伦相关新闻</p>
-          <p className="text-[13px] mt-2" style={{ color: '#9CA3AF' }}>新闻会实时更新，稍后再来看看</p>
+          <p className="font-semibold text-[16px] mb-1" style={{ color: '#1C1917' }}>暂无相关新闻</p>
+          <p className="text-[14px]" style={{ color: '#78716C' }}>当前热搜榜上没有任嘉伦相关新闻</p>
+          <p className="text-[13px] mt-2" style={{ color: '#A8A29E' }}>新闻会实时更新，稍后再来看看</p>
         </div>
       ) : limit ? (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {displayNews.map(news => (
-            <NewsCard key={news.id} news={news} />
+          {displayNews.map((news, idx) => (
+            <AnimateOnScroll key={news.id} delay={idx * 0.06} y={12}>
+              <NewsCard news={news} />
+            </AnimateOnScroll>
           ))}
         </div>
       ) : (
@@ -179,8 +183,10 @@ export default function NewsFeed({ limit }) {
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {group.items.map(news => (
-                  <NewsCard key={news.id} news={news} />
+                {group.items.map((news, idx) => (
+                  <AnimateOnScroll key={news.id} delay={idx * 0.06} y={12}>
+                    <NewsCard news={news} />
+                  </AnimateOnScroll>
                 ))}
               </div>
             </section>

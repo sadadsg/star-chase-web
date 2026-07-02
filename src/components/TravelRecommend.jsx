@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
 import { fetchSchedule } from '../api/dataApi'
 
 const CITIES = [
@@ -64,7 +65,7 @@ export default function TravelRecommend() {
     return (
       <div className="space-y-4">
         {[1, 2].map(i => (
-          <div key={i} className="glass rounded-3xl p-5 animate-pulse">
+          <div key={i} className="glass rounded-3xl p-5 skeleton-shimmer">
             <div className="h-6 rounded-lg mb-3" style={{ background: 'rgba(139,92,246,0.06)', width: '33%' }} />
             <div className="h-4 rounded-lg" style={{ background: 'rgba(139,92,246,0.04)', width: '50%' }} />
           </div>
@@ -79,15 +80,15 @@ export default function TravelRecommend() {
       <div className="glass rounded-3xl p-4 sm:p-5">
         <div className="flex items-center gap-2 mb-3 sm:mb-4">
           <span className="w-6 h-6 rounded-full text-white text-[13px] font-bold flex items-center justify-center" style={{ background: '#7C3AED' }}>1</span>
-          <h3 className="text-[16px] font-semibold" style={{ color: '#1E1B4B' }}>选择你想参加的活动</h3>
+          <h3 className="text-[16px] font-semibold font-serif-display" style={{ color: '#1C1917' }}>选择你想参加的活动</h3>
         </div>
         {events.length === 0 ? (
           <div className="py-10 text-center">
             <svg className="w-12 h-12 mx-auto mb-3" style={{ color: '#D1D5DB' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <p className="font-semibold text-[15px] mb-1" style={{ color: '#1E1B4B' }}>暂无活动数据</p>
-            <p className="text-[14px]" style={{ color: '#6B7280' }}>活动信息会从新闻中自动提取</p>
+            <p className="font-semibold text-[15px] mb-1" style={{ color: '#1C1917' }}>暂无活动数据</p>
+            <p className="text-[14px]" style={{ color: '#78716C' }}>活动信息会从新闻中自动提取</p>
           </div>
         ) : (
           <div className="grid gap-2 sm:grid-cols-2">
@@ -95,23 +96,25 @@ export default function TravelRecommend() {
               const ts = typeStyle[event.type] || typeStyle.business
               const isActive = selectedEvent === i
               return (
-                <button key={event.id} onClick={() => setSelectedEvent(isActive ? null : i)}
+                <motion.button key={event.id} onClick={() => setSelectedEvent(isActive ? null : i)}
+                  whileTap={{ scale: 0.97 }}
+                  whileHover={{ scale: 1.01 }}
                   className="p-4 rounded-2xl text-left transition-all"
                   style={{
                     background: isActive ? '#7C3AED' : 'rgba(255,255,255,0.4)',
-                    color: isActive ? 'white' : '#1E1B4B',
+                    color: isActive ? 'white' : '#1C1917',
                     border: `1px solid ${isActive ? '#7C3AED' : 'rgba(255,255,255,0.4)'}`,
                   }}>
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[12px] px-2 py-0.5 rounded-lg font-medium"
+                    <span className="text-[12px] px-2.5 py-0.5 rounded-full font-medium"
                       style={{ background: isActive ? 'rgba(255,255,255,0.2)' : ts.bg, color: isActive ? 'rgba(255,255,255,0.8)' : ts.color }}>
                       {ts.label}
                     </span>
-                    <span className="text-[13px]" style={{ color: isActive ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>{event.date}</span>
+                    <span className="text-[13px]" style={{ color: isActive ? 'rgba(255,255,255,0.5)' : '#A8A29E' }}>{event.date}</span>
                   </div>
                   <div className="font-semibold text-[15px] mb-0.5">{event.title}</div>
-                  <div className="text-[13px]" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#6B7280' }}>{event.location}</div>
-                </button>
+                  <div className="text-[13px]" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#78716C' }}>{event.location}</div>
+                </motion.button>
               )
             })}
           </div>
@@ -119,31 +122,46 @@ export default function TravelRecommend() {
       </div>
 
       {/* 出发城市 */}
-      {activeEvent && (
-        <div className="glass rounded-3xl p-4 sm:p-5">
+      <AnimatePresence>
+        {activeEvent && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="glass rounded-3xl p-4 sm:p-5"
+          >
           <div className="flex items-center gap-2 mb-3 sm:mb-4">
             <span className="w-6 h-6 rounded-full text-white text-[13px] font-bold flex items-center justify-center" style={{ background: '#7C3AED' }}>2</span>
-            <h3 className="text-[16px] font-semibold" style={{ color: '#1E1B4B' }}>选择你的出发城市</h3>
+            <h3 className="text-[16px] font-semibold font-serif-display" style={{ color: '#1C1917' }}>选择你的出发城市</h3>
           </div>
-          <div className="text-[14px] mb-3" style={{ color: '#6B7280' }}>
-            目的地：<span className="font-medium" style={{ color: '#1E1B4B' }}>{activeEvent.city || activeEvent.location}</span>
+          <div className="text-[14px] mb-3" style={{ color: '#78716C' }}>
+            目的地：<span className="font-medium" style={{ color: '#1C1917' }}>{activeEvent.city || activeEvent.location}</span>
           </div>
           <select value={fromCity} onChange={e => setFromCity(e.target.value)}
             className="w-full sm:w-56 px-4 py-2.5 rounded-xl text-[15px] cursor-pointer"
-            style={{ border: '1px solid rgba(255,255,255,0.4)', background: 'rgba(255,255,255,0.4)', color: '#1E1B4B' }}>
+            style={{ border: '1px solid rgba(255,255,255,0.4)', background: 'rgba(255,255,255,0.4)', color: '#1C1917' }}>
             {CITIES.map(city => <option key={city} value={city}>{city}</option>)}
           </select>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* 出行方案 */}
-      {activeEvent && fromCity !== (activeEvent.city || activeEvent.location) && (
-        <div className="glass rounded-3xl overflow-hidden">
+      <AnimatePresence>
+        {activeEvent && fromCity !== (activeEvent.city || activeEvent.location) && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="glass rounded-3xl overflow-hidden"
+          >
           <div className="p-4 sm:p-5" style={{ background: 'rgba(139,92,246,0.06)' }}>
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-bold text-[16px] sm:text-[18px]" style={{ color: '#1E1B4B' }}>{fromCity} → {activeEvent.city || activeEvent.location}</h3>
-                <p className="text-[13px] sm:text-[14px] mt-0.5" style={{ color: '#6B7280' }}>{activeEvent.title}</p>
+                <h3 className="font-bold text-[16px] sm:text-[18px] font-serif-display" style={{ color: '#1C1917' }}>{fromCity} → {activeEvent.city || activeEvent.location}</h3>
+                <p className="text-[13px] sm:text-[14px] mt-0.5" style={{ color: '#78716C' }}>{activeEvent.title}</p>
               </div>
               <div className="text-right text-[13px] sm:text-[14px]">
                 <div className="font-medium" style={{ color: '#7C3AED' }}>{activeEvent.date}</div>
@@ -151,7 +169,7 @@ export default function TravelRecommend() {
             </div>
           </div>
           <div className="p-4 sm:p-5">
-            <h4 className="font-semibold text-[14px] sm:text-[15px] mb-2 sm:mb-3" style={{ color: '#1E1B4B' }}>出行方案</h4>
+            <h4 className="font-semibold text-[14px] sm:text-[15px] mb-2 sm:mb-3" style={{ color: '#1C1917' }}>出行方案</h4>
             <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
               <a href={`https://flights.ctrip.com/online/list/oneway-${fromCity.substring(0,2)}-${(activeEvent.city || activeEvent.location).substring(0,2)}?depdate=${activeEvent.date}`}
                 target="_blank" rel="noopener noreferrer"
@@ -163,10 +181,10 @@ export default function TravelRecommend() {
                   </svg>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[15px] font-semibold group-hover:text-[#7C3AED] transition-colors" style={{ color: '#1E1B4B' }}>
+                  <div className="text-[15px] font-semibold group-hover:text-[#7C3AED] transition-colors" style={{ color: '#1C1917' }}>
                     携程 · 查看航班
                   </div>
-                  <div className="text-[13px]" style={{ color: '#6B7280' }}>{activeEvent.date} 直达/中转航班</div>
+                  <div className="text-[13px]" style={{ color: '#78716C' }}>{activeEvent.date} 直达/中转航班</div>
                 </div>
               </a>
               <a href={`https://kyfw.12306.cn/otn/leftTicket/init?leftTicketDTO.train_date=${activeEvent.date}&leftTicketDTO.from_station=${stationCodes[fromCity] || ''}&leftTicketDTO.to_station=${stationCodes[activeEvent.city] || ''}&purpose_codes=ADULT`}
@@ -179,29 +197,42 @@ export default function TravelRecommend() {
                   </svg>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[15px] font-semibold group-hover:text-[#059669] transition-colors" style={{ color: '#1E1B4B' }}>
+                  <div className="text-[15px] font-semibold group-hover:text-[#059669] transition-colors" style={{ color: '#1C1917' }}>
                     12306 · 查看车次
                   </div>
-                  <div className="text-[13px]" style={{ color: '#6B7280' }}>{activeEvent.date} 高铁/动车</div>
+                  <div className="text-[13px]" style={{ color: '#78716C' }}>{activeEvent.date} 高铁/动车</div>
                 </div>
               </a>
             </div>
           </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* 本地活动提示 */}
-      {activeEvent && fromCity === (activeEvent.city || activeEvent.location) && (
-        <div className="glass rounded-3xl py-12 text-center">
-          <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: 'rgba(16,185,129,0.1)' }}>
+      <AnimatePresence>
+        {activeEvent && fromCity === (activeEvent.city || activeEvent.location) && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="glass rounded-3xl py-12 text-center"
+          >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: 'spring', stiffness: 500, damping: 25, delay: 0.1 }}
+            className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: 'rgba(16,185,129,0.1)' }}>
             <svg className="w-6 h-6" style={{ color: '#059669' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-          </div>
-          <p className="font-semibold text-[16px]" style={{ color: '#1E1B4B' }}>活动就在你的城市！</p>
-          <p className="text-[14px] mt-1" style={{ color: '#6B7280' }}>无需出行，直接去现场就行啦</p>
-        </div>
-      )}
+          </motion.div>
+          <p className="font-semibold text-[16px]" style={{ color: '#1C1917' }}>活动就在你的城市！</p>
+          <p className="text-[14px] mt-1" style={{ color: '#78716C' }}>无需出行，直接去现场就行啦</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

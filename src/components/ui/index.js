@@ -18,3 +18,6 @@ export {
   EmptyState,
   NetworkStatus,
 } from './ErrorMessage'
+
+export { default as PageTransition } from './PageTransition'
+export { default as AnimateOnScroll } from './AnimateOnScroll'

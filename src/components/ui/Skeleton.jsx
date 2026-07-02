@@ -7,7 +7,7 @@
 export function SkeletonBlock({ className = '', ...props }) {
   return (
     <div
-      className={`bg-[#F0F3F8] rounded animate-pulse ${className}`}
+      className={`skeleton-shimmer rounded ${className}`}
       {...props}
     />
   )
@@ -33,7 +33,7 @@ export function SkeletonCard({ hasImage = true, lines = 3, className = '' }) {
   return (
     <div className={`bg-white rounded-2xl overflow-hidden border border-[#EDF0F5] ${className}`}>
       {hasImage && (
-        <div className="aspect-video bg-[#F0F3F8] animate-pulse" />
+        <div className="aspect-video skeleton-shimmer" />
       )}
       <div className="p-4 space-y-3">
         <SkeletonText width="3/4" height="4" />
@@ -121,7 +121,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className = '' }) {
             <SkeletonBlock
               key={colIndex}
               className="h-4 rounded"
-              style={{ width: `${Math.random() * 40 + 60}%` }}
+              style={{ width: `${[85, 65, 75, 60][colIndex % 4]}%` }}
             />
           ))}
         </div>

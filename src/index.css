@@ -1,30 +1,32 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 @theme {
-  --color-primary: #C084FC;
-  --color-primary-light: #D8B4FE;
-  --color-primary-soft: #FAF5FF;
+  --color-primary: #7C3AED;
+  --color-primary-light: #A78BFA;
+  --color-primary-soft: rgba(139,92,246,0.08);
   --color-accent: #60A5FA;
   --color-accent-soft: #EFF6FF;
   --color-warm: #FCD34D;
   --color-warm-soft: #FFFBEB;
+  --color-warm-surface: #FAF7F2;
   --color-rose: #FDA4AF;
   --color-rose-soft: #FFF1F2;
   --color-surface: #FFFFFF;
   --color-bg: #F5F3FF;
-  --color-text: #1E1B4B;
-  --color-text-secondary: #6B7280;
-  --color-border: rgba(255,255,255,0.6);
-  --color-border-hover: rgba(255,255,255,0.8);
+  --color-text: #1C1917;
+  --color-text-secondary: #78716C;
+  --color-text-muted: #A8A29E;
+  --color-border: rgba(255,255,255,0.5);
+  --color-border-hover: rgba(255,255,255,0.7);
 }
 
 body {
   margin: 0;
   font-family: 'Roboto', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(135deg, #EDE9FE 0%, #FCE7F3 35%, #E0F2FE 70%, #F0FDF4 100%);
+  background: linear-gradient(135deg, #EDE9FE 0%, #FDF2F8 25%, #FCE7F3 45%, #E0F2FE 70%, #F0FDF4 100%);
   background-attachment: fixed;
-  color: #1E1B4B;
+  color: #1C1917;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,7 +36,12 @@ body {
   min-height: 100vh;
 }
 
-/* 滚动条 */
+/* ===== 衬线标题字体 ===== */
+.font-serif-display {
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, serif;
+}
+
+/* ===== 滚动条 ===== */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -42,42 +49,140 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(192, 132, 252, 0.3);
+  background: rgba(139, 92, 246, 0.25);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(192, 132, 252, 0.5);
+  background: rgba(139, 92, 246, 0.4);
 }
 
 /* ===== 液态玻璃卡片 ===== */
 .glass {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(24px) saturate(200%);
   -webkit-backdrop-filter: blur(24px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-/* 卡片悬浮 */
-.card-hover {
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
-}
-.card-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px -8px rgba(139, 92, 246, 0.15);
+/* 暖米色玻璃卡片 — 参考 MiMo 的 #fcfaf8 暖调 */
+.glass-warm {
+  background: linear-gradient(135deg, rgba(250,247,242,0.55), rgba(255,255,255,0.4));
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* 渐变文字 — 淡雅紫蓝粉 */
+/* ===== 药丸形按钮 — 参考 MiMo ===== */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.4);
+  color: #1C1917;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 200ms ease;
+}
+
+.btn-pill:hover {
+  background: rgba(139,92,246,0.1);
+  border-color: rgba(139,92,246,0.2);
+  color: #7C3AED;
+  transform: translateY(-1px);
+}
+
+.btn-pill-primary {
+  background: #7C3AED;
+  color: white;
+  border-color: #7C3AED;
+}
+
+.btn-pill-primary:hover {
+  background: #6D28D9;
+  border-color: #6D28D9;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-pill-arrow {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  margin-left: -10px;
+  transition: opacity 200ms ease, margin-left 200ms ease;
+}
+
+.btn-pill:hover .btn-pill-arrow {
+  opacity: 1;
+  margin-left: 4px;
+}
+
+/* ===== 下划线导航 hover — 参考 MiMo ===== */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 2px;
+  height: 2px;
+  background: #7C3AED;
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ===== 打字机光标 ===== */
+.typewriter-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: -0.18em;
+  animation: caret-blink 0.75s step-end infinite;
+}
+
+.typewriter-caret.is-done {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+
+/* ===== 渐变文字 ===== */
 .gradient-text {
   background: linear-gradient(135deg, #A78BFA, #818CF8, #C084FC);
   -webkit-background-clip: text;
@@ -85,30 +190,46 @@ body {
   background-clip: text;
 }
 
-/* 区块标题 */
-.section-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1E1B4B;
-  letter-spacing: -0.3px;
+/* ===== 卡片悬浮 ===== */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(139, 92, 246, 0.1), 0 16px 48px -8px rgba(139, 92, 246, 0.08);
+  border-color: rgba(255,255,255,0.7);
 }
 
-/* 渐变背景 */
+/* Shimmer sweep on hover — desktop only */
+@media (hover: hover) {
+  .card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .card-hover:hover::before {
+    left: 120%;
+  }
+}
+
+/* ===== 渐变背景辅助 ===== */
 .gradient-soft {
-  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.15) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.35);
 }
 
-.gradient-hero {
-  background: linear-gradient(160deg, rgba(255,255,255,0.5) 0%, rgba(252,231,243,0.3) 35%, rgba(224,242,254,0.3) 70%, rgba(240,253,244,0.3) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.5);
-}
-
-/* 状态标签 */
+/* ===== 状态标签 ===== */
 .tag-filming {
   background: rgba(139, 92, 246, 0.1);
   color: #7C3AED;
@@ -126,7 +247,7 @@ body {
   color: #DB2777;
 }
 
-/* 日历有行程的日期 */
+/* ===== 日历有行程的日期 ===== */
 .cal-has-event {
   position: relative;
 }
@@ -142,7 +263,7 @@ body {
   background: #A78BFA;
 }
 
-/* 文本截断 */
+/* ===== 文本截断 ===== */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -150,13 +271,13 @@ body {
   overflow: hidden;
 }
 
-/* 选中态 */
+/* ===== 选中态 ===== */
 ::selection {
-  background: rgba(167, 139, 250, 0.3);
-  color: #1E1B4B;
+  background: rgba(167, 139, 250, 0.25);
+  color: #1C1917;
 }
 
-/* 手机端日历格子缩小 */
+/* ===== 手机端日历格子缩小 ===== */
 @media (max-width: 639px) {
   .cal-cell-mobile {
     min-height: 56px !important;
@@ -164,7 +285,57 @@ body {
   }
 }
 
-/* 减弱动画 */
+/* ===== Logo shimmer 呼吸动画 ===== */
+.logo-shimmer {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== 按钮 active 触觉反馈 ===== */
+.btn-pill:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* ===== 骨架屏 shimmer 替代 pulse ===== */
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: rgba(139,92,246,0.04);
+}
+
+.skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139,92,246,0.06), transparent);
+  animation: shimmer-sweep 1.8s ease-in-out infinite;
+}
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ===== Badge 呼吸脉冲 ===== */
+.badge-pulse {
+  animation: badge-breathe 2s ease-in-out infinite;
+}
+
+@keyframes badge-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ===== 减弱动画 ===== */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

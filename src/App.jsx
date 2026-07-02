@@ -1,12 +1,35 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import SchedulePage from './pages/SchedulePage'
 import NewsPage from './pages/NewsPage'
 import EventsPage from './pages/EventsPage'
 import TravelPage from './pages/TravelPage'
+import PageTransition from './components/ui/PageTransition'
 import { NetworkStatus } from './components/ui'
 import { useNetworkStatus } from './hooks'
+
+function AnimatedRoutes() {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [location.pathname])
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
+        <Route path="/schedule" element={<PageTransition><SchedulePage /></PageTransition>} />
+        <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
+        <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
+        <Route path="/travel" element={<PageTransition><TravelPage /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
+  )
+}
 
 export default function App() {
   const isOnline = useNetworkStatus()
@@ -14,28 +37,17 @@ export default function App() {
   return (
     <BrowserRouter basename="/star-chase-web">
       <div className="min-h-screen">
-        {/* 全局网络状态提示 */}
         <NetworkStatus isOnline={isOnline} />
-        
+
         <Navbar />
-        <main className="max-w-6xl mx-auto px-5 sm:px-8 py-6">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/schedule" element={<SchedulePage />} />
-            <Route path="/news" element={<NewsPage />} />
-            <Route path="/events" element={<EventsPage />} />
-            <Route path="/travel" element={<TravelPage />} />
-          </Routes>
+        <main className="max-w-5xl mx-auto px-5 sm:px-8 py-6">
+          <AnimatedRoutes />
         </main>
 
-        {/* Footer */}
-        <footer className="mt-10" style={{ borderTop: '1px solid rgba(255,255,255,0.4)' }}>
-          <div className="max-w-6xl mx-auto px-5 py-8 text-center">
-            <p className="text-[13px]" style={{ color: '#9CA3AF' }}>
-              嘉期如梦 — 你的爱豆行程助手
-            </p>
-            <p className="text-[13px] mt-1" style={{ color: '#D1D5DB' }}>
-              数据仅供参考，实际行程以官方发布为准
+        <footer className="mt-10" style={{ borderTop: '1px solid rgba(255,255,255,0.3)' }}>
+          <div className="max-w-5xl mx-auto px-5 py-6 text-center">
+            <p className="text-[12px]" style={{ color: '#A8A29E' }}>
+              嘉期如梦 · 你的爱豆行程助手 · 数据仅供参考，实际行程以官方发布为准
             </p>
           </div>
         </footer>

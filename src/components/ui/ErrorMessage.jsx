@@ -138,14 +138,16 @@ export function EmptyState({
   className = '',
 }) {
   return (
-    <div className={`bg-white rounded-2xl py-16 text-center border border-[#EDF0F5] ${className}`}>
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="font-semibold text-[#2D3748] text-[16px] mb-2">{title}</h3>
-      <p className="text-[#8E99A8] text-[14px] mb-6">{message}</p>
+    <div className={`glass rounded-2xl py-14 text-center ${className}`}>
+      <div className="flex justify-center mb-4">
+        {typeof icon === 'string' ? <span className="text-4xl">{icon}</span> : icon}
+      </div>
+      <h3 className="font-semibold text-[16px] mb-1.5" style={{ color: '#1C1917' }}>{title}</h3>
+      <p className="text-[14px]" style={{ color: '#A8A29E' }}>{message}</p>
       {action && onAction && (
         <button
           onClick={onAction}
-          className="bg-[#5B8DEF] text-white text-[14px] font-medium px-5 py-2.5 rounded-xl hover:bg-[#4A7DE0] transition-colors"
+          className="btn-pill-primary btn-pill mt-5"
         >
           {action}
         </button>
@@ -160,7 +162,7 @@ export function NetworkStatus({ isOnline = true, className = '' }) {
 
   return (
     <div className={`bg-[#FFFBEB] border-b border-[#FDE68A] px-4 py-2 ${className}`}>
-      <div className="max-w-6xl mx-auto flex items-center justify-center gap-2 text-[13px] text-[#92400E]">
+      <div className="max-w-5xl mx-auto flex items-center justify-center gap-2 text-[13px] text-[#92400E]">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
         </svg>

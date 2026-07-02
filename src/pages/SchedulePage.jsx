@@ -5,8 +5,8 @@ export default function SchedulePage() {
   return (
     <div>
       <div className="mb-5">
-        <h1 className="text-xl font-semibold" style={{ color: '#1E1B4B' }}>行程日历</h1>
-        <p className="text-[14px] mt-0.5" style={{ color: '#6B7280' }}>查看任嘉伦的全部行程安排，点击日期查看详情</p>
+        <h1 className="text-xl font-semibold font-serif-display" style={{ color: '#1C1917' }}>行程日历</h1>
+        <p className="text-[14px] mt-0.5" style={{ color: '#78716C' }}>查看任嘉伦的全部行程安排，点击日期查看详情</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">

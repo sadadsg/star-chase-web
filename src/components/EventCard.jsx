@@ -38,7 +38,7 @@ export default function EventCard({ limit }) {
     return (
       <div className="grid gap-3 sm:grid-cols-2">
         {[1, 2].map(i => (
-          <div key={i} className="glass rounded-3xl overflow-hidden animate-pulse">
+          <div key={i} className="glass rounded-3xl overflow-hidden skeleton-shimmer">
             <div className="aspect-video" style={{ background: 'rgba(139,92,246,0.05)' }} />
             <div className="p-4 space-y-3">
               <div className="h-4 rounded-lg" style={{ background: 'rgba(139,92,246,0.06)', width: '75%' }} />
@@ -53,7 +53,11 @@ export default function EventCard({ limit }) {
   if (events.length === 0) {
     return (
       <EmptyState
-        icon="🎫"
+        icon={
+          <svg className="w-10 h-10" style={{ color: '#D6D3D1' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+          </svg>
+        }
         title="暂无活动"
         message="当前没有相关活动信息"
       />
@@ -66,14 +70,14 @@ export default function EventCard({ limit }) {
         const ss = statusStyles[event.status] || statusStyles.onsale
         return (
           <div key={event.id} className="glass rounded-3xl overflow-hidden card-hover">
-            <div className="aspect-video relative overflow-hidden">
+            <div className="aspect-video relative overflow-hidden group">
               <img
                 src={event.cover}
                 alt={event.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-300 will-change-transform"
                 loading="lazy"
               />
-              <span className="absolute top-2.5 right-2.5 px-3 py-1 rounded-xl text-[13px] font-medium backdrop-blur-sm"
+              <span className={`absolute top-2.5 right-2.5 px-3 py-1 rounded-xl text-[13px] font-medium backdrop-blur-sm ${event.status === 'hot' ? 'badge-pulse' : ''}`}
                 style={{ background: ss.bg, color: ss.color }}>
                 {event.statusText}
               </span>
@@ -103,14 +107,13 @@ export default function EventCard({ limit }) {
                   href={event.newsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-white text-[14px] font-medium px-4 py-2.5 rounded-xl transition-colors no-underline text-center"
-                  style={{ background: '#7C3AED' }}
+                  className="btn-pill-primary btn-pill w-full text-center"
                 >
                   查看来源
                 </a>
               ) : (
-                <span className="block w-full text-[14px] font-medium px-4 py-2.5 rounded-xl text-center"
-                  style={{ background: 'rgba(107,114,128,0.06)', color: '#9CA3AF' }}>
+                <span className="block w-full text-[13px] font-medium px-4 py-2 rounded-full text-center cursor-default"
+                  style={{ background: 'rgba(168,162,158,0.08)', color: '#A8A29E', border: '1px solid rgba(255,255,255,0.3)' }}>
                   暂无链接
                 </span>
               )}

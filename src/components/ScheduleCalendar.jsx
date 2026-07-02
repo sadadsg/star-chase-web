@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { SkeletonCalendar } from './ui'
 import { fetchSchedule } from '../api/dataApi'
 
@@ -6,10 +7,10 @@ const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
 const MONTHS = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
 
 const typeColor = {
-  filming: { bg: 'rgba(139,92,246,0.1)', text: 'text-[#7C3AED]', dot: 'bg-[#7C3AED]' },
-  variety: { bg: 'rgba(16,185,129,0.1)', text: 'text-[#059669]', dot: 'bg-[#059669]' },
-  business: { bg: 'rgba(245,158,11,0.1)', text: 'text-[#D97706]', dot: 'bg-[#D97706]' },
-  fanmeeting: { bg: 'rgba(236,72,153,0.1)', text: 'text-[#DB2777]', dot: 'bg-[#DB2777]' },
+  filming: { bg: 'rgba(139,92,246,0.1)', text: 'text-[#7C3AED]', dot: 'bg-[#7C3AED]', border: 'border-[rgba(139,92,246,0.2)]' },
+  variety: { bg: 'rgba(16,185,129,0.1)', text: 'text-[#059669]', dot: 'bg-[#059669]', border: 'border-[rgba(16,185,129,0.2)]' },
+  business: { bg: 'rgba(245,158,11,0.1)', text: 'text-[#D97706]', dot: 'bg-[#D97706]', border: 'border-[rgba(245,158,11,0.2)]' },
+  fanmeeting: { bg: 'rgba(236,72,153,0.1)', text: 'text-[#DB2777]', dot: 'bg-[#DB2777]', border: 'border-[rgba(236,72,153,0.2)]' },
 }
 
 function shortTitle(title) {
@@ -27,6 +28,7 @@ export default function ScheduleCalendar() {
   const [selectedDate, setSelectedDate] = useState(null)
   const [schedule, setSchedule] = useState([])
   const [loading, setLoading] = useState(true)
+  const direction = useRef(1) // 1 = forward, -1 = backward
 
   // 获取行程数据
   useEffect(() => {
@@ -88,12 +90,14 @@ export default function ScheduleCalendar() {
   }
 
   const prevMonth = () => {
+    direction.current = -1
     if (month === 1) { setYear(year - 1); setMonth(12) }
     else setMonth(month - 1)
     setSelectedDate(null)
   }
 
   const nextMonth = () => {
+    direction.current = 1
     if (month === 12) { setYear(year + 1); setMonth(1) }
     else setMonth(month + 1)
     setSelectedDate(null)
@@ -135,7 +139,7 @@ export default function ScheduleCalendar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <h3 className="text-[15px] sm:text-lg font-semibold text-[#2D3748]">{year}年 {MONTHS[month - 1]}</h3>
+        <h3 className="text-[15px] sm:text-lg font-semibold font-serif-display" style={{ color: '#1C1917' }}>{year}年 {MONTHS[month - 1]}</h3>
         <button onClick={nextMonth} className="p-1.5 sm:p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -170,6 +174,14 @@ export default function ScheduleCalendar() {
       </div>
 
       {/* Calendar Grid */}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={`${year}-${month}`}
+          initial={{ opacity: 0, x: direction.current * 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: direction.current * -30 }}
+          transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+        >
       <div className="grid grid-cols-7 gap-px bg-[#EDF0F5] rounded-xl overflow-hidden">
         {calendarDays.map((day, i) => {
           const events = getDayEvents(day)
@@ -185,16 +197,22 @@ export default function ScheduleCalendar() {
               className={`
                 min-h-[56px] sm:min-h-[80px] p-1 sm:p-1.5 text-left transition-all relative
                 ${!day ? 'bg-[#FAFBFC] cursor-default' : 'bg-white cursor-pointer hover:bg-[#FAFBFC]'}
-                ${isSelected ? 'ring-2 ring-inset ring-[#5B8DEF]' : ''}
               `}
             >
               {day && (
                 <>
-                  <div className="flex items-center justify-between mb-0.5 sm:mb-1">
+                  {isSelected && (
+                    <motion.span
+                      layoutId="calendar-selected-ring"
+                      className="absolute inset-0.5 rounded-lg ring-2 ring-[#7C3AED]"
+                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                  <div className="flex items-center justify-between mb-0.5 sm:mb-1 relative z-10">
                     <span className={`
                       text-[12px] sm:text-[14px] leading-none
-                      ${todayFlag ? 'bg-[#5B8DEF] text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold' : 'text-[#5A6577]'}
-                      ${isSelected && !todayFlag ? 'text-[#5B8DEF] font-bold' : ''}
+                      ${todayFlag ? 'bg-[#7C3AED] text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold' : 'text-[#5A6577]'}
+                      ${isSelected && !todayFlag ? 'text-[#7C3AED] font-bold' : ''}
                     `}>
                       {day}
                     </span>
@@ -219,6 +237,8 @@ export default function ScheduleCalendar() {
           )
         })}
       </div>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Legend */}
       <div className="flex flex-wrap gap-3 sm:gap-4 mt-2 sm:mt-3">
@@ -236,8 +256,15 @@ export default function ScheduleCalendar() {
       </div>
 
       {/* Selected Date Schedule Detail */}
-      {selectedDate && selectedSchedule.length > 0 && (
-        <div className="mt-4 space-y-2">
+      <AnimatePresence>
+        {selectedDate && selectedSchedule.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-4 space-y-2 overflow-hidden"
+          >
           <h4 className="text-[14px] font-medium text-[#8E99A8]">{selectedDate} 的行程</h4>
           {selectedSchedule.map(s => {
             const c = typeColor[s.type] || typeColor.business
@@ -248,8 +275,8 @@ export default function ScheduleCalendar() {
                   <span className={`text-[13px] font-medium ${c.text}`}>{s.typeName}</span>
                   <span className="text-[13px] text-[#B0BEC5] ml-auto">{s.time}</span>
                 </div>
-                <h4 className="font-semibold text-[#2D3748] text-[16px]">{s.title}</h4>
-                <p className="text-[14px] mt-1 text-[#5A6577] leading-relaxed">{s.description}</p>
+                <h4 className="font-semibold text-[16px]" style={{ color: '#1C1917' }}>{s.title}</h4>
+                <p className="text-[14px] mt-1 leading-relaxed" style={{ color: '#57534E' }}>{s.description}</p>
                 <div className="flex items-center justify-between mt-2">
                   <div className="text-[13px] text-[#8E99A8]">{s.location}</div>
                   {s.newsUrl && s.newsUrl !== '#' && (
@@ -257,7 +284,8 @@ export default function ScheduleCalendar() {
                       href={s.newsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[13px] font-medium text-[#6366F1] hover:text-[#4F46E5] bg-[#EEF2FF] hover:bg-[#E0E7FF] px-3 py-1.5 rounded-lg transition-colors no-underline"
+                      className="text-[13px] font-medium px-3 py-1.5 rounded-full transition-colors no-underline"
+                      style={{ color: '#7C3AED', background: 'rgba(139,92,246,0.08)' }}
                     >
                       查看来源
                     </a>
@@ -266,11 +294,12 @@ export default function ScheduleCalendar() {
               </div>
             )
           })}
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {selectedDate && selectedSchedule.length === 0 && (
-        <div className="mt-4 text-center py-6 text-[#B0BEC5] text-[14px]">
+        <div className="mt-4 text-center py-6 text-[14px]" style={{ color: '#A8A29E' }}>
           这天暂无行程安排
         </div>
       )}

@@ -1,4 +1,5 @@
-const BASE_URL = import.meta.env.VITE_API_BASE || 'https://sadadsg.github.io/star-chase-web/api'
+const BASE_URL = import.meta.env.VITE_API_BASE
+  || (import.meta.env.PROD ? '/star-chase-web/api' : 'http://localhost:3001/api')
 
 export async function fetchSchedule() {
   try {
