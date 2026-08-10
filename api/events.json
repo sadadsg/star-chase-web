@@ -3,15 +3,15 @@
     {
       "id": 10000,
       "date": "2026-08-10",
-      "type": "fanmeeting",
-      "typeName": "演出活动",
-      "title": "任嘉伦、黄子弘凡、何宣林……星星火火音乐节全阵容集结完毕,本...",
-      "description": "任嘉伦、黄子弘凡、何宣林……星星火火音乐节全阵容集结完毕,本...",
+      "type": "business",
+      "typeName": "商务活动",
+      "title": "封面故事|任嘉伦:向光而行",
+      "description": "封面故事|任嘉伦:向光而行",
       "location": "待定",
       "city": "待定",
       "time": "全天",
-      "newsUrl": "https://baijiahao.baidu.com/s?id=1872673446241905158&wfr=spider&for=pc",
-      "name": "任嘉伦、黄子弘凡、何宣林……星星火火音乐节全阵容集结完毕,本...",
+      "newsUrl": "http://baijiahao.baidu.com/s?id=1746436317260777901&wfr=spider&for=pc",
+      "name": "封面故事|任嘉伦:向光而行",
       "venue": "待定",
       "status": "onsale",
       "statusText": "查看来源",
@@ -19,5 +19,5 @@
     }
   ],
   "total": 1,
-  "updatedAt": "2026-08-10T10:58:45.967Z"
+  "updatedAt": "2026-08-10T11:46:55.725Z"
 }
