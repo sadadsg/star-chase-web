@@ -1,23 +1,5 @@
 {
-  "data": [
-    {
-      "id": 10000,
-      "date": "2026-08-17",
-      "type": "business",
-      "typeName": "商务活动",
-      "title": "封面故事|任嘉伦:向光而行",
-      "description": "封面故事|任嘉伦:向光而行",
-      "location": "待定",
-      "city": "待定",
-      "time": "全天",
-      "newsUrl": "http://baijiahao.baidu.com/s?id=1746436317260777901&wfr=spider&for=pc",
-      "name": "封面故事|任嘉伦:向光而行",
-      "venue": "待定",
-      "status": "onsale",
-      "statusText": "查看来源",
-      "cover": "https://picsum.photos/seed/event10000/600/400"
-    }
-  ],
-  "total": 1,
-  "updatedAt": "2026-08-17T11:16:59.452Z"
+  "data": [],
+  "total": 0,
+  "updatedAt": "2026-08-17T12:23:28.010Z"
 }
