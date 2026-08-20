@@ -1,5 +1,18 @@
 {
-  "data": [],
-  "total": 0,
-  "updatedAt": "2026-08-20T13:38:31.676Z"
+  "data": [
+    {
+      "id": 10000,
+      "date": "2026-08-20",
+      "type": "business",
+      "typeName": "商务活动",
+      "title": "封面故事|任嘉伦:向光而行",
+      "description": "封面故事|任嘉伦:向光而行",
+      "location": "待定",
+      "city": "待定",
+      "time": "全天",
+      "newsUrl": "http://baijiahao.baidu.com/s?id=1746436317260777901&wfr=spider&for=pc"
+    }
+  ],
+  "total": 1,
+  "updatedAt": "2026-08-20T14:25:43.738Z"
 }
