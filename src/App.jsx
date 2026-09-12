@@ -45,19 +45,19 @@ const footerNav = [
 function Footer() {
   return (
     <footer style={{ background: '#f5f5f7', borderTop: '1px solid #d2d2d7' }}>
-      <div className="container-apple py-6 sm:py-8">
-        <div className="flex flex-wrap gap-x-6 gap-y-2 pb-4" style={{ borderBottom: '1px solid #d2d2d7' }}>
+      <div className="container-apple py-8 sm:py-10">
+        <div className="flex flex-wrap gap-x-7 gap-y-2.5 pb-5" style={{ borderBottom: '1px solid #d2d2d7' }}>
           {footerNav.map(item => (
             <Link key={item.path} to={item.path} className="text-[12px] no-underline" style={{ color: '#424245' }}>
               {item.label}
             </Link>
           ))}
         </div>
-        <div className="pt-4 space-y-1.5">
-          <p className="text-[12px] m-0" style={{ color: '#86868b' }}>
+        <div className="pt-5 space-y-2.5">
+          <p className="text-[12px] leading-relaxed m-0" style={{ color: '#86868b' }}>
             数据来源：任嘉伦工作室官方微博、百度资讯。行程仅供参考，实际安排以官方发布为准。
           </p>
-          <p className="text-[12px] m-0" style={{ color: '#86868b' }}>
+          <p className="text-[12px] leading-relaxed m-0" style={{ color: '#86868b' }}>
             嘉期如梦 · 非官方粉丝项目 · 2026
           </p>
         </div>

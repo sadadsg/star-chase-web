@@ -82,7 +82,7 @@ function Hero() {
   )
 }
 
-/* ===== 分段二：浅灰底 · 近期行程（分组行 + 就近匹配 + 行级 stagger） ===== */
+/* ===== 分段三：白底 · 近期行程（分组行 + 就近匹配 + 行级 stagger） ===== */
 function UpcomingSchedule() {
   const [myCity] = useLocalStorage('my-city')
   const [schedule, setSchedule] = useState([])
@@ -113,7 +113,7 @@ function UpcomingSchedule() {
   const matchedCount = myCity ? schedule.filter(s => s.city === myCity).length : 0
 
   return (
-    <section style={{ background: '#f5f5f7', padding: '64px 0' }}>
+    <section style={{ background: '#ffffff', padding: '64px 0' }}>
       <div className="container-apple">
         <AnimateOnScroll y={10} duration={0.45}>
           <div className="flex items-baseline justify-between gap-4 flex-wrap mb-3">
@@ -227,10 +227,10 @@ function UpcomingSchedule() {
   )
 }
 
-/* ===== 分段三：白底 · 最新资讯 ===== */
+/* ===== 分段二：浅灰底 · 最新资讯 ===== */
 function LatestNews() {
   return (
-    <section style={{ padding: '64px 0' }}>
+    <section style={{ background: '#f5f5f7', padding: '64px 0' }}>
       <div className="container-apple">
         <AnimateOnScroll y={10} duration={0.45}>
           <div className="flex items-baseline justify-between mb-3">
@@ -293,8 +293,8 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
-      <UpcomingSchedule />
       <LatestNews />
+      <UpcomingSchedule />
       <EventsAndTravel />
       <ArtistIntroSection />
     </div>
