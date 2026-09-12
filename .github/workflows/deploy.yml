@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 * * * *'  # 每小时
   workflow_dispatch:
+    inputs:
+      with_glm:
+        description: '本次运行是否启用 GLM 抽取（需已配置 ZHIPU_API_KEY secret）'
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -23,8 +28,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Fetch data from Baidu hot search
+      # 1. 抓工作室微博镜像（免登录）→ data/weibo-posts.json
+      - name: Fetch studio Weibo (sina mirror)
+        run: node scripts/fetch-weibo.cjs
+
+      # 2. 行程结构化抽取（配置 ZHIPU_API_KEY 后启用 GLM，否则保守降级）
+      - name: Extract schedule from studio posts
+        run: node scripts/extract-schedule.cjs
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+
+      # 3. 资讯抓取汇总 + 派生活动 → news.json / events.json
+      - name: Fetch news
         run: node scripts/fetch-data.cjs
+
+      # 4. 数据管道单测（fixture 驱动，不出网）
+      - name: Run data pipeline tests
+        run: node --test scripts/test/*.test.cjs
 
       - name: Build frontend
         run: npm run build

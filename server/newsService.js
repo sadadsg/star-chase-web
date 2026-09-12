@@ -1,8 +1,12 @@
 
 
-// 严格的艺人关键词 - 必须包含这些词才算艺人新闻
-const ARTIST_KEYWORDS = ['任嘉伦', 'Allen Ren', '任国超', '佳偶天成', '陆千乔', '暮色心约', '风与潮', '37·单枪匹马', '无忧渡']
-const DEFAULT_UID = '6492637583'
+import config from '../scripts/artists.config.cjs'
+
+// 关键词/类型/城市统一来自 scripts/artists.config.cjs（与 CI 抓取脚本共用单一配置源）
+const ARTIST_KEYWORDS = config.artists.flatMap(a => a.keywords)
+const SCHEDULE_KEYWORDS = config.scheduleKeywords
+const CITIES = config.cities
+const DEFAULT_UID = config.artists[0].weibo.uid
 
 // 缓存
 const cache = {
@@ -97,21 +101,8 @@ async function fetchBaiduHot() {
 
 // ========== 从新闻提取行程 ==========
 
-// 行程关键词
-const SCHEDULE_KEYWORDS = {
-  filming: ['开机', '杀青', '拍摄', '剧组', '新剧', '主演', '剧集'],
-  variety: ['综艺', '录制', '节目', '晚会', '春晚'],
-  business: ['品牌', '代言', '活动', '发布会', '时装周', '秀场', '直播'],
-  fanmeeting: ['演唱会', '音乐节', '见面会', '巡演', '签售'],
-}
-
-// 城市列表
-const CITIES = [
-  '北京', '上海', '广州', '深圳', '成都', '杭州', '南京', '武汉',
-  '重庆', '西安', '长沙', '天津', '苏州', '青岛', '大连', '郑州',
-  '昆明', '厦门', '福州', '合肥', '大理', '横店', '金华', '青岛',
-  '贵州', '泸州', '嘉善', '阜阳', '厦门', '澳门',
-]
+// 城市列表（含去重，config.cities 为准）
+const CITY_LIST = [...new Set(CITIES)]
 
 // 从新闻中提取行程（只提取艺人相关新闻）
 function extractScheduleFromNews(newsItems) {
@@ -141,7 +132,7 @@ function extractScheduleFromNews(newsItems) {
 
     // 检测城市
     let city = '待定'
-    for (const c of CITIES) {
+    for (const c of CITY_LIST) {
       if (text.includes(c)) {
         city = c
         break

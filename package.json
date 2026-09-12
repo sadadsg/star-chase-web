@@ -8,6 +8,10 @@
     "server": "node server/index.js",
     "build": "vite build",
     "lint": "eslint .",
+    "test": "node --test scripts/test/*.test.cjs",
+    "data:weibo": "node scripts/fetch-weibo.cjs",
+    "data:extract": "node scripts/extract-schedule.cjs",
+    "data:news": "node scripts/fetch-data.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
