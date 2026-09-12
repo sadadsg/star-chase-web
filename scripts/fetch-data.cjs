@@ -119,10 +119,10 @@ function studioPostsAsNews() {
   for (const artist of config.artists) {
     const posts = (bundle.artists && bundle.artists[artist.id] && bundle.artists[artist.id].recentPosts) || []
     for (const p of posts) {
-      const title = cleanTitle(p.text) || '工作室微博更新'
+      const clean = cleanTitle(p.text)
       news.push({
-        title: title.slice(0, 60),
-        summary: p.text.slice(0, 140),
+        title: (clean || '工作室微博更新').slice(0, 60),
+        summary: (clean || p.text).slice(0, 140),
         source: artist.weibo.accountName,
         url: p.detailUrl,
         cover: '',

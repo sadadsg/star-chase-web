@@ -172,6 +172,13 @@ v1 从百度热搜/资讯标题里匹配「开机/杀青/代言」等关键词�
 
 `scripts/artists.config.cjs`：艺人关键词、工作室 UID、行程/类型关键词、城市表、抽取参数。抓取脚本与 dev server 共用；`worker/`、`scf-deploy/` 作为自包含部署产物有意保持独立。
 
+#### 订阅源与 PWA（v2.1）
+
+- **ICS 日历订阅**：`scripts/generate-feeds.cjs` 从 schedule.json 生成 `api/schedule.ics`（RFC 5545：CRLF、≤75 字节折行、全天事件 DTEND 排他、UID 稳定可更新、北京时间显式 +08:00 解析）。行程页「订阅到系统日历」按钮走 `webcal://` 协议，iPhone/Mac/Google 日历一键订阅，CI 每小时自动再生成。
+- **RSS 订阅**：同脚本生成 `api/rss.xml`（RSS 2.0，30 条，XML 转义），资讯页头部入口。
+- **购票渠道深链**：活动卡片内置大麦/秀动搜索深链（实测可用 200；猫眼 piao 站超时弃用）。不抓票务 API——反爬重且易碎，深链零维护且不产生假状态。
+- **PWA**：`manifest.webmanifest` + 双尺寸 PNG 图标（浏览器渲染生成，蓝底白「嘉」）+ `sw.js`（页面导航网络优先、`/api/*` 数据 stale-while-revalidate、带 hash 的 assets 缓存优先），生产环境注册。
+
 #### dataApi.js 静态接口（未变）
 
 ```js
@@ -305,6 +312,7 @@ jobs:
       3. node scripts/fetch-weibo.cjs      # 工作室微博镜像抓取
       4. node scripts/extract-schedule.cjs # GLM 行程抽取（secrets.ZHIPU_API_KEY，缺省降级）
       5. node scripts/fetch-data.cjs       # 资讯汇总 + 派生活动
+      5.5 node scripts/generate-feeds.cjs  # schedule.ics + rss.xml
       6. node --test scripts/test/*.test.cjs
       7. npm run build
       8. mkdir -p dist/api && cp data/*.json dist/api/
@@ -500,13 +508,15 @@ export const API_BASE = import.meta.env.VITE_API_BASE
 
 - [ ] GLM 视觉抽取实测调优（需配置 `ZHIPU_API_KEY` 后观察「月度嘉书」抽取质量）
 - [ ] GitHub Actions 美区 IP 抓 sina 镜像页的连通性验证（本地已通，CI 待首次运行确认）
-- [ ] ICS 日历订阅（schedule.json → webcal，粉丝一键订阅系统日历）
+- [x] ~~ICS 日历订阅~~（v2.1 已完成：`api/schedule.ics` + webcal 一键订阅）
+- [x] ~~RSS 订阅~~（v2.1 已完成：`api/rss.xml`）
+- [x] ~~PWA~~（v2.1 已完成：manifest + SW 离线缓存）
+- [ ] 票务平台真实数据接入（深链已上线；API 抓取需评估反爬与维护成本）
 - [ ] 出行推荐接入真实航班/高铁查询 API
 - [ ] 多艺人支持（配置已就绪，扩展 `artists.config.cjs` 即可）
-- [ ] 演出票务平台（大麦/猫眼）结构化接入
 - [ ] 用户收藏/提醒功能
 - [ ] 暗色模式（用户曾回退，可重新评估）
 
 ---
 
-*文档版本：v2.0 | 最后更新：2026-09-12 | v2 变更：行程源重构（工作室微博+GLM 抽取）、UI 重构（Apple 式极简分段布局）、数据管道 TDD 化*
+*文档版本：v2.1 | 最后更新：2026-09-12 | v2 变更：行程源重构（工作室微博+GLM 抽取）、UI 重构（Apple 式极简分段布局）、数据管道 TDD 化；v2.1 变更：ICS/RSS 订阅、购票深链、PWA*

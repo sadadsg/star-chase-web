@@ -12,6 +12,7 @@
     "data:weibo": "node scripts/fetch-weibo.cjs",
     "data:extract": "node scripts/extract-schedule.cjs",
     "data:news": "node scripts/fetch-data.cjs",
+    "data:feeds": "node scripts/generate-feeds.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

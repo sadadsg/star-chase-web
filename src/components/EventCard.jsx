@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import { EmptyState } from './ui'
 import { fetchEvents } from '../api/dataApi'
 
+const CHANNELS = [
+  { name: '大麦购票', url: 'https://search.damai.cn/search.html?keyword=%E4%BB%BB%E5%98%89%E4%BC%A6' },
+  { name: '秀动搜索', url: 'https://www.showstart.com/search?keyword=%E4%BB%BB%E5%98%89%E4%BC%A6' },
+]
+
 export default function EventCard({ limit }) {
   const [events, setEvents] = useState([])
   const [loading, setLoading] = useState(true)
@@ -61,6 +66,13 @@ export default function EventCard({ limit }) {
               <p className="text-[13px] m-0" style={{ color: '#86868b' }}>
                 {event.date} · {event.location || event.city}
               </p>
+              <div className="flex gap-4 mt-2">
+                {CHANNELS.map(c => (
+                  <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="link-apple text-[13px]">
+                    {c.name} <span className="chevron">›</span>
+                  </a>
+                ))}
+              </div>
             </div>
             {event.newsUrl && event.newsUrl !== '#' ? (
               <a

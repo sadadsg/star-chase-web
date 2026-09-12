@@ -42,6 +42,10 @@ jobs:
       - name: Fetch news
         run: node scripts/fetch-data.cjs
 
+      # 3.5 生成订阅源 → schedule.ics / rss.xml
+      - name: Generate ICS calendar & RSS feeds
+        run: node scripts/generate-feeds.cjs
+
       # 4. 数据管道单测（fixture 驱动，不出网）
       - name: Run data pipeline tests
         run: node --test scripts/test/*.test.cjs
