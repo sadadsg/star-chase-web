@@ -98,20 +98,26 @@ export default function NewsFeed({ limit }) {
           />
         </div>
       )}
-      <div className="p-4 sm:p-5">
+      <div className="p-4 sm:p-5 flex flex-col h-full">
         <p className="text-[12px] font-medium m-0 mb-1.5" style={{ color: '#86868b' }}>
           {news.category || '资讯'} · {news.source}
         </p>
-        <h3 className="font-semibold text-[16px] leading-snug mb-2 line-clamp-2 m-0 transition-colors group-hover:text-[#0066cc]"
-          style={{ color: '#1d1d1f' }}>
+        {/* 标题/摘要均锁 2 行并预留 2 行高度，日期行贴底，保证同行卡片等高 */}
+        <h3
+          className="font-semibold text-[16px] leading-snug mb-2 line-clamp-2 m-0 transition-colors group-hover:text-[#0066cc]"
+          style={{ color: '#1d1d1f', minHeight: '2.75em' }}
+        >
           {news.title}
         </h3>
         {news.summary && news.summary !== news.title && (
-          <p className="text-[14px] leading-relaxed line-clamp-2 mb-3" style={{ color: '#6e6e73' }}>
+          <p
+            className="text-[14px] leading-relaxed line-clamp-2 mb-3 m-0"
+            style={{ color: '#6e6e73', minHeight: '3.25em' }}
+          >
             {news.summary}
           </p>
         )}
-        <p className="text-[13px] m-0" style={{ color: '#86868b' }}>
+        <p className="text-[13px] m-0 mt-auto" style={{ color: '#86868b' }}>
           {(news.time || news.date || '').slice(0, 10)}
         </p>
       </div>
@@ -122,12 +128,18 @@ export default function NewsFeed({ limit }) {
     return n.url && n.url !== '#' && !n.url.startsWith('/')
   }
 
+  // 资讯页（无 limit）双列拉宽行长至 ~33 字；首页摘要区保持三列紧凑
+  const gridCls = limit
+    ? 'grid gap-3 sm:grid-cols-2 lg:grid-cols-3'
+    : 'grid gap-3 sm:grid-cols-2'
+
   const renderCards = (items) => (
     <AnimatePresence mode="popLayout" initial={false}>
       {items.map((news, idx) => (
         <motion.div
           key={news.id}
           layout
+          className="h-full"
           variants={cardMotion}
           initial="initial"
           animate="animate"
@@ -182,7 +194,7 @@ export default function NewsFeed({ limit }) {
         {loading ? (
           <motion.div
             key="skeleton"
-            className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+            className={gridCls}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
@@ -201,7 +213,7 @@ export default function NewsFeed({ limit }) {
             <p className="text-[14px] m-0" style={{ color: '#86868b' }}>资讯来自工作室微博与百度资讯，更新后自动展示</p>
           </motion.div>
         ) : limit ? (
-          <motion.div key="limited" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" {...gridPresence}>
+          <motion.div key="limited" className={gridCls} {...gridPresence}>
             {renderCards(displayNews)}
           </motion.div>
         ) : groupedByMonth ? (
@@ -215,14 +227,14 @@ export default function NewsFeed({ limit }) {
                   <span className="text-[14px]" style={{ color: '#86868b' }}>{group.items.length} 条</span>
                   <div className="flex-1 h-px" style={{ background: '#d2d2d7' }} />
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <div className={gridCls}>
                   {renderCards(group.items)}
                 </div>
               </section>
             ))}
           </motion.div>
         ) : (
-          <motion.div key="flat" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" {...gridPresence}>
+          <motion.div key="flat" className={gridCls} {...gridPresence}>
             {renderCards(displayNews)}
           </motion.div>
         )}

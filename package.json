@@ -14,6 +14,7 @@
     "data:news": "node scripts/fetch-data.cjs",
     "data:feeds": "node scripts/generate-feeds.cjs",
     "data:notify": "node scripts/notify.cjs",
+    "stage": "mkdir -p dist/api && cp data/*.json dist/api/ && cp data/schedule.ics data/rss.xml dist/api/",
     "preview": "vite preview"
   },
   "dependencies": {

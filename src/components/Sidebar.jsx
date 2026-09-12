@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { artistInfo } from '../data/rjlData'
 import { EASE_OUT_EXPO } from '../lib/motion'
 
+// 生日 ISO → 本地化「1989 年 4 月 11 日」
+function localizeDate(iso) {
+  const m = typeof iso === 'string' && iso.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)
+  return m ? `${m[1]} 年 ${+m[2]} 月 ${+m[3]} 日` : iso
+}
+
 const hairline = '1px solid #d2d2d7'
 
 // Apple 式规格卡：白底、发丝线分区、系统排版
@@ -30,7 +36,7 @@ export default function Sidebar() {
 
         <div style={{ borderTop: hairline }}>
           {[
-            ['生日', artistInfo.birthday],
+            ['生日', localizeDate(artistInfo.birthday)],
             ['星座', artistInfo.constellation],
             ['出生地', artistInfo.birthplace],
             ['身高', artistInfo.height],
@@ -40,8 +46,8 @@ export default function Sidebar() {
           ].filter(([, v]) => v).map(([label, value], i, arr) => (
             <div key={label} className="flex justify-between py-2.5 text-[14px]"
               style={{ borderBottom: i < arr.length - 1 ? '1px solid #f0f0f2' : 'none' }}>
-              <span style={{ color: '#86868b' }}>{label}</span>
-              <span className="text-right" style={{ color: '#1d1d1f' }}>{value}</span>
+              <span className="flex-shrink-0 whitespace-nowrap" style={{ color: '#86868b' }}>{label}</span>
+              <span className="text-right ml-4" style={{ color: '#1d1d1f' }}>{value}</span>
             </div>
           ))}
         </div>
