@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SkeletonCalendar } from './ui'
 import { fetchSchedule } from '../api/dataApi'
@@ -6,15 +6,16 @@ import { fetchSchedule } from '../api/dataApi'
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
 const MONTHS = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
 
+// 降饱和类型色（与全局设计令牌一致）
 const typeColor = {
-  filming: { bg: 'rgba(139,92,246,0.1)', text: 'text-[#7C3AED]', dot: 'bg-[#7C3AED]', border: 'border-[rgba(139,92,246,0.2)]' },
-  variety: { bg: 'rgba(16,185,129,0.1)', text: 'text-[#059669]', dot: 'bg-[#059669]', border: 'border-[rgba(16,185,129,0.2)]' },
-  business: { bg: 'rgba(245,158,11,0.1)', text: 'text-[#D97706]', dot: 'bg-[#D97706]', border: 'border-[rgba(245,158,11,0.2)]' },
-  fanmeeting: { bg: 'rgba(236,72,153,0.1)', text: 'text-[#DB2777]', dot: 'bg-[#DB2777]', border: 'border-[rgba(236,72,153,0.2)]' },
+  filming: { bg: 'rgba(88,86,214,0.08)', text: '#5856d6', dot: '#5856d6' },
+  variety: { bg: 'rgba(36,138,61,0.08)', text: '#248a3d', dot: '#248a3d' },
+  business: { bg: 'rgba(180,83,9,0.08)', text: '#b45309', dot: '#b45309' },
+  fanmeeting: { bg: 'rgba(214,51,108,0.08)', text: '#d6336c', dot: '#d6336c' },
 }
 
 function shortTitle(title) {
-  const cleaned = title
+  const cleaned = (title || '')
     .replace(/^《[^》]+》/, '')
     .replace(/^「[^」]+」/, '')
   if (cleaned.length <= 6) return cleaned
@@ -28,17 +29,15 @@ export default function ScheduleCalendar() {
   const [selectedDate, setSelectedDate] = useState(null)
   const [schedule, setSchedule] = useState([])
   const [loading, setLoading] = useState(true)
-  const direction = useRef(1) // 1 = forward, -1 = backward
 
-  // 获取行程数据
   useEffect(() => {
     let cancelled = false
-    
+
     async function loadData() {
       try {
         setLoading(true)
         const result = await fetchSchedule()
-        
+
         if (!cancelled) {
           setSchedule(result.data || [])
           setLoading(false)
@@ -51,23 +50,20 @@ export default function ScheduleCalendar() {
         }
       }
     }
-    
+
     loadData()
     return () => { cancelled = true }
   }, [])
 
-  // 当前月份的行程
   const monthSchedule = useMemo(() => {
     const prefix = `${year}-${String(month).padStart(2, '0')}`
     return schedule.filter(s => s.date && s.date.startsWith(prefix))
   }, [schedule, year, month])
 
-  // 选中日期的行程
   const selectedSchedule = selectedDate
     ? schedule.filter(s => s.date === selectedDate)
     : []
 
-  // 日历格子
   const calendarDays = useMemo(() => {
     const firstDay = new Date(year, month - 1, 1).getDay()
     const daysInMonth = new Date(year, month, 0).getDate()
@@ -90,14 +86,12 @@ export default function ScheduleCalendar() {
   }
 
   const prevMonth = () => {
-    direction.current = -1
     if (month === 1) { setYear(year - 1); setMonth(12) }
     else setMonth(month - 1)
     setSelectedDate(null)
   }
 
   const nextMonth = () => {
-    direction.current = 1
     if (month === 12) { setYear(year + 1); setMonth(1) }
     else setMonth(month + 1)
     setSelectedDate(null)
@@ -113,34 +107,39 @@ export default function ScheduleCalendar() {
     return stats
   }, [monthSchedule])
 
-  // 加载状态
   if (loading) {
     return <SkeletonCalendar />
   }
 
   return (
     <div>
-      {/* 无数据提示 */}
       {schedule.length === 0 && (
-        <div className="bg-[#EEF2FF] border border-[#C7D2FE] rounded-lg px-4 py-3 mb-4">
-          <div className="flex items-center gap-2 text-[14px] text-[#6366F1]">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>暂无行程数据，行程会从新闻中自动提取</span>
-          </div>
+        <div className="rounded-xl px-4 py-3 mb-4" style={{ background: '#f5f5f7' }}>
+          <p className="text-[14px] m-0" style={{ color: '#6e6e73' }}>
+            暂无行程数据。行程来自工作室官方微博，发布后自动更新。
+          </p>
         </div>
       )}
 
-      {/* Month Navigation */}
+      {/* 月份切换 */}
       <div className="flex items-center justify-between mb-3 sm:mb-4">
-        <button onClick={prevMonth} className="p-1.5 sm:p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
+        <button onClick={prevMonth} aria-label="上个月"
+          className="p-1.5 sm:p-2 rounded-lg transition cursor-pointer bg-transparent"
+          style={{ border: 'none', color: '#86868b' }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#f5f5f7' }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <h3 className="text-[15px] sm:text-lg font-semibold font-serif-display" style={{ color: '#1C1917' }}>{year}年 {MONTHS[month - 1]}</h3>
-        <button onClick={nextMonth} className="p-1.5 sm:p-2 hover:bg-[#F7F9FC] rounded-lg transition text-[#8E99A8] hover:text-[#2D3748]">
+        <h3 className="text-[17px] sm:text-[19px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+          {year}年 {MONTHS[month - 1]}
+        </h3>
+        <button onClick={nextMonth} aria-label="下个月"
+          className="p-1.5 sm:p-2 rounded-lg transition cursor-pointer bg-transparent"
+          style={{ border: 'none', color: '#86868b' }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#f5f5f7' }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
@@ -149,7 +148,7 @@ export default function ScheduleCalendar() {
 
       {/* 月度统计条 */}
       {monthSchedule.length > 0 && (
-        <div className="flex gap-2 sm:gap-3 mb-2 sm:mb-3 text-[11px] sm:text-[13px]">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2 sm:mb-3 text-[12px] sm:text-[13px]">
           {[
             { type: 'filming', label: '影视' },
             { type: 'variety', label: '综艺' },
@@ -157,90 +156,95 @@ export default function ScheduleCalendar() {
             { type: 'fanmeeting', label: '演出' },
           ].map(item => (
             monthStats[item.type] > 0 && (
-              <span key={item.type} className={`${typeColor[item.type].text} font-medium`}>
+              <span key={item.type} className="font-medium" style={{ color: typeColor[item.type].text }}>
                 {item.label} {monthStats[item.type]}条
               </span>
             )
           ))}
-          <span className="text-[#B0BEC5]">共{monthSchedule.length}条行程</span>
+          <span style={{ color: '#aeaeb2' }}>共{monthSchedule.length}条</span>
         </div>
       )}
 
-      {/* Weekday Headers */}
-        <div className="grid grid-cols-7 mb-0.5">
+      {/* 星期表头 */}
+      <div className="grid grid-cols-7 mb-0.5">
         {WEEKDAYS.map(d => (
-          <div key={d} className="text-center text-[11px] sm:text-[13px] font-semibold text-[#8E99A8] py-1 sm:py-2">{d}</div>
+          <div key={d} className="text-center text-[11px] sm:text-[13px] font-medium py-1 sm:py-2" style={{ color: '#86868b' }}>{d}</div>
         ))}
       </div>
 
-      {/* Calendar Grid */}
+      {/* 日期网格 */}
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={`${year}-${month}`}
-          initial={{ opacity: 0, x: direction.current * 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: direction.current * -30 }}
-          transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.18 }}
         >
-      <div className="grid grid-cols-7 gap-px bg-[#EDF0F5] rounded-xl overflow-hidden">
-        {calendarDays.map((day, i) => {
-          const events = getDayEvents(day)
-          const dateStr = day ? `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}` : ''
-          const isSelected = day && selectedDate === dateStr
-          const todayFlag = isToday(day)
+          <div className="grid grid-cols-7 gap-px rounded-xl overflow-hidden" style={{ background: '#e8e8ed' }}>
+            {calendarDays.map((day, i) => {
+              const events = getDayEvents(day)
+              const dateStr = day ? `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}` : ''
+              const isSelected = day && selectedDate === dateStr
+              const todayFlag = isToday(day)
 
-          return (
-            <button
-              key={i}
-              onClick={() => handleDayClick(day)}
-              disabled={!day}
-              className={`
-                min-h-[56px] sm:min-h-[80px] p-1 sm:p-1.5 text-left transition-all relative
-                ${!day ? 'bg-[#FAFBFC] cursor-default' : 'bg-white cursor-pointer hover:bg-[#FAFBFC]'}
-              `}
-            >
-              {day && (
-                <>
-                  {isSelected && (
-                    <motion.span
-                      layoutId="calendar-selected-ring"
-                      className="absolute inset-0.5 rounded-lg ring-2 ring-[#7C3AED]"
-                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                    />
+              return (
+                <button
+                  key={i}
+                  onClick={() => handleDayClick(day)}
+                  disabled={!day}
+                  className={`
+                    min-h-[56px] sm:min-h-[80px] p-1 sm:p-1.5 text-left transition-colors relative
+                    ${!day ? 'cursor-default' : 'cursor-pointer'}
+                  `}
+                  style={{ background: day ? '#ffffff' : '#fafafa' }}
+                  onMouseEnter={e => { if (day) e.currentTarget.style.background = '#fafafa' }}
+                  onMouseLeave={e => { if (day) e.currentTarget.style.background = '#ffffff' }}
+                >
+                  {day && (
+                    <>
+                      {isSelected && (
+                        <span className="absolute inset-0.5 rounded-lg pointer-events-none"
+                          style={{ boxShadow: 'inset 0 0 0 2px #1d1d1f' }} />
+                      )}
+                      <div className="flex items-center justify-between mb-0.5 sm:mb-1 relative z-10">
+                        <span className={`
+                          text-[12px] sm:text-[14px] leading-none tabular-nums
+                          ${todayFlag ? 'text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-semibold' : ''}
+                        `}
+                          style={{
+                            background: todayFlag ? '#1d1d1f' : 'transparent',
+                            color: todayFlag ? '#fff' : isSelected ? '#1d1d1f' : '#1d1d1f',
+                            fontWeight: isSelected || todayFlag ? 600 : 400,
+                          }}>
+                          {day}
+                        </span>
+                      </div>
+
+                      <div className="space-y-0.5">
+                        {events.slice(0, 2).map((ev, j) => {
+                          const c = typeColor[ev.type] || typeColor.business
+                          return (
+                            <div key={j} className="text-[10px] sm:text-[11px] leading-tight px-0.5 sm:px-1 py-0.5 rounded truncate font-medium"
+                              style={{ background: c.bg, color: c.text }}>
+                              {shortTitle(ev.title)}
+                            </div>
+                          )
+                        })}
+                        {events.length > 2 && (
+                          <div className="text-[12px] px-0.5" style={{ color: '#aeaeb2' }}>+{events.length - 2}</div>
+                        )}
+                      </div>
+                    </>
                   )}
-                  <div className="flex items-center justify-between mb-0.5 sm:mb-1 relative z-10">
-                    <span className={`
-                      text-[12px] sm:text-[14px] leading-none
-                      ${todayFlag ? 'bg-[#7C3AED] text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold' : 'text-[#5A6577]'}
-                      ${isSelected && !todayFlag ? 'text-[#7C3AED] font-bold' : ''}
-                    `}>
-                      {day}
-                    </span>
-                  </div>
-
-                  <div className="space-y-0.5">
-                    {events.slice(0, 2).map((ev, j) => {
-                      const c = typeColor[ev.type] || typeColor.business
-                      return (
-                        <div key={j} className={`${c.bg} ${c.text} text-[10px] sm:text-[11px] leading-tight px-0.5 sm:px-1 py-0.5 rounded truncate font-medium`}>
-                          {shortTitle(ev.title)}
-                        </div>
-                      )
-                    })}
-                    {events.length > 2 && (
-                      <div className="text-[12px] text-[#B0BEC5] px-0.5">+{events.length - 2}</div>
-                    )}
-                  </div>
-                </>
-              )}
-            </button>
-          )
-        })}
-      </div>
+                </button>
+              )
+            })}
+          </div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Legend */}
+      {/* 图例 */}
       <div className="flex flex-wrap gap-3 sm:gap-4 mt-2 sm:mt-3">
         {[
           { type: 'filming', label: '影视拍摄' },
@@ -248,58 +252,59 @@ export default function ScheduleCalendar() {
           { type: 'business', label: '商务活动' },
           { type: 'fanmeeting', label: '演出活动' },
         ].map(item => (
-          <div key={item.type} className="flex items-center gap-1 sm:gap-1.5 text-[12px] sm:text-[13px] text-[#8E99A8]">
-            <span className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-sm ${typeColor[item.type].dot}`} />
+          <div key={item.type} className="flex items-center gap-1 sm:gap-1.5 text-[12px] sm:text-[13px]" style={{ color: '#86868b' }}>
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-sm" style={{ background: typeColor[item.type].dot }} />
             {item.label}
           </div>
         ))}
       </div>
 
-      {/* Selected Date Schedule Detail */}
+      {/* 选中日期详情 */}
       <AnimatePresence>
         {selectedDate && selectedSchedule.length > 0 && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="mt-4 space-y-2 overflow-hidden"
           >
-          <h4 className="text-[14px] font-medium text-[#8E99A8]">{selectedDate} 的行程</h4>
-          {selectedSchedule.map(s => {
-            const c = typeColor[s.type] || typeColor.business
-            return (
-              <div key={s.id} className={`p-4 rounded-xl border ${c.bg} ${c.border}`}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`w-2 h-2 rounded-full ${c.dot}`} />
-                  <span className={`text-[13px] font-medium ${c.text}`}>{s.typeName}</span>
-                  <span className="text-[13px] text-[#B0BEC5] ml-auto">{s.time}</span>
-                </div>
-                <h4 className="font-semibold text-[16px]" style={{ color: '#1C1917' }}>{s.title}</h4>
-                <p className="text-[14px] mt-1 leading-relaxed" style={{ color: '#57534E' }}>{s.description}</p>
-                <div className="flex items-center justify-between mt-2">
-                  <div className="text-[13px] text-[#8E99A8]">{s.location}</div>
-                  {s.newsUrl && s.newsUrl !== '#' && (
-                    <a
-                      href={s.newsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[13px] font-medium px-3 py-1.5 rounded-full transition-colors no-underline"
-                      style={{ color: '#7C3AED', background: 'rgba(139,92,246,0.08)' }}
-                    >
-                      查看来源
-                    </a>
+            <h4 className="text-[14px] font-medium m-0" style={{ color: '#86868b' }}>{selectedDate} 的行程</h4>
+            {selectedSchedule.map(s => {
+              const c = typeColor[s.type] || typeColor.business
+              return (
+                <div key={s.id} className="p-4 rounded-xl" style={{ background: '#fff', border: '1px solid #e8e8ed' }}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2 h-2 rounded-full" style={{ background: c.dot }} />
+                    <span className="text-[13px] font-medium" style={{ color: c.text }}>{s.typeName}</span>
+                    <span className="text-[13px] ml-auto" style={{ color: '#aeaeb2' }}>{s.time}</span>
+                  </div>
+                  <h4 className="font-semibold text-[16px] m-0" style={{ color: '#1d1d1f' }}>{s.title}</h4>
+                  {s.description && s.description !== s.title && (
+                    <p className="text-[14px] mt-1 leading-relaxed" style={{ color: '#6e6e73' }}>{s.description}</p>
                   )}
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="text-[13px]" style={{ color: '#86868b' }}>{s.location}</div>
+                    {s.newsUrl && s.newsUrl !== '#' && (
+                      <a
+                        href={s.newsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-apple text-[13px]"
+                      >
+                        查看来源 <span className="chevron">›</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
           </motion.div>
         )}
       </AnimatePresence>
 
       {selectedDate && selectedSchedule.length === 0 && (
-        <div className="mt-4 text-center py-6 text-[14px]" style={{ color: '#A8A29E' }}>
+        <div className="mt-4 text-center py-6 text-[14px]" style={{ color: '#86868b' }}>
           这天暂无行程安排
         </div>
       )}

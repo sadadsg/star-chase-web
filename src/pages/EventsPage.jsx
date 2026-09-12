@@ -2,13 +2,14 @@ import EventCard from '../components/EventCard'
 
 export default function EventsPage() {
   return (
-    <div>
-      <div className="mb-5">
-        <h1 className="text-xl font-semibold font-serif-display" style={{ color: '#1C1917' }}>活动门票</h1>
-        <p className="text-[14px] mt-0.5" style={{ color: '#78716C' }}>任嘉伦最新活动、见面会门票信息，直达购票链接</p>
+    <div style={{ background: '#fff' }}>
+      <div className="container-apple" style={{ paddingTop: 48, paddingBottom: 64 }}>
+        <h1 className="section-title m-0">活动门票</h1>
+        <p className="text-[15px] mt-1.5 mb-8" style={{ color: '#6e6e73' }}>
+          演出与商务活动信息，直达来源链接
+        </p>
+        <EventCard />
       </div>
-
-      <EventCard />
     </div>
   )
 }

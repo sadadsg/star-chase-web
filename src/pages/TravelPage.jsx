@@ -6,13 +6,14 @@ export default function TravelPage() {
   const eventId = searchParams.get('eventId')
 
   return (
-    <div>
-      <div className="mb-5">
-        <h1 className="text-xl font-semibold font-serif-display" style={{ color: '#1C1917' }}>出行推荐</h1>
-        <p className="text-[14px] mt-0.5" style={{ color: '#78716C' }}>选择出发城市，自动匹配去爱豆活动的机票和高铁方案</p>
+    <div style={{ background: '#fff' }}>
+      <div className="container-apple" style={{ paddingTop: 48, paddingBottom: 64 }}>
+        <h1 className="section-title m-0">出行推荐</h1>
+        <p className="text-[15px] mt-1.5 mb-8" style={{ color: '#6e6e73' }}>
+          选定活动与出发城市，一键查询机票和高铁
+        </p>
+        <TravelRecommend initialEventId={eventId ? Number(eventId) : null} />
       </div>
-
-      <TravelRecommend initialEventId={eventId ? Number(eventId) : null} />
     </div>
   )
 }

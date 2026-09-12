@@ -17,11 +17,21 @@ const stationCodes = {
   '昆明': 'KMM', '厦门': 'XMS', '福州': 'FZS', '合肥': 'HFH',
 }
 
-const typeStyle = {
-  filming: { color: '#7C3AED', bg: 'rgba(139,92,246,0.1)', label: '影视' },
-  variety: { color: '#059669', bg: 'rgba(16,185,129,0.1)', label: '综艺' },
-  business: { color: '#D97706', bg: 'rgba(245,158,11,0.1)', label: '商务' },
-  fanmeeting: { color: '#DB2777', bg: 'rgba(236,72,153,0.1)', label: '演出' },
+const typeLabel = {
+  filming: '影视',
+  variety: '综艺',
+  business: '商务',
+  fanmeeting: '演出',
+}
+
+function StepHeader({ no, title }) {
+  return (
+    <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
+      <span className="w-6 h-6 rounded-full text-[13px] font-semibold flex items-center justify-center"
+        style={{ background: '#f5f5f7', color: '#1d1d1f' }}>{no}</span>
+      <h3 className="text-[17px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>{title}</h3>
+    </div>
+  )
 }
 
 export default function TravelRecommend() {
@@ -65,9 +75,9 @@ export default function TravelRecommend() {
     return (
       <div className="space-y-4">
         {[1, 2].map(i => (
-          <div key={i} className="glass rounded-3xl p-5 skeleton-shimmer">
-            <div className="h-6 rounded-lg mb-3" style={{ background: 'rgba(139,92,246,0.06)', width: '33%' }} />
-            <div className="h-4 rounded-lg" style={{ background: 'rgba(139,92,246,0.04)', width: '50%' }} />
+          <div key={i} className="rounded-2xl p-5" style={{ border: '1px solid #e8e8ed' }}>
+            <div className="h-4 rounded skeleton-shimmer mb-3" style={{ width: '33%' }} />
+            <div className="h-3 rounded skeleton-shimmer" style={{ width: '50%' }} />
           </div>
         ))}
       </div>
@@ -76,135 +86,126 @@ export default function TravelRecommend() {
 
   return (
     <div className="space-y-4 sm:space-y-5">
-      {/* 活动选择 */}
-      <div className="glass rounded-3xl p-4 sm:p-5">
-        <div className="flex items-center gap-2 mb-3 sm:mb-4">
-          <span className="w-6 h-6 rounded-full text-white text-[13px] font-bold flex items-center justify-center" style={{ background: '#7C3AED' }}>1</span>
-          <h3 className="text-[16px] font-semibold font-serif-display" style={{ color: '#1C1917' }}>选择你想参加的活动</h3>
-        </div>
+      {/* 第一步：选择活动 */}
+      <div className="rounded-2xl p-4 sm:p-5" style={{ background: '#fff', border: '1px solid #d2d2d7' }}>
+        <StepHeader no={1} title="选择你想参加的活动" />
         {events.length === 0 ? (
           <div className="py-10 text-center">
-            <svg className="w-12 h-12 mx-auto mb-3" style={{ color: '#D1D5DB' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <p className="font-semibold text-[15px] mb-1" style={{ color: '#1C1917' }}>暂无活动数据</p>
-            <p className="text-[14px]" style={{ color: '#78716C' }}>活动信息会从新闻中自动提取</p>
+            <p className="font-semibold text-[16px] m-0 mb-1" style={{ color: '#1d1d1f' }}>暂无活动数据</p>
+            <p className="text-[14px] m-0" style={{ color: '#86868b' }}>活动信息来自工作室微博，发布后自动更新</p>
           </div>
         ) : (
           <div className="grid gap-2 sm:grid-cols-2">
             {events.map((event, i) => {
-              const ts = typeStyle[event.type] || typeStyle.business
               const isActive = selectedEvent === i
               return (
-                <motion.button key={event.id} onClick={() => setSelectedEvent(isActive ? null : i)}
-                  whileTap={{ scale: 0.97 }}
-                  whileHover={{ scale: 1.01 }}
-                  className="p-4 rounded-2xl text-left transition-all"
+                <button key={event.id} onClick={() => setSelectedEvent(isActive ? null : i)}
+                  className="p-4 rounded-xl text-left transition-all cursor-pointer"
                   style={{
-                    background: isActive ? '#7C3AED' : 'rgba(255,255,255,0.4)',
-                    color: isActive ? 'white' : '#1C1917',
-                    border: `1px solid ${isActive ? '#7C3AED' : 'rgba(255,255,255,0.4)'}`,
+                    background: isActive ? '#f5f9ff' : '#ffffff',
+                    border: '1px solid ' + (isActive ? '#0071e3' : '#e8e8ed'),
                   }}>
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[12px] px-2.5 py-0.5 rounded-full font-medium"
-                      style={{ background: isActive ? 'rgba(255,255,255,0.2)' : ts.bg, color: isActive ? 'rgba(255,255,255,0.8)' : ts.color }}>
-                      {ts.label}
+                    <span className="text-[12px] px-2 py-0.5 rounded-full font-medium"
+                      style={{ background: '#f5f5f7', color: '#6e6e73' }}>
+                      {typeLabel[event.type] || '活动'}
                     </span>
-                    <span className="text-[13px]" style={{ color: isActive ? 'rgba(255,255,255,0.5)' : '#A8A29E' }}>{event.date}</span>
+                    <span className="text-[13px]" style={{ color: '#86868b' }}>{event.date}</span>
                   </div>
-                  <div className="font-semibold text-[15px] mb-0.5">{event.title}</div>
-                  <div className="text-[13px]" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#78716C' }}>{event.location}</div>
-                </motion.button>
+                  <div className="font-semibold text-[15px] mb-0.5" style={{ color: '#1d1d1f' }}>{event.title}</div>
+                  <div className="text-[13px]" style={{ color: '#86868b' }}>{event.location || event.city}</div>
+                </button>
               )
             })}
           </div>
         )}
       </div>
 
-      {/* 出发城市 */}
+      {/* 第二步：出发城市 */}
       <AnimatePresence>
         {activeEvent && (
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="glass rounded-3xl p-4 sm:p-5"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="rounded-2xl p-4 sm:p-5"
+            style={{ background: '#fff', border: '1px solid #d2d2d7' }}
           >
-          <div className="flex items-center gap-2 mb-3 sm:mb-4">
-            <span className="w-6 h-6 rounded-full text-white text-[13px] font-bold flex items-center justify-center" style={{ background: '#7C3AED' }}>2</span>
-            <h3 className="text-[16px] font-semibold font-serif-display" style={{ color: '#1C1917' }}>选择你的出发城市</h3>
-          </div>
-          <div className="text-[14px] mb-3" style={{ color: '#78716C' }}>
-            目的地：<span className="font-medium" style={{ color: '#1C1917' }}>{activeEvent.city || activeEvent.location}</span>
-          </div>
-          <select value={fromCity} onChange={e => setFromCity(e.target.value)}
-            className="w-full sm:w-56 px-4 py-2.5 rounded-xl text-[15px] cursor-pointer"
-            style={{ border: '1px solid rgba(255,255,255,0.4)', background: 'rgba(255,255,255,0.4)', color: '#1C1917' }}>
-            {CITIES.map(city => <option key={city} value={city}>{city}</option>)}
-          </select>
+            <StepHeader no={2} title="选择你的出发城市" />
+            <p className="text-[14px] mb-3 m-0" style={{ color: '#6e6e73' }}>
+              目的地：<span className="font-medium" style={{ color: '#1d1d1f' }}>{activeEvent.city || activeEvent.location}</span>
+            </p>
+            <select value={fromCity} onChange={e => setFromCity(e.target.value)}
+              className="w-full sm:w-56 px-4 py-2.5 rounded-xl text-[15px] cursor-pointer"
+              style={{ border: '1px solid #d2d2d7', background: '#fff', color: '#1d1d1f' }}>
+              {CITIES.map(city => <option key={city} value={city}>{city}</option>)}
+            </select>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* 出行方案 */}
+      {/* 第三步：出行方案 */}
       <AnimatePresence>
         {activeEvent && fromCity !== (activeEvent.city || activeEvent.location) && (
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="glass rounded-3xl overflow-hidden"
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="rounded-2xl overflow-hidden"
+            style={{ background: '#fff', border: '1px solid #d2d2d7' }}
           >
-          <div className="p-4 sm:p-5" style={{ background: 'rgba(139,92,246,0.06)' }}>
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="font-bold text-[16px] sm:text-[18px] font-serif-display" style={{ color: '#1C1917' }}>{fromCity} → {activeEvent.city || activeEvent.location}</h3>
-                <p className="text-[13px] sm:text-[14px] mt-0.5" style={{ color: '#78716C' }}>{activeEvent.title}</p>
-              </div>
-              <div className="text-right text-[13px] sm:text-[14px]">
-                <div className="font-medium" style={{ color: '#7C3AED' }}>{activeEvent.date}</div>
+            <div className="p-4 sm:p-5" style={{ borderBottom: '1px solid #e8e8ed' }}>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-semibold text-[16px] sm:text-[18px] m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+                    {fromCity} → {activeEvent.city || activeEvent.location}
+                  </h3>
+                  <p className="text-[13px] sm:text-[14px] mt-0.5 m-0" style={{ color: '#86868b' }}>{activeEvent.title}</p>
+                </div>
+                <div className="text-[14px] font-medium" style={{ color: '#0066cc' }}>{activeEvent.date}</div>
               </div>
             </div>
-          </div>
-          <div className="p-4 sm:p-5">
-            <h4 className="font-semibold text-[14px] sm:text-[15px] mb-2 sm:mb-3" style={{ color: '#1C1917' }}>出行方案</h4>
-            <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
-              <a href={`https://flights.ctrip.com/online/list/oneway-${fromCity.substring(0,2)}-${(activeEvent.city || activeEvent.location).substring(0,2)}?depdate=${activeEvent.date}`}
-                target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 rounded-2xl transition-all no-underline group"
-                style={{ border: '1px solid rgba(255,255,255,0.4)' }}>
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(139,92,246,0.1)' }}>
-                  <svg className="w-5 h-5" style={{ color: '#7C3AED' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[15px] font-semibold group-hover:text-[#7C3AED] transition-colors" style={{ color: '#1C1917' }}>
-                    携程 · 查看航班
+            <div className="p-4 sm:p-5">
+              <h4 className="font-semibold text-[14px] sm:text-[15px] mb-2 sm:mb-3 m-0" style={{ color: '#1d1d1f' }}>出行方案</h4>
+              <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
+                <a href={`https://flights.ctrip.com/online/list/oneway-${fromCity.substring(0,2)}-${(activeEvent.city || activeEvent.location).substring(0,2)}?depdate=${activeEvent.date}`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-xl no-underline group transition-colors"
+                  style={{ background: '#f5f5f7' }}>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff' }}>
+                    <svg className="w-5 h-5" style={{ color: '#1d1d1f' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
                   </div>
-                  <div className="text-[13px]" style={{ color: '#78716C' }}>{activeEvent.date} 直达/中转航班</div>
-                </div>
-              </a>
-              <a href={`https://kyfw.12306.cn/otn/leftTicket/init?leftTicketDTO.train_date=${activeEvent.date}&leftTicketDTO.from_station=${stationCodes[fromCity] || ''}&leftTicketDTO.to_station=${stationCodes[activeEvent.city] || ''}&purpose_codes=ADULT`}
-                target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 rounded-2xl transition-all no-underline group"
-                style={{ border: '1px solid rgba(255,255,255,0.4)' }}>
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(16,185,129,0.1)' }}>
-                  <svg className="w-5 h-5" style={{ color: '#059669' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8m-8 4h8m-4 4v3m-6 0h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[15px] font-semibold group-hover:text-[#059669] transition-colors" style={{ color: '#1C1917' }}>
-                    12306 · 查看车次
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[15px] font-medium transition-colors group-hover:text-[#0066cc]" style={{ color: '#1d1d1f' }}>
+                      携程 · 查看航班
+                    </div>
+                    <div className="text-[13px]" style={{ color: '#86868b' }}>{activeEvent.date} 直达/中转航班</div>
                   </div>
-                  <div className="text-[13px]" style={{ color: '#78716C' }}>{activeEvent.date} 高铁/动车</div>
-                </div>
-              </a>
+                  <span className="chevron text-[#0066cc]">›</span>
+                </a>
+                <a href={`https://kyfw.12306.cn/otn/leftTicket/init?leftTicketDTO.train_date=${activeEvent.date}&leftTicketDTO.from_station=${stationCodes[fromCity] || ''}&leftTicketDTO.to_station=${stationCodes[activeEvent.city] || ''}&purpose_codes=ADULT`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-xl no-underline group transition-colors"
+                  style={{ background: '#f5f5f7' }}>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff' }}>
+                    <svg className="w-5 h-5" style={{ color: '#1d1d1f' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8m-8 4h8m-4 4v3m-6 0h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[15px] font-medium transition-colors group-hover:text-[#0066cc]" style={{ color: '#1d1d1f' }}>
+                      12306 · 查看车次
+                    </div>
+                    <div className="text-[13px]" style={{ color: '#86868b' }}>{activeEvent.date} 高铁/动车</div>
+                  </div>
+                  <span className="chevron text-[#0066cc]">›</span>
+                </a>
+              </div>
             </div>
-          </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -213,23 +214,15 @@ export default function TravelRecommend() {
       <AnimatePresence>
         {activeEvent && fromCity === (activeEvent.city || activeEvent.location) && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="glass rounded-3xl py-12 text-center"
+            transition={{ duration: 0.25 }}
+            className="rounded-2xl py-12 text-center"
+            style={{ background: '#fff', border: '1px solid #d2d2d7' }}
           >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: 'spring', stiffness: 500, damping: 25, delay: 0.1 }}
-            className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: 'rgba(16,185,129,0.1)' }}>
-            <svg className="w-6 h-6" style={{ color: '#059669' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </motion.div>
-          <p className="font-semibold text-[16px]" style={{ color: '#1C1917' }}>活动就在你的城市！</p>
-          <p className="text-[14px] mt-1" style={{ color: '#78716C' }}>无需出行，直接去现场就行啦</p>
+            <p className="font-semibold text-[16px] m-0" style={{ color: '#1d1d1f' }}>活动就在你的城市</p>
+            <p className="text-[14px] mt-1 m-0" style={{ color: '#86868b' }}>无需出行，直接去现场就行</p>
           </motion.div>
         )}
       </AnimatePresence>

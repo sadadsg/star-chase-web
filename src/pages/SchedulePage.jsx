@@ -3,18 +3,18 @@ import Sidebar from '../components/Sidebar'
 
 export default function SchedulePage() {
   return (
-    <div>
-      <div className="mb-5">
-        <h1 className="text-xl font-semibold font-serif-display" style={{ color: '#1C1917' }}>行程日历</h1>
-        <p className="text-[14px] mt-0.5" style={{ color: '#78716C' }}>查看任嘉伦的全部行程安排，点击日期查看详情</p>
-      </div>
+    <div style={{ background: '#fff' }}>
+      <div className="container-apple" style={{ paddingTop: 48, paddingBottom: 64 }}>
+        <h1 className="section-title m-0">行程日历</h1>
+        <p className="text-[15px] mt-1.5 mb-8" style={{ color: '#6e6e73' }}>
+          全部行程安排，点击日期查看详情
+        </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
-        <div className="lg:col-span-1 order-2 lg:order-1">
-          <Sidebar />
-        </div>
-        <div className="lg:col-span-3 order-1 lg:order-2">
-          <div className="glass p-5">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+          <div className="lg:col-span-1 order-2 lg:order-1">
+            <Sidebar />
+          </div>
+          <div className="lg:col-span-3 order-1 lg:order-2">
             <ScheduleCalendar />
           </div>
         </div>

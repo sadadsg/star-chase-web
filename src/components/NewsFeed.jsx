@@ -2,21 +2,20 @@ import { useState, useEffect, useMemo } from 'react'
 import { fetchNews } from '../api/dataApi'
 import { AnimateOnScroll } from './ui'
 
-const categories = ['全部', '影视', '综艺', '时尚', '日常']
+const categories = ['全部', '影视', '综艺', '时尚', '演出', '日常']
 
 const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月',
   '七月', '八月', '九月', '十月', '十一月', '十二月']
 
 function SkeletonCard() {
   return (
-    <div className="glass rounded-3xl overflow-hidden skeleton-shimmer">
-      <div className="aspect-video" style={{ background: 'rgba(139,92,246,0.05)' }} />
+    <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid #e8e8ed' }}>
       <div className="p-4 space-y-3">
-        <div className="h-4 rounded-lg" style={{ background: 'rgba(139,92,246,0.06)', width: '75%' }} />
-        <div className="h-3 rounded-lg" style={{ background: 'rgba(139,92,246,0.04)', width: '100%' }} />
+        <div className="h-4 rounded skeleton-shimmer" style={{ width: '75%' }} />
+        <div className="h-3 rounded skeleton-shimmer" style={{ width: '100%' }} />
         <div className="flex justify-between">
-          <div className="h-3 rounded-lg" style={{ background: 'rgba(139,92,246,0.04)', width: '64px' }} />
-          <div className="h-3 rounded-lg" style={{ background: 'rgba(139,92,246,0.04)', width: '80px' }} />
+          <div className="h-3 rounded skeleton-shimmer" style={{ width: 64 }} />
+          <div className="h-3 rounded skeleton-shimmer" style={{ width: 80 }} />
         </div>
       </div>
     </div>
@@ -56,7 +55,9 @@ export default function NewsFeed({ limit }) {
     const groups = []
     const map = new Map()
     for (const news of displayNews) {
-      const [y, m] = (news.date || '').split('-')
+      const timeStr = news.time || news.date || ''
+      const [y, m] = timeStr.split('-')
+      if (!y || !m) continue
       const key = `${y}-${m}`
       if (!map.has(key)) {
         const entry = { key, year: y, month: parseInt(m), items: [] }
@@ -65,7 +66,7 @@ export default function NewsFeed({ limit }) {
       }
       map.get(key).items.push(news)
     }
-    return groups
+    return groups.length ? groups : null
   }, [displayNews, limit])
 
   const NewsCard = ({ news }) => {
@@ -77,7 +78,8 @@ export default function NewsFeed({ limit }) {
           href={newsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group glass rounded-3xl overflow-hidden card-hover no-underline block"
+          className="group rounded-2xl overflow-hidden no-underline block card-hover"
+          style={{ background: '#fff', border: '1px solid #e8e8ed' }}
         >
           <NewsCardContent news={news} />
         </a>
@@ -85,7 +87,7 @@ export default function NewsFeed({ limit }) {
     }
 
     return (
-      <div className="group glass rounded-3xl overflow-hidden">
+      <div className="group rounded-2xl overflow-hidden" style={{ background: '#fff', border: '1px solid #e8e8ed' }}>
         <NewsCardContent news={news} />
       </div>
     )
@@ -94,33 +96,31 @@ export default function NewsFeed({ limit }) {
   const NewsCardContent = ({ news }) => (
     <>
       {news.cover && (
-        <div className="aspect-video overflow-hidden relative">
+        <div className="aspect-video overflow-hidden">
           <img
             src={news.cover}
             alt={news.title}
-            className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-300 will-change-transform"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
-          <span className="absolute top-2.5 left-2.5 backdrop-blur-sm text-[13px] font-medium px-2.5 py-1 rounded-xl"
-            style={{ background: 'rgba(255,255,255,0.8)', color: '#4B5563' }}>
-            {news.category || '资讯'}
-          </span>
         </div>
       )}
-      <div className="p-4">
-        <h3 className="font-semibold text-[16px] leading-snug mb-2 line-clamp-2 group-hover:text-[#7C3AED] transition-colors"
-          style={{ color: '#1E1B4B' }}>
+      <div className="p-4 sm:p-5">
+        <p className="text-[12px] font-medium m-0 mb-1.5" style={{ color: '#86868b' }}>
+          {news.category || '资讯'} · {news.source}
+        </p>
+        <h3 className="font-semibold text-[16px] leading-snug mb-2 line-clamp-2 m-0 transition-colors group-hover:text-[#0066cc]"
+          style={{ color: '#1d1d1f' }}>
           {news.title}
         </h3>
         {news.summary && news.summary !== news.title && (
-          <p className="text-[14px] leading-relaxed line-clamp-2 mb-3" style={{ color: '#6B7280' }}>
+          <p className="text-[14px] leading-relaxed line-clamp-2 mb-3" style={{ color: '#6e6e73' }}>
             {news.summary}
           </p>
         )}
-        <div className="flex items-center justify-between text-[13px]" style={{ color: '#9CA3AF' }}>
-          <span>{news.source}</span>
-          <span>{news.date || news.time}</span>
-        </div>
+        <p className="text-[13px] m-0" style={{ color: '#86868b' }}>
+          {(news.time || news.date || '').slice(0, 10)}
+        </p>
       </div>
     </>
   )
@@ -128,16 +128,17 @@ export default function NewsFeed({ limit }) {
   return (
     <div>
       {!limit && (
-        <div className="flex gap-1.5 sm:gap-2 mb-4 sm:mb-5 overflow-x-auto pb-1">
+        <div className="inline-flex flex-wrap gap-0 p-1 rounded-full mb-6" style={{ background: '#f5f5f7' }}>
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap transition-all cursor-pointer"
+              className="px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap cursor-pointer transition-all"
               style={{
-                color: activeCategory === cat ? '#7C3AED' : '#78716C',
-                background: activeCategory === cat ? 'rgba(139,92,246,0.1)' : 'rgba(255,255,255,0.4)',
-                border: `1px solid ${activeCategory === cat ? 'rgba(139,92,246,0.2)' : 'rgba(255,255,255,0.35)'}`,
+                color: activeCategory === cat ? '#1d1d1f' : '#6e6e73',
+                background: activeCategory === cat ? '#ffffff' : 'transparent',
+                boxShadow: activeCategory === cat ? '0 1px 4px rgba(0,0,0,0.12)' : 'none',
+                border: 'none',
               }}
             >
               {cat}
@@ -151,13 +152,9 @@ export default function NewsFeed({ limit }) {
           {[1, 2, 3].map(i => <SkeletonCard key={i} />)}
         </div>
       ) : displayNews.length === 0 ? (
-        <div className="glass rounded-3xl py-16 text-center">
-          <svg className="w-12 h-12 mx-auto mb-3" style={{ color: '#D6D3D1' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-          </svg>
-          <p className="font-semibold text-[16px] mb-1" style={{ color: '#1C1917' }}>暂无相关新闻</p>
-          <p className="text-[14px]" style={{ color: '#78716C' }}>当前热搜榜上没有任嘉伦相关新闻</p>
-          <p className="text-[13px] mt-2" style={{ color: '#A8A29E' }}>新闻会实时更新，稍后再来看看</p>
+        <div className="py-16 text-center">
+          <p className="font-semibold text-[17px] mb-1.5 m-0" style={{ color: '#1d1d1f' }}>暂无相关资讯</p>
+          <p className="text-[14px] m-0" style={{ color: '#86868b' }}>资讯来自工作室微博与百度资讯，更新后自动展示</p>
         </div>
       ) : limit ? (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -167,19 +164,16 @@ export default function NewsFeed({ limit }) {
             </AnimateOnScroll>
           ))}
         </div>
-      ) : (
-        <div className="space-y-8">
-          {groupedByMonth && groupedByMonth.map((group) => (
+      ) : groupedByMonth ? (
+        <div className="space-y-10">
+          {groupedByMonth.map((group) => (
             <section key={group.key}>
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-6 rounded-full" style={{ background: 'linear-gradient(to bottom, #A78BFA, #C084FC)' }} />
-                  <h2 className="text-[18px] font-bold" style={{ color: '#1E1B4B' }}>
-                    {group.year}年{monthNames[group.month - 1]}
-                  </h2>
-                </div>
-                <span className="text-[14px]" style={{ color: '#9CA3AF' }}>{group.items.length} 条资讯</span>
-                <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.4)' }} />
+                <h2 className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+                  {group.year}年{monthNames[group.month - 1]}
+                </h2>
+                <span className="text-[14px]" style={{ color: '#86868b' }}>{group.items.length} 条</span>
+                <div className="flex-1 h-px" style={{ background: '#d2d2d7' }} />
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -190,6 +184,14 @@ export default function NewsFeed({ limit }) {
                 ))}
               </div>
             </section>
+          ))}
+        </div>
+      ) : (
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {displayNews.map((news, idx) => (
+            <AnimateOnScroll key={news.id} delay={idx * 0.06} y={12}>
+              <NewsCard news={news} />
+            </AnimateOnScroll>
           ))}
         </div>
       )}
