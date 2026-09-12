@@ -70,7 +70,7 @@ jobs:
       - name: Copy data into dist
         run: |
           mkdir -p dist/api
-          cp data/*.json dist/api/
+          cp data/*.json data/*.ics data/*.xml dist/api/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
