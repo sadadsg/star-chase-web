@@ -49,8 +49,8 @@ export default function Navbar() {
               aria-hidden="true"
               className="inline-flex items-center justify-center"
               style={{
-                width: 21, height: 21, borderRadius: 5, background: '#b64400',
-                color: '#ffffff', fontSize: 13, lineHeight: 1, fontFamily: LOGO_FONT,
+                width: 24, height: 24, borderRadius: 6, background: '#b64400',
+                color: '#ffffff', fontSize: 15, lineHeight: 1, fontFamily: LOGO_FONT,
                 paddingTop: 1,
               }}
             >
@@ -59,7 +59,7 @@ export default function Navbar() {
             <span
               className="whitespace-nowrap"
               style={{
-                fontFamily: LOGO_FONT, fontSize: 19, fontWeight: 400,
+                fontFamily: LOGO_FONT, fontSize: 22, fontWeight: 400,
                 letterSpacing: '0.14em', color: '#1d1d1f',
               }}
             >
@@ -72,7 +72,7 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-2 sm:px-2.5 py-1.5 text-[12px] sm:text-[13px] whitespace-nowrap no-underline nav-link-underline ${location.pathname === item.path ? 'is-active font-medium' : ''
+                className={`px-2 sm:px-2.5 py-1.5 text-[13px] sm:text-[14px] whitespace-nowrap no-underline nav-link-underline ${location.pathname === item.path ? 'is-active font-medium' : ''
                   }`}
               >
                 {item.label}
