@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useNavigationType, Link } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
@@ -13,19 +13,22 @@ import { useNetworkStatus } from './hooks'
 
 function AnimatedRoutes() {
   const location = useLocation()
+  const navType = useNavigationType()
+  // PUSH/REPLACE = 前进（从下进入）；POP（浏览器后退）= 返回（从上进入）
+  const direction = navType === 'POP' ? -1 : 1
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [location.pathname])
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" custom={direction} initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
-        <Route path="/schedule" element={<PageTransition><SchedulePage /></PageTransition>} />
-        <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
-        <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
-        <Route path="/travel" element={<PageTransition><TravelPage /></PageTransition>} />
+        <Route path="/" element={<PageTransition direction={direction}><HomePage /></PageTransition>} />
+        <Route path="/schedule" element={<PageTransition direction={direction}><SchedulePage /></PageTransition>} />
+        <Route path="/news" element={<PageTransition direction={direction}><NewsPage /></PageTransition>} />
+        <Route path="/events" element={<PageTransition direction={direction}><EventsPage /></PageTransition>} />
+        <Route path="/travel" element={<PageTransition direction={direction}><TravelPage /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   )

@@ -4,6 +4,8 @@
  */
 
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { EASE_OUT_EXPO } from '../../lib/motion'
 
 // 错误类型配置
 const errorTypes = {
@@ -128,7 +130,7 @@ export function InlineError({ message, className = '' }) {
   )
 }
 
-// 空状态提示
+// 空状态提示（图标 → 标题 → 描述依次入场）
 export function EmptyState({
   icon = '📭',
   title = '暂无数据',
@@ -137,38 +139,57 @@ export function EmptyState({
   onAction,
   className = '',
 }) {
+  const item = {
+    initial: { opacity: 0, y: 8 },
+    animate: { opacity: 1, y: 0 },
+  }
   return (
-    <div className={`glass rounded-2xl py-14 text-center ${className}`}>
-      <div className="flex justify-center mb-4">
+    <motion.div
+      className={`glass rounded-2xl py-14 text-center ${className}`}
+      initial="initial"
+      animate="animate"
+      variants={{ animate: { transition: { staggerChildren: 0.06 } } }}
+    >
+      <motion.div className="flex justify-center mb-4" variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
         {typeof icon === 'string' ? <span className="text-4xl">{icon}</span> : icon}
-      </div>
-      <h3 className="font-semibold text-[16px] mb-1.5" style={{ color: '#1C1917' }}>{title}</h3>
-      <p className="text-[14px]" style={{ color: '#A8A29E' }}>{message}</p>
+      </motion.div>
+      <motion.h3 className="font-semibold text-[16px] mb-1.5 m-0" style={{ color: '#1d1d1f' }} variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
+        {title}
+      </motion.h3>
+      <motion.p className="text-[14px] m-0" style={{ color: '#86868b' }} variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
+        {message}
+      </motion.p>
       {action && onAction && (
-        <button
+        <motion.button
           onClick={onAction}
           className="btn-pill-primary btn-pill mt-5"
+          variants={item}
+          transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}
         >
           {action}
-        </button>
+        </motion.button>
       )}
-    </div>
+    </motion.div>
   )
 }
 
-// 网络状态提示条
+// 网络状态提示条（顶部滑入）
 export function NetworkStatus({ isOnline = true, className = '' }) {
   if (isOnline) return null
 
   return (
-    <div className={`bg-[#FFFBEB] border-b border-[#FDE68A] px-4 py-2 ${className}`}>
+    <motion.div
+      className={`bg-[#FFFBEB] border-b border-[#FDE68A] px-4 py-2 ${className}`}
+      initial={{ y: '-100%' }}
+      animate={{ y: 0, transition: { duration: 0.3, ease: EASE_OUT_EXPO } }}
+    >
       <div className="max-w-5xl mx-auto flex items-center justify-center gap-2 text-[13px] text-[#92400E]">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
         </svg>
         <span>网络连接已断开，显示的是缓存内容</span>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

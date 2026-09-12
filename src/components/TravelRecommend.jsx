@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { fetchSchedule } from '../api/dataApi'
 import { CITIES } from '../data/cities'
+import { EASE_OUT_EXPO } from '../lib/motion'
 
 const stationCodes = {
   '北京': 'BJP', '上海': 'SHH', '广州': 'GZQ', '深圳': 'SZQ',
@@ -80,7 +81,7 @@ export default function TravelRecommend() {
   }
 
   return (
-    <div className="space-y-4 sm:space-y-5">
+    <motion.div layout className="space-y-4 sm:space-y-5" transition={{ duration: 0.35, ease: EASE_OUT_EXPO }}>
       {/* 第一步：选择活动 */}
       <div className="rounded-2xl p-4 sm:p-5" style={{ background: '#fff', border: '1px solid #d2d2d7' }}>
         <StepHeader no={1} title="选择你想参加的活动" />
@@ -122,8 +123,8 @@ export default function TravelRecommend() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
+            exit={{ opacity: 0, y: -6, transition: { duration: 0.15, ease: 'easeOut' } }}
+            transition={{ duration: 0.25, ease: EASE_OUT_EXPO }}
             className="rounded-2xl p-4 sm:p-5"
             style={{ background: '#fff', border: '1px solid #d2d2d7' }}
           >
@@ -146,8 +147,8 @@ export default function TravelRecommend() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
+            exit={{ opacity: 0, y: -6, transition: { duration: 0.15, ease: 'easeOut' } }}
+            transition={{ duration: 0.25, ease: EASE_OUT_EXPO }}
             className="rounded-2xl overflow-hidden"
             style={{ background: '#fff', border: '1px solid #d2d2d7' }}
           >
@@ -211,7 +212,7 @@ export default function TravelRecommend() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, y: -6, transition: { duration: 0.15, ease: 'easeOut' } }}
             transition={{ duration: 0.25 }}
             className="rounded-2xl py-12 text-center"
             style={{ background: '#fff', border: '1px solid #d2d2d7' }}
@@ -221,6 +222,6 @@ export default function TravelRecommend() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }

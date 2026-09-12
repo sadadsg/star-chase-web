@@ -31,7 +31,7 @@ export function SkeletonText({ width = 'full', height = '4', className = '' }) {
 // 卡片骨架
 export function SkeletonCard({ hasImage = true, lines = 3, className = '' }) {
   return (
-    <div className={`bg-white rounded-2xl overflow-hidden border border-[#EDF0F5] ${className}`}>
+    <div className={`bg-white rounded-2xl overflow-hidden border border-[#e8e8ed] ${className}`}>
       {hasImage && (
         <div className="aspect-video skeleton-shimmer" />
       )}
@@ -56,7 +56,7 @@ export function SkeletonCard({ hasImage = true, lines = 3, className = '' }) {
 // 列表项骨架
 export function SkeletonListItem({ className = '' }) {
   return (
-    <div className={`bg-white rounded-xl p-4 border border-[#EDF0F5] flex items-center gap-4 ${className}`}>
+    <div className={`bg-white rounded-xl p-4 border border-[#e8e8ed] flex items-center gap-4 ${className}`}>
       <SkeletonBlock className="w-12 h-12 rounded-lg flex-shrink-0" />
       <div className="flex-1 space-y-2">
         <SkeletonText width="3/4" height="4" />
@@ -102,9 +102,9 @@ export function SkeletonCalendar({ className = '' }) {
 // 表格骨架
 export function SkeletonTable({ rows = 5, columns = 4, className = '' }) {
   return (
-    <div className={`bg-white rounded-2xl border border-[#EDF0F5] overflow-hidden ${className}`}>
+    <div className={`bg-white rounded-2xl border border-[#e8e8ed] overflow-hidden ${className}`}>
       {/* 表头 */}
-      <div className="grid gap-4 p-4 border-b border-[#EDF0F5]" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+      <div className="grid gap-4 p-4 border-b border-[#e8e8ed]" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
         {Array.from({ length: columns }).map((_, i) => (
           <SkeletonBlock key={i} className="h-4 rounded" />
         ))}
@@ -114,7 +114,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className = '' }) {
       {Array.from({ length: rows }).map((_, rowIndex) => (
         <div
           key={rowIndex}
-          className="grid gap-4 p-4 border-b border-[#EDF0F5] last:border-b-0"
+          className="grid gap-4 p-4 border-b border-[#e8e8ed] last:border-b-0"
           style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
         >
           {Array.from({ length: columns }).map((_, colIndex) => (

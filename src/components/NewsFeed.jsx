@@ -1,25 +1,18 @@
 import { useState, useEffect, useMemo } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { fetchNews } from '../api/dataApi'
-import { AnimateOnScroll } from './ui'
+import { SkeletonCard } from './ui'
+import { EASE_OUT_EXPO, SPRING_SNAP } from '../lib/motion'
 
 const categories = ['全部', '影视', '综艺', '时尚', '演出', '日常']
 
 const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月',
   '七月', '八月', '九月', '十月', '十一月', '十二月']
 
-function SkeletonCard() {
-  return (
-    <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid #e8e8ed' }}>
-      <div className="p-4 space-y-3">
-        <div className="h-4 rounded skeleton-shimmer" style={{ width: '75%' }} />
-        <div className="h-3 rounded skeleton-shimmer" style={{ width: '100%' }} />
-        <div className="flex justify-between">
-          <div className="h-3 rounded skeleton-shimmer" style={{ width: 64 }} />
-          <div className="h-3 rounded skeleton-shimmer" style={{ width: 80 }} />
-        </div>
-      </div>
-    </div>
-  )
+const cardMotion = {
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO } },
+  exit: { opacity: 0, scale: 0.97, transition: { duration: 0.15 } },
 }
 
 export default function NewsFeed({ limit }) {
@@ -70,25 +63,25 @@ export default function NewsFeed({ limit }) {
   }, [displayNews, limit])
 
   const NewsCard = ({ news }) => {
-    const newsUrl = news.url
+    const inner = <NewsCardContent news={news} />
+    const cardStyle = { background: '#fff', border: '1px solid #e8e8ed' }
 
-    if (newsUrl && newsUrl !== '#' && !newsUrl.startsWith('/')) {
+    if (newsUrl(news)) {
       return (
         <a
-          href={newsUrl}
+          href={news.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group rounded-2xl overflow-hidden no-underline block card-hover"
-          style={{ background: '#fff', border: '1px solid #e8e8ed' }}
+          className="group rounded-2xl overflow-hidden no-underline block card-hover h-full"
+          style={cardStyle}
         >
-          <NewsCardContent news={news} />
+          {inner}
         </a>
       )
     }
-
     return (
-      <div className="group rounded-2xl overflow-hidden" style={{ background: '#fff', border: '1px solid #e8e8ed' }}>
-        <NewsCardContent news={news} />
+      <div className="group rounded-2xl overflow-hidden h-full" style={cardStyle}>
+        {inner}
       </div>
     )
   }
@@ -125,76 +118,122 @@ export default function NewsFeed({ limit }) {
     </>
   )
 
+  function newsUrl(n) {
+    return n.url && n.url !== '#' && !n.url.startsWith('/')
+  }
+
+  const renderCards = (items) => (
+    <AnimatePresence mode="popLayout" initial={false}>
+      {items.map((news, idx) => (
+        <motion.div
+          key={news.id}
+          layout
+          variants={cardMotion}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{
+            duration: 0.35,
+            ease: EASE_OUT_EXPO,
+            delay: Math.min(idx, 8) * 0.03,
+            layout: { duration: 0.35, ease: EASE_OUT_EXPO },
+          }}
+        >
+          <NewsCard news={news} />
+        </motion.div>
+      ))}
+    </AnimatePresence>
+  )
+
   return (
     <div>
       {!limit && (
-        <div className="inline-flex flex-wrap gap-0 p-1 rounded-full mb-6" style={{ background: '#f5f5f7' }}>
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className="px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap cursor-pointer transition-all"
-              style={{
-                color: activeCategory === cat ? '#1d1d1f' : '#6e6e73',
-                background: activeCategory === cat ? '#ffffff' : 'transparent',
-                boxShadow: activeCategory === cat ? '0 1px 4px rgba(0,0,0,0.12)' : 'none',
-                border: 'none',
-              }}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="inline-flex flex-wrap gap-0 p-1 rounded-full mb-6 relative" style={{ background: '#f5f5f7' }}>
+          {categories.map(cat => {
+            const active = activeCategory === cat
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className="relative px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap cursor-pointer"
+                style={{
+                  color: active ? '#1d1d1f' : '#6e6e73',
+                  background: 'transparent',
+                  border: 'none',
+                  transition: 'color 150ms ease',
+                }}
+              >
+                {active && (
+                  <motion.span
+                    layoutId="news-seg-thumb"
+                    className="absolute inset-0 rounded-full"
+                    style={{ background: '#ffffff', boxShadow: '0 1px 4px rgba(0,0,0,0.12)' }}
+                    transition={SPRING_SNAP}
+                  />
+                )}
+                <span className="relative">{cat}</span>
+              </button>
+            )
+          })}
         </div>
       )}
 
-      {loading ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map(i => <SkeletonCard key={i} />)}
-        </div>
-      ) : displayNews.length === 0 ? (
-        <div className="py-16 text-center">
-          <p className="font-semibold text-[17px] mb-1.5 m-0" style={{ color: '#1d1d1f' }}>暂无相关资讯</p>
-          <p className="text-[14px] m-0" style={{ color: '#86868b' }}>资讯来自工作室微博与百度资讯，更新后自动展示</p>
-        </div>
-      ) : limit ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {displayNews.map((news, idx) => (
-            <AnimateOnScroll key={news.id} delay={idx * 0.06} y={12}>
-              <NewsCard news={news} />
-            </AnimateOnScroll>
-          ))}
-        </div>
-      ) : groupedByMonth ? (
-        <div className="space-y-10">
-          {groupedByMonth.map((group) => (
-            <section key={group.key}>
-              <div className="flex items-center gap-3 mb-4">
-                <h2 className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
-                  {group.year}年{monthNames[group.month - 1]}
-                </h2>
-                <span className="text-[14px]" style={{ color: '#86868b' }}>{group.items.length} 条</span>
-                <div className="flex-1 h-px" style={{ background: '#d2d2d7' }} />
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {group.items.map((news, idx) => (
-                  <AnimateOnScroll key={news.id} delay={idx * 0.06} y={12}>
-                    <NewsCard news={news} />
-                  </AnimateOnScroll>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
-      ) : (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {displayNews.map((news, idx) => (
-            <AnimateOnScroll key={news.id} delay={idx * 0.06} y={12}>
-              <NewsCard news={news} />
-            </AnimateOnScroll>
-          ))}
-        </div>
-      )}
+      <AnimatePresence mode="wait" initial={false}>
+        {loading ? (
+          <motion.div
+            key="skeleton"
+            className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
+          >
+            {[1, 2, 3].map(i => <SkeletonCard key={i} hasImage={false} lines={2} />)}
+          </motion.div>
+        ) : displayNews.length === 0 ? (
+          <motion.div
+            key="empty"
+            className="py-16 text-center"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO } }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
+          >
+            <p className="font-semibold text-[17px] mb-1.5 m-0" style={{ color: '#1d1d1f' }}>暂无相关资讯</p>
+            <p className="text-[14px] m-0" style={{ color: '#86868b' }}>资讯来自工作室微博与百度资讯，更新后自动展示</p>
+          </motion.div>
+        ) : limit ? (
+          <motion.div key="limited" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" {...gridPresence}>
+            {renderCards(displayNews)}
+          </motion.div>
+        ) : groupedByMonth ? (
+          <motion.div key="grouped" className="space-y-10" {...gridPresence}>
+            {groupedByMonth.map((group) => (
+              <section key={group.key}>
+                <div className="flex items-center gap-3 mb-4">
+                  <h2 className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+                    {group.year}年{monthNames[group.month - 1]}
+                  </h2>
+                  <span className="text-[14px]" style={{ color: '#86868b' }}>{group.items.length} 条</span>
+                  <div className="flex-1 h-px" style={{ background: '#d2d2d7' }} />
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {renderCards(group.items)}
+                </div>
+              </section>
+            ))}
+          </motion.div>
+        ) : (
+          <motion.div key="flat" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" {...gridPresence}>
+            {renderCards(displayNews)}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
+}
+
+// 外层容器入场（首次加载/布局形态切换）
+const gridPresence = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.3, ease: EASE_OUT_EXPO } },
+  exit: { opacity: 0, transition: { duration: 0.15 } },
 }

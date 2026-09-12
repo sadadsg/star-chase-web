@@ -1,4 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import { useState } from 'react'
 
 const navItems = [
   { path: '/', label: '首页' },
@@ -9,12 +11,26 @@ const navItems = [
 ]
 
 // Apple 式全局导航：44px 细高、半透明白 + saturate blur、发丝线底边
+// 滚动后浮现极淡投影，增强层深提示（motion-meaning：内容开始从其下滑过）
 export default function Navbar() {
   const location = useLocation()
+  const [scrolled, setScrolled] = useState(false)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    setScrolled(latest > 8)
+  })
 
   return (
-    <nav
+    <motion.nav
       className="sticky top-0 z-50"
+      initial={false}
+      animate={{
+        boxShadow: scrolled
+          ? '0 1px 12px rgba(0,0,0,0.06)'
+          : '0 1px 0px rgba(0,0,0,0)',
+      }}
+      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       style={{
         background: 'rgba(255,255,255,0.8)',
         backdropFilter: 'saturate(180%) blur(20px)',
@@ -44,6 +60,6 @@ export default function Navbar() {
           </nav>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   )
 }

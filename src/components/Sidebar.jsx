@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { artistInfo } from '../data/rjlData'
+import { EASE_OUT_EXPO } from '../lib/motion'
 
 const hairline = '1px solid #d2d2d7'
 
@@ -55,9 +56,8 @@ export default function Sidebar() {
                 <motion.p
                   key={i + 1}
                   initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  animate={{ opacity: 1, height: 'auto', transition: { duration: 0.3, ease: EASE_OUT_EXPO } }}
+                  exit={{ opacity: 0, height: 0, transition: { duration: 0.18, ease: 'easeOut' } }}
                   className="overflow-hidden m-0"
                 >
                   {para}
