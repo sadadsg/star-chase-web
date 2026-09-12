@@ -10,9 +10,7 @@ const navItems = [
   { path: '/travel', label: '出行' },
 ]
 
-// 品牌标识：楷体疏排 + 红印章「嘉」（楷体栈全平台内置，零网络请求；
-// 印章色与首页眉题 #b64400 呼应）
-const LOGO_FONT = "'Kaiti SC', 'STKaiti', 'KaiTi', 'BiauKai', 'DFKai-SB', serif"
+// 品牌标识：系统默认字体 + 红印章「嘉」（印章色与首页眉题 #b64400 呼应）
 
 // Apple 式全局导航：44px 细高、半透明白 + saturate blur、发丝线底边
 // 滚动后浮现极淡投影，增强层深提示（motion-meaning：内容开始从其下滑过）
@@ -49,8 +47,8 @@ export default function Navbar() {
               aria-hidden="true"
               className="inline-flex items-center justify-center"
               style={{
-                width: 24, height: 24, borderRadius: 6, background: '#b64400',
-                color: '#ffffff', fontSize: 15, lineHeight: 1, fontFamily: LOGO_FONT,
+                width: 26, height: 26, borderRadius: 6, background: '#b64400',
+                color: '#ffffff', fontSize: 16, lineHeight: 1, fontWeight: 600,
                 paddingTop: 1,
               }}
             >
@@ -59,8 +57,8 @@ export default function Navbar() {
             <span
               className="whitespace-nowrap"
               style={{
-                fontFamily: LOGO_FONT, fontSize: 22, fontWeight: 400,
-                letterSpacing: '0.14em', color: '#1d1d1f',
+                fontSize: 24, fontWeight: 600,
+                letterSpacing: '-0.01em', color: '#1d1d1f',
               }}
             >
               嘉期如梦
@@ -72,7 +70,7 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-2 sm:px-2.5 py-1.5 text-[13px] sm:text-[14px] whitespace-nowrap no-underline nav-link-underline ${location.pathname === item.path ? 'is-active font-medium' : ''
+                className={`px-2 sm:px-2.5 py-1.5 text-[14px] sm:text-[15px] whitespace-nowrap no-underline nav-link-underline ${location.pathname === item.path ? 'is-active font-medium' : ''
                   }`}
               >
                 {item.label}
