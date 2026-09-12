@@ -10,6 +10,10 @@ const navItems = [
   { path: '/travel', label: '出行' },
 ]
 
+// 品牌标识：楷体疏排 + 红印章「嘉」（楷体栈全平台内置，零网络请求；
+// 印章色与首页眉题 #b64400 呼应）
+const LOGO_FONT = "'Kaiti SC', 'STKaiti', 'KaiTi', 'BiauKai', 'DFKai-SB', serif"
+
 // Apple 式全局导航：44px 细高、半透明白 + saturate blur、发丝线底边
 // 滚动后浮现极淡投影，增强层深提示（motion-meaning：内容开始从其下滑过）
 export default function Navbar() {
@@ -40,8 +44,25 @@ export default function Navbar() {
     >
       <div className="container-apple">
         <div className="flex items-center justify-between h-11">
-          <Link to="/" className="no-underline flex-shrink-0">
-            <span className="text-[18px] font-semibold whitespace-nowrap" style={{ color: '#1d1d1f', letterSpacing: '-0.01em' }}>
+          <Link to="/" className="no-underline flex-shrink-0 flex items-center gap-2">
+            <span
+              aria-hidden="true"
+              className="inline-flex items-center justify-center"
+              style={{
+                width: 21, height: 21, borderRadius: 5, background: '#b64400',
+                color: '#ffffff', fontSize: 13, lineHeight: 1, fontFamily: LOGO_FONT,
+                paddingTop: 1,
+              }}
+            >
+              嘉
+            </span>
+            <span
+              className="whitespace-nowrap"
+              style={{
+                fontFamily: LOGO_FONT, fontSize: 19, fontWeight: 400,
+                letterSpacing: '0.14em', color: '#1d1d1f',
+              }}
+            >
               嘉期如梦
             </span>
           </Link>
