@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } fr
 import NewsFeed from '../components/NewsFeed'
 import EventCard from '../components/EventCard'
 import CityPicker from '../components/CityPicker'
+import ArtistIntroSection from '../components/ArtistIntroSection'
 import { AnimateOnScroll } from '../components/ui'
 import { useLocalStorage } from '../hooks'
 import { fetchSchedule } from '../api/dataApi'
@@ -295,6 +296,7 @@ export default function HomePage() {
       <UpcomingSchedule />
       <LatestNews />
       <EventsAndTravel />
+      <ArtistIntroSection />
     </div>
   )
 }
