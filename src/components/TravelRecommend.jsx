@@ -2,12 +2,7 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { fetchSchedule } from '../api/dataApi'
-
-const CITIES = [
-  '北京', '上海', '广州', '深圳', '成都', '杭州', '南京', '武汉',
-  '重庆', '西安', '长沙', '天津', '苏州', '青岛', '大连', '郑州',
-  '昆明', '厦门', '福州', '合肥',
-]
+import { CITIES } from '../data/cities'
 
 const stationCodes = {
   '北京': 'BJP', '上海': 'SHH', '广州': 'GZQ', '深圳': 'SZQ',

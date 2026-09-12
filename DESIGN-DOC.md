@@ -3,7 +3,7 @@
 ## 1. 项目概述
 
 **项目名称**：嘉期如梦 (Star Chase)
-**项目定位**：追星族行程助手 — 追踪艺人行程、新闻资讯、活动门票和出行推荐
+**项目定位**：追星族行程助手 — 聚合官方发布行程、新闻资讯、活动门票和出行推荐（仅官方公开内容，不做私人行程/航班类功能）
 **当前艺人**：任嘉伦 (Allen Ren)
 **数据来源**：任嘉伦工作室官方微博（sina 镜像页免登录抓取）+ 百度资讯；行程经 GLM 结构化抽取
 **线上地址**：https://sadadsg.github.io/star-chase-web/
@@ -172,6 +172,16 @@ v1 从百度热搜/资讯标题里匹配「开机/杀青/代言」等关键词�
 
 `scripts/artists.config.cjs`：艺人关键词、工作室 UID、行程/类型关键词、城市表、抽取参数。抓取脚本与 dev server 共用；`worker/`、`scf-deploy/` 作为自包含部署产物有意保持独立。
 
+#### 提醒闭环（v2.2 — Bandsintown 公式国产化）
+
+- **就近匹配**（纯前端，localStorage 免账号）：`useLocalStorage` hook + `CityPicker` 组件。首页近期行程命中「我的城市」高亮 +「就在你的城市」徽章；行程页「只看我的城市」iOS 式开关全日历过滤，空态显示城市名。
+- **增量推送**（`scripts/notify.cjs`）：与 `git show HEAD:data/*.json` 对比（git 即状态，无状态文件），新增行程/资讯组装纯文本消息（≤5 行程 + 3 资讯，企业微信 2048 字节红线内截断），多通道分发：`WECHAT_WEBHOOK`（企微群机器人）/ `BARK_URL`（iOS）/ `TELEGRAM_BOT_TOKEN`+`TELEGRAM_CHAT_ID`，未配置自动跳过，`NOTIFY_DRY_RUN=1` 本地试跑。
+- **轻社区**（giscus）：资讯页底部，GitHub Discussions 驱动（repoId `R_kgDOS4kc_A` / General 分类），零成本免审核运维。**前置条件：仓库需安装 giscus App（github.com/apps/giscus）**。
+
+#### 合规边界（v2.2 明确）
+
+竞品调研结论：超级星饭团因「行程追踪」功能于 2021 清朗行动被下架。本项目因此明确：只聚合**官方公开发布**内容；文案用「官方行程聚合/日历」，不用「行程追踪/踪迹」；不做私人行程、航班、打榜集资、付费 DM。
+
 #### 订阅源与 PWA（v2.1）
 
 - **ICS 日历订阅**：`scripts/generate-feeds.cjs` 从 schedule.json 生成 `api/schedule.ics`（RFC 5545：CRLF、≤75 字节折行、全天事件 DTEND 排他、UID 稳定可更新、北京时间显式 +08:00 解析）。行程页「订阅到系统日历」按钮走 `webcal://` 协议，iPhone/Mac/Google 日历一键订阅，CI 每小时自动再生成。
@@ -313,6 +323,7 @@ jobs:
       4. node scripts/extract-schedule.cjs # GLM 行程抽取（secrets.ZHIPU_API_KEY，缺省降级）
       5. node scripts/fetch-data.cjs       # 资讯汇总 + 派生活动
       5.5 node scripts/generate-feeds.cjs  # schedule.ics + rss.xml
+      4.5 node scripts/notify.cjs             # 增量推送（多通道 webhook）
       6. node --test scripts/test/*.test.cjs
       7. npm run build
       8. mkdir -p dist/api && cp data/*.json dist/api/
@@ -511,6 +522,9 @@ export const API_BASE = import.meta.env.VITE_API_BASE
 - [x] ~~ICS 日历订阅~~（v2.1 已完成：`api/schedule.ics` + webcal 一键订阅）
 - [x] ~~RSS 订阅~~（v2.1 已完成：`api/rss.xml`）
 - [x] ~~PWA~~（v2.1 已完成：manifest + SW 离线缓存）
+- [x] ~~就近匹配 + 更新推送 + 轻社区~~（v2.2 已完成：CityPicker 就近高亮、三通道增量推送、giscus 讨论区）
+- [ ] giscus App 安装（仓库管理员在 github.com/apps/giscus 一键安装，装完讨论区即生效）
+- [ ] 推送通道 secrets 配置（按 README 指引三选一即可）
 - [ ] 票务平台真实数据接入（深链已上线；API 抓取需评估反爬与维护成本）
 - [ ] 出行推荐接入真实航班/高铁查询 API
 - [ ] 多艺人支持（配置已就绪，扩展 `artists.config.cjs` 即可）
@@ -519,4 +533,4 @@ export const API_BASE = import.meta.env.VITE_API_BASE
 
 ---
 
-*文档版本：v2.1 | 最后更新：2026-09-12 | v2 变更：行程源重构（工作室微博+GLM 抽取）、UI 重构（Apple 式极简分段布局）、数据管道 TDD 化；v2.1 变更：ICS/RSS 订阅、购票深链、PWA*
+*文档版本：v2.2 | 最后更新：2026-09-12 | v2 变更：行程源重构（工作室微博+GLM 抽取）、UI 重构（Apple 式极简分段布局）、数据管道 TDD 化；v2.1 变更：ICS/RSS 订阅、购票深链、PWA；v2.2 变更：就近匹配、增量推送、giscus 轻社区、合规措辞收紧*

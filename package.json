@@ -13,9 +13,11 @@
     "data:extract": "node scripts/extract-schedule.cjs",
     "data:news": "node scripts/fetch-data.cjs",
     "data:feeds": "node scripts/generate-feeds.cjs",
+    "data:notify": "node scripts/notify.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@giscus/react": "^3.1.0",
     "@tailwindcss/vite": "^4.3.0",
     "cheerio": "^1.2.0",
     "cors": "^2.8.6",

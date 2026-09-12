@@ -50,6 +50,15 @@ jobs:
       - name: Run data pipeline tests
         run: node --test scripts/test/*.test.cjs
 
+      # 4.5 增量推送（配置了对应 secret 的通道才会发送）
+      - name: Notify new schedule/news
+        run: node scripts/notify.cjs
+        env:
+          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK }}
+          BARK_URL: ${{ secrets.BARK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
       - name: Build frontend
         run: npm run build
 

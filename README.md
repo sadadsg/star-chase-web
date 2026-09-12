@@ -1,6 +1,6 @@
 # 嘉期如梦 (Star Chase)
 
-你的爱豆行程助手 — 追踪艺人行程、新闻资讯、活动门票和出行推荐。
+你的爱豆行程助手 — 聚合官方发布行程、新闻资讯、活动门票和出行推荐。
 
 ## 功能
 
@@ -38,6 +38,23 @@ npm run server
 ```bash
 cp .env.example .env
 ```
+
+## 更新推送（可选）
+
+配置以下任意 GitHub Secret 后，CI 检测到新增行程/资讯会自动推送（未配置的通道自动跳过）：
+
+| Secret | 获取方式 |
+|--------|----------|
+| `WECHAT_WEBHOOK` | 企业微信群 → 设置 → 群机器人 → 添加 → 复制 Webhook 地址 |
+| `BARK_URL` | iPhone 安装 Bark App → 复制服务器地址（形如 `https://api.day.app/xxx`） |
+| `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | @BotFather 建 bot → 给 bot 发消息后从 `getUpdates` 拿 chat_id |
+
+本地测试：`NOTIFY_DRY_RUN=1 npm run data:notify`（只打印消息不发送）。
+
+## 交互功能
+
+- **就近匹配**：首页/行程页选择「我的城市」（存 localStorage，免账号），命中行程高亮「就在你的城市」，行程页可一键「只看我的城市」
+- **粉丝讨论区**：资讯页底部基于 GitHub Discussions 的评论区（giscus）
 
 ## 项目结构
 

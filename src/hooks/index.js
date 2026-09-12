@@ -3,3 +3,4 @@
  */
 
 export { useNetworkStatus } from './useNetworkStatus'
+export { useLocalStorage } from './useLocalStorage'

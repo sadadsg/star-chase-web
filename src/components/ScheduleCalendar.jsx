@@ -1,6 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SkeletonCalendar } from './ui'
+import CityPicker from './CityPicker'
+import { useLocalStorage } from '../hooks'
 import { fetchSchedule } from '../api/dataApi'
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
@@ -29,6 +31,8 @@ export default function ScheduleCalendar() {
   const [selectedDate, setSelectedDate] = useState(null)
   const [schedule, setSchedule] = useState([])
   const [loading, setLoading] = useState(true)
+  const [myCity] = useLocalStorage('my-city')
+  const [onlyMine, setOnlyMine] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -55,13 +59,16 @@ export default function ScheduleCalendar() {
     return () => { cancelled = true }
   }, [])
 
+  // 「只看我的城市」过滤后的可见行程（日历/统计/详情统一走 visible）
+  const visible = onlyMine && myCity ? schedule.filter(s => s.city === myCity) : schedule
+
   const monthSchedule = useMemo(() => {
     const prefix = `${year}-${String(month).padStart(2, '0')}`
-    return schedule.filter(s => s.date && s.date.startsWith(prefix))
-  }, [schedule, year, month])
+    return visible.filter(s => s.date && s.date.startsWith(prefix))
+  }, [visible, year, month])
 
   const selectedSchedule = selectedDate
-    ? schedule.filter(s => s.date === selectedDate)
+    ? visible.filter(s => s.date === selectedDate)
     : []
 
   const calendarDays = useMemo(() => {
@@ -76,7 +83,7 @@ export default function ScheduleCalendar() {
   const getDayEvents = (day) => {
     if (!day) return []
     const dateStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`
-    return schedule.filter(s => s.date === dateStr)
+    return visible.filter(s => s.date === dateStr)
   }
 
   const handleDayClick = (day) => {
@@ -145,6 +152,50 @@ export default function ScheduleCalendar() {
           </svg>
         </button>
       </div>
+
+      {/* 就近匹配：城市选择 + 只看我的城市 */}
+      <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
+        <CityPicker />
+        <label
+          className="inline-flex items-center gap-2 m-0"
+          style={{
+            fontSize: 13,
+            color: '#6e6e73',
+            cursor: myCity ? 'pointer' : 'default',
+            opacity: myCity ? 1 : 0.45,
+          }}
+          title={myCity ? '' : '先选择「我的城市」'}
+        >
+          <span className="whitespace-nowrap">只看我的城市</span>
+          <input
+            type="checkbox"
+            checked={onlyMine && Boolean(myCity)}
+            disabled={!myCity}
+            onChange={e => { setOnlyMine(e.target.checked); setSelectedDate(null) }}
+            style={{ display: 'none' }}
+          />
+          <span style={{
+            width: 40, height: 24, borderRadius: 980, position: 'relative',
+            background: onlyMine && myCity ? '#0071e3' : '#e8e8ed',
+            transition: 'background 0.2s ease', flexShrink: 0, display: 'inline-block',
+          }}>
+            <span style={{
+              position: 'absolute', top: 2,
+              left: onlyMine && myCity ? 18 : 2,
+              width: 20, height: 20, borderRadius: '50%', background: '#fff',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+              transition: 'left 0.2s ease',
+            }} />
+          </span>
+        </label>
+      </div>
+
+      {/* 过滤后本月无行程的提示 */}
+      {onlyMine && myCity && schedule.length > 0 && monthSchedule.length === 0 && (
+        <p className="text-[13px] m-0 mb-2" style={{ color: '#86868b' }}>
+          {year}年{MONTHS[month - 1]}你所在城市（{myCity}）暂无行程
+        </p>
+      )}
 
       {/* 月度统计条 */}
       {monthSchedule.length > 0 && (
@@ -277,6 +328,11 @@ export default function ScheduleCalendar() {
                   <div className="flex items-center gap-2 mb-2">
                     <span className="w-2 h-2 rounded-full" style={{ background: c.dot }} />
                     <span className="text-[13px] font-medium" style={{ color: c.text }}>{s.typeName}</span>
+                    {myCity && s.city === myCity && (
+                      <span style={{ fontSize: 11, fontWeight: 500, color: '#0066cc', background: 'rgba(0,113,227,0.08)', padding: '2px 8px', borderRadius: 980 }}>
+                        就在你的城市
+                      </span>
+                    )}
                     <span className="text-[13px] ml-auto" style={{ color: '#aeaeb2' }}>{s.time}</span>
                   </div>
                   <h4 className="font-semibold text-[16px] m-0" style={{ color: '#1d1d1f' }}>{s.title}</h4>

@@ -1,4 +1,5 @@
 import NewsFeed from '../components/NewsFeed'
+import CommentSection from '../components/CommentSection'
 
 export default function NewsPage() {
   return (
@@ -21,6 +22,7 @@ export default function NewsPage() {
           </a>
         </div>
         <NewsFeed />
+        <CommentSection />
       </div>
     </div>
   )
