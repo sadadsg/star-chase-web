@@ -71,6 +71,9 @@ jobs:
         run: |
           mkdir -p dist/api
           cp data/*.json data/*.ics data/*.xml dist/api/
+          # SPA 深链接回退：GitHub Pages 对未知路径返回 404.html，
+          # 复制 index.html 后 BrowserRouter 可按原路径恢复页面（修复内页刷新 404）
+          cp dist/index.html dist/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
