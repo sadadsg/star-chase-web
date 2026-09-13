@@ -15,17 +15,24 @@ module.exports = {
         '佳偶天成', '陆千乔', '暮色心约', '风与潮', '无忧渡', '深渊无间',
         '37·单枪匹马',
       ],
-      // 行程正源：微博账号矩阵（sina 镜像页免登录 SSR）
+      // 行程正源：微博账号矩阵（sina 镜像页免登录 SSR，全部经 curl 逐个验证 2026-09-13）
       // type: studio 工作室 / drama 剧集平台官微 / brand 品牌官微 / fanclub 后援会
       weibo: {
         mirrorAccounts: [
           { uid: '6135103753', name: '任嘉伦工作室', type: 'studio' },
-          // 其余账号经验证后追加（品牌官微发文杂，资讯层已按艺人关键词过滤）
+          { uid: '9126904284', name: '剧集深渊无间', type: 'drama' },
+          { uid: '1731986465', name: '爱奇艺', type: 'drama' },
+          { uid: '7937619875', name: '佳偶天成官博', type: 'drama' },
+          { uid: '1893988140', name: '瑞士美度表MIDO', type: 'brand' },
+          { uid: '1999333873', name: '欧诗漫美如珍珠', type: 'brand' },
+          { uid: '2831880082', name: 'ETRO艾绰', type: 'brand' },
+          { uid: '3855798856', name: '任嘉伦全国后援会', type: 'fanclub' },
+          { uid: '7390430685', name: '任嘉伦-海外分会', type: 'fanclub' },
         ],
         accountName: '任嘉伦工作室', // 兼容旧字段
       },
-      // 工作室帖文中值得做行程抽取的关键词
-      schedulePostKeywords: ['行程', '嘉书', '日程', '档期', '日历'],
+      // 工作室帖文中值得做行程抽取的关键词（播出/加更/定档覆盖剧集排播类行程）
+      schedulePostKeywords: ['行程', '嘉书', '日程', '档期', '日历', '播出', '加更', '定档', '开播', '直播'],
       // 工作室帖文并入资讯流的最大条数
       newsMaxPosts: 30,
     },

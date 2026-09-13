@@ -55,7 +55,7 @@ function extractFromTextFallback(post) {
     description: post.text.slice(0, 200),
     city: findCity(post.text),
     time: time || '全天',
-    source: 'studio_weibo',
+    source: post.accountName || 'studio_weibo',
     postId: post.id,
     newsUrl: post.detailUrl,
   }))
@@ -70,7 +70,7 @@ async function extractFromTextGLM(post) {
   const arr = glm.extractJSON(content)
   const postId = post.id
   const newsUrl = post.detailUrl
-  return (Array.isArray(arr) ? arr : []).map(it => ({ ...it, source: 'studio_weibo', postId, newsUrl }))
+  return (Array.isArray(arr) ? arr : []).map(it => ({ ...it, source: post.accountName || 'studio_weibo', postId, newsUrl }))
 }
 
 // GLM 视觉抽取：下载海报 → base64 → glm-4v
@@ -155,7 +155,7 @@ async function main() {
           try {
             const items = await extractFromPic(pic, monthHint)
             allRaw.push(...items.map(it => ({
-              ...it, source: 'studio_weibo', postId: post.id, newsUrl: post.detailUrl,
+              ...it, source: post.accountName || 'studio_weibo', postId: post.id, newsUrl: post.detailUrl,
             })))
             stats.glmPicItems += items.length
             picsProcessed++
