@@ -15,11 +15,14 @@ module.exports = {
         '佳偶天成', '陆千乔', '暮色心约', '风与潮', '无忧渡', '深渊无间',
         '37·单枪匹马',
       ],
-      // 行程正源：工作室微博（sina 镜像页免登录 SSR）
+      // 行程正源：微博账号矩阵（sina 镜像页免登录 SSR）
+      // type: studio 工作室 / drama 剧集平台官微 / brand 品牌官微 / fanclub 后援会
       weibo: {
-        uid: '6135103753',
-        accountName: '任嘉伦工作室',
-        mirrorUrl: 'https://www.sina.cn/media/6135103753',
+        mirrorAccounts: [
+          { uid: '6135103753', name: '任嘉伦工作室', type: 'studio' },
+          // 其余账号经验证后追加（品牌官微发文杂，资讯层已按艺人关键词过滤）
+        ],
+        accountName: '任嘉伦工作室', // 兼容旧字段
       },
       // 工作室帖文中值得做行程抽取的关键词
       schedulePostKeywords: ['行程', '嘉书', '日程', '档期', '日历'],

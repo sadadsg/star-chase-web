@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { fetchNews } from '../api/dataApi'
 import { SkeletonCard } from './ui'
-import { EASE_OUT_EXPO, SPRING_SNAP } from '../lib/motion'
+import { EASE_OUT_EXPO, SPRING_SNAP, SPRING_SOFT } from '../lib/motion'
 
 const categories = ['全部', '影视', '综艺', '时尚', '演出', '日常']
 
@@ -17,6 +17,7 @@ const cardMotion = {
 
 export default function NewsFeed({ limit }) {
   const [activeCategory, setActiveCategory] = useState('全部')
+  const [officialOnly, setOfficialOnly] = useState(false)
   const [liveNews, setLiveNews] = useState([])
   const [loading, setLoading] = useState(!limit)
 
@@ -41,7 +42,13 @@ export default function NewsFeed({ limit }) {
     ? liveNews
     : liveNews.filter(n => n.category === activeCategory)
 
-  const displayNews = limit ? filteredNews.slice(0, limit) : filteredNews
+  // 首页摘要区（limit 模式）优先官方来源；官方不足时回退全量前 N 条，避免首页开天窗
+  const displayNews = limit
+    ? (() => {
+      const official = filteredNews.filter(n => n.official)
+      return (official.length ? official : filteredNews).slice(0, limit)
+    })()
+    : (officialOnly ? filteredNews.filter(n => n.official) : filteredNews)
 
   const groupedByMonth = useMemo(() => {
     if (limit || displayNews.length === 0) return null
@@ -160,33 +167,63 @@ export default function NewsFeed({ limit }) {
   return (
     <div>
       {!limit && (
-        <div className="inline-flex flex-wrap gap-0 p-1 rounded-full mb-6 relative" style={{ background: '#f5f5f7' }}>
-          {categories.map(cat => {
-            const active = activeCategory === cat
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className="relative px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap cursor-pointer"
+        <div className="flex items-center justify-between flex-wrap gap-3 mb-6">
+          <div className="inline-flex flex-wrap gap-0 p-1 rounded-full relative" style={{ background: '#f5f5f7' }}>
+            {categories.map(cat => {
+              const active = activeCategory === cat
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className="relative px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap cursor-pointer"
+                  style={{
+                    color: active ? '#1d1d1f' : '#6e6e73',
+                    background: 'transparent',
+                    border: 'none',
+                    transition: 'color 150ms ease',
+                  }}
+                >
+                  {active && (
+                    <motion.span
+                      layoutId="news-seg-thumb"
+                      className="absolute inset-0 rounded-full"
+                      style={{ background: '#ffffff', boxShadow: '0 1px 4px rgba(0,0,0,0.12)' }}
+                      transition={SPRING_SNAP}
+                    />
+                  )}
+                  <span className="relative">{cat}</span>
+                </button>
+              )
+            })}
+          </div>
+
+          {/* 只看官方（工作室/官方账号） */}
+          <label
+            className="inline-flex items-center gap-2 m-0 cursor-pointer"
+            style={{ fontSize: 13, color: '#6e6e73' }}
+          >
+            <span className="whitespace-nowrap">只看官方</span>
+            <input
+              type="checkbox"
+              checked={officialOnly}
+              onChange={e => setOfficialOnly(e.target.checked)}
+              style={{ display: 'none' }}
+            />
+            <motion.span
+              style={{ width: 36, height: 21, borderRadius: 980, position: 'relative', flexShrink: 0, display: 'inline-block' }}
+              animate={{ backgroundColor: officialOnly ? '#0071e3' : '#e8e8ed' }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+            >
+              <motion.span
                 style={{
-                  color: active ? '#1d1d1f' : '#6e6e73',
-                  background: 'transparent',
-                  border: 'none',
-                  transition: 'color 150ms ease',
+                  position: 'absolute', top: 2, width: 17, height: 17, borderRadius: '50%',
+                  background: '#fff', boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
                 }}
-              >
-                {active && (
-                  <motion.span
-                    layoutId="news-seg-thumb"
-                    className="absolute inset-0 rounded-full"
-                    style={{ background: '#ffffff', boxShadow: '0 1px 4px rgba(0,0,0,0.12)' }}
-                    transition={SPRING_SNAP}
-                  />
-                )}
-                <span className="relative">{cat}</span>
-              </button>
-            )
-          })}
+                animate={{ x: officialOnly ? 17 : 0 }}
+                transition={SPRING_SOFT}
+              />
+            </motion.span>
+          </label>
         </div>
       )}
 

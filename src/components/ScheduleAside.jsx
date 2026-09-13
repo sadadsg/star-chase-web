@@ -79,7 +79,8 @@ export default function ScheduleAside() {
                 {nextEvent.title}
               </p>
               <p className="text-[13px] m-0" style={{ color: '#6e6e73' }}>
-                {nextEvent.date.slice(5).replace('-', '.')} {nextEvent.typeName}
+                {nextEvent.date.slice(5).replace('-', '.')}
+                {nextEvent.time && nextEvent.time !== '全天' ? ` ${nextEvent.time}` : ''} {nextEvent.typeName}
                 {nextEvent.city && nextEvent.city !== '待定' ? ` · ${nextEvent.city}` : ''}
                 {countdown && <span style={{ color: '#0066cc', fontWeight: 500 }}> · {countdown}</span>}
               </p>

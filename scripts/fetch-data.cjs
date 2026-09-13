@@ -23,6 +23,19 @@ const UA_HEADERS = {
 const ALL_KEYWORDS = config.artists.flatMap(a => a.keywords)
 const ARTIST_NAME = config.artists[0].name
 
+// 官方来源集合：全部微博镜像账号名（工作室/剧官微/品牌官微/后援会）
+const OFFICIAL_SOURCES = new Set(
+  config.artists.flatMap(a => {
+    const w = a.weibo || {}
+    if (Array.isArray(w.mirrorAccounts)) return w.mirrorAccounts.map(m => m.name)
+    return w.accountName ? [w.accountName] : []
+  })
+)
+
+function isOfficialSource(source) {
+  return OFFICIAL_SOURCES.has(source)
+}
+
 function matchesArtist(text) {
   return ALL_KEYWORDS.some(kw => text.includes(kw))
 }
@@ -110,20 +123,30 @@ async function fetchBaiduHot() {
   return news
 }
 
-// ===== 工作室微博帖文 → 资讯 =====
-function studioPostsAsNews() {
+// ===== 微博官方账号帖文 → 资讯（多账号；品牌官微发文杂，须过艺人关键词过滤） =====
+function weiboPostsAsNews() {
   const postsPath = path.join(DATA_DIR, 'weibo-posts.json')
   if (!fs.existsSync(postsPath)) return []
   const bundle = JSON.parse(fs.readFileSync(postsPath, 'utf8'))
   const news = []
   for (const artist of config.artists) {
-    const posts = (bundle.artists && bundle.artists[artist.id] && bundle.artists[artist.id].recentPosts) || []
-    for (const p of posts) {
+    const artistBundle = bundle.artists && bundle.artists[artist.id]
+    if (!artistBundle) continue
+    // 兼容两种结构：多账号 accounts[]（新）与单账号 recentPosts（旧）
+    const accountPosts = Array.isArray(artistBundle.accounts)
+      ? artistBundle.accounts.flatMap(acc => (acc.recentPosts || []).map(p => ({ ...p, accountName: acc.name, accountType: acc.type })))
+      : (artistBundle.recentPosts || []).map(p => ({ ...p, accountName: artist.weibo.accountName, accountType: 'studio' }))
+
+    for (const p of accountPosts) {
+      const text = `${p.text || ''}`
+      if (!matchesArtist(text)) continue // 品牌官微等噪声过滤
       const clean = cleanTitle(p.text)
+      const source = p.accountName || artist.weibo.accountName
       news.push({
-        title: (clean || '工作室微博更新').slice(0, 60),
+        title: (clean || '官方微博更新').slice(0, 60),
         summary: (clean || p.text).slice(0, 140),
-        source: artist.weibo.accountName,
+        source,
+        official: isOfficialSource(source),
         url: p.detailUrl,
         cover: '',
         category: guessCategory(p.text),
@@ -131,7 +154,7 @@ function studioPostsAsNews() {
       })
     }
   }
-  console.log(`[news] 工作室微博帖文: ${news.length} 条`)
+  console.log(`[news] 官方微博帖文(关键词过滤后): ${news.length} 条`)
   return news
 }
 
@@ -165,7 +188,7 @@ async function main() {
 
   const batches = await Promise.allSettled([fetchBaiduNews(), fetchBaiduHot()])
   const incoming = [
-    ...studioPostsAsNews(),
+    ...weiboPostsAsNews(),
     ...batches.flatMap(b => (b.status === 'fulfilled' ? b.value : [])),
   ]
   for (const b of batches) {

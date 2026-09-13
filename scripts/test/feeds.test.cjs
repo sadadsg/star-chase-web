@@ -48,6 +48,21 @@ test('foldICSLine: 75 字节上限折行且续行空格开头，展开可还原'
   assert.strictEqual(unfolded, long)
 })
 
+test('buildICS: 带时刻条目转 UTC（北京-8h），DTEND +2h；无时刻保持全天', () => {
+  const ics = buildICS([
+    { date: '2026-09-20', typeName: '演出活动', title: '音乐节', city: '青岛', time: '18:00' },
+    { date: '2026-09-21', typeName: '商务活动', title: '全天活动' },
+    { date: '2026-09-22', typeName: '商务活动', title: '早场', time: '07:00' },
+  ], { calendarName: '测试', now: NOW })
+  // 18:00 北京 = 10:00Z 同日
+  assert.ok(ics.includes('DTSTART:20260920T100000Z'))
+  assert.ok(ics.includes('DTEND:20260920T120000Z'))
+  // 07:00 北京 = 23:00Z 前一日（跨日回退）
+  assert.ok(ics.includes('DTSTART:20260921T230000Z'))
+  // 全天条目不受影响
+  assert.ok(ics.includes('DTSTART;VALUE=DATE:20260921'))
+})
+
 test('buildRSS: XML 转义 + pubDate + 条目截断', () => {
   const news = Array.from({ length: 40 }, (_, i) => ({
     title: `标题<i>${i} & "引用"`,

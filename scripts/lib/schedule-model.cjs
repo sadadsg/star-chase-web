@@ -44,6 +44,7 @@ function validateItems(rawItems, { cities, typeNames, dateWindowMonths = 1, now 
       date, type, title, city,
       typeName: typeNames ? typeNames[type] : type,
       description: (raw.description || title).slice(0, 200),
+      time: /^\d{2}:\d{2}$/.test(raw.time || '') ? raw.time : '全天',
       source: raw.source || 'studio_weibo',
       postId: raw.postId || null,
       newsUrl: raw.newsUrl || null,
@@ -70,7 +71,7 @@ function mergeSchedule(existing, incoming, { retentionDays = 120, now = new Date
   return out
 }
 
-// 资讯合并：按标题去重，保留 retentionDays 窗口，按时间倒序，cap maxItems
+// 资讯合并：按标题去重，保留 retentionDays 窗口，官方来源置顶（组内时间倒序），cap maxItems
 function mergeNews(existing, incoming, { retentionDays = 90, maxItems = 60, now = new Date() } = {}) {
   const seen = new Set()
   const cutoff = now.getTime() - retentionDays * 86400 * 1000
@@ -84,7 +85,7 @@ function mergeNews(existing, incoming, { retentionDays = 90, maxItems = 60, now 
   }
   return out
     .filter(n => n._ts === 0 || n._ts >= cutoff) // 无日期的保留（宁可多展示）
-    .sort((a, b) => b._ts - a._ts)
+    .sort((a, b) => (Number(Boolean(b.official)) - Number(Boolean(a.official))) || (b._ts - a._ts))
     .slice(0, maxItems)
     .map(({ _ts, ...n }) => n)
 }
@@ -117,6 +118,22 @@ function extractDatesFallback(text, postTime) {
   return [...dates]
 }
 
+// 保守时刻提取：只认数字型时间（18:00 / 18：00 / 18点30 / 18点整），取首个
+// 不做「晚上八点」类中文换算（宁缺毋滥）；无则返回 null
+function extractTime(text) {
+  if (!text) return null
+  const patterns = [
+    /(?:^|[^\d])([01]?\d|2[0-3])[:：]([0-5]\d)/,
+    /(?:^|[^\d])([01]?\d|2[0-3])点([0-5]\d)分?/,
+    /(?:^|[^\d])([01]?\d|2[0-3])点整/,
+  ]
+  for (const re of patterns) {
+    const m = text.match(re)
+    if (m) return `${String(m[1]).padStart(2, '0')}:${m[2] || '00'}`
+  }
+  return null
+}
+
 // 清洗帖文为可展示标题：去超话标记/话题/@/链接/零宽字符
 function cleanTitle(text) {
   return (text || '')
@@ -131,4 +148,4 @@ function cleanTitle(text) {
     .slice(0, 60)
 }
 
-module.exports = { isValidDate, monthsFromNow, validateItems, mergeSchedule, mergeNews, classifyType, extractDatesFallback, cleanTitle }
+module.exports = { isValidDate, monthsFromNow, validateItems, mergeSchedule, mergeNews, classifyType, extractDatesFallback, extractTime, cleanTitle }

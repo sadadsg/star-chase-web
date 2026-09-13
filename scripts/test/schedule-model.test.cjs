@@ -2,7 +2,7 @@ const { test } = require('node:test')
 const assert = require('node:assert')
 const {
   isValidDate, monthsFromNow, validateItems, mergeSchedule, mergeNews,
-  classifyType, extractDatesFallback, cleanTitle,
+  classifyType, extractDatesFallback, cleanTitle, extractTime,
 } = require('../lib/schedule-model.cjs')
 
 const CFG = {
@@ -117,4 +117,35 @@ test('extractDatesFallback: 无 postTime 时回退当前时间且不崩溃', () 
 test('cleanTitle: 去超话标记、话题、@、链接与零宽字符', () => {
   const raw = '#任嘉伦[超话]# #剧集深渊无间# 今晚18:00 锁定爱奇艺迷雾剧场 @任嘉伦Allen https://t.cn/abc \u200b'
   assert.strictEqual(cleanTitle(raw), '今晚18:00 锁定爱奇艺迷雾剧场')
+})
+
+test('extractTime: 数字型时刻保守提取', () => {
+  assert.strictEqual(extractTime('今晚18:00，锁定爱奇艺迷雾剧场'), '18:00')
+  assert.strictEqual(extractTime('直播 19：30 开启'), '19:30')
+  assert.strictEqual(extractTime('晚上8点30分见'), '08:30')
+  assert.strictEqual(extractTime('明天 9点整 开播'), '09:00')
+  assert.strictEqual(extractTime('9月20日 见面会'), null, '日期不当时刻')
+  assert.strictEqual(extractTime('逐帧欣赏陆千乔'), null)
+  assert.strictEqual(extractTime(''), null)
+})
+
+test('validateItems: time 归一化（HH:MM 保留，其余归全天）', () => {
+  const { items } = validateItems([
+    { date: '2026-09-20', type: 'fanmeeting', title: 'A', time: '19:30' },
+    { date: '2026-09-20', type: 'fanmeeting', title: 'B', time: '晚上' },
+    { date: '2026-09-20', type: 'fanmeeting', title: 'C' },
+  ], CFG)
+  assert.deepStrictEqual(items.map(i => i.time), ['19:30', '全天', '全天'])
+})
+
+test('mergeNews: 官方来源置顶（组内时间倒序）', () => {
+  const existing = []
+  const incoming = [
+    { title: '营销号新闻', time: '2026-09-12 20:00', source: '百度搜索' },
+    { title: '官方旧帖', time: '2026-09-10 09:00', source: '任嘉伦工作室', official: true },
+    { title: '营销号新闻2', time: '2026-09-12 19:00', source: '百度搜索' },
+    { title: '官方新帖', time: '2026-09-12 10:00', source: '任嘉伦工作室', official: true },
+  ]
+  const merged = mergeNews(existing, incoming, { retentionDays: 90, maxItems: 10, now: CFG.now })
+  assert.deepStrictEqual(merged.map(n => n.title), ['官方新帖', '官方旧帖', '营销号新闻', '营销号新闻2'])
 })

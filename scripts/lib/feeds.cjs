@@ -58,7 +58,15 @@ function stableId(seed) {
   return crypto.createHash('sha1').update(seed).digest('hex').slice(0, 12)
 }
 
-// schedule 条目数组 → ICS 文本（CRLF）
+// 北京时间日期+时刻 → UTC 基本格式（DTSTART 用 UTC 形式免 VTIMEZONE，兼容性最好）
+function beijingToUTC(dateStr, hhmm) {
+  const [y, m, d] = dateStr.split('-').map(Number)
+  const [hh, mm] = hhmm.split(':').map(Number)
+  const dt = new Date(Date.UTC(y, m - 1, d, hh - 8, mm))
+  return dt
+}
+
+// buildICS：带时刻（s.time = 'HH:MM'）的条目 DTSTART=UTC 时刻、DTEND=+2h；无时刻保持全天
 function buildICS(schedule, { calendarName, now = new Date() } = {}) {
   const lines = [
     'BEGIN:VCALENDAR',
@@ -76,8 +84,16 @@ function buildICS(schedule, { calendarName, now = new Date() } = {}) {
     lines.push('BEGIN:VEVENT')
     lines.push(`UID:${uid}`)
     lines.push(`DTSTAMP:${stamp}`)
-    lines.push(`DTSTART;VALUE=DATE:${icsDate(s.date)}`)
-    lines.push(`DTEND;VALUE=DATE:${icsDate(nextDay(s.date))}`)
+    const timed = /^\d{2}:\d{2}$/.test(s.time || '')
+    if (timed) {
+      const start = beijingToUTC(s.date, s.time)
+      const end = new Date(start.getTime() + 2 * 3600 * 1000)
+      lines.push(`DTSTART:${icsUTC(start)}`)
+      lines.push(`DTEND:${icsUTC(end)}`)
+    } else {
+      lines.push(`DTSTART;VALUE=DATE:${icsDate(s.date)}`)
+      lines.push(`DTEND;VALUE=DATE:${icsDate(nextDay(s.date))}`)
+    }
     lines.push(foldICSLine(`SUMMARY:${escapeICSText(`【${s.typeName || '活动'}】${s.title || ''}`)}`))
     if (s.city && s.city !== '待定') lines.push(foldICSLine(`LOCATION:${escapeICSText(s.city)}`))
     if (s.description) lines.push(foldICSLine(`DESCRIPTION:${escapeICSText(s.description.slice(0, 300))}`))
