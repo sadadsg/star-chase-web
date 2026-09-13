@@ -566,10 +566,10 @@
     }
   ],
   "total": 47,
-  "updatedAt": "2026-09-13T09:47:48.463Z",
+  "updatedAt": "2026-09-13T12:57:44.029Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 44,
+    "validated": 40,
     "dropped": 20,
     "dropReasons": {
       "date_out_of_window": 20
@@ -577,7 +577,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 64,
+    "fallbackItems": 60,
     "errors": 0
   }
 }
