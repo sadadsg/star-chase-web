@@ -615,6 +615,30 @@
     {
       "date": "2026-09-16",
       "type": "filming",
+      "title": "快乐！五年时光流转，江湖甜意不变~一起回顾无墨山庄里贴贴夫妇 的温柔与心动吧[期待]现在关注并转发还有机会获得「随机主演",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#公子倾城开播五周年#快乐！五年时光流转，江湖甜意不变~一起回顾无墨山庄里贴贴夫妇@卜冠今 @王星越 的温柔与心动吧[期待]现在关注并转发还有机会获得「随机主演签名照」哦~#桃桃那年今日# http://t.cn/AXOMnUp2 ​",
+      "time": "全天",
+      "source": "爱奇艺",
+      "postId": "5343826568021221",
+      "newsUrl": "https://www.sina.cn/news/detail/5343826568021221.html"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "filming",
+      "title": "快乐[打call]赤子之心，砥砺前行！赴正义长路，一起来 重温这段动人故事吧~现在关注并转发还有机会获得「爱奇艺会员月卡",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#沉默的真相开播六周年#快乐[打call]赤子之心，砥砺前行！赴正义长路，一起来@爱奇艺 重温这段动人故事吧~现在关注并转发还有机会获得「爱奇艺会员月卡」哦~@廖凡 @白宇WHITE @谭卓 @演员宁理 #桃桃那年今日# http://t.cn/AXOMEtHe ​",
+      "time": "全天",
+      "source": "爱奇艺",
+      "postId": "5343811468265096",
+      "newsUrl": "https://www.sina.cn/news/detail/5343811468265096.html"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "filming",
       "title": "明明在职场刻意保持安全距离，怎么反而越来越近？究竟是陆承洲 的深V太诱惑，还是林晓晓 沦陷在美色里？爱奇艺 今日开播！\ud83e",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -659,6 +683,18 @@
       "source": "爱奇艺",
       "postId": "5341890062581888",
       "newsUrl": "https://www.sina.cn/news/detail/5341890062581888.html"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "filming",
+      "title": "9月17日12:00在爱奇艺开播！为什么说来爱奇艺追剧真香？VIP会员总有一款适合你👇",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#一瓯春# 9月17日12:00在爱奇艺开播！为什么说来爱奇艺追剧真香？VIP会员总有一款适合你👇 ​",
+      "time": "12:00",
+      "source": "爱奇艺",
+      "postId": "5343849381888109",
+      "newsUrl": "https://www.sina.cn/news/detail/5343849381888109.html"
     },
     {
       "date": "2026-09-17",
@@ -769,11 +805,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5343384907809420.html"
     }
   ],
-  "total": 64,
-  "updatedAt": "2026-09-16T08:05:34.559Z",
+  "total": 67,
+  "updatedAt": "2026-09-16T13:54:28.741Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 47,
+    "validated": 50,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -781,7 +817,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 66,
+    "fallbackItems": 69,
     "errors": 0
   }
 }
