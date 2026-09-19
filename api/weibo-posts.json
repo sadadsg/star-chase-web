@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T09:58:57.865Z",
+  "updatedAt": "2026-09-19T13:42:59.893Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -93,15 +93,6 @@
           "accountName": "任嘉伦工作室",
           "accountType": "studio",
           "hint": "filming"
-        },
-        {
-          "id": "5304360387219660",
-          "detailUrl": "https://www.sina.cn/news/detail/5304360387219660.html",
-          "time": "2026-05-30 19:45",
-          "text": "#任嘉伦[超话]# 直播前的定格📸 boss@任嘉伦Allen 把居家的魅力藏进每个细节～ 往那一坐，就是最懂生活的有心任[太阳]#任苒时光# ​",
-          "accountName": "任嘉伦工作室",
-          "accountType": "studio",
-          "hint": "business"
         },
         {
           "id": "5341191705988298",
@@ -678,26 +669,28 @@
           "pics": [
             "https://k.sinaimg.cn/n/news/transform/310/w710h400/20260919/bba3-65bfd83d65b907f8475727322deaeb53.jpg/w710h400z1l50t1q750ab.jpg?by=comos",
             "https://k.sinaimg.cn/n/news/transform/266/w640h426/20260919/96f2-8df3ad01847bc86dde409d9929f7ce44.jpg/w200h134z1l50t1q754fd.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/11a4-38e30b218cdb7fe30d571d9a648447a9.jpg/w200h134z1l50t1q75dfa.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/200/w720h1080/20260919/d089-ed5d9d24fb2984f6ca49123aab4f65d0.jpg/w200h134z1l50t1q752f4.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/386/w750h436/20260919/ad88-d5ad579b081321c0f3024d3abd79a10d.jpg/w200h134z1l50t1q75bed.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/17aa-2e84f6dbd7c1a057d24a70a2a373e073.jpg/w200h134z1l50t1q7562d.jpg?by=comos",
-            "https://k.sinaimg.cn/n/sinakd20260919s/656/w640h816/20260919/6f80-9392ae6d37829bce36825c86b81c098f.jpg/w120h90l50t11b9.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/317/w690h1227/20260919/00d6-645b63942293d333c0d8661c54c6a209.png/w120h90l50t1c38.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/181/w535h446/20260919/45d6-f765b45058a3c51212d7e845e28d1e39.png/w120h90l50t17cd.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/267/w640h427/20260919/29a2-fdb27d21c329c0e1e59d81650fc6c4ba.jpg/w120h90l50t1594.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/650/w900h1350/20260919/f1fa-e0dbbadf3a3fbbfcba398221a9be5ff5.jpg/w120h90l50t1f88.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/718/w1024h494/20260919/fa67-86cb0c723de743bfa68d3b9fee96d7b2.png/w120h90l50t10f0.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/700/w600h900/20260919/3135-5afd580837980e17e1a862f3e539e733.jpg/w120h90l50t11fe.jpg",
+            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/dd9f-80f07c4cded4759bdad8ba31d6815edf.jpg/w200h134z1l50t1q75d88.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/400/w1280h720/20260919/9552-9a16ca527ccb573491ad331b98f754ac.jpg/w200h134z1l50t1q75931.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/ddcd-1d8ea07d883f71fdf5fec136adcdc86c.jpg/w200h134z1l50t1q7557e.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/2103-2c3a36bb610337b42187f2924a13265f.jpg/w200h134z1l50t1q75a4d.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/434/w1700h1134/20260919/236a-fcdb9a786897596135c93a6a97a2258e.jpg/w200h134z1l50t1q7509c.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/399/w720h479/20260919/9119-9dae294becdf39451a7b9414ff57e1a0.jpg/w200h134z1l50t1q75357.jpg?by=comos",
+            "https://k.sinaimg.cn/n/sinakd20260919s/385/w1080h905/20260919/57af-584c337f7acde542efad0712b4077df6.jpg/w120h90l50t1907.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/786/w640h946/20260919/3000-13fd5058133e1b802efe9abf13ec02f3.jpg/w120h90l50t13cd.jpg",
+            "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/e_NJ-fysqfnf9443598.png/w120h90l50t1f86.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/265/w640h425/20260919/cbbc-fb51e40bc9ac690210d5caa5cf495c9a.jpg/w120h90l50t16dc.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/336/w665h471/20260919/c7b6-e25907dc8ea68a06b8768c7d1f67c49b.jpg/w120h90l50t11a2.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/290/w1080h810/20260919/4220-844d8793fc5bbb2b54c02bcb2bfbd4a6.jpg/w120h90l50t16b1.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/699/w900h599/20260919/afb3-73dbdd30436325d6cd5fffa2ab03fcbe.jpg/w120h90l50t197d.jpg",
             "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/1900-c06d7ec991124946d7702040d020419c.jpg/w350h234z1l50t1q75584.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/088f-86dbaf2768e89d3d678fa08dde70a521.jpg/w350h234z1l50t1q75abb.jpg?by=comos",
-            "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
-            "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
-            "https://k.sinaimg.cn/n/sinakd20260919s/300/w720h380/20260919/0eae-3ccc93c80159fec9575aed882005a4a0.jpg/w200h134z1l50t1q75af7.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/518/w550h1568/20260919/0e62-f950e2a2f43b1b066fe1fb92e17ef6dd.png/w200h134z1l50t1q752aa.jpg?by=comos",
-            "https://k.sinaimg.cn/n/finance/683/w399h284/20260919/d93d-62146133259ca2da33fa8eb8da0f56d3.png/w200h134z1l50t1q75d3a.jpg?by=comos",
-            "https://k.sinaimg.cn/n/finance/785/w468h317/20260919/253b-3d6adb6ff5f61512234d5ad293f6052b.png/w200h134z1l50t1q75748.jpg?by=comos",
-            "https://k.sinaimg.cn/n/front20260919ac/160/w1280h1280/20260919/9626-06a8e2561186ae1b67505564fbed9732.jpg/w200h134z1l50t1q75bc0.jpg?by=comos",
+            "https://k.sinaimg.cn/n/front20260919ac/300/w720h380/20260919/a65e-7651c3e28291581b93306a4fef1b3aef.jpg/w200h134z1l50t1q75b3f.jpg?by=comos",
+            "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
+            "https://k.sinaimg.cn/n/finance/500/w300h200/20251028/74a7-65908b5e7ff44a3cc09f2280ef4838ac.png/w200h134z1l50t1q7561e.jpg?by=comos",
+            "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180418/7RAA-fzihnep5208659.png/w200h134z1l50t1q754d3.jpg?by=comos",
+            "https://k.sinaimg.cn/n/sinakd20260919s/220/w1276h544/20260919/61c1-e69d4013b2b5ad3c28a5c1264f334ab6.jpg/w200h134z1l50t1q7585c.jpg?by=comos",
+            "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/c989-2a48932d3f7a49dd0bb055d83998ca1e.png/w350h234z1l50t1q75ff9.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/44db-c190acb5dbaa4fa9eca803dcfa1b80a1.jpg/w350h234z1l50t1q7591e.jpg?by=comos",
             "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/KCcj-fysqfnf9443543.png/w200h134z1l50t1q757d0.jpg?by=comos",
@@ -1046,33 +1039,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5343712063783208.html",
           "time": "2026-09-16 09:55",
           "text": "#爱情上升期开播# 明明在职场刻意保持安全距离，怎么反而越来越近？究竟是陆承洲@王凯沐 的深V太诱惑，还是林晓晓@徐轸轸Zzz 沦陷在美色里？爱奇艺#爱情上升期# 今日开播！🥝http://t.cn/AXOMzG5B ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama",
-          "hint": "filming"
-        },
-        {
-          "id": "5343450338952783",
-          "detailUrl": "https://www.sina.cn/news/detail/5343450338952783.html",
-          "time": "2026-09-15 16:35",
-          "text": "#金牌客服董董恩开播三周年#啦！逗趣不止，甜蜜狙击！[yeah]今天再来@爱奇艺 看鬼马乙方董董恩@徐璐LULU 如何攻略帅气甲方楼渊@魏哲鸣Miles ~ #金牌客服董董恩# #桃桃那年今日# http://t.cn/AXhGgOGD ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama",
-          "hint": "filming"
-        },
-        {
-          "id": "5343420139700826",
-          "detailUrl": "https://www.sina.cn/news/detail/5343420139700826.html",
-          "time": "2026-09-15 14:35",
-          "text": "#请君开播四周年#快乐！千年追爱双向奔赴，今日再来@爱奇艺 与陆炎@任嘉伦Allen 于登登@李沁 共赴奇幻之路吧~ #请君##桃桃那年今日# http://t.cn/A6SuUGCI ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama",
-          "hint": "filming"
-        },
-        {
-          "id": "5343384907809420",
-          "detailUrl": "https://www.sina.cn/news/detail/5343384907809420.html",
-          "time": "2026-09-15 12:15",
-          "text": "#电影年会不能停2#网播定档！一场盛大年会筹备风波席卷集团，有人想保住岗位，有人伺机升职，有人暗藏裁员秘密。职场套路轮番上演，办公室乌龙接连不断，打工人真实共鸣感拉满。9月18日，来@爱奇艺 看～ ​",
           "accountName": "爱奇艺",
           "accountType": "drama",
           "hint": "filming"
@@ -1627,33 +1593,6 @@
           "hint": "filming"
         },
         {
-          "id": "5340463796322938",
-          "detailUrl": "https://www.sina.cn/news/detail/5340463796322938.html",
-          "time": "2026-09-07 10:47",
-          "text": "#深渊无间定档0909# 跟随李成警官@任嘉伦Allen 一起找出被掩藏的真相！",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub",
-          "hint": "filming"
-        },
-        {
-          "id": "5340462753514701",
-          "detailUrl": "https://www.sina.cn/news/detail/5340462753514701.html",
-          "time": "2026-09-07 10:43",
-          "text": "当小说预言照进现实，李成警官如何找准节奏，跳出预设陷阱？9月9日，与@任嘉伦Allen 一同揭开深渊之下的真相。#深渊无间定档0909##深渊无间终极预告# //@任嘉伦工作室:#任嘉伦[超话]# #剧集深渊无间# 越是靠近真相，就越容易被深渊裹挟，只有找准自己的节奏，跳出预设的陷阱，才能剖开层层迷雾，找出真",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub",
-          "hint": "filming"
-        },
-        {
-          "id": "5340462371310305",
-          "detailUrl": "https://www.sina.cn/news/detail/5340462371310305.html",
-          "time": "2026-09-07 10:41",
-          "text": "热血新警李成，在层层迷雾中执着追凶。期待演员@任嘉伦Allen 在《深渊无间》中的表演，9月9日，随李sir一同剖开迷雾，探寻真相🔍#深渊无间终极预告# #深渊无间定档0909#",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub",
-          "hint": "filming"
-        },
-        {
           "id": "5341188854385347",
           "detailUrl": "https://www.sina.cn/news/detail/5341188854385347.html",
           "time": "2026-09-09 10:48",
@@ -1697,6 +1636,22 @@
           "pics": [
             "http://wx2.sinaimg.cn/middle/006HcgKlly1igx5bphuo4j318g30cnpf.jpg"
           ],
+          "accountName": "任嘉伦工作室",
+          "accountType": "studio"
+        },
+        {
+          "id": "5344944153953187",
+          "detailUrl": "https://www.sina.cn/news/detail/5344944153953187.html",
+          "time": "2026-09-19 19:30",
+          "text": "#任嘉伦[超话]# 全方位回顾李成@任嘉伦Allen 帅气🫡#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# http://t.cn/AXOWfFE2 ​",
+          "accountName": "任嘉伦工作室",
+          "accountType": "studio"
+        },
+        {
+          "id": "5344937630505266",
+          "detailUrl": "https://www.sina.cn/news/detail/5344937630505266.html",
+          "time": "2026-09-19 19:04",
+          "text": "#任嘉伦[超话]# 这一路，我们陪伴李成@任嘉伦Allen 追查到了真相，更见识到了他的正义与善良。深渊有尽，正道无间。李成，我们下次再见！#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间#",
           "accountName": "任嘉伦工作室",
           "accountType": "studio"
         },
@@ -1917,22 +1872,6 @@
           "accountType": "studio"
         },
         {
-          "id": "5342109452210098",
-          "detailUrl": "https://www.sina.cn/news/detail/5342109452210098.html",
-          "time": "2026-09-11 23:46",
-          "text": "#任嘉伦[超话]# 灯光为他亮起之前，他@任嘉伦Allen 先回敬了音乐。把明天的舞台提前预演一遍，只为和你们见面时，一切都刚刚好。 武汉，明天见。#任苒时光# ​",
-          "accountName": "任嘉伦工作室",
-          "accountType": "studio"
-        },
-        {
-          "id": "5342084509992714",
-          "detailUrl": "https://www.sina.cn/news/detail/5342084509992714.html",
-          "time": "2026-09-11 22:07",
-          "text": "#任嘉伦[超话]# 爱奇艺站内热度破7500🔥 调查不断深入，每一次新的发现，都让他离最初想要寻找的东西更近一点。李成@任嘉伦Allen 的下一程，继续与大家并肩而行[心]#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# ​",
-          "accountName": "任嘉伦工作室",
-          "accountType": "studio"
-        },
-        {
           "id": "5341191705988298",
           "detailUrl": "https://www.sina.cn/news/detail/5341191705988298.html",
           "time": "2026-09-09 11:00",
@@ -1949,6 +1888,70 @@
           "time": "2026-09-07 09:59",
           "text": "#剧集深渊无间# 一部正在连载的小说，牵出五起尘封旧案。暴力罪案的背后暗流汹涌，这场劫难究竟是天意，还是迟来的制裁？#深渊无间定档0909# #深渊无间终极预告# 原著：《深渊》@作者_深蓝 导演：@导演-刘海波 总编剧：聂成帅 领衔主演：任国超@任嘉伦Allen @秦俊杰 （按姓氏笔画排序） 特别出演： ​",
           "pics": [],
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344966582994523",
+          "detailUrl": "https://www.sina.cn/news/detail/5344966582994523.html",
+          "time": "2026-09-19 21:00",
+          "text": "深渊之内，回响未绝，故事最后，仍能记起许多来自他们的声音，有的关于信念，有的关于仇恨，有的关于传承……每句话背后，都是他们留在深渊之中的印记。#深渊无间今日收官# #剧集深渊无间# http://t.cn/AXOlve3k ​",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344951483240356",
+          "detailUrl": "https://www.sina.cn/news/detail/5344951483240356.html",
+          "time": "2026-09-19 20:00",
+          "text": "#剧集深渊无间# 韩品木@秦俊杰 说自己为了母亲、为了兄弟，“没得选”。李成@任嘉伦Allen 却直面他的复仇逻辑：312案里的受害者才是真的没得选，毕德华@Mr__小李子 一家、辛吉然@田小洁 一家，都不该成为复仇的牺牲品。犯罪的人，终将接受法律审判。#深渊无间今日收官# http://t.cn/AXOWNIJ5 ​",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344943934538033",
+          "detailUrl": "https://www.sina.cn/news/detail/5344943934538033.html",
+          "time": "2026-09-19 19:30",
+          "text": "#剧集深渊无间# 陈春丽@倪虹洁 为了保护儿子，竟与韩品木@秦俊杰 联手策划了受害现场。她让韩品木先捅伤自己，再利用提前准备好的物品伪造现场，看似是受害者的陈春丽，究竟还隐藏着多少秘密？#深渊无间今日收官# http://t.cn/AXOWfpQz ​",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344940977821392",
+          "detailUrl": "https://www.sina.cn/news/detail/5344940977821392.html",
+          "time": "2026-09-19 19:18",
+          "text": "关于韩品木@秦俊杰 的一切，在消失的第八章找到了答案，感谢一切相遇，深渊之外，会有光亮！#剧集深渊无间# #深渊无间今日收官#",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344940843335843",
+          "detailUrl": "https://www.sina.cn/news/detail/5344940843335843.html",
+          "time": "2026-09-19 19:17",
+          "text": "李成警官@任嘉伦Allen 从一开始就选择了最艰难但是通往正义公平的路，并由此一直坚定执着地向前走，于是我们也跟随着小李警官的成长，等到了真相到来。感谢同行，一起奔赴充满光亮的新程！#剧集深渊无间# #深渊无间今日收官#",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344936384004855",
+          "detailUrl": "https://www.sina.cn/news/detail/5344936384004855.html",
+          "time": "2026-09-19 19:00",
+          "text": "#剧集深渊无间# 八年前的真相终于要揭开了吗？辛小亮@郭丞 、胡小飞@演员驰翌 和郭鹏飞@姜冠南JK 绑架杜鹃，本想将罪名嫁祸给张成国和宋来福，却在复仇过程中一步步失控。三个人的三把刀，也彻底改变了所有人的命运……#深渊无间今日收官# http://t.cn/AXOWA6xi ​",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344928834257740",
+          "detailUrl": "https://www.sina.cn/news/detail/5344928834257740.html",
+          "time": "2026-09-19 18:30",
+          "text": "#剧集深渊无间# 孙强@张亦驰isolation 终于醒来，却带来一个令人震惊的真相：有人花十万让他杀李成，可他却阴差阳错杀死了赵干哲。更让李成@任嘉伦Allen 意外的是，孙强自称同时潜伏在韩品木和张成国身边，又透露游戏群里的“飞扬”可能是两个人？#深渊无间今日收官# http://t.cn/AXOWzNRI ​",
+          "accountName": "剧集深渊无间",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344921288447314",
+          "detailUrl": "https://www.sina.cn/news/detail/5344921288447314.html",
+          "time": "2026-09-19 18:00",
+          "text": "#剧集深渊无间# 警察调查陈春丽@倪虹洁 的通讯记录，发现她与儿子郭鹏飞@姜冠南JK 一年只在过年联系一次。异常的联系频率，让李成@任嘉伦Allen 产生一个大胆猜测：陈春丽案与其他的案件或许根本不是同一个案件，而是八年前复仇计划中的一环？#深渊无间今日收官# http://t.cn/AXOWP9fy ​",
           "accountName": "剧集深渊无间",
           "accountType": "drama"
         },
@@ -2121,70 +2124,6 @@
           "accountType": "drama"
         },
         {
-          "id": "5343713326006903",
-          "detailUrl": "https://www.sina.cn/news/detail/5343713326006903.html",
-          "time": "2026-09-16 10:00",
-          "text": "站在故事的尾声回望，在湟水县中遇到的每一个人，似乎都在深渊中挣扎着度过了很长一段人生。 有理想、有遗憾、有守护、有仇恨、有秘密…… 如果一切可以重来，他们又是否会做出不一样的选择？ 结局已经到来，但深渊之内尚有回声，让我们一同穿过谜团、辨识人心，寻找最终的答案。 #剧集深渊无间# 加更 ​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343493658511347",
-          "detailUrl": "https://www.sina.cn/news/detail/5343493658511347.html",
-          "time": "2026-09-15 19:27",
-          "text": "追小说连载，找312案真相！现在来@爱奇艺 迷雾剧场解锁#剧集深渊无间# 加更礼，直通大结局揭开尘封八年的真相。",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343481824285966",
-          "detailUrl": "https://www.sina.cn/news/detail/5343481824285966.html",
-          "time": "2026-09-15 18:40",
-          "text": "#深渊无间豆瓣开分7.2# 豆瓣开分7.2！一桩旧案，八年追凶，真相揭晓后才发现，深渊之内是人性的博弈。感谢所有支持与肯定，有「渊」相遇，继续同行！#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，一键直通大结局！ ​​​​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343471738031356",
-          "detailUrl": "https://www.sina.cn/news/detail/5343471738031356.html",
-          "time": "2026-09-15 18:00",
-          "text": "嫌疑人悬于屋内，钱币漫天飘荡……李成@任嘉伦Allen 在韩品木@秦俊杰 自尽的诡异梦境中惊醒，看着窗外阴雨，他清楚，真相或许比梦境更可怕。#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOcGu2q ​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343411332452180",
-          "detailUrl": "https://www.sina.cn/news/detail/5343411332452180.html",
-          "time": "2026-09-15 14:00",
-          "text": "“我的儿子才是我唯一的希望。”这句来自母亲的独白，成了谎言最坚硬的铠甲，当撕开的画面露出旧日温情，陈春丽@倪虹洁 拼命护住的，究竟是儿子的前程，还是自己不敢直视的罪过？#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ ​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343381137392199",
-          "detailUrl": "https://www.sina.cn/news/detail/5343381137392199.html",
-          "time": "2026-09-15 12:00",
-          "text": "原则上洗照片要三天，但尽快破案本身就是原则！李成警官@任嘉伦Allen 证件一亮，热心湟水群众工作速度立刻开启十倍速🔛#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOtxlja ​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343366036592825",
-          "detailUrl": "https://www.sina.cn/news/detail/5343366036592825.html",
-          "time": "2026-09-15 11:00",
-          "text": "没想到警局戏的幕后居然是如此轻松的氛围，赵干哲@演员王砚辉 和范杰@人艺何冰 之间的人物关系居然是这样？算了算了，不管怎样，都“还是哥们儿”！#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOtG1fr ​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
-          "id": "5343350933687029",
-          "detailUrl": "https://www.sina.cn/news/detail/5343350933687029.html",
-          "time": "2026-09-15 10:00",
-          "text": "那些看似毫不相干的瞬间，被同一桩旧案悄悄缝合在了一起。 巷口拉起的警戒线，隔开了现实与曾经...... 自首的口供是否属实？ 行凶者真的会再次回到案发现场？ 证据指向的人就一定是嫌疑人？ 你以为的日常，很可能每一步都在走向深渊。 当所有人的命运被同一条暗线串联，谁是猎人，谁又是被牵引的那一个 ​",
-          "accountName": "剧集深渊无间",
-          "accountType": "drama"
-        },
-        {
           "id": "5343751070288890",
           "detailUrl": "https://www.sina.cn/news/detail/5343751070288890.html",
           "time": "2026-09-16 12:30",
@@ -2197,6 +2136,54 @@
           "detailUrl": "https://www.sina.cn/news/detail/5341949200696462.html",
           "time": "2026-09-11 13:10",
           "text": "#关晓彤聊天也怕收到在吗# “有事说事，没事就别找我”~@关晓彤 面对“在吗”和突袭来电的反应是不是像极了你本人[偷笑]#关晓彤说宋雨琦胆子肥嘟嘟的# 原来让晓彤觉得安全感十足的圈内好友，是在《奔跑吧》闯关时给她留下深刻印象的@宋雨琦_i-dle ，完全是“胆子肥嘟嘟的”存在了[奶牛猫]更多 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344959462902510",
+          "detailUrl": "https://www.sina.cn/news/detail/5344959462902510.html",
+          "time": "2026-09-19 20:31",
+          "text": "#桃厂上新一瓯春# #一瓯春# 谢清圆咬沈润幕后花絮送达💕片场欢笑连连——一个愿咬，一个愿挨，这糖带点牙印，嗑起来更香！每日18:00，爱奇艺正在热播！ 领衔主演：许凯@许凯soso 周也@周也yeah （按姓氏笔画排序） http://t.cn/AXOWmSTK ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344955574784546",
+          "detailUrl": "https://www.sina.cn/news/detail/5344955574784546.html",
+          "time": "2026-09-19 20:16",
+          "text": "#爱奇艺我不是大师# 福利视频已送达～现在是上官诚明@李现ing 的有氧时间，做大师这一行，身体才是硬本钱啊！9月24日起，爱奇艺以骗制骗玄疑剧 #我不是大师# 上线，一起来揭开骗局！ 爱奇艺预约：http://t.cn/AX0kp80j http://t.cn/AXOWTIBZ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344946970171589",
+          "detailUrl": "https://www.sina.cn/news/detail/5344946970171589.html",
+          "time": "2026-09-19 19:42",
+          "text": "#爱奇艺我不是大师# 风云涌动，众人入局。面对局中局，骗中骗，上官诚明@李现ing 会如何见招拆招？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 上线，好戏即将开场～ 爱奇艺预约：http://t.cn/AX0kp80 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344938990767153",
+          "detailUrl": "https://www.sina.cn/news/detail/5344938990767153.html",
+          "time": "2026-09-19 19:10",
+          "text": "#桃厂上新一瓯春# 前方低气压预警⚠️严瑞@许凯soso 撞见自己送给谢清圆@周也yeah 的玉佩在别人手里，当场动怒——送出去的真心被转送，这口气严大人咽不下！💥每日18:00锁定@爱奇艺 #一瓯春# 正在热播！ http://t.cn/AXOWUpDW ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344928835829845",
+          "detailUrl": "https://www.sina.cn/news/detail/5344928835829845.html",
+          "time": "2026-09-19 18:30",
+          "text": "#爱奇艺我不是大师# #我不是大师# 大师骗术千千万，在桃追剧防被骗。9月24日来爱奇艺追剧，跟着小奇一起做「在桃大师」🙋🏻‍♀️ 领衔主演（按姓氏笔画排序）：李现@李现ing 、李雪（李一桐）@李一桐Q 爱奇艺预约：http://t.cn/AX9AQPkE ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5344926080435908",
+          "detailUrl": "https://www.sina.cn/news/detail/5344926080435908.html",
+          "time": "2026-09-19 18:19",
+          "text": "恭喜@终究有一天我能做到心中所想 等2名用户获得【随机主演签名照】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXOW7CRU",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2303,26 +2290,28 @@
           "pics": [
             "https://k.sinaimg.cn/n/news/transform/310/w710h400/20260919/bba3-65bfd83d65b907f8475727322deaeb53.jpg/w710h400z1l50t1q750ab.jpg?by=comos",
             "https://k.sinaimg.cn/n/news/transform/266/w640h426/20260919/96f2-8df3ad01847bc86dde409d9929f7ce44.jpg/w200h134z1l50t1q754fd.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/11a4-38e30b218cdb7fe30d571d9a648447a9.jpg/w200h134z1l50t1q75dfa.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/200/w720h1080/20260919/d089-ed5d9d24fb2984f6ca49123aab4f65d0.jpg/w200h134z1l50t1q752f4.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/386/w750h436/20260919/ad88-d5ad579b081321c0f3024d3abd79a10d.jpg/w200h134z1l50t1q75bed.jpg?by=comos",
-            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/17aa-2e84f6dbd7c1a057d24a70a2a373e073.jpg/w200h134z1l50t1q7562d.jpg?by=comos",
-            "https://k.sinaimg.cn/n/sinakd20260919s/656/w640h816/20260919/6f80-9392ae6d37829bce36825c86b81c098f.jpg/w120h90l50t11b9.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/317/w690h1227/20260919/00d6-645b63942293d333c0d8661c54c6a209.png/w120h90l50t1c38.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/181/w535h446/20260919/45d6-f765b45058a3c51212d7e845e28d1e39.png/w120h90l50t17cd.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/267/w640h427/20260919/29a2-fdb27d21c329c0e1e59d81650fc6c4ba.jpg/w120h90l50t1594.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/650/w900h1350/20260919/f1fa-e0dbbadf3a3fbbfcba398221a9be5ff5.jpg/w120h90l50t1f88.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/718/w1024h494/20260919/fa67-86cb0c723de743bfa68d3b9fee96d7b2.png/w120h90l50t10f0.jpg",
-            "https://k.sinaimg.cn/n/sinakd20260919s/700/w600h900/20260919/3135-5afd580837980e17e1a862f3e539e733.jpg/w120h90l50t11fe.jpg",
+            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/dd9f-80f07c4cded4759bdad8ba31d6815edf.jpg/w200h134z1l50t1q75d88.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/400/w1280h720/20260919/9552-9a16ca527ccb573491ad331b98f754ac.jpg/w200h134z1l50t1q75931.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/ddcd-1d8ea07d883f71fdf5fec136adcdc86c.jpg/w200h134z1l50t1q7557e.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/2103-2c3a36bb610337b42187f2924a13265f.jpg/w200h134z1l50t1q75a4d.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/434/w1700h1134/20260919/236a-fcdb9a786897596135c93a6a97a2258e.jpg/w200h134z1l50t1q7509c.jpg?by=comos",
+            "https://k.sinaimg.cn/n/spider20260919/399/w720h479/20260919/9119-9dae294becdf39451a7b9414ff57e1a0.jpg/w200h134z1l50t1q75357.jpg?by=comos",
+            "https://k.sinaimg.cn/n/sinakd20260919s/385/w1080h905/20260919/57af-584c337f7acde542efad0712b4077df6.jpg/w120h90l50t1907.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/786/w640h946/20260919/3000-13fd5058133e1b802efe9abf13ec02f3.jpg/w120h90l50t13cd.jpg",
+            "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/e_NJ-fysqfnf9443598.png/w120h90l50t1f86.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/265/w640h425/20260919/cbbc-fb51e40bc9ac690210d5caa5cf495c9a.jpg/w120h90l50t16dc.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/336/w665h471/20260919/c7b6-e25907dc8ea68a06b8768c7d1f67c49b.jpg/w120h90l50t11a2.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/290/w1080h810/20260919/4220-844d8793fc5bbb2b54c02bcb2bfbd4a6.jpg/w120h90l50t16b1.jpg",
+            "https://k.sinaimg.cn/n/sinakd20260919s/699/w900h599/20260919/afb3-73dbdd30436325d6cd5fffa2ab03fcbe.jpg/w120h90l50t197d.jpg",
             "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/1900-c06d7ec991124946d7702040d020419c.jpg/w350h234z1l50t1q75584.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/088f-86dbaf2768e89d3d678fa08dde70a521.jpg/w350h234z1l50t1q75abb.jpg?by=comos",
-            "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
-            "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
-            "https://k.sinaimg.cn/n/sinakd20260919s/300/w720h380/20260919/0eae-3ccc93c80159fec9575aed882005a4a0.jpg/w200h134z1l50t1q75af7.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/518/w550h1568/20260919/0e62-f950e2a2f43b1b066fe1fb92e17ef6dd.png/w200h134z1l50t1q752aa.jpg?by=comos",
-            "https://k.sinaimg.cn/n/finance/683/w399h284/20260919/d93d-62146133259ca2da33fa8eb8da0f56d3.png/w200h134z1l50t1q75d3a.jpg?by=comos",
-            "https://k.sinaimg.cn/n/finance/785/w468h317/20260919/253b-3d6adb6ff5f61512234d5ad293f6052b.png/w200h134z1l50t1q75748.jpg?by=comos",
-            "https://k.sinaimg.cn/n/front20260919ac/160/w1280h1280/20260919/9626-06a8e2561186ae1b67505564fbed9732.jpg/w200h134z1l50t1q75bc0.jpg?by=comos",
+            "https://k.sinaimg.cn/n/front20260919ac/300/w720h380/20260919/a65e-7651c3e28291581b93306a4fef1b3aef.jpg/w200h134z1l50t1q75b3f.jpg?by=comos",
+            "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
+            "https://k.sinaimg.cn/n/finance/500/w300h200/20251028/74a7-65908b5e7ff44a3cc09f2280ef4838ac.png/w200h134z1l50t1q7561e.jpg?by=comos",
+            "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180418/7RAA-fzihnep5208659.png/w200h134z1l50t1q754d3.jpg?by=comos",
+            "https://k.sinaimg.cn/n/sinakd20260919s/220/w1276h544/20260919/61c1-e69d4013b2b5ad3c28a5c1264f334ab6.jpg/w200h134z1l50t1q7585c.jpg?by=comos",
+            "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/c989-2a48932d3f7a49dd0bb055d83998ca1e.png/w350h234z1l50t1q75ff9.jpg?by=comos",
             "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/44db-c190acb5dbaa4fa9eca803dcfa1b80a1.jpg/w350h234z1l50t1q7591e.jpg?by=comos",
             "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/KCcj-fysqfnf9443543.png/w200h134z1l50t1q757d0.jpg?by=comos",
@@ -2462,54 +2451,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5344803505049963.html",
           "time": "2026-09-19 10:12",
           "text": "#爱奇艺我不是大师# #我不是大师定档0924# 角色海报第二弹，众多江湖神秘人物来袭！眼神藏锋、身份成谜。他们将将落入怎样的圈套？又是谁在给谁做局？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 邀你入局。 爱奇艺预约：http://t.cn/AX9AQPkE ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5344803001733475",
-          "detailUrl": "https://www.sina.cn/news/detail/5344803001733475.html",
-          "time": "2026-09-19 10:10",
-          "text": "#爱奇艺我不是大师# #我不是大师定档0924# 角色海报释出，风云将至，江湖神秘人物集结，钓系销冠、最强导师、墨镜神棍、坟场影帝……重量级人物一一登场，他们的背后隐藏了什么故事？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 上线，看这场民国局中局骗中骗谁能笑到最后！ 爱奇艺预约： ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5344802247017358",
-          "detailUrl": "https://www.sina.cn/news/detail/5344802247017358.html",
-          "time": "2026-09-19 10:07",
-          "text": "故事落幕，暖意不散。青梧镇每个人都找到了属于自己的归宿，所有的挣扎与等待，终有回响。#生逢其时# 加更嘉年华已开启，来爱奇艺见证这段邻里故事的温情结局。 领衔主演：（按姓氏笔画排序） 王子奇@王子奇是演员王子奇 关晓彤@关晓彤 特别出演：（按姓氏笔画排序） 刘琳@演员刘琳 郭涛@郭涛 郭晓东 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5344801240384527",
-          "detailUrl": "https://www.sina.cn/news/detail/5344801240384527.html",
-          "time": "2026-09-19 10:03",
-          "text": "#深渊无间今日收官# #剧集深渊无间# 连环凶案尘埃落定，连载小说如期完结，罪恶终将在阳光下接受审判。@任嘉伦Allen @秦俊杰 @演员王砚辉 @田小洁 @人艺何冰 @张亦驰isolation @宗俊涛Zen @郝平 @倪虹洁 今日18:00爱奇艺迷雾剧场会员收官！ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5344800485153555",
-          "detailUrl": "https://www.sina.cn/news/detail/5344800485153555.html",
-          "time": "2026-09-19 10:00",
-          "text": "#爱奇艺我不是大师# #我不是大师定档0924# 灾星下探、天生祸水，身不由己，众人早已无路可退！骗局接踵而至，手段层出不穷，一朝败落东山再起，且看各位如何逆风翻盘！9月24日爱奇艺以骗制骗玄疑剧#我不是大师# 即将正式开局！ 领衔主演（按姓氏笔画排序）：李现@李现ing 、李雪（李一桐）@李一桐Q ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5344792935400257",
-          "detailUrl": "https://www.sina.cn/news/detail/5344792935400257.html",
-          "time": "2026-09-19 09:30",
-          "text": "#择日飞升动画# ED《开眼》MV正式上线！神明视苍生为刍狗，苦海无涯，看少年许应逆命而上改写天道！每周六9：00锁定爱奇艺！ 指路:http://t.cn/AXO0rVu0 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5344785386176882",
-          "detailUrl": "https://www.sina.cn/news/detail/5344785386176882.html",
-          "time": "2026-09-19 09:00",
-          "text": "#择日飞升动画# 第12集上线！周家围捕而来，初见以为是美人计，不料竟是妖树登场！高能打斗即刻上演，今天9：00锁定爱奇艺！ 指路:http://t.cn/AXO01cQe ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -3496,6 +3437,30 @@
           "accountType": "fanclub"
         },
         {
+          "id": "5344946263690638",
+          "detailUrl": "https://www.sina.cn/news/detail/5344946263690638.html",
+          "time": "2026-09-19 19:39",
+          "text": "回望属于李成的一幕幕画面，感谢@任嘉伦Allen 塑造出这样鲜活立体的李成，每一帧都值得反复观看#任嘉伦李成# [打call]#任嘉伦深渊无间#",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
+          "id": "5344945114187578",
+          "detailUrl": "https://www.sina.cn/news/detail/5344945114187578.html",
+          "time": "2026-09-19 19:34",
+          "text": "短短数日，我们一同走完李成这段坎坷的旅程。他重情重义，始终铭记初心，将正义贯彻到底。感恩与李成相遇，于黑暗之中守望光明。愿前路漫漫，顺遂无忧，我们下个角色再见。@任嘉伦Allen #任嘉伦李成# [打call]#任嘉伦深渊无间#",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
+          "id": "5344939196290366",
+          "detailUrl": "https://www.sina.cn/news/detail/5344939196290366.html",
+          "time": "2026-09-19 19:11",
+          "text": "纵然身陷无边深渊，心中正道从未湮灭。深渊有尽，正道无间。感谢@任嘉伦Allen 塑造的这个鲜活角色，我们期待下一次相逢#任嘉伦深渊无间# //@任嘉伦工作室:#任嘉伦[超话]# 这一路，我们陪伴李成@任嘉伦Allen 追查到了真相，更见识到了他的正义与善良。深渊有尽，正道无间。李成，我们下次再见！",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
           "id": "5344907155996856",
           "detailUrl": "https://www.sina.cn/news/detail/5344907155996856.html",
           "time": "2026-09-19 17:03",
@@ -3700,27 +3665,11 @@
           "accountType": "fanclub"
         },
         {
-          "id": "5342768719463701",
-          "detailUrl": "https://www.sina.cn/news/detail/5342768719463701.html",
-          "time": "2026-09-13 19:26",
-          "text": "武戏利落有力量，文戏沉静藏张力，不管是动作戏份还是审讯对峙，都全力以赴认真对待@任嘉伦Allen #任嘉伦深渊无间# [打call]#任嘉伦#",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5342718286630337",
-          "detailUrl": "https://www.sina.cn/news/detail/5342718286630337.html",
-          "time": "2026-09-13 16:06",
-          "text": "那些来不及的告别，化作心底的力量，支撑李成@任嘉伦Allen 继续向着真相迈步#任嘉伦# [打call]#任嘉伦深渊无间#",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5342677180615774",
-          "detailUrl": "https://www.sina.cn/news/detail/5342677180615774.html",
-          "time": "2026-09-13 13:22",
-          "text": "深埋在深渊之中的秘密水落石出，追查途中李成@任嘉伦Allen 始终不曾动摇，还有那些并肩走过的同行者，全部拥有了属于他们的答案。漫漫长路尘埃落定，那些孤勇与热忱，终不被辜负#任嘉伦深渊无间# //@任嘉伦工作室:#任嘉伦[超话]# 故事走到终章，李成@任嘉伦Allen 也终于有机会回望这一路。那些藏在《深",
-          "accountName": "任嘉伦全国后援会",
+          "id": "5344968937046460",
+          "detailUrl": "https://www.sina.cn/news/detail/5344968937046460.html",
+          "time": "2026-09-19 21:09",
+          "text": "转发微博",
+          "accountName": "任嘉伦-海外分会",
           "accountType": "fanclub"
         },
         {
@@ -3960,14 +3909,6 @@
           "text": "期待新作 任嘉伦@任嘉伦Allen #美度全球品牌代言人任嘉伦#",
           "accountName": "任嘉伦-海外分会",
           "accountType": "fanclub"
-        },
-        {
-          "id": "5306768935884432",
-          "detailUrl": "https://www.sina.cn/news/detail/5306768935884432.html",
-          "time": "2026-06-06 11:16",
-          "text": "[有票了][有票了][有票了]高考加油[赢牛奶][赢牛奶][赢牛奶]",
-          "accountName": "任嘉伦-海外分会",
-          "accountType": "fanclub"
         }
       ],
       "accounts": [
@@ -4067,15 +4008,6 @@
               "accountName": "任嘉伦工作室",
               "accountType": "studio",
               "hint": "filming"
-            },
-            {
-              "id": "5304360387219660",
-              "detailUrl": "https://www.sina.cn/news/detail/5304360387219660.html",
-              "time": "2026-05-30 19:45",
-              "text": "#任嘉伦[超话]# 直播前的定格📸 boss@任嘉伦Allen 把居家的魅力藏进每个细节～ 往那一坐，就是最懂生活的有心任[太阳]#任苒时光# ​",
-              "accountName": "任嘉伦工作室",
-              "accountType": "studio",
-              "hint": "business"
             }
           ],
           "recentPosts": [
@@ -4087,6 +4019,22 @@
               "pics": [
                 "http://wx2.sinaimg.cn/middle/006HcgKlly1igx5bphuo4j318g30cnpf.jpg"
               ],
+              "accountName": "任嘉伦工作室",
+              "accountType": "studio"
+            },
+            {
+              "id": "5344944153953187",
+              "detailUrl": "https://www.sina.cn/news/detail/5344944153953187.html",
+              "time": "2026-09-19 19:30",
+              "text": "#任嘉伦[超话]# 全方位回顾李成@任嘉伦Allen 帅气🫡#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# http://t.cn/AXOWfFE2 ​",
+              "accountName": "任嘉伦工作室",
+              "accountType": "studio"
+            },
+            {
+              "id": "5344937630505266",
+              "detailUrl": "https://www.sina.cn/news/detail/5344937630505266.html",
+              "time": "2026-09-19 19:04",
+              "text": "#任嘉伦[超话]# 这一路，我们陪伴李成@任嘉伦Allen 追查到了真相，更见识到了他的正义与善良。深渊有尽，正道无间。李成，我们下次再见！#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间#",
               "accountName": "任嘉伦工作室",
               "accountType": "studio"
             },
@@ -4303,22 +4251,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5342279088210606.html",
               "time": "2026-09-12 11:00",
               "text": "#任嘉伦[超话]# 半山腰的灯光昏黄，照不亮二十年前的旧路。李成@任嘉伦Allen 听着那些往事，思绪万千。有些真相不止在卷宗里，也在那些欲言又止的沉默里。#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# 更多瞬间存在于秘密的角落里：http://t.cn/AXOhiNAM ​",
-              "accountName": "任嘉伦工作室",
-              "accountType": "studio"
-            },
-            {
-              "id": "5342109452210098",
-              "detailUrl": "https://www.sina.cn/news/detail/5342109452210098.html",
-              "time": "2026-09-11 23:46",
-              "text": "#任嘉伦[超话]# 灯光为他亮起之前，他@任嘉伦Allen 先回敬了音乐。把明天的舞台提前预演一遍，只为和你们见面时，一切都刚刚好。 武汉，明天见。#任苒时光# ​",
-              "accountName": "任嘉伦工作室",
-              "accountType": "studio"
-            },
-            {
-              "id": "5342084509992714",
-              "detailUrl": "https://www.sina.cn/news/detail/5342084509992714.html",
-              "time": "2026-09-11 22:07",
-              "text": "#任嘉伦[超话]# 爱奇艺站内热度破7500🔥 调查不断深入，每一次新的发现，都让他离最初想要寻找的东西更近一点。李成@任嘉伦Allen 的下一程，继续与大家并肩而行[心]#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# ​",
               "accountName": "任嘉伦工作室",
               "accountType": "studio"
             }
@@ -4861,6 +4793,70 @@
               "accountType": "drama"
             },
             {
+              "id": "5344966582994523",
+              "detailUrl": "https://www.sina.cn/news/detail/5344966582994523.html",
+              "time": "2026-09-19 21:00",
+              "text": "深渊之内，回响未绝，故事最后，仍能记起许多来自他们的声音，有的关于信念，有的关于仇恨，有的关于传承……每句话背后，都是他们留在深渊之中的印记。#深渊无间今日收官# #剧集深渊无间# http://t.cn/AXOlve3k ​",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344951483240356",
+              "detailUrl": "https://www.sina.cn/news/detail/5344951483240356.html",
+              "time": "2026-09-19 20:00",
+              "text": "#剧集深渊无间# 韩品木@秦俊杰 说自己为了母亲、为了兄弟，“没得选”。李成@任嘉伦Allen 却直面他的复仇逻辑：312案里的受害者才是真的没得选，毕德华@Mr__小李子 一家、辛吉然@田小洁 一家，都不该成为复仇的牺牲品。犯罪的人，终将接受法律审判。#深渊无间今日收官# http://t.cn/AXOWNIJ5 ​",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344943934538033",
+              "detailUrl": "https://www.sina.cn/news/detail/5344943934538033.html",
+              "time": "2026-09-19 19:30",
+              "text": "#剧集深渊无间# 陈春丽@倪虹洁 为了保护儿子，竟与韩品木@秦俊杰 联手策划了受害现场。她让韩品木先捅伤自己，再利用提前准备好的物品伪造现场，看似是受害者的陈春丽，究竟还隐藏着多少秘密？#深渊无间今日收官# http://t.cn/AXOWfpQz ​",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344940977821392",
+              "detailUrl": "https://www.sina.cn/news/detail/5344940977821392.html",
+              "time": "2026-09-19 19:18",
+              "text": "关于韩品木@秦俊杰 的一切，在消失的第八章找到了答案，感谢一切相遇，深渊之外，会有光亮！#剧集深渊无间# #深渊无间今日收官#",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344940843335843",
+              "detailUrl": "https://www.sina.cn/news/detail/5344940843335843.html",
+              "time": "2026-09-19 19:17",
+              "text": "李成警官@任嘉伦Allen 从一开始就选择了最艰难但是通往正义公平的路，并由此一直坚定执着地向前走，于是我们也跟随着小李警官的成长，等到了真相到来。感谢同行，一起奔赴充满光亮的新程！#剧集深渊无间# #深渊无间今日收官#",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344936384004855",
+              "detailUrl": "https://www.sina.cn/news/detail/5344936384004855.html",
+              "time": "2026-09-19 19:00",
+              "text": "#剧集深渊无间# 八年前的真相终于要揭开了吗？辛小亮@郭丞 、胡小飞@演员驰翌 和郭鹏飞@姜冠南JK 绑架杜鹃，本想将罪名嫁祸给张成国和宋来福，却在复仇过程中一步步失控。三个人的三把刀，也彻底改变了所有人的命运……#深渊无间今日收官# http://t.cn/AXOWA6xi ​",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344928834257740",
+              "detailUrl": "https://www.sina.cn/news/detail/5344928834257740.html",
+              "time": "2026-09-19 18:30",
+              "text": "#剧集深渊无间# 孙强@张亦驰isolation 终于醒来，却带来一个令人震惊的真相：有人花十万让他杀李成，可他却阴差阳错杀死了赵干哲。更让李成@任嘉伦Allen 意外的是，孙强自称同时潜伏在韩品木和张成国身边，又透露游戏群里的“飞扬”可能是两个人？#深渊无间今日收官# http://t.cn/AXOWzNRI ​",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344921288447314",
+              "detailUrl": "https://www.sina.cn/news/detail/5344921288447314.html",
+              "time": "2026-09-19 18:00",
+              "text": "#剧集深渊无间# 警察调查陈春丽@倪虹洁 的通讯记录，发现她与儿子郭鹏飞@姜冠南JK 一年只在过年联系一次。异常的联系频率，让李成@任嘉伦Allen 产生一个大胆猜测：陈春丽案与其他的案件或许根本不是同一个案件，而是八年前复仇计划中的一环？#深渊无间今日收官# http://t.cn/AXOWP9fy ​",
+              "accountName": "剧集深渊无间",
+              "accountType": "drama"
+            },
+            {
               "id": "5344906187114772",
               "detailUrl": "https://www.sina.cn/news/detail/5344906187114772.html",
               "time": "2026-09-19 17:00",
@@ -5027,70 +5023,6 @@
               "text": "戏外的@宗俊涛Zen 可爱拉满，在线邀请李成@任嘉伦Allen 体验道具软弹手感，可屏幕内的张成国，谁看了不说一句恐怖如斯！上一秒入戏狠戾，下一秒出戏温柔，被张成国吓到的有渊人不妨来一睹“真面目”吧～#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOM4mzI ​",
               "accountName": "剧集深渊无间",
               "accountType": "drama"
-            },
-            {
-              "id": "5343713326006903",
-              "detailUrl": "https://www.sina.cn/news/detail/5343713326006903.html",
-              "time": "2026-09-16 10:00",
-              "text": "站在故事的尾声回望，在湟水县中遇到的每一个人，似乎都在深渊中挣扎着度过了很长一段人生。 有理想、有遗憾、有守护、有仇恨、有秘密…… 如果一切可以重来，他们又是否会做出不一样的选择？ 结局已经到来，但深渊之内尚有回声，让我们一同穿过谜团、辨识人心，寻找最终的答案。 #剧集深渊无间# 加更 ​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343493658511347",
-              "detailUrl": "https://www.sina.cn/news/detail/5343493658511347.html",
-              "time": "2026-09-15 19:27",
-              "text": "追小说连载，找312案真相！现在来@爱奇艺 迷雾剧场解锁#剧集深渊无间# 加更礼，直通大结局揭开尘封八年的真相。",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343481824285966",
-              "detailUrl": "https://www.sina.cn/news/detail/5343481824285966.html",
-              "time": "2026-09-15 18:40",
-              "text": "#深渊无间豆瓣开分7.2# 豆瓣开分7.2！一桩旧案，八年追凶，真相揭晓后才发现，深渊之内是人性的博弈。感谢所有支持与肯定，有「渊」相遇，继续同行！#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，一键直通大结局！ ​​​​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343471738031356",
-              "detailUrl": "https://www.sina.cn/news/detail/5343471738031356.html",
-              "time": "2026-09-15 18:00",
-              "text": "嫌疑人悬于屋内，钱币漫天飘荡……李成@任嘉伦Allen 在韩品木@秦俊杰 自尽的诡异梦境中惊醒，看着窗外阴雨，他清楚，真相或许比梦境更可怕。#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOcGu2q ​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343411332452180",
-              "detailUrl": "https://www.sina.cn/news/detail/5343411332452180.html",
-              "time": "2026-09-15 14:00",
-              "text": "“我的儿子才是我唯一的希望。”这句来自母亲的独白，成了谎言最坚硬的铠甲，当撕开的画面露出旧日温情，陈春丽@倪虹洁 拼命护住的，究竟是儿子的前程，还是自己不敢直视的罪过？#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ ​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343381137392199",
-              "detailUrl": "https://www.sina.cn/news/detail/5343381137392199.html",
-              "time": "2026-09-15 12:00",
-              "text": "原则上洗照片要三天，但尽快破案本身就是原则！李成警官@任嘉伦Allen 证件一亮，热心湟水群众工作速度立刻开启十倍速🔛#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOtxlja ​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343366036592825",
-              "detailUrl": "https://www.sina.cn/news/detail/5343366036592825.html",
-              "time": "2026-09-15 11:00",
-              "text": "没想到警局戏的幕后居然是如此轻松的氛围，赵干哲@演员王砚辉 和范杰@人艺何冰 之间的人物关系居然是这样？算了算了，不管怎样，都“还是哥们儿”！#剧集深渊无间# 加更礼已开启，锁定@爱奇艺 迷雾剧场，直通大结局！ http://t.cn/AXOtG1fr ​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
-            },
-            {
-              "id": "5343350933687029",
-              "detailUrl": "https://www.sina.cn/news/detail/5343350933687029.html",
-              "time": "2026-09-15 10:00",
-              "text": "那些看似毫不相干的瞬间，被同一桩旧案悄悄缝合在了一起。 巷口拉起的警戒线，隔开了现实与曾经...... 自首的口供是否属实？ 行凶者真的会再次回到案发现场？ 证据指向的人就一定是嫌疑人？ 你以为的日常，很可能每一步都在走向深渊。 当所有人的命运被同一条暗线串联，谁是猎人，谁又是被牵引的那一个 ​",
-              "accountName": "剧集深渊无间",
-              "accountType": "drama"
             }
           ]
         },
@@ -5169,26 +5101,28 @@
               "pics": [
                 "https://k.sinaimg.cn/n/news/transform/310/w710h400/20260919/bba3-65bfd83d65b907f8475727322deaeb53.jpg/w710h400z1l50t1q750ab.jpg?by=comos",
                 "https://k.sinaimg.cn/n/news/transform/266/w640h426/20260919/96f2-8df3ad01847bc86dde409d9929f7ce44.jpg/w200h134z1l50t1q754fd.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/11a4-38e30b218cdb7fe30d571d9a648447a9.jpg/w200h134z1l50t1q75dfa.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/200/w720h1080/20260919/d089-ed5d9d24fb2984f6ca49123aab4f65d0.jpg/w200h134z1l50t1q752f4.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/386/w750h436/20260919/ad88-d5ad579b081321c0f3024d3abd79a10d.jpg/w200h134z1l50t1q75bed.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/17aa-2e84f6dbd7c1a057d24a70a2a373e073.jpg/w200h134z1l50t1q7562d.jpg?by=comos",
-                "https://k.sinaimg.cn/n/sinakd20260919s/656/w640h816/20260919/6f80-9392ae6d37829bce36825c86b81c098f.jpg/w120h90l50t11b9.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/317/w690h1227/20260919/00d6-645b63942293d333c0d8661c54c6a209.png/w120h90l50t1c38.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/181/w535h446/20260919/45d6-f765b45058a3c51212d7e845e28d1e39.png/w120h90l50t17cd.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/267/w640h427/20260919/29a2-fdb27d21c329c0e1e59d81650fc6c4ba.jpg/w120h90l50t1594.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/650/w900h1350/20260919/f1fa-e0dbbadf3a3fbbfcba398221a9be5ff5.jpg/w120h90l50t1f88.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/718/w1024h494/20260919/fa67-86cb0c723de743bfa68d3b9fee96d7b2.png/w120h90l50t10f0.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/700/w600h900/20260919/3135-5afd580837980e17e1a862f3e539e733.jpg/w120h90l50t11fe.jpg",
+                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/dd9f-80f07c4cded4759bdad8ba31d6815edf.jpg/w200h134z1l50t1q75d88.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/400/w1280h720/20260919/9552-9a16ca527ccb573491ad331b98f754ac.jpg/w200h134z1l50t1q75931.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/ddcd-1d8ea07d883f71fdf5fec136adcdc86c.jpg/w200h134z1l50t1q7557e.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/2103-2c3a36bb610337b42187f2924a13265f.jpg/w200h134z1l50t1q75a4d.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/434/w1700h1134/20260919/236a-fcdb9a786897596135c93a6a97a2258e.jpg/w200h134z1l50t1q7509c.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/399/w720h479/20260919/9119-9dae294becdf39451a7b9414ff57e1a0.jpg/w200h134z1l50t1q75357.jpg?by=comos",
+                "https://k.sinaimg.cn/n/sinakd20260919s/385/w1080h905/20260919/57af-584c337f7acde542efad0712b4077df6.jpg/w120h90l50t1907.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/786/w640h946/20260919/3000-13fd5058133e1b802efe9abf13ec02f3.jpg/w120h90l50t13cd.jpg",
+                "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/e_NJ-fysqfnf9443598.png/w120h90l50t1f86.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/265/w640h425/20260919/cbbc-fb51e40bc9ac690210d5caa5cf495c9a.jpg/w120h90l50t16dc.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/336/w665h471/20260919/c7b6-e25907dc8ea68a06b8768c7d1f67c49b.jpg/w120h90l50t11a2.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/290/w1080h810/20260919/4220-844d8793fc5bbb2b54c02bcb2bfbd4a6.jpg/w120h90l50t16b1.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/699/w900h599/20260919/afb3-73dbdd30436325d6cd5fffa2ab03fcbe.jpg/w120h90l50t197d.jpg",
                 "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/1900-c06d7ec991124946d7702040d020419c.jpg/w350h234z1l50t1q75584.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/088f-86dbaf2768e89d3d678fa08dde70a521.jpg/w350h234z1l50t1q75abb.jpg?by=comos",
-                "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
-                "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
-                "https://k.sinaimg.cn/n/sinakd20260919s/300/w720h380/20260919/0eae-3ccc93c80159fec9575aed882005a4a0.jpg/w200h134z1l50t1q75af7.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/518/w550h1568/20260919/0e62-f950e2a2f43b1b066fe1fb92e17ef6dd.png/w200h134z1l50t1q752aa.jpg?by=comos",
-                "https://k.sinaimg.cn/n/finance/683/w399h284/20260919/d93d-62146133259ca2da33fa8eb8da0f56d3.png/w200h134z1l50t1q75d3a.jpg?by=comos",
-                "https://k.sinaimg.cn/n/finance/785/w468h317/20260919/253b-3d6adb6ff5f61512234d5ad293f6052b.png/w200h134z1l50t1q75748.jpg?by=comos",
-                "https://k.sinaimg.cn/n/front20260919ac/160/w1280h1280/20260919/9626-06a8e2561186ae1b67505564fbed9732.jpg/w200h134z1l50t1q75bc0.jpg?by=comos",
+                "https://k.sinaimg.cn/n/front20260919ac/300/w720h380/20260919/a65e-7651c3e28291581b93306a4fef1b3aef.jpg/w200h134z1l50t1q75b3f.jpg?by=comos",
+                "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
+                "https://k.sinaimg.cn/n/finance/500/w300h200/20251028/74a7-65908b5e7ff44a3cc09f2280ef4838ac.png/w200h134z1l50t1q7561e.jpg?by=comos",
+                "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180418/7RAA-fzihnep5208659.png/w200h134z1l50t1q754d3.jpg?by=comos",
+                "https://k.sinaimg.cn/n/sinakd20260919s/220/w1276h544/20260919/61c1-e69d4013b2b5ad3c28a5c1264f334ab6.jpg/w200h134z1l50t1q7585c.jpg?by=comos",
+                "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/c989-2a48932d3f7a49dd0bb055d83998ca1e.png/w350h234z1l50t1q75ff9.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/44db-c190acb5dbaa4fa9eca803dcfa1b80a1.jpg/w350h234z1l50t1q7591e.jpg?by=comos",
                 "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/KCcj-fysqfnf9443543.png/w200h134z1l50t1q757d0.jpg?by=comos",
@@ -5540,33 +5474,6 @@
               "accountName": "爱奇艺",
               "accountType": "drama",
               "hint": "filming"
-            },
-            {
-              "id": "5343450338952783",
-              "detailUrl": "https://www.sina.cn/news/detail/5343450338952783.html",
-              "time": "2026-09-15 16:35",
-              "text": "#金牌客服董董恩开播三周年#啦！逗趣不止，甜蜜狙击！[yeah]今天再来@爱奇艺 看鬼马乙方董董恩@徐璐LULU 如何攻略帅气甲方楼渊@魏哲鸣Miles ~ #金牌客服董董恩# #桃桃那年今日# http://t.cn/AXhGgOGD ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama",
-              "hint": "filming"
-            },
-            {
-              "id": "5343420139700826",
-              "detailUrl": "https://www.sina.cn/news/detail/5343420139700826.html",
-              "time": "2026-09-15 14:35",
-              "text": "#请君开播四周年#快乐！千年追爱双向奔赴，今日再来@爱奇艺 与陆炎@任嘉伦Allen 于登登@李沁 共赴奇幻之路吧~ #请君##桃桃那年今日# http://t.cn/A6SuUGCI ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama",
-              "hint": "filming"
-            },
-            {
-              "id": "5343384907809420",
-              "detailUrl": "https://www.sina.cn/news/detail/5343384907809420.html",
-              "time": "2026-09-15 12:15",
-              "text": "#电影年会不能停2#网播定档！一场盛大年会筹备风波席卷集团，有人想保住岗位，有人伺机升职，有人暗藏裁员秘密。职场套路轮番上演，办公室乌龙接连不断，打工人真实共鸣感拉满。9月18日，来@爱奇艺 看～ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama",
-              "hint": "filming"
             }
           ],
           "recentPosts": [
@@ -5583,6 +5490,54 @@
               "detailUrl": "https://www.sina.cn/news/detail/5341949200696462.html",
               "time": "2026-09-11 13:10",
               "text": "#关晓彤聊天也怕收到在吗# “有事说事，没事就别找我”~@关晓彤 面对“在吗”和突袭来电的反应是不是像极了你本人[偷笑]#关晓彤说宋雨琦胆子肥嘟嘟的# 原来让晓彤觉得安全感十足的圈内好友，是在《奔跑吧》闯关时给她留下深刻印象的@宋雨琦_i-dle ，完全是“胆子肥嘟嘟的”存在了[奶牛猫]更多 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344959462902510",
+              "detailUrl": "https://www.sina.cn/news/detail/5344959462902510.html",
+              "time": "2026-09-19 20:31",
+              "text": "#桃厂上新一瓯春# #一瓯春# 谢清圆咬沈润幕后花絮送达💕片场欢笑连连——一个愿咬，一个愿挨，这糖带点牙印，嗑起来更香！每日18:00，爱奇艺正在热播！ 领衔主演：许凯@许凯soso 周也@周也yeah （按姓氏笔画排序） http://t.cn/AXOWmSTK ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344955574784546",
+              "detailUrl": "https://www.sina.cn/news/detail/5344955574784546.html",
+              "time": "2026-09-19 20:16",
+              "text": "#爱奇艺我不是大师# 福利视频已送达～现在是上官诚明@李现ing 的有氧时间，做大师这一行，身体才是硬本钱啊！9月24日起，爱奇艺以骗制骗玄疑剧 #我不是大师# 上线，一起来揭开骗局！ 爱奇艺预约：http://t.cn/AX0kp80j http://t.cn/AXOWTIBZ ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344946970171589",
+              "detailUrl": "https://www.sina.cn/news/detail/5344946970171589.html",
+              "time": "2026-09-19 19:42",
+              "text": "#爱奇艺我不是大师# 风云涌动，众人入局。面对局中局，骗中骗，上官诚明@李现ing 会如何见招拆招？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 上线，好戏即将开场～ 爱奇艺预约：http://t.cn/AX0kp80 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344938990767153",
+              "detailUrl": "https://www.sina.cn/news/detail/5344938990767153.html",
+              "time": "2026-09-19 19:10",
+              "text": "#桃厂上新一瓯春# 前方低气压预警⚠️严瑞@许凯soso 撞见自己送给谢清圆@周也yeah 的玉佩在别人手里，当场动怒——送出去的真心被转送，这口气严大人咽不下！💥每日18:00锁定@爱奇艺 #一瓯春# 正在热播！ http://t.cn/AXOWUpDW ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344928835829845",
+              "detailUrl": "https://www.sina.cn/news/detail/5344928835829845.html",
+              "time": "2026-09-19 18:30",
+              "text": "#爱奇艺我不是大师# #我不是大师# 大师骗术千千万，在桃追剧防被骗。9月24日来爱奇艺追剧，跟着小奇一起做「在桃大师」🙋🏻‍♀️ 领衔主演（按姓氏笔画排序）：李现@李现ing 、李雪（李一桐）@李一桐Q 爱奇艺预约：http://t.cn/AX9AQPkE ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5344926080435908",
+              "detailUrl": "https://www.sina.cn/news/detail/5344926080435908.html",
+              "time": "2026-09-19 18:19",
+              "text": "恭喜@终究有一天我能做到心中所想 等2名用户获得【随机主演签名照】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXOW7CRU",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -5689,26 +5644,28 @@
               "pics": [
                 "https://k.sinaimg.cn/n/news/transform/310/w710h400/20260919/bba3-65bfd83d65b907f8475727322deaeb53.jpg/w710h400z1l50t1q750ab.jpg?by=comos",
                 "https://k.sinaimg.cn/n/news/transform/266/w640h426/20260919/96f2-8df3ad01847bc86dde409d9929f7ce44.jpg/w200h134z1l50t1q754fd.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/11a4-38e30b218cdb7fe30d571d9a648447a9.jpg/w200h134z1l50t1q75dfa.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/200/w720h1080/20260919/d089-ed5d9d24fb2984f6ca49123aab4f65d0.jpg/w200h134z1l50t1q752f4.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/386/w750h436/20260919/ad88-d5ad579b081321c0f3024d3abd79a10d.jpg/w200h134z1l50t1q75bed.jpg?by=comos",
-                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/17aa-2e84f6dbd7c1a057d24a70a2a373e073.jpg/w200h134z1l50t1q7562d.jpg?by=comos",
-                "https://k.sinaimg.cn/n/sinakd20260919s/656/w640h816/20260919/6f80-9392ae6d37829bce36825c86b81c098f.jpg/w120h90l50t11b9.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/317/w690h1227/20260919/00d6-645b63942293d333c0d8661c54c6a209.png/w120h90l50t1c38.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/181/w535h446/20260919/45d6-f765b45058a3c51212d7e845e28d1e39.png/w120h90l50t17cd.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/267/w640h427/20260919/29a2-fdb27d21c329c0e1e59d81650fc6c4ba.jpg/w120h90l50t1594.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/650/w900h1350/20260919/f1fa-e0dbbadf3a3fbbfcba398221a9be5ff5.jpg/w120h90l50t1f88.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/718/w1024h494/20260919/fa67-86cb0c723de743bfa68d3b9fee96d7b2.png/w120h90l50t10f0.jpg",
-                "https://k.sinaimg.cn/n/sinakd20260919s/700/w600h900/20260919/3135-5afd580837980e17e1a862f3e539e733.jpg/w120h90l50t11fe.jpg",
+                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/dd9f-80f07c4cded4759bdad8ba31d6815edf.jpg/w200h134z1l50t1q75d88.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/400/w1280h720/20260919/9552-9a16ca527ccb573491ad331b98f754ac.jpg/w200h134z1l50t1q75931.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/ddcd-1d8ea07d883f71fdf5fec136adcdc86c.jpg/w200h134z1l50t1q7557e.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/400/w720h480/20260919/2103-2c3a36bb610337b42187f2924a13265f.jpg/w200h134z1l50t1q75a4d.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/434/w1700h1134/20260919/236a-fcdb9a786897596135c93a6a97a2258e.jpg/w200h134z1l50t1q7509c.jpg?by=comos",
+                "https://k.sinaimg.cn/n/spider20260919/399/w720h479/20260919/9119-9dae294becdf39451a7b9414ff57e1a0.jpg/w200h134z1l50t1q75357.jpg?by=comos",
+                "https://k.sinaimg.cn/n/sinakd20260919s/385/w1080h905/20260919/57af-584c337f7acde542efad0712b4077df6.jpg/w120h90l50t1907.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/786/w640h946/20260919/3000-13fd5058133e1b802efe9abf13ec02f3.jpg/w120h90l50t13cd.jpg",
+                "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/e_NJ-fysqfnf9443598.png/w120h90l50t1f86.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/265/w640h425/20260919/cbbc-fb51e40bc9ac690210d5caa5cf495c9a.jpg/w120h90l50t16dc.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/336/w665h471/20260919/c7b6-e25907dc8ea68a06b8768c7d1f67c49b.jpg/w120h90l50t11a2.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/290/w1080h810/20260919/4220-844d8793fc5bbb2b54c02bcb2bfbd4a6.jpg/w120h90l50t16b1.jpg",
+                "https://k.sinaimg.cn/n/sinakd20260919s/699/w900h599/20260919/afb3-73dbdd30436325d6cd5fffa2ab03fcbe.jpg/w120h90l50t197d.jpg",
                 "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/1900-c06d7ec991124946d7702040d020419c.jpg/w350h234z1l50t1q75584.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/584/w350h234/20260918/088f-86dbaf2768e89d3d678fa08dde70a521.jpg/w350h234z1l50t1q75abb.jpg?by=comos",
-                "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
-                "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
-                "https://k.sinaimg.cn/n/sinakd20260919s/300/w720h380/20260919/0eae-3ccc93c80159fec9575aed882005a4a0.jpg/w200h134z1l50t1q75af7.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/518/w550h1568/20260919/0e62-f950e2a2f43b1b066fe1fb92e17ef6dd.png/w200h134z1l50t1q752aa.jpg?by=comos",
-                "https://k.sinaimg.cn/n/finance/683/w399h284/20260919/d93d-62146133259ca2da33fa8eb8da0f56d3.png/w200h134z1l50t1q75d3a.jpg?by=comos",
-                "https://k.sinaimg.cn/n/finance/785/w468h317/20260919/253b-3d6adb6ff5f61512234d5ad293f6052b.png/w200h134z1l50t1q75748.jpg?by=comos",
-                "https://k.sinaimg.cn/n/front20260919ac/160/w1280h1280/20260919/9626-06a8e2561186ae1b67505564fbed9732.jpg/w200h134z1l50t1q75bc0.jpg?by=comos",
+                "https://k.sinaimg.cn/n/front20260919ac/300/w720h380/20260919/a65e-7651c3e28291581b93306a4fef1b3aef.jpg/w200h134z1l50t1q75b3f.jpg?by=comos",
+                "https://k.sinaimg.cn/n/front20260919ac/141/w660h281/20260919/1634-b348144e40aa115f8ada161c30781318.jpg/w200h134z1l50t1q751ee.jpg?by=comos",
+                "https://k.sinaimg.cn/n/finance/500/w300h200/20251028/74a7-65908b5e7ff44a3cc09f2280ef4838ac.png/w200h134z1l50t1q7561e.jpg?by=comos",
+                "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180418/7RAA-fzihnep5208659.png/w200h134z1l50t1q754d3.jpg?by=comos",
+                "https://k.sinaimg.cn/n/sinakd20260919s/220/w1276h544/20260919/61c1-e69d4013b2b5ad3c28a5c1264f334ab6.jpg/w200h134z1l50t1q7585c.jpg?by=comos",
+                "https://k.sinaimg.cn/n/front20260919ac/539/w940h399/20260919/e29a-ae874ecc925aa952a6f3996b0ca05778.jpg/w200h134z1l50t1q7599d.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/c989-2a48932d3f7a49dd0bb055d83998ca1e.png/w350h234z1l50t1q75ff9.jpg?by=comos",
                 "https://k.sinaimg.cn/n/finance/transform/310/w710h400/20260918/44db-c190acb5dbaa4fa9eca803dcfa1b80a1.jpg/w350h234z1l50t1q7591e.jpg?by=comos",
                 "https://k.sinaimg.cn/n/default/feedbackpics/transform/116/w550h366/20180326/KCcj-fysqfnf9443543.png/w200h134z1l50t1q757d0.jpg?by=comos",
@@ -5848,54 +5805,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5344803505049963.html",
               "time": "2026-09-19 10:12",
               "text": "#爱奇艺我不是大师# #我不是大师定档0924# 角色海报第二弹，众多江湖神秘人物来袭！眼神藏锋、身份成谜。他们将将落入怎样的圈套？又是谁在给谁做局？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 邀你入局。 爱奇艺预约：http://t.cn/AX9AQPkE ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5344803001733475",
-              "detailUrl": "https://www.sina.cn/news/detail/5344803001733475.html",
-              "time": "2026-09-19 10:10",
-              "text": "#爱奇艺我不是大师# #我不是大师定档0924# 角色海报释出，风云将至，江湖神秘人物集结，钓系销冠、最强导师、墨镜神棍、坟场影帝……重量级人物一一登场，他们的背后隐藏了什么故事？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 上线，看这场民国局中局骗中骗谁能笑到最后！ 爱奇艺预约： ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5344802247017358",
-              "detailUrl": "https://www.sina.cn/news/detail/5344802247017358.html",
-              "time": "2026-09-19 10:07",
-              "text": "故事落幕，暖意不散。青梧镇每个人都找到了属于自己的归宿，所有的挣扎与等待，终有回响。#生逢其时# 加更嘉年华已开启，来爱奇艺见证这段邻里故事的温情结局。 领衔主演：（按姓氏笔画排序） 王子奇@王子奇是演员王子奇 关晓彤@关晓彤 特别出演：（按姓氏笔画排序） 刘琳@演员刘琳 郭涛@郭涛 郭晓东 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5344801240384527",
-              "detailUrl": "https://www.sina.cn/news/detail/5344801240384527.html",
-              "time": "2026-09-19 10:03",
-              "text": "#深渊无间今日收官# #剧集深渊无间# 连环凶案尘埃落定，连载小说如期完结，罪恶终将在阳光下接受审判。@任嘉伦Allen @秦俊杰 @演员王砚辉 @田小洁 @人艺何冰 @张亦驰isolation @宗俊涛Zen @郝平 @倪虹洁 今日18:00爱奇艺迷雾剧场会员收官！ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5344800485153555",
-              "detailUrl": "https://www.sina.cn/news/detail/5344800485153555.html",
-              "time": "2026-09-19 10:00",
-              "text": "#爱奇艺我不是大师# #我不是大师定档0924# 灾星下探、天生祸水，身不由己，众人早已无路可退！骗局接踵而至，手段层出不穷，一朝败落东山再起，且看各位如何逆风翻盘！9月24日爱奇艺以骗制骗玄疑剧#我不是大师# 即将正式开局！ 领衔主演（按姓氏笔画排序）：李现@李现ing 、李雪（李一桐）@李一桐Q ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5344792935400257",
-              "detailUrl": "https://www.sina.cn/news/detail/5344792935400257.html",
-              "time": "2026-09-19 09:30",
-              "text": "#择日飞升动画# ED《开眼》MV正式上线！神明视苍生为刍狗，苦海无涯，看少年许应逆命而上改写天道！每周六9：00锁定爱奇艺！ 指路:http://t.cn/AXO0rVu0 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5344785386176882",
-              "detailUrl": "https://www.sina.cn/news/detail/5344785386176882.html",
-              "time": "2026-09-19 09:00",
-              "text": "#择日飞升动画# 第12集上线！周家围捕而来，初见以为是美人计，不料竟是妖树登场！高能打斗即刻上演，今天9：00锁定爱奇艺！ 指路:http://t.cn/AXO01cQe ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
@@ -7465,33 +7374,6 @@
               "accountName": "任嘉伦全国后援会",
               "accountType": "fanclub",
               "hint": "filming"
-            },
-            {
-              "id": "5340463796322938",
-              "detailUrl": "https://www.sina.cn/news/detail/5340463796322938.html",
-              "time": "2026-09-07 10:47",
-              "text": "#深渊无间定档0909# 跟随李成警官@任嘉伦Allen 一起找出被掩藏的真相！",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub",
-              "hint": "filming"
-            },
-            {
-              "id": "5340462753514701",
-              "detailUrl": "https://www.sina.cn/news/detail/5340462753514701.html",
-              "time": "2026-09-07 10:43",
-              "text": "当小说预言照进现实，李成警官如何找准节奏，跳出预设陷阱？9月9日，与@任嘉伦Allen 一同揭开深渊之下的真相。#深渊无间定档0909##深渊无间终极预告# //@任嘉伦工作室:#任嘉伦[超话]# #剧集深渊无间# 越是靠近真相，就越容易被深渊裹挟，只有找准自己的节奏，跳出预设的陷阱，才能剖开层层迷雾，找出真",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub",
-              "hint": "filming"
-            },
-            {
-              "id": "5340462371310305",
-              "detailUrl": "https://www.sina.cn/news/detail/5340462371310305.html",
-              "time": "2026-09-07 10:41",
-              "text": "热血新警李成，在层层迷雾中执着追凶。期待演员@任嘉伦Allen 在《深渊无间》中的表演，9月9日，随李sir一同剖开迷雾，探寻真相🔍#深渊无间终极预告# #深渊无间定档0909#",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub",
-              "hint": "filming"
             }
           ],
           "recentPosts": [
@@ -7508,6 +7390,30 @@
               "detailUrl": "https://www.sina.cn/news/detail/5280061372503128.html",
               "time": "2026-03-24 18:29",
               "text": "【超话相关规则】 🅰️微博相关管理规则 ✅日常任务由@任嘉伦星辰研究院 （原网投组）每日总结发布 ✅热搜等其他任务由@任嘉伦丨唯伦特工 即时发布任务 ✅超话不当言论发给值日的主持人，值班表在下文。 ✅超话加精申请私信@任嘉伦全国后援会 ，超话加精细则http://t.cn/AXfE3dd9 ✅✅微博非超话 ​",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5344946263690638",
+              "detailUrl": "https://www.sina.cn/news/detail/5344946263690638.html",
+              "time": "2026-09-19 19:39",
+              "text": "回望属于李成的一幕幕画面，感谢@任嘉伦Allen 塑造出这样鲜活立体的李成，每一帧都值得反复观看#任嘉伦李成# [打call]#任嘉伦深渊无间#",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5344945114187578",
+              "detailUrl": "https://www.sina.cn/news/detail/5344945114187578.html",
+              "time": "2026-09-19 19:34",
+              "text": "短短数日，我们一同走完李成这段坎坷的旅程。他重情重义，始终铭记初心，将正义贯彻到底。感恩与李成相遇，于黑暗之中守望光明。愿前路漫漫，顺遂无忧，我们下个角色再见。@任嘉伦Allen #任嘉伦李成# [打call]#任嘉伦深渊无间#",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5344939196290366",
+              "detailUrl": "https://www.sina.cn/news/detail/5344939196290366.html",
+              "time": "2026-09-19 19:11",
+              "text": "纵然身陷无边深渊，心中正道从未湮灭。深渊有尽，正道无间。感谢@任嘉伦Allen 塑造的这个鲜活角色，我们期待下一次相逢#任嘉伦深渊无间# //@任嘉伦工作室:#任嘉伦[超话]# 这一路，我们陪伴李成@任嘉伦Allen 追查到了真相，更见识到了他的正义与善良。深渊有尽，正道无间。李成，我们下次再见！",
               "accountName": "任嘉伦全国后援会",
               "accountType": "fanclub"
             },
@@ -7714,30 +7620,6 @@
               "text": "悬案落幕，前路修远。恭喜李成警官@任嘉伦Allen 爱奇艺角色热度破3亿[给你小心心][给你小心心][给你小心心][给你小心心]#任嘉伦深渊无间# #任嘉伦李成#",
               "accountName": "任嘉伦全国后援会",
               "accountType": "fanclub"
-            },
-            {
-              "id": "5342768719463701",
-              "detailUrl": "https://www.sina.cn/news/detail/5342768719463701.html",
-              "time": "2026-09-13 19:26",
-              "text": "武戏利落有力量，文戏沉静藏张力，不管是动作戏份还是审讯对峙，都全力以赴认真对待@任嘉伦Allen #任嘉伦深渊无间# [打call]#任嘉伦#",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5342718286630337",
-              "detailUrl": "https://www.sina.cn/news/detail/5342718286630337.html",
-              "time": "2026-09-13 16:06",
-              "text": "那些来不及的告别，化作心底的力量，支撑李成@任嘉伦Allen 继续向着真相迈步#任嘉伦# [打call]#任嘉伦深渊无间#",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5342677180615774",
-              "detailUrl": "https://www.sina.cn/news/detail/5342677180615774.html",
-              "time": "2026-09-13 13:22",
-              "text": "深埋在深渊之中的秘密水落石出，追查途中李成@任嘉伦Allen 始终不曾动摇，还有那些并肩走过的同行者，全部拥有了属于他们的答案。漫漫长路尘埃落定，那些孤勇与热忱，终不被辜负#任嘉伦深渊无间# //@任嘉伦工作室:#任嘉伦[超话]# 故事走到终章，李成@任嘉伦Allen 也终于有机会回望这一路。那些藏在《深",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
             }
           ]
         },
@@ -7746,7 +7628,7 @@
           "name": "任嘉伦-海外分会",
           "type": "fanclub",
           "postCount": 100,
-          "latestPostTime": "2026-09-14 22:28",
+          "latestPostTime": "2026-09-19 21:09",
           "scheduleCandidates": [
             {
               "id": "5341188854385347",
@@ -7784,6 +7666,14 @@
             }
           ],
           "recentPosts": [
+            {
+              "id": "5344968937046460",
+              "detailUrl": "https://www.sina.cn/news/detail/5344968937046460.html",
+              "time": "2026-09-19 21:09",
+              "text": "转发微博",
+              "accountName": "任嘉伦-海外分会",
+              "accountType": "fanclub"
+            },
             {
               "id": "5343177011633532",
               "detailUrl": "https://www.sina.cn/news/detail/5343177011633532.html",
@@ -8019,14 +7909,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5308577099285900.html",
               "time": "2026-06-11 11:01",
               "text": "期待新作 任嘉伦@任嘉伦Allen #美度全球品牌代言人任嘉伦#",
-              "accountName": "任嘉伦-海外分会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5306768935884432",
-              "detailUrl": "https://www.sina.cn/news/detail/5306768935884432.html",
-              "time": "2026-06-06 11:16",
-              "text": "[有票了][有票了][有票了]高考加油[赢牛奶][赢牛奶][赢牛奶]",
               "accountName": "任嘉伦-海外分会",
               "accountType": "fanclub"
             }

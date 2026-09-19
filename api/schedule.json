@@ -541,30 +541,6 @@
       "newsUrl": "https://www.sina.cn/news/detail/5341932839503160.html"
     },
     {
-      "date": "2026-09-15",
-      "type": "filming",
-      "title": "啦！逗趣不止，甜蜜狙击！[yeah]今天再来 看鬼马乙方董董恩 如何攻略帅气甲方楼渊 ~",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#金牌客服董董恩开播三周年#啦！逗趣不止，甜蜜狙击！[yeah]今天再来@爱奇艺 看鬼马乙方董董恩@徐璐LULU 如何攻略帅气甲方楼渊@魏哲鸣Miles ~ #金牌客服董董恩# #桃桃那年今日# http://t.cn/AXhGgOGD ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5343450338952783",
-      "newsUrl": "https://www.sina.cn/news/detail/5343450338952783.html"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "filming",
-      "title": "快乐！千年追爱双向奔赴，今日再来 与陆炎 于登登 共赴奇幻之路吧~",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#请君开播四周年#快乐！千年追爱双向奔赴，今日再来@爱奇艺 与陆炎@任嘉伦Allen 于登登@李沁 共赴奇幻之路吧~ #请君##桃桃那年今日# http://t.cn/A6SuUGCI ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5343420139700826",
-      "newsUrl": "https://www.sina.cn/news/detail/5343420139700826.html"
-    },
-    {
       "date": "2026-09-16",
       "type": "filming",
       "title": "快乐！五年时光流转，江湖甜意不变~一起回顾无墨山庄里贴贴夫妇 的温柔与心动吧[期待]现在关注并转发还有机会获得「随机主演",
@@ -853,18 +829,6 @@
       "newsUrl": "https://www.sina.cn/news/detail/5344090809173101.html"
     },
     {
-      "date": "2026-09-18",
-      "type": "filming",
-      "title": "网播定档！一场盛大年会筹备风波席卷集团，有人想保住岗位，有人伺机升职，有人暗藏裁员秘密。职场套路轮番上演，办公室乌龙接连",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#电影年会不能停2#网播定档！一场盛大年会筹备风波席卷集团，有人想保住岗位，有人伺机升职，有人暗藏裁员秘密。职场套路轮番上演，办公室乌龙接连不断，打工人真实共鸣感拉满。9月18日，来@爱奇艺 看～ ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5343384907809420",
-      "newsUrl": "https://www.sina.cn/news/detail/5343384907809420.html"
-    },
-    {
       "date": "2026-09-19",
       "type": "business",
       "title": "今晚横塘团建排面拉满🦚17:00起， 直播间，莲梵巧 谢清和 谢正钧 荣嬷嬷 抱弦 薛三郎 陪你边看边唠；19:00起",
@@ -1033,11 +997,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5344906399977117.html"
     }
   ],
-  "total": 86,
-  "updatedAt": "2026-09-19T09:58:57.944Z",
+  "total": 83,
+  "updatedAt": "2026-09-19T13:42:59.951Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 68,
+    "validated": 63,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -1045,7 +1009,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 87,
+    "fallbackItems": 82,
     "errors": 0
   }
 }
