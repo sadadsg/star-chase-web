@@ -567,18 +567,6 @@
     {
       "date": "2026-09-16",
       "type": "filming",
-      "title": "明明在职场刻意保持安全距离，怎么反而越来越近？究竟是陆承洲 的深V太诱惑，还是林晓晓 沦陷在美色里？爱奇艺 今日开播！\ud83e",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#爱情上升期开播# 明明在职场刻意保持安全距离，怎么反而越来越近？究竟是陆承洲@王凯沐 的深V太诱惑，还是林晓晓@徐轸轸Zzz 沦陷在美色里？爱奇艺#爱情上升期# 今日开播！🥝http://t.cn/AXOMzG5B ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5343712063783208",
-      "newsUrl": "https://www.sina.cn/news/detail/5343712063783208.html"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "filming",
       "title": "来也！线索串联，荆棘缠绕，重启之时，是入局亦是破局。当旧案的尘土被重新扬起，没有人能干净地离开。嘿！跟上节奏，别回头😈",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -997,11 +985,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5344906399977117.html"
     }
   ],
-  "total": 83,
-  "updatedAt": "2026-09-19T23:51:09.730Z",
+  "total": 82,
+  "updatedAt": "2026-09-20T02:28:53.049Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 63,
+    "validated": 62,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -1009,7 +997,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 82,
+    "fallbackItems": 81,
     "errors": 0
   }
 }
