@@ -627,18 +627,6 @@
     {
       "date": "2026-09-17",
       "type": "filming",
-      "title": "工笔画海报第二波✨九人九面，各藏机锋——平静是画的，波澜是他们的。今日首播12点连播6集！锁定爱奇艺，看横塘众生相🍵",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#桃厂上新一瓯春# #一瓯春今日开播# #一瓯春一眼入戏海报# 工笔画海报第二波✨九人九面，各藏机锋——平静是画的，波澜是他们的。今日首播12点连播6集！锁定爱奇艺，看横塘众生相🍵 特别出演：黄晓娟@黄晓娟-蓉蓉 富大龙@富山堂 赫兰鹏（赫子铭）@赫子铭 出演：王苏棋（苏棋）@苏棋sukii 张天爱（天 ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5344076968236332",
-      "newsUrl": "https://www.sina.cn/news/detail/5344076968236332.html"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "filming",
       "title": "快乐[打call]在循环里追逐真相，于时空中探寻人性！还记得去年和丁奇 安岚 墨远致 一起经历的惊奇探险吗？快来 重温吧",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -985,11 +973,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5345284067692541.html"
     }
   ],
-  "total": 82,
-  "updatedAt": "2026-09-20T13:20:22.666Z",
+  "total": 81,
+  "updatedAt": "2026-09-20T17:09:27.195Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 62,
+    "validated": 61,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -997,7 +985,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 81,
+    "fallbackItems": 80,
     "errors": 0
   }
 }
