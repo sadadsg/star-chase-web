@@ -795,30 +795,6 @@
     {
       "date": "2026-09-24",
       "type": "filming",
-      "title": "角色海报第二弹，众多江湖神秘人物来袭！眼神藏锋、身份成谜。他们将将落入怎样的圈套？又是谁在给谁做局？9月24日起，爱奇艺",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#爱奇艺我不是大师# #我不是大师定档0924# 角色海报第二弹，众多江湖神秘人物来袭！眼神藏锋、身份成谜。他们将将落入怎样的圈套？又是谁在给谁做局？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 邀你入局。 爱奇艺预约：http://t.cn/AX9AQPkE ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5344803505049963",
-      "newsUrl": "https://www.sina.cn/news/detail/5344803505049963.html"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "filming",
-      "title": "角色海报释出，风云将至，江湖神秘人物集结，钓系销冠、最强导师、墨镜神棍、坟场影帝……重量级人物一一登场，他们的背后隐藏了",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#爱奇艺我不是大师# #我不是大师定档0924# 角色海报释出，风云将至，江湖神秘人物集结，钓系销冠、最强导师、墨镜神棍、坟场影帝……重量级人物一一登场，他们的背后隐藏了什么故事？9月24日起，爱奇艺以骗制骗玄疑剧#我不是大师# 上线，看这场民国局中局骗中骗谁能笑到最后！ 爱奇艺预约： ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5344803001733475",
-      "newsUrl": "https://www.sina.cn/news/detail/5344803001733475.html"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "filming",
       "title": "这江湖上，最不缺的就是“大师”，信的人多了，假的也成了真的。有人假借天命行骗，有人藏身暗处操盘。真真假假，层层反转。9月",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -865,11 +841,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5345526016115336.html"
     }
   ],
-  "total": 72,
-  "updatedAt": "2026-09-21T11:29:41.390Z",
+  "total": 70,
+  "updatedAt": "2026-09-21T17:28:13.892Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 51,
+    "validated": 49,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -877,7 +853,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 70,
+    "fallbackItems": 68,
     "errors": 0
   }
 }
