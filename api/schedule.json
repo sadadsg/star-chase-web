@@ -505,6 +505,18 @@
       "newsUrl": "https://www.sina.cn/news/detail/5341191705988298.html"
     },
     {
+      "date": "2026-09-14",
+      "type": "filming",
+      "title": "湟水县今日公告栏更新：胁迫青少年犯罪、钓鱼佬的习惯、神秘包裹、急兑的网吧......看似琐碎的日常，拼起来却是一张完整的",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "湟水县今日公告栏更新：胁迫青少年犯罪、钓鱼佬的习惯、神秘包裹、急兑的网吧......看似琐碎的日常，拼起来却是一张完整的罪恶地图！很多时候，越靠近答案，越看不清真相。#剧集深渊无间# 爱奇艺迷雾剧场正在热播，加更礼已开启，一键直通大结局！ ​",
+      "time": "全天",
+      "source": "剧集深渊无间",
+      "postId": "5343049162689296",
+      "newsUrl": "https://www.sina.cn/news/detail/5343049162689296.html"
+    },
+    {
       "date": "2026-09-15",
       "type": "filming",
       "title": "9月15日硬核上线！身体藏毒、开膛取货、当街焚棺，毒枭背后暗藏更大惊天黑幕！热血硬汉 以拳止恶，假死卧底 黑白游走，疯批",
@@ -543,6 +555,18 @@
     {
       "date": "2026-09-16",
       "type": "filming",
+      "title": "湟水公告栏今日更新🪧 警情与进展、调查与证言，加密线索限时解锁🔐一起在真相尽头，回望深渊之内的回响！案件结案，追更快",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#剧集深渊无间# 湟水公告栏今日更新🪧 警情与进展、调查与证言，加密线索限时解锁🔐一起在真相尽头，回望深渊之内的回响！案件结案，追更快乐回归，明日复更，我们继续追光！剧集加更礼已开启，锁定@爱奇艺 迷雾剧场，一键直通大结局！ ​",
+      "time": "全天",
+      "source": "剧集深渊无间",
+      "postId": "5343773719530301",
+      "newsUrl": "https://www.sina.cn/news/detail/5343773719530301.html"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "filming",
       "title": "财迷打工人林晓晓 遇上取款机霸总陆承洲 ，表面默契的职场双强却藏着隐秘关系？9月16日锁定爱奇艺 🥝预约👉🏻",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -551,6 +575,18 @@
       "source": "爱奇艺",
       "postId": "5341890062581888",
       "newsUrl": "https://www.sina.cn/news/detail/5341890062581888.html"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "filming",
+      "title": "收件箱今日重启🌟重要嫌疑人邀约单独见面？老刑警追凶多年后检举自己儿子？加更礼已开启，更多精彩，锁定 迷雾剧场！",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#剧集深渊无间# 收件箱今日重启🌟重要嫌疑人邀约单独见面？老刑警追凶多年后检举自己儿子？加更礼已开启，更多精彩，锁定@爱奇艺 迷雾剧场！ ​",
+      "time": "全天",
+      "source": "剧集深渊无间",
+      "postId": "5344105917055033",
+      "newsUrl": "https://www.sina.cn/news/detail/5344105917055033.html"
     },
     {
       "date": "2026-09-21",
@@ -649,11 +685,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5345585818239767.html"
     }
   ],
-  "total": 54,
-  "updatedAt": "2026-09-22T10:37:23.845Z",
+  "total": 57,
+  "updatedAt": "2026-09-22T15:16:43.016Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 16,
+    "validated": 33,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -661,7 +697,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 35,
+    "fallbackItems": 52,
     "errors": 0
   }
 }
