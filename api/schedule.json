@@ -637,6 +637,18 @@
       "newsUrl": "https://www.sina.cn/news/detail/5344827979597432.html"
     },
     {
+      "date": "2026-09-24",
+      "type": "filming",
+      "title": "骗局升级！在桃大师开课啦，教你拆解圈套、识破骗局！9月24日 18:00，上官诚明 、江飞燕 、傻亮 、祖爷 、做客 直",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#爱奇艺我不是大师# 骗局升级！在桃大师开课啦，教你拆解圈套、识破骗局！9月24日 18:00，上官诚明@李现ing 、江飞燕@李一桐Q 、傻亮@刘冠麟 、祖爷@果靖霖 、做客#爱奇艺一起聊# 直播间，一同入局解谜！锁定爱奇艺，我们不见不散！#我不是大师# 直播指路👉http://t.cn/AXOdktuA 爱奇艺预约： ​",
+      "time": "18:00",
+      "source": "爱奇艺",
+      "postId": "5346375865730816",
+      "newsUrl": "https://www.sina.cn/news/detail/5346375865730816.html"
+    },
+    {
       "date": "2026-09-25",
       "type": "business",
       "title": "《月满有时，圆满有期》｜在时间里，等一颗珍珠的光华 月满有时，圆满有期 真正的圆满，如天上明月，亦如世间珍珠 —— 默默",
@@ -649,11 +661,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5346295338239904.html"
     }
   ],
-  "total": 54,
-  "updatedAt": "2026-09-23T07:00:34.350Z",
+  "total": 55,
+  "updatedAt": "2026-09-23T12:39:31.055Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 28,
+    "validated": 29,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -661,7 +673,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 47,
+    "fallbackItems": 48,
     "errors": 0
   }
 }
