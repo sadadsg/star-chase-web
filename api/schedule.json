@@ -855,6 +855,18 @@
     {
       "date": "2026-09-25",
       "type": "filming",
+      "title": "利刃划破黑暗，正义终将破局！今天一起来 重温 吧~现在关注并转发，还有机会获得「 随机主演签名照」一张！",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#围猎开播一周年# 利刃划破黑暗，正义终将破局！今天一起来@爱奇艺 重温#电视剧围猎# 吧~现在关注并转发，还有机会获得「@王阳0313 @張宥浩 @俞灏明 @邓恩熙 @杨皓宇 @余皑磊 @郝平 @演员冯兵 @黄璐lulu 随机主演签名照」一张！#桃桃那年今日# http://t.cn/AXWz4XKs ​",
+      "time": "全天",
+      "source": "爱奇艺",
+      "postId": "5347088059336774",
+      "newsUrl": "https://www.sina.cn/news/detail/5347088059336774.html"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "filming",
       "title": "追剧日历划重点！大师登场，九大玄疑局将要逐个开启，看你的脑力够不够用？爱奇艺全网首播，9月24日，VIP会员18:00更",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -949,11 +961,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5346612676395556.html"
     }
   ],
-  "total": 79,
-  "updatedAt": "2026-09-25T05:38:06.524Z",
+  "total": 80,
+  "updatedAt": "2026-09-25T10:51:27.650Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 50,
+    "validated": 51,
     "dropped": 18,
     "dropReasons": {
       "date_out_of_window": 18
@@ -961,7 +973,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 68,
+    "fallbackItems": 69,
     "errors": 0
   }
 }
