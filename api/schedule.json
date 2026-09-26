@@ -651,18 +651,6 @@
     {
       "date": "2026-09-24",
       "type": "filming",
-      "title": "一句话点明亲情和爱情的本质，上官诚明 、金不换 还是太懂如何拿捏人性了。今晚18点，以骗制骗玄疑剧爱奇艺 上线！ 爱奇艺",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#爱奇艺我不是大师# #我不是大师今日开播# 一句话点明亲情和爱情的本质，上官诚明@李现ing 、金不换@吴刚de微博 还是太懂如何拿捏人性了。今晚18点，以骗制骗玄疑剧爱奇艺#我不是大师# 上线！ 爱奇艺预约：http://t.cn/AX9AQPkE http://t.cn/AXOszIby ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5346664019924124",
-      "newsUrl": "https://www.sina.cn/news/detail/5346664019924124.html"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "filming",
       "title": "上官诚明 的仇人就在眼前，杀还是不杀？这是个问题！再定睛一看，好家伙，这俩人的“生死局”主打一个拼手速！每晚18点，以骗",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -707,18 +695,6 @@
       "source": "爱奇艺",
       "postId": "5346771201169057",
       "newsUrl": "https://www.sina.cn/news/detail/5346771201169057.html"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "filming",
-      "title": "摊开人物关系图！有人骗过爱过；有人逢场作戏；有人是同门宿敌，有人局中做局。人人都在演，就看谁先掉马！今晚18点，以骗制骗",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#爱奇艺我不是大师# #我不是大师今日开播# 摊开人物关系图！有人骗过爱过；有人逢场作戏；有人是同门宿敌，有人局中做局。人人都在演，就看谁先掉马！今晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 上线，一起挖掘每一处伏笔，见证终局落子～ 爱奇艺预约：http://t.cn/AX9AQPkE ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5346674081006026",
-      "newsUrl": "https://www.sina.cn/news/detail/5346674081006026.html"
     },
     {
       "date": "2026-09-25",
@@ -767,25 +743,13 @@
       "source": "爱奇艺",
       "postId": "5347405148456185",
       "newsUrl": "https://www.sina.cn/news/detail/5347405148456185.html"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "filming",
-      "title": "诡宅开放，诚招有缘人试睡。够怪、够刺激、够胆欢迎来！ 9月28日， 爱奇艺电影频道全网首播。 导演·编剧：王博伦[A.L",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#电影怪屋定档# 诡宅开放，诚招有缘人试睡。够怪、够刺激、够胆欢迎来！ 9月28日，#电影怪屋# 爱奇艺电影频道全网首播。 导演·编剧：王博伦[A.L.U] 编剧：富贵 马儿 韩涵 胡婧一 领衔主演：@傅菁 领衔主演：@思漩Christie @苏劲源 特别主演：@张越宁 主演：@王健宇JY 王麦岐 友情出演： ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5346667970167545",
-      "newsUrl": "https://www.sina.cn/news/detail/5346667970167545.html"
     }
   ],
-  "total": 65,
-  "updatedAt": "2026-09-26T11:58:39.841Z",
+  "total": 62,
+  "updatedAt": "2026-09-26T15:51:09.923Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 36,
+    "validated": 33,
     "dropped": 18,
     "dropReasons": {
       "date_out_of_window": 18
@@ -793,7 +757,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 54,
+    "fallbackItems": 51,
     "errors": 0
   }
 }
