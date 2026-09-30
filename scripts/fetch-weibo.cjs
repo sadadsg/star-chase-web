@@ -8,7 +8,7 @@ const fs = require('node:fs')
 const path = require('node:path')
 const config = require('./artists.config.cjs')
 const { parseFeed, parseDetailPics } = require('./lib/parse-mirror.cjs')
-const { classifyType } = require('./lib/schedule-model.cjs')
+const { classifyType, filterScheduleCandidates, countByAccountType } = require('./lib/schedule-model.cjs')
 const { fetchText } = require('./lib/http.cjs')
 
 const DETAIL_LIMIT = 8 // 每账号每次最多为多少条候选帖抓详情页配图
@@ -33,8 +33,15 @@ async function fetchAccount(account, artist) {
     throw new Error('镜像页解析到 0 条帖文（页面结构可能变化或被反爬）')
   }
 
-  const candidates = posts.filter(p =>
+  // 行程候选 = 命中关键词 ∩ 账号类型在白名单内。
+  // 白名单外的账号（剧集/品牌/后援会）仍产出 recentPosts 进资讯流，但不进日程。
+  const allowedTypes = artist.weibo.scheduleAccountTypes
+  const keywordHits = posts.filter(p =>
     artist.schedulePostKeywords.some(kw => p.text.includes(kw))
+  )
+  const candidates = filterScheduleCandidates(
+    keywordHits.map(p => ({ ...p, accountType: account.type })),
+    allowedTypes
   )
 
   for (const cand of candidates.slice(0, DETAIL_LIMIT)) {
@@ -53,6 +60,9 @@ async function fetchAccount(account, artist) {
     type: account.type,
     postCount: posts.length,
     latestPostTime: posts[0].time || null,
+    // 被白名单挡掉的量，供 CI 日志与上游观测
+    keywordHitCount: keywordHits.length,
+    excludedCount: keywordHits.length - candidates.length,
     scheduleCandidates: candidates.map(c => ({
       ...c,
       accountName: account.name,
@@ -80,7 +90,10 @@ async function main() {
       try {
         const result = await fetchAccount(account, artist)
         results.push(result)
-        console.log(`  [${artist.id}] ${account.name}(${account.type}): ${result.postCount} 帖, 候选 ${result.scheduleCandidates.length} 条 (最新: ${result.latestPostTime})`)
+        const filterNote = result.excludedCount > 0
+          ? `，白名单外过滤 ${result.excludedCount} 条`
+          : ''
+        console.log(`  [${artist.id}] ${account.name}(${account.type}): ${result.postCount} 帖, 候选 ${result.scheduleCandidates.length} 条${filterNote} (最新: ${result.latestPostTime})`)
       } catch (err) {
         failures++
         console.error(`  [${artist.id}] ${account.name} 抓取失败: ${err.message}`)
@@ -95,13 +108,26 @@ async function main() {
       process.exitCode = 1 // 有失败但非全军覆没：标记供 CI 观测，不阻断部署
     }
 
+    const mergedCandidates = results.flatMap(r => r.scheduleCandidates)
+    const typeDist = countByAccountType(mergedCandidates)
+    const allowed = (artist.weibo.scheduleAccountTypes || ['studio']).join('/')
+    console.log(`  [${artist.id}] 行程候选合计 ${mergedCandidates.length} 条（白名单: ${allowed}）类型分布: ${JSON.stringify(typeDist)}`)
+    // 白名单失效的自检：出现非白名单类型说明配置与实现脱节
+    const leaked = Object.keys(typeDist).filter(t => !typeDist[t] || t === 'unknown' || !(artist.weibo.scheduleAccountTypes || ['studio']).includes(t))
+    if (leaked.length > 0) {
+      console.error(`  [${artist.id}] 警告：行程候选中出现白名单外类型 ${leaked.join('/')}，过滤逻辑可能未生效`)
+      process.exitCode = 1
+    }
+
     artists[artist.id] = {
       // 合并字段（带来源标注），供 extract-schedule / fetch-data 直接消费
-      scheduleCandidates: results.flatMap(r => r.scheduleCandidates),
+      scheduleCandidates: mergedCandidates,
       recentPosts: results.flatMap(r => r.recentPosts),
       accounts: results,
       accountCount: results.length,
       failureCount: failures,
+      scheduleAccountTypes: artist.weibo.scheduleAccountTypes || ['studio'],
+      scheduleCandidateTypes: typeDist,
     }
   }
 

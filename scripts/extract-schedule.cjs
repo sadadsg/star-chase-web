@@ -8,7 +8,7 @@
 const fs = require('node:fs')
 const path = require('node:path')
 const config = require('./artists.config.cjs')
-const { validateItems, mergeSchedule, classifyType, extractDatesFallback, extractTime, cleanTitle } = require('./lib/schedule-model.cjs')
+const { validateItems, mergeSchedule, classifyType, extractDatesFallback, extractTime, cleanTitle, filterScheduleCandidates } = require('./lib/schedule-model.cjs')
 const { fetchText, fetchBinary, sleep } = require('./lib/http.cjs')
 const glm = require('./lib/glm.cjs')
 
@@ -56,6 +56,7 @@ function extractFromTextFallback(post) {
     city: findCity(post.text),
     time: time || '全天',
     source: post.accountName || 'studio_weibo',
+    accountType: post.accountType || null,
     postId: post.id,
     newsUrl: post.detailUrl,
   }))
@@ -70,7 +71,7 @@ async function extractFromTextGLM(post) {
   const arr = glm.extractJSON(content)
   const postId = post.id
   const newsUrl = post.detailUrl
-  return (Array.isArray(arr) ? arr : []).map(it => ({ ...it, source: post.accountName || 'studio_weibo', postId, newsUrl }))
+  return (Array.isArray(arr) ? arr : []).map(it => ({ ...it, source: post.accountName || 'studio_weibo', accountType: post.accountType || null, postId, newsUrl }))
 }
 
 // GLM 视觉抽取：下载海报 → base64 → glm-4v
@@ -121,8 +122,16 @@ async function main() {
 
   for (const artist of config.artists) {
     const bundle = weiboData.artists && weiboData.artists[artist.id]
-    const candidates = (bundle && bundle.scheduleCandidates) || []
-    console.log(`[extract] ${artist.name}: ${candidates.length} 条候选帖`)
+    const rawCandidates = (bundle && bundle.scheduleCandidates) || []
+
+    // 二次防线：即使 weibo-posts.json 里混进了白名单外的候选（历史文件 / 手工改动），
+    // 这里按 accountType 再挡一次；mergeSchedule 侧还会清除 schedule.json 的存量脏条目。
+    const allowedTypes = (artist.weibo && artist.weibo.scheduleAccountTypes) || ['studio']
+    const candidates = filterScheduleCandidates(rawCandidates, allowedTypes)
+    if (rawCandidates.length - candidates.length > 0) {
+      console.warn(`  [warn] ${artist.name}: ${rawCandidates.length - candidates.length} 条候选账号类型不在白名单 ${JSON.stringify(allowedTypes)}，已剔除`)
+    }
+    console.log(`[extract] ${artist.name}: ${candidates.length}/${rawCandidates.length} 条候选帖进入抽取（白名单: ${allowedTypes.join('/')}）`)
 
     for (const post of candidates) {
       let got = false
@@ -155,7 +164,7 @@ async function main() {
           try {
             const items = await extractFromPic(pic, monthHint)
             allRaw.push(...items.map(it => ({
-              ...it, source: post.accountName || 'studio_weibo', postId: post.id, newsUrl: post.detailUrl,
+              ...it, source: post.accountName || 'studio_weibo', accountType: post.accountType || null, postId: post.id, newsUrl: post.detailUrl,
             })))
             stats.glmPicItems += items.length
             picsProcessed++
@@ -176,19 +185,25 @@ async function main() {
     dateWindowMonths: config.extraction.dateWindowMonths,
   })
 
+  const allowedTypes = (config.artists[0] && config.artists[0].weibo.scheduleAccountTypes) || ['studio']
   const merged = mergeSchedule(existing.data, items, {
     retentionDays: config.extraction.scheduleRetentionDays,
+    allowedAccountTypes: allowedTypes,
   })
+
+  const mergeDropped = merged.dropped || { expired: 0, duplicate: 0, sourceNotAllowed: 0 }
 
   const out = {
     data: merged,
     total: merged.length,
     updatedAt: new Date().toISOString(),
     source: 'studio_weibo',
+    scheduleAccountTypes: allowedTypes,
     runStats: {
       validated: items.length,
       dropped: dropped.length,
       dropReasons: dropped.reduce((acc, d) => ({ ...acc, [d.reason]: (acc[d.reason] || 0) + 1 }), {}),
+      mergeDropped,
       glmCalls,
       ...stats,
     },
@@ -196,6 +211,7 @@ async function main() {
 
   fs.writeFileSync(schedulePath, JSON.stringify(out, null, 2))
   console.log(`[extract] 校验通过 ${items.length} 条（丢弃 ${dropped.length}），schedule.json 合计 ${merged.length} 条`)
+  console.log(`[extract] 合并阶段清理: 过期 ${mergeDropped.expired} / 重复 ${mergeDropped.duplicate} / 来源不在白名单 ${mergeDropped.sourceNotAllowed}`)
   if (dropped.length) {
     console.log(`[extract] 丢弃原因分布: ${JSON.stringify(out.runStats.dropReasons)}`)
   }

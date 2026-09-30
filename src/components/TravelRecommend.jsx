@@ -4,14 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { fetchSchedule } from '../api/dataApi'
 import { CITIES } from '../data/cities'
 import { EASE_OUT_EXPO } from '../lib/motion'
-
-const stationCodes = {
-  '北京': 'BJP', '上海': 'SHH', '广州': 'GZQ', '深圳': 'SZQ',
-  '成都': 'CDW', '杭州': 'HZH', '南京': 'NJH', '武汉': 'WHN',
-  '重庆': 'CQW', '西安': 'XAY', '长沙': 'CSQ', '天津': 'TJP',
-  '苏州': 'SZH', '青岛': 'QDK', '大连': 'DLT', '郑州': 'ZZF',
-  '昆明': 'KMM', '厦门': 'XMS', '福州': 'FZS', '合肥': 'HFH',
-}
+import { normalizeCity, buildCtripFlightUrl, buildTrain12306Url, eventKey } from '../lib/travel-links'
 
 const typeLabel = {
   filming: '影视',
@@ -30,9 +23,10 @@ function StepHeader({ no, title }) {
   )
 }
 
-export default function TravelRecommend() {
+export default function TravelRecommend({ initialEventId = null }) {
   const [searchParams] = useSearchParams()
-  const eventId = searchParams.get('eventId')
+  // URL 参数优先；TravelPage 也会把 eventId 作为 initialEventId 传下来，两者取其一即可
+  const eventId = searchParams.get('eventId') || initialEventId
   const [events, setEvents] = useState([])
   const [loading, setLoading] = useState(true)
   const [selectedEvent, setSelectedEvent] = useState(null)
@@ -44,9 +38,11 @@ export default function TravelRecommend() {
       try {
         const result = await fetchSchedule()
         if (!cancelled) {
+          // schedule.json 无 location 字段（曾映射 s.location → venue 恒为 undefined）；
+          // 目的地只认 city，且「待定」归一为 null
           const activityEvents = (result.data || [])
             .filter(s => s.type === 'fanmeeting' || s.type === 'business')
-            .map(s => ({ ...s, name: s.title, venue: s.location }))
+            .map(s => ({ ...s, destCity: normalizeCity(s.city) }))
           setEvents(activityEvents)
           setLoading(false)
         }
@@ -60,12 +56,17 @@ export default function TravelRecommend() {
 
   useEffect(() => {
     if (eventId && events.length > 0) {
-      const idx = events.findIndex(e => e.id === Number(eventId))
+      // schedule.json 无 id 字段，早期用 e.id 匹配恒为 -1；改用 postId
+      const idx = events.findIndex(e => eventKey(e) === String(eventId))
       if (idx >= 0) setSelectedEvent(idx) // eslint-disable-line react-hooks/set-state-in-effect
     }
   }, [eventId, events])
 
   const activeEvent = selectedEvent !== null ? events[selectedEvent] : null
+  const destCity = activeEvent ? activeEvent.destCity : null
+  const isLocal = Boolean(activeEvent && destCity && fromCity === destCity)
+  const flightUrl = activeEvent ? buildCtripFlightUrl(fromCity, destCity, activeEvent.date) : null
+  const trainUrl = activeEvent ? buildTrain12306Url(fromCity, destCity, activeEvent.date) : null
 
   if (loading) {
     return (
@@ -95,7 +96,7 @@ export default function TravelRecommend() {
             {events.map((event, i) => {
               const isActive = selectedEvent === i
               return (
-                <button key={event.id} onClick={() => setSelectedEvent(isActive ? null : i)}
+                <button key={eventKey(event) || i} onClick={() => setSelectedEvent(isActive ? null : i)}
                   className="p-4 rounded-xl text-left transition-all cursor-pointer"
                   style={{
                     background: isActive ? '#f5f9ff' : '#ffffff',
@@ -109,7 +110,7 @@ export default function TravelRecommend() {
                     <span className="text-[13px]" style={{ color: '#86868b' }}>{event.date}</span>
                   </div>
                   <div className="font-semibold text-[15px] mb-0.5" style={{ color: '#1d1d1f' }}>{event.title}</div>
-                  <div className="text-[13px]" style={{ color: '#86868b' }}>{event.location || event.city}</div>
+                  <div className="text-[13px]" style={{ color: '#86868b' }}>{event.destCity || '目的地待官方公布'}</div>
                 </button>
               )
             })}
@@ -130,7 +131,7 @@ export default function TravelRecommend() {
           >
             <StepHeader no={2} title="选择你的出发城市" />
             <p className="text-[14px] mb-3 m-0" style={{ color: '#6e6e73' }}>
-              目的地：<span className="font-medium" style={{ color: '#1d1d1f' }}>{activeEvent.city || activeEvent.location}</span>
+              目的地：<span className="font-medium" style={{ color: '#1d1d1f' }}>{destCity || '待官方公布'}</span>
             </p>
             <select value={fromCity} onChange={e => setFromCity(e.target.value)}
               className="w-full sm:w-56 px-4 py-2.5 rounded-xl text-[15px] cursor-pointer"
@@ -143,7 +144,7 @@ export default function TravelRecommend() {
 
       {/* 第三步：出行方案 */}
       <AnimatePresence>
-        {activeEvent && fromCity !== (activeEvent.city || activeEvent.location) && (
+        {activeEvent && !isLocal && (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,7 +157,7 @@ export default function TravelRecommend() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-semibold text-[16px] sm:text-[18px] m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
-                    {fromCity} → {activeEvent.city || activeEvent.location}
+                    {fromCity} → {destCity || '待定'}
                   </h3>
                   <p className="text-[13px] sm:text-[14px] mt-0.5 m-0" style={{ color: '#86868b' }}>{activeEvent.title}</p>
                 </div>
@@ -165,42 +166,52 @@ export default function TravelRecommend() {
             </div>
             <div className="p-4 sm:p-5">
               <h4 className="font-semibold text-[14px] sm:text-[15px] mb-2 sm:mb-3 m-0" style={{ color: '#1d1d1f' }}>出行方案</h4>
-              <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
-                <a href={`https://flights.ctrip.com/online/list/oneway-${fromCity.substring(0,2)}-${(activeEvent.city || activeEvent.location).substring(0,2)}?depdate=${activeEvent.date}`}
-                  target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-xl no-underline group transition-colors"
-                  style={{ background: '#f5f5f7' }}>
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff' }}>
-                    <svg className="w-5 h-5" style={{ color: '#1d1d1f' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-[15px] font-medium transition-colors group-hover:text-[#0066cc]" style={{ color: '#1d1d1f' }}>
-                      携程 · 查看航班
+              {flightUrl && trainUrl ? (
+                <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
+                  <a href={flightUrl}
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl no-underline group transition-colors"
+                    style={{ background: '#f5f5f7' }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff' }}>
+                      <svg className="w-5 h-5" style={{ color: '#1d1d1f' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
                     </div>
-                    <div className="text-[13px]" style={{ color: '#86868b' }}>{activeEvent.date} 直达/中转航班</div>
-                  </div>
-                  <span className="chevron text-[#0066cc]">›</span>
-                </a>
-                <a href={`https://kyfw.12306.cn/otn/leftTicket/init?leftTicketDTO.train_date=${activeEvent.date}&leftTicketDTO.from_station=${stationCodes[fromCity] || ''}&leftTicketDTO.to_station=${stationCodes[activeEvent.city] || ''}&purpose_codes=ADULT`}
-                  target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-xl no-underline group transition-colors"
-                  style={{ background: '#f5f5f7' }}>
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff' }}>
-                    <svg className="w-5 h-5" style={{ color: '#1d1d1f' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8m-8 4h8m-4 4v3m-6 0h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-[15px] font-medium transition-colors group-hover:text-[#0066cc]" style={{ color: '#1d1d1f' }}>
-                      12306 · 查看车次
+                    <div className="flex-1 min-w-0">
+                      <div className="text-[15px] font-medium transition-colors group-hover:text-[#0066cc]" style={{ color: '#1d1d1f' }}>
+                        携程 · 查看航班
+                      </div>
+                      <div className="text-[13px]" style={{ color: '#86868b' }}>{activeEvent.date} 直达/中转航班</div>
                     </div>
-                    <div className="text-[13px]" style={{ color: '#86868b' }}>{activeEvent.date} 高铁/动车</div>
-                  </div>
-                  <span className="chevron text-[#0066cc]">›</span>
-                </a>
-              </div>
+                    <span className="chevron text-[#0066cc]">›</span>
+                  </a>
+                  <a href={trainUrl}
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl no-underline group transition-colors"
+                    style={{ background: '#f5f5f7' }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff' }}>
+                      <svg className="w-5 h-5" style={{ color: '#1d1d1f' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8m-8 4h8m-4 4v3m-6 0h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-[15px] font-medium transition-colors group-hover:text-[#0066cc]" style={{ color: '#1d1d1f' }}>
+                        12306 · 查看车次
+                      </div>
+                      <div className="text-[13px]" style={{ color: '#86868b' }}>{activeEvent.date} 高铁/动车</div>
+                    </div>
+                    <span className="chevron text-[#0066cc]">›</span>
+                  </a>
+                </div>
+              ) : (
+                // 目的地未知时不产出购票链接（早期版本会生成 oneway-北京-待定 这类死链）
+                <div className="py-8 text-center" style={{ background: '#f5f5f7', borderRadius: 12 }}>
+                  <p className="font-medium text-[15px] m-0 mb-1" style={{ color: '#1d1d1f' }}>活动目的地尚未公布</p>
+                  <p className="text-[13px] m-0" style={{ color: '#86868b' }}>
+                    官方微博暂未写明举办城市，公布后可一键查询机票与高铁
+                  </p>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
@@ -208,7 +219,7 @@ export default function TravelRecommend() {
 
       {/* 本地活动提示 */}
       <AnimatePresence>
-        {activeEvent && fromCity === (activeEvent.city || activeEvent.location) && (
+        {isLocal && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

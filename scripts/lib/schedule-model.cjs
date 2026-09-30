@@ -46,6 +46,8 @@ function validateItems(rawItems, { cities, typeNames, dateWindowMonths = 1, now 
       description: (raw.description || title).slice(0, 200),
       time: /^\d{2}:\d{2}$/.test(raw.time || '') ? raw.time : '全天',
       source: raw.source || 'studio_weibo',
+      // 账号类型随条目走，供 mergeSchedule 按白名单清理存量脏数据
+      accountType: raw.accountType || null,
       postId: raw.postId || null,
       newsUrl: raw.newsUrl || null,
     })
@@ -54,20 +56,32 @@ function validateItems(rawItems, { cities, typeNames, dateWindowMonths = 1, now 
 }
 
 // 行程合并：按 date+title 去重，过期出清，按日期升序
-function mergeSchedule(existing, incoming, { retentionDays = 120, now = new Date() } = {}) {
+// allowedAccountTypes 传入时，同时做来源白名单清理：
+//   - 存量条目里没有 accountType 字段的（2026-09-30 之前写入的），视为不合规一并清掉。
+//     这是刻意的：账号矩阵扩到 9 个号后灌进来的剧集/品牌/后援会条目没有可信来源标注，
+//     与其留到 120 天 retention 自然过期，不如按「宁缺毋滥」立刻清除。
+function mergeSchedule(existing, incoming, { retentionDays = 120, allowedAccountTypes, now = new Date() } = {}) {
   const seen = new Set()
   const cutoff = Date.now() - retentionDays * 86400 * 1000
   const out = []
+  const dropped = { expired: 0, duplicate: 0, sourceNotAllowed: 0 }
+  const enforceSource = Array.isArray(allowedAccountTypes) && allowedAccountTypes.length > 0
+
   for (const s of [...(existing || []), ...(incoming || [])]) {
     if (!isValidDate(s.date)) continue
     const t = new Date(`${s.date}T00:00:00Z`).getTime()
-    if (t < cutoff) continue
+    if (t < cutoff) { dropped.expired++; continue }
+    if (enforceSource && !allowedAccountTypes.includes(s.accountType)) {
+      dropped.sourceNotAllowed++
+      continue
+    }
     const key = `${s.date}|${(s.title || '').replace(/\s+/g, '')}`
-    if (seen.has(key)) continue
+    if (seen.has(key)) { dropped.duplicate++; continue }
     seen.add(key)
     out.push(s)
   }
   out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.title || '').localeCompare(b.title || '')))
+  out.dropped = dropped
   return out
 }
 
@@ -148,4 +162,32 @@ function cleanTitle(text) {
     .slice(0, 60)
 }
 
-module.exports = { isValidDate, monthsFromNow, validateItems, mergeSchedule, mergeNews, classifyType, extractDatesFallback, extractTime, cleanTitle }
+// 行程抽取的账号类型白名单 —— 只有艺人工作室官微能权威发布本人行程。
+// 剧集/平台官微发的是播出表，品牌发的是促销，后援会发的是应援活动，
+// 三者都会命中 scheduleKeywords 里的 播出/开播/定档/活动 等词而被误当成行程。
+const DEFAULT_SCHEDULE_ACCOUNT_TYPES = ['studio']
+
+// 该账号类型能否作为行程来源
+function isScheduleAccountType(accountType, allowedTypes = DEFAULT_SCHEDULE_ACCOUNT_TYPES) {
+  const list = Array.isArray(allowedTypes) && allowedTypes.length
+    ? allowedTypes
+    : DEFAULT_SCHEDULE_ACCOUNT_TYPES
+  return list.includes(accountType)
+}
+
+// 按白名单过滤候选帖；白名单为空/未配置时回退到 studio-only（而非全放行）
+function filterScheduleCandidates(candidates, allowedTypes) {
+  return (candidates || []).filter(c => isScheduleAccountType(c.accountType, allowedTypes))
+}
+
+// 各账号类型的候选帖数量（供 CI 日志暴露被过滤掉的量）
+function countByAccountType(candidates) {
+  const out = {}
+  for (const c of candidates || []) {
+    const t = c.accountType || 'unknown'
+    out[t] = (out[t] || 0) + 1
+  }
+  return out
+}
+
+module.exports = { isValidDate, monthsFromNow, validateItems, mergeSchedule, mergeNews, classifyType, extractDatesFallback, extractTime, cleanTitle, DEFAULT_SCHEDULE_ACCOUNT_TYPES, isScheduleAccountType, filterScheduleCandidates, countByAccountType }
