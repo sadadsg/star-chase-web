@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SkeletonCalendar } from './ui'
 import CityPicker from './CityPicker'
+import NotifyToggle from './NotifyToggle'
 import { useLocalStorage } from '../hooks'
 import { fetchSchedule } from '../api/dataApi'
 import { EASE_OUT_EXPO, SPRING_SOFT, SPRING_SNAP, staggerChild } from '../lib/motion'
@@ -11,10 +12,10 @@ const MONTHS = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', 
 
 // 降饱和类型色（与全局设计令牌一致）
 const typeColor = {
-  filming: { bg: 'rgba(88,86,214,0.08)', text: '#5856d6', dot: '#5856d6' },
-  variety: { bg: 'rgba(36,138,61,0.08)', text: '#248a3d', dot: '#248a3d' },
-  business: { bg: 'rgba(180,83,9,0.08)', text: '#b45309', dot: '#b45309' },
-  fanmeeting: { bg: 'rgba(214,51,108,0.08)', text: '#d6336c', dot: '#d6336c' },
+  filming: { bg: 'rgba(88,86,214,0.08)', text: 'var(--color-type-filming)', dot: 'var(--color-type-filming)' },
+  variety: { bg: 'rgba(36,138,61,0.08)', text: 'var(--color-type-variety)', dot: 'var(--color-type-variety)' },
+  business: { bg: 'rgba(180,83,9,0.08)', text: 'var(--color-type-business)', dot: 'var(--color-type-business)' },
+  fanmeeting: { bg: 'rgba(214,51,108,0.08)', text: 'var(--color-type-fanmeeting)', dot: 'var(--color-type-fanmeeting)' },
 }
 
 function shortTitle(title) {
@@ -132,8 +133,8 @@ export default function ScheduleCalendar() {
   return (
     <div>
       {schedule.length === 0 && (
-        <div className="rounded-xl px-4 py-3 mb-4" style={{ background: '#f5f5f7' }}>
-          <p className="text-[14px] m-0" style={{ color: '#6e6e73' }}>
+        <div className="rounded-xl px-4 py-3 mb-4" style={{ background: 'var(--color-surface)' }}>
+          <p className="text-[14px] m-0" style={{ color: 'var(--color-text-secondary)' }}>
             暂无行程数据。行程来自工作室官方微博，发布后自动更新。
           </p>
         </div>
@@ -146,7 +147,7 @@ export default function ScheduleCalendar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <h3 className="text-[17px] sm:text-[19px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+        <h3 className="text-[17px] sm:text-[19px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: 'var(--color-text)' }}>
           {year}年 {MONTHS[month - 1]}
         </h3>
         <button onClick={nextMonth} aria-label="下个月" className="cal-nav-btn p-1.5 sm:p-2 rounded-lg cursor-pointer bg-transparent" style={{ border: 'none' }}>
@@ -159,49 +160,52 @@ export default function ScheduleCalendar() {
       {/* 就近匹配：城市选择 + 只看我的城市（弹簧开关） */}
       <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
         <CityPicker />
-        <label
-          className="inline-flex items-center gap-2 m-0"
-          style={{
-            fontSize: 13,
-            color: '#6e6e73',
-            cursor: myCity ? 'pointer' : 'default',
-            opacity: myCity ? 1 : 0.45,
-          }}
-          title={myCity ? '' : '先选择「我的城市」'}
-        >
-          <span className="whitespace-nowrap">只看我的城市</span>
-          <input
-            type="checkbox"
-            checked={onlyMine && Boolean(myCity)}
-            disabled={!myCity}
-            onChange={e => { setOnlyMine(e.target.checked); setSelectedDate(null) }}
-            style={{ display: 'none' }}
-          />
-          <motion.span
+        <div className="flex items-center gap-4 flex-wrap">
+          <NotifyToggle />
+          <label
+            className="inline-flex items-center gap-2 m-0"
             style={{
-              width: 40, height: 24, borderRadius: 980, position: 'relative',
-              flexShrink: 0, display: 'inline-block',
+              fontSize: 13,
+              color: 'var(--color-text-secondary)',
+              cursor: myCity ? 'pointer' : 'default',
+              opacity: myCity ? 1 : 0.45,
             }}
-            animate={{
-              backgroundColor: onlyMine && myCity ? '#0071e3' : '#e8e8ed',
-            }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
+            title={myCity ? '' : '先选择「我的城市」'}
           >
+            <span className="whitespace-nowrap">只看我的城市</span>
+            <input
+              type="checkbox"
+              checked={onlyMine && Boolean(myCity)}
+              disabled={!myCity}
+              onChange={e => { setOnlyMine(e.target.checked); setSelectedDate(null) }}
+              style={{ display: 'none' }}
+            />
             <motion.span
               style={{
-                position: 'absolute', top: 2, width: 20, height: 20, borderRadius: '50%',
-                background: '#fff', boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+                width: 40, height: 24, borderRadius: 980, position: 'relative',
+                flexShrink: 0, display: 'inline-block',
               }}
-              animate={{ x: onlyMine && myCity ? 16 : 0 }}
-              transition={SPRING_SOFT}
-            />
-          </motion.span>
-        </label>
+              animate={{
+                backgroundColor: onlyMine && myCity ? 'var(--color-btn)' : 'var(--color-surface-deep)',
+              }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+            >
+              <motion.span
+                style={{
+                  position: 'absolute', top: 2, width: 20, height: 20, borderRadius: '50%',
+                  background: '#fff', boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+                }}
+                animate={{ x: onlyMine && myCity ? 16 : 0 }}
+                transition={SPRING_SOFT}
+              />
+            </motion.span>
+          </label>
+        </div>
       </div>
 
       {/* 过滤后本月无行程的提示 */}
       {onlyMine && myCity && schedule.length > 0 && monthSchedule.length === 0 && (
-        <p className="text-[13px] m-0 mb-2" style={{ color: '#86868b' }}>
+        <p className="text-[13px] m-0 mb-2" style={{ color: 'var(--color-text-muted)' }}>
           {year}年{MONTHS[month - 1]}你所在城市（{myCity}）暂无行程
         </p>
       )}
@@ -221,14 +225,14 @@ export default function ScheduleCalendar() {
               </span>
             )
           ))}
-          <span style={{ color: '#aeaeb2' }}>共{monthSchedule.length}条</span>
+          <span style={{ color: 'var(--color-text-muted)' }}>共{monthSchedule.length}条</span>
         </div>
       )}
 
       {/* 星期表头 */}
       <div className="grid grid-cols-7 mb-0.5">
         {WEEKDAYS.map(d => (
-          <div key={d} className="text-center text-[11px] sm:text-[13px] font-medium py-1 sm:py-2" style={{ color: '#86868b' }}>{d}</div>
+          <div key={d} className="text-center text-[11px] sm:text-[13px] font-medium py-1 sm:py-2" style={{ color: 'var(--color-text-muted)' }}>{d}</div>
         ))}
       </div>
 
@@ -242,7 +246,7 @@ export default function ScheduleCalendar() {
           animate="animate"
           exit="exit"
         >
-          <div className="grid grid-cols-7 gap-px rounded-xl overflow-hidden" style={{ background: '#e8e8ed' }}>
+          <div className="grid grid-cols-7 gap-px rounded-xl overflow-hidden" style={{ background: 'var(--color-surface-deep)' }}>
             {calendarDays.map((day, i) => {
               const events = getDayEvents(day)
               const dateStr = day ? `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}` : ''
@@ -262,7 +266,7 @@ export default function ScheduleCalendar() {
                         <motion.span
                           layoutId="cal-selected-ring"
                           className="absolute inset-0.5 rounded-lg pointer-events-none"
-                          style={{ boxShadow: 'inset 0 0 0 2px #1d1d1f' }}
+                          style={{ boxShadow: 'inset 0 0 0 2px var(--color-text)' }}
                           transition={SPRING_SNAP}
                         />
                       )}
@@ -272,8 +276,8 @@ export default function ScheduleCalendar() {
                           ${todayFlag ? 'text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-semibold' : ''}
                         `}
                           style={{
-                            background: todayFlag ? '#1d1d1f' : 'transparent',
-                            color: '#1d1d1f',
+                            background: todayFlag ? 'var(--color-text)' : 'transparent',
+                            color: 'var(--color-text)',
                             fontWeight: isSelected || todayFlag ? 600 : 400,
                           }}>
                           {day}
@@ -291,7 +295,7 @@ export default function ScheduleCalendar() {
                           )
                         })}
                         {events.length > 2 && (
-                          <div className="text-[12px] px-0.5" style={{ color: '#aeaeb2' }}>+{events.length - 2}</div>
+                          <div className="text-[12px] px-0.5" style={{ color: 'var(--color-text-muted)' }}>+{events.length - 2}</div>
                         )}
                       </div>
                     </>
@@ -311,7 +315,7 @@ export default function ScheduleCalendar() {
           { type: 'business', label: '商务活动' },
           { type: 'fanmeeting', label: '演出活动' },
         ].map(item => (
-          <div key={item.type} className="flex items-center gap-1 sm:gap-1.5 text-[12px] sm:text-[13px]" style={{ color: '#86868b' }}>
+          <div key={item.type} className="flex items-center gap-1 sm:gap-1.5 text-[12px] sm:text-[13px]" style={{ color: 'var(--color-text-muted)' }}>
             <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-sm" style={{ background: typeColor[item.type].dot }} />
             {item.label}
           </div>
@@ -329,7 +333,7 @@ export default function ScheduleCalendar() {
           >
             <motion.h4
               className="text-[14px] font-medium m-0"
-              style={{ color: '#86868b' }}
+              style={{ color: 'var(--color-text-muted)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { delay: 0.1, duration: 0.25 } }}
             >
@@ -348,24 +352,24 @@ export default function ScheduleCalendar() {
                     key={s.id}
                     variants={staggerChild}
                     className="p-4 rounded-xl"
-                    style={{ background: '#fff', border: '1px solid #e8e8ed' }}
+                    style={{ background: 'var(--color-bg)', border: '1px solid var(--color-surface-deep)' }}
                   >
                     <div className="flex items-center gap-2 mb-2">
                       <span className="w-2 h-2 rounded-full" style={{ background: c.dot }} />
                       <span className="text-[13px] font-medium" style={{ color: c.text }}>{s.typeName}</span>
                       {myCity && s.city === myCity && (
-                        <span style={{ fontSize: 11, fontWeight: 500, color: '#0066cc', background: 'rgba(0,113,227,0.08)', padding: '2px 8px', borderRadius: 980 }}>
+                        <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--color-link)', background: 'rgba(0,113,227,0.08)', padding: '2px 8px', borderRadius: 980 }}>
                           就在你的城市
                         </span>
                       )}
-                      <span className="text-[13px] ml-auto" style={{ color: '#aeaeb2' }}>{s.time}</span>
+                      <span className="text-[13px] ml-auto" style={{ color: 'var(--color-text-muted)' }}>{s.time}</span>
                     </div>
-                    <h4 className="font-semibold text-[16px] m-0" style={{ color: '#1d1d1f' }}>{s.title}</h4>
+                    <h4 className="font-semibold text-[16px] m-0" style={{ color: 'var(--color-text)' }}>{s.title}</h4>
                     {s.description && s.description !== s.title && (
-                      <p className="text-[14px] mt-1 leading-relaxed" style={{ color: '#6e6e73' }}>{s.description}</p>
+                      <p className="text-[14px] mt-1 leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>{s.description}</p>
                     )}
                     <div className="flex items-center justify-between mt-2">
-                      <div className="text-[13px]" style={{ color: '#86868b' }}>{s.location}</div>
+                      <div className="text-[13px]" style={{ color: 'var(--color-text-muted)' }}>{s.location}</div>
                       {s.newsUrl && s.newsUrl !== '#' && (
                         <a
                           href={s.newsUrl}
@@ -386,7 +390,7 @@ export default function ScheduleCalendar() {
       </AnimatePresence>
 
       {selectedDate && selectedSchedule.length === 0 && (
-        <div className="mt-4 text-center py-6 text-[14px]" style={{ color: '#86868b' }}>
+        <div className="mt-4 text-center py-6 text-[14px]" style={{ color: 'var(--color-text-muted)' }}>
           这天暂无行程安排
         </div>
       )}

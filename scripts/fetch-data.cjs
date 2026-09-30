@@ -1,7 +1,7 @@
 // 资讯抓取与汇总 → data/news.json + data/events.json
 // 用法: node scripts/fetch-data.cjs
 // 职责（v2）：
-//   1. 百度资讯搜索 + 百度热搜 → 艺人相关资讯
+//   1. 百度资讯搜索（百度热搜默认关闭，见 fetchBaiduHot 注释）→ 艺人相关资讯
 //   2. 工作室微博帖文（data/weibo-posts.json，由 fetch-weibo.cjs 产出）→ 并入资讯流
 //   3. 增量去重合并（90 天窗口，按标题去重，容量截断）
 //   4. 从 data/schedule.json（由 extract-schedule.cjs 产出）派生活动门票数据
@@ -106,8 +106,14 @@ async function fetchBaiduNews() {
   return news
 }
 
-// ===== 百度实时热搜（备用） =====
+// ===== 百度实时热搜（默认关闭） =====
+// 2026-09-30 起默认关闭：CI 长期实测稳定 0 命中（艺人关键词几乎不会出现在实时热搜榜），
+// 每轮白等约 4 秒且零产出。保留代码与开关，若百度改版或出现有效命中可用 FETCH_BAIDU_HOT=1 恢复。
 async function fetchBaiduHot() {
+  if (process.env.FETCH_BAIDU_HOT !== '1') {
+    console.log('[news] 百度热搜: 已跳过（默认关闭，FETCH_BAIDU_HOT=1 可启用）')
+    return []
+  }
   const html = await fetchText('https://top.baidu.com/board?tab=realtime', { headers: UA_HEADERS })
   const matches = html.match(/"word":"([^"]+)"/g) || []
   const news = matches
