@@ -3,18 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>嘉期如梦 — 你的爱豆行程助手</title>
-    <meta name="description" content="任嘉伦行程、资讯、活动与出行推荐。行程数据来自工作室官方微博，自动更新。" />
-    <meta name="theme-color" content="#ffffff" />
+    <title>嘉期如梦 — 任嘉伦官方行程聚合与日历</title>
+    <meta name="description" content="任嘉伦工作室官方微博行程聚合、ICS 日历订阅、新闻资讯与活动信息。只收录官方公开发布内容，发布后自动更新。" />
+    <link rel="canonical" href="https://sadadsg.github.io/star-chase-web/" />
+
+    <!-- Open Graph / Twitter：分享卡片。单艺人，静态写死即可 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="嘉期如梦" />
+    <meta property="og:title" content="嘉期如梦 — 任嘉伦官方行程聚合与日历" />
+    <meta property="og:description" content="工作室官方微博行程聚合、ICS 日历订阅、新闻资讯与活动信息，自动更新。" />
+    <meta property="og:url" content="https://sadadsg.github.io/star-chase-web/" />
+    <meta property="og:image" content="https://sadadsg.github.io/star-chase-web/og-cover.png" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="嘉期如梦 — 任嘉伦官方行程聚合与日历" />
+    <meta name="twitter:description" content="工作室官方微博行程聚合、ICS 日历订阅、新闻资讯与活动信息，自动更新。" />
+    <meta name="twitter:image" content="https://sadadsg.github.io/star-chase-web/og-cover.png" />
+
+    <!-- 主题色双声明：无 JS 时也能跟随系统深浅色 -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
+
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon-192.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="嘉期如梦" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="alternate" type="application/rss+xml" title="嘉期如梦 · 资讯" href="/star-chase-web/api/rss.xml" />
   </head>
   <body>
     <div id="root"></div>
+    <!-- 在 React 之前同步应用主题，避免深色模式下首帧闪白。
+         逻辑与 src/hooks/useTheme.js 的 apply() 保持一致。 -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('star_chase_theme');
+          if (t !== 'light' && t !== 'dark') t = 'system';
+          var dark = t === 'dark' ||
+            (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var root = document.documentElement;
+          root.classList.remove('light', 'dark');
+          if (t === 'light') root.classList.add('light');
+          else if (t === 'dark') root.classList.add('dark');
+          root.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (e) { /* 隐私模式下 localStorage 可能不可用 */ }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

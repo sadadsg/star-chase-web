@@ -100,20 +100,34 @@ star-chase/
 │   │   ├── ui/                 # 通用 UI 组件
 │   │   │   ├── ErrorMessage.jsx
 │   │   │   ├── Skeleton.jsx
+│   │   │   ├── PageTransition.jsx   # 路由转场
+│   │   │   ├── AnimateOnScroll.jsx  # 滚动入场动效
 │   │   │   └── index.js
-│   │   ├── travel/             # 出行推荐子组件
-│   │   ├── EventCard.jsx       # 活动门票卡片
-│   │   ├── HeroBanner.jsx      # 艺人信息横幅
-│   │   ├── Navbar.jsx          # 导航栏（桌面/移动双模式）
-│   │   ├── NewsFeed.jsx        # 新闻资讯流
+│   │   ├── ArtistIntroSection.jsx  # 首页「关于任嘉伦」收尾区
+│   │   ├── CityPicker.jsx     # 我的城市（就近匹配）
+│   │   ├── CommentSection.jsx # giscus 讨论区
+│   │   ├── EventCard.jsx      # 活动门票卡片
+│   │   ├── Navbar.jsx         # 导航栏（含主题切换）
+│   │   ├── NewsFeed.jsx       # 新闻资讯流
+│   │   ├── NotifyToggle.jsx   # 行程提醒开关（浏览器原生通知）
+│   │   ├── ScheduleAside.jsx  # 行程页侧栏（艺人资料/统计）
 │   │   ├── ScheduleCalendar.jsx # 行程日历
-│   │   ├── Sidebar.jsx         # 艺人详情侧边栏
+│   │   ├── SubscribeActions.jsx # 订阅/分享/纠错投稿
+│   │   ├── ThemeToggle.jsx    # 外观三态切换
 │   │   └── TravelRecommend.jsx # 出行推荐
 │   ├── data/
-│   │   └── rjlData.js          # 艺人静态数据（任嘉伦）
+│   │   ├── cities.js          # 出发城市表
+│   │   └── rjlData.js         # 艺人静态数据（任嘉伦）
 │   ├── hooks/
-│   │   ├── useDataFetch.js     # 数据获取 Hook
+│   │   ├── useLocalStorage.js
+│   │   ├── useNetworkStatus.js
+│   │   ├── useNotificationPermission.js
+│   │   ├── useTheme.js
 │   │   └── index.js
+│   ├── lib/
+│   │   ├── motion.js           # 动效曲线令牌
+│   │   ├── notify-store.js     # 行程提醒的增量比对（SW 侧有等价内联实现）
+│   │   └── travel-links.js     # 携程/12306 深链生成
 │   ├── pages/
 │   │   ├── HomePage.jsx        # 首页（Bento Grid）
 │   │   ├── SchedulePage.jsx    # 行程日历页
@@ -121,11 +135,11 @@ star-chase/
 │   │   ├── EventsPage.jsx      # 活动门票页
 │   │   └── TravelPage.jsx      # 出行推荐页
 │   ├── App.jsx                 # 路由配置
-│   ├── config.js               # API 地址配置
-│   ├── index.css               # 全局样式 + 设计系统
+│   ├── index.css               # 全局样式 + 设计系统 + 深色令牌
 │   └── main.jsx                # 入口
 ├── data/                       # 抓取的数据 JSON
 ├── dist/                       # 构建输出
+├── scripts/prerender.mjs       # 构建期预渲染（5 路由 + 404 + sitemap）
 ├── vite.config.js              # Vite 配置
 ├── package.json
 └── README.md
@@ -519,16 +533,20 @@ export const API_BASE = import.meta.env.VITE_API_BASE
 
 - [ ] GLM 视觉抽取实测调优（需配置 `ZHIPU_API_KEY` 后观察「月度嘉书」抽取质量）
 - [ ] GitHub Actions 美区 IP 抓 sina 镜像页的连通性验证（本地已通，CI 待首次运行确认）
-- [x] ~~ICS 日历订阅~~（v2.1 已完成：`api/schedule.ics` + webcal 一键订阅）
+- [x] ~~ICS 日历订阅~~（v2.1 已完成：`api/schedule.ics` + webcal 一键订阅；v2.3 入口提升到行程页顶部与首页空态）
 - [x] ~~RSS 订阅~~（v2.1 已完成：`api/rss.xml`）
 - [x] ~~PWA~~（v2.1 已完成：manifest + SW 离线缓存）
-- [x] ~~就近匹配 + 更新推送 + 轻社区~~（v2.2 已完成：CityPicker 就近高亮、三通道增量推送、giscus 讨论区）
+- [x] ~~就近匹配 + 轻社区~~（v2.2 已完成：CityPicker 就近高亮、giscus 讨论区）
+- [x] ~~浏览器内行程提醒~~（v2.3：SW 拿到新 schedule.json 比对 postId，新增条目弹原生通知，**零后端零 secret**）
+- [x] ~~SEO 基础~~（v2.3：`robots.txt` / `sitemap.xml` / og meta / 5 路由构建期预渲染 + ld+json）
+- [x] ~~深色模式~~（v2.3：暗色令牌 + 三态切换 + 首帧内联脚本避免 FOUC）
+- [ ] **配置 `ZHIPU_API_KEY`**（当前仓库 0 secret，GLM 抽取处于降级：城市恒为「待定」、标题为 60 字截断原文）
+- [ ] **配置推送通道 secret**（`WECHAT_WEBHOOK` / `BARK_URL` / `TELEGRAM_*` 三选一；不配则只有浏览器内提醒可用）
 - [ ] giscus App 安装（仓库管理员在 github.com/apps/giscus 一键安装，装完讨论区即生效）
-- [ ] 推送通道 secrets 配置（按 README 指引三选一即可）
 - [ ] 票务平台真实数据接入（深链已上线；API 抓取需评估反爬与维护成本）
 - [ ] 出行推荐接入真实航班/高铁查询 API
 - [ ] 多艺人支持（配置已就绪，扩展 `artists.config.cjs` 即可）
-- [ ] 用户收藏/提醒功能
+- [ ] 用户收藏功能
 - [ ] 暗色模式（用户曾回退，可重新评估）
 
 ---
