@@ -44,20 +44,20 @@ const footerNav = [
 // Apple 式页脚：浅灰底、多列小字链接、发丝线分隔、法律声明行
 function Footer() {
   return (
-    <footer style={{ background: '#f5f5f7', borderTop: '1px solid #d2d2d7' }}>
+    <footer style={{ background: 'var(--color-surface)', borderTop: '1px solid var(--color-hairline)' }}>
       <div className="container-apple py-8 sm:py-10">
-        <div className="flex flex-wrap gap-x-7 gap-y-2.5 pb-5" style={{ borderBottom: '1px solid #d2d2d7' }}>
+        <div className="flex flex-wrap gap-x-7 gap-y-2.5 pb-5" style={{ borderBottom: '1px solid var(--color-hairline)' }}>
           {footerNav.map(item => (
-            <Link key={item.path} to={item.path} className="text-[12px] no-underline" style={{ color: '#424245' }}>
+            <Link key={item.path} to={item.path} className="text-[12px] no-underline" style={{ color: 'var(--color-text-secondary)' }}>
               {item.label}
             </Link>
           ))}
         </div>
         <div className="pt-5 space-y-2.5">
-          <p className="text-[12px] leading-relaxed m-0" style={{ color: '#86868b' }}>
+          <p className="text-[12px] leading-relaxed m-0" style={{ color: 'var(--color-text-muted)' }}>
             数据来源：任嘉伦工作室官方微博、百度资讯。行程仅供参考，实际安排以官方发布为准。
           </p>
-          <p className="text-[12px] leading-relaxed m-0" style={{ color: '#86868b' }}>
+          <p className="text-[12px] leading-relaxed m-0" style={{ color: 'var(--color-text-muted)' }}>
             嘉期如梦 · 非官方粉丝项目 · 2026
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function App() {
 
   return (
     <BrowserRouter basename="/star-chase-web">
-      <div className="min-h-screen flex flex-col" style={{ background: '#ffffff' }}>
+      <div className="min-h-screen flex flex-col" style={{ background: 'var(--color-bg)' }}>
         <NetworkStatus isOnline={isOnline} />
 
         <Navbar />

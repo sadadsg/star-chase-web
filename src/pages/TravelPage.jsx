@@ -6,10 +6,10 @@ export default function TravelPage() {
   const eventId = searchParams.get('eventId')
 
   return (
-    <div style={{ background: '#fff' }}>
+    <div style={{ background: 'var(--color-bg)' }}>
       <div className="container-apple" style={{ paddingTop: 48, paddingBottom: 64 }}>
         <h1 className="section-title m-0">出行推荐</h1>
-        <p className="text-[15px] mt-1.5 mb-8" style={{ color: '#6e6e73' }}>
+        <p className="text-[15px] mt-1.5 mb-8" style={{ color: 'var(--color-text-secondary)' }}>
           选定活动与出发城市，一键查询机票和高铁
         </p>
         <TravelRecommend initialEventId={eventId ? Number(eventId) : null} />

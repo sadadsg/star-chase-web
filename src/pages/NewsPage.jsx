@@ -3,12 +3,12 @@ import CommentSection from '../components/CommentSection'
 
 export default function NewsPage() {
   return (
-    <div style={{ background: '#fff' }}>
+    <div style={{ background: 'var(--color-bg)' }}>
       <div className="container-apple" style={{ paddingTop: 48, paddingBottom: 64 }}>
         <div className="flex items-end justify-between gap-4 flex-wrap">
           <div>
             <h1 className="section-title m-0">新闻资讯</h1>
-            <p className="text-[15px] mt-1.5 mb-8 m-0" style={{ color: '#6e6e73' }}>
+            <p className="text-[15px] mt-1.5 mb-8 m-0" style={{ color: 'var(--color-text-secondary)' }}>
               最新动态、影视资讯与时尚活动
             </p>
           </div>

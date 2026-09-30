@@ -153,10 +153,10 @@ export function EmptyState({
       <motion.div className="flex justify-center mb-4" variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
         {typeof icon === 'string' ? <span className="text-4xl">{icon}</span> : icon}
       </motion.div>
-      <motion.h3 className="font-semibold text-[16px] mb-1.5 m-0" style={{ color: '#1d1d1f' }} variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
+      <motion.h3 className="font-semibold text-[16px] mb-1.5 m-0" style={{ color: 'var(--color-text)' }} variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
         {title}
       </motion.h3>
-      <motion.p className="text-[14px] m-0" style={{ color: '#86868b' }} variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
+      <motion.p className="text-[14px] m-0" style={{ color: 'var(--color-text-muted)' }} variants={item} transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}>
         {message}
       </motion.p>
       {action && onAction && (

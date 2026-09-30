@@ -16,13 +16,13 @@ function ArtistIntroSection() {
   const bioLines = artistInfo.bioFull ? artistInfo.bioFull.split('\n\n') : [artistInfo.bio]
 
   return (
-    <section style={{ background: '#fff', padding: '64px 0 80px' }}>
+    <section style={{ background: 'var(--color-bg)', padding: '64px 0 80px' }}>
       <div className="container-apple">
         <AnimateOnScroll y={10} duration={0.45}>
           <h2 className="section-title m-0 mb-2">关于任嘉伦</h2>
           <motion.div
             className="h-px mb-8 origin-left"
-            style={{ background: '#d2d2d7' }}
+            style={{ background: 'var(--color-hairline)' }}
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -35,14 +35,14 @@ function ArtistIntroSection() {
             {/* 左：身份 + 规格 */}
             <motion.div variants={staggerChild}>
               <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-0">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#f5f5f7' }}>
-                  <span className="text-[28px] font-semibold" style={{ color: '#1d1d1f' }}>伦</span>
+                <div className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'var(--color-surface)' }}>
+                  <span className="text-[28px] font-semibold" style={{ color: 'var(--color-text)' }}>伦</span>
                 </div>
                 <div className="md:text-left md:mt-4 text-center md:text-left">
-                  <p className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+                  <p className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: 'var(--color-text)' }}>
                     {artistInfo.name}
                   </p>
-                  <p className="text-[14px] m-0 mt-0.5" style={{ color: '#86868b' }}>
+                  <p className="text-[14px] m-0 mt-0.5" style={{ color: 'var(--color-text-muted)' }}>
                     {artistInfo.englishName}{artistInfo.realName ? ` · 本名 ${artistInfo.realName}` : ''}
                   </p>
                 </div>
@@ -57,9 +57,9 @@ function ArtistIntroSection() {
                   ['粉丝名', artistInfo.fansName],
                 ].filter(([, v]) => v).map(([label, value], i, arr) => (
                   <div key={label} className="flex justify-between py-2.5 text-[14px]"
-                    style={{ borderBottom: i < arr.length - 1 ? '1px solid #f0f0f2' : 'none' }}>
-                    <span className="flex-shrink-0 whitespace-nowrap" style={{ color: '#86868b' }}>{label}</span>
-                    <span className="text-right ml-4" style={{ color: '#1d1d1f' }}>{value}</span>
+                    style={{ borderBottom: i < arr.length - 1 ? '1px solid var(--color-hairline)' : 'none' }}>
+                    <span className="flex-shrink-0 whitespace-nowrap" style={{ color: 'var(--color-text-muted)' }}>{label}</span>
+                    <span className="text-right ml-4" style={{ color: 'var(--color-text)' }}>{value}</span>
                   </div>
                 ))}
               </div>
@@ -67,8 +67,8 @@ function ArtistIntroSection() {
 
             {/* 右：简介 + 代表作品 */}
             <motion.div variants={staggerChild} className="md:col-span-2">
-              <h3 className="text-[13px] font-semibold m-0 mb-2" style={{ color: '#86868b' }}>人物简介</h3>
-              <div className="text-[15px] leading-relaxed" style={{ color: '#424245' }}>
+              <h3 className="text-[13px] font-semibold m-0 mb-2" style={{ color: 'var(--color-text-muted)' }}>人物简介</h3>
+              <div className="text-[15px] leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
                 <p className="m-0">{bioLines[0]}</p>
                 <AnimatePresence>
                   {bioExpanded && bioLines.slice(1).map((para, i) => (
@@ -88,7 +88,7 @@ function ArtistIntroSection() {
                 <button
                   onClick={() => setBioExpanded(!bioExpanded)}
                   className="mt-2 text-[13px] font-medium cursor-pointer bg-transparent border-none p-0"
-                  style={{ color: '#0066cc' }}
+                  style={{ color: 'var(--color-link)' }}
                 >
                   {bioExpanded ? '收起' : '展开全部'}
                 </button>
@@ -96,13 +96,13 @@ function ArtistIntroSection() {
 
               {artistInfo.works && (
                 <div className="mt-6">
-                  <h3 className="text-[13px] font-semibold m-0 mb-2" style={{ color: '#86868b' }}>代表作品</h3>
+                  <h3 className="text-[13px] font-semibold m-0 mb-2" style={{ color: 'var(--color-text-muted)' }}>代表作品</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
                     {artistInfo.works.map((work, i) => (
                       <div key={i} className="flex items-center justify-between text-[14px] py-1.5"
-                        style={{ borderBottom: '1px solid #f0f0f2' }}>
-                        <span className="font-medium" style={{ color: '#1d1d1f' }}>{work.title}</span>
-                        <span className="text-[13px] flex-shrink-0 ml-3" style={{ color: '#86868b' }}>{work.role} · {work.year}</span>
+                        style={{ borderBottom: '1px solid var(--color-hairline)' }}>
+                        <span className="font-medium" style={{ color: 'var(--color-text)' }}>{work.title}</span>
+                        <span className="text-[13px] flex-shrink-0 ml-3" style={{ color: 'var(--color-text-muted)' }}>{work.role} · {work.year}</span>
                       </div>
                     ))}
                   </div>
@@ -113,7 +113,7 @@ function ArtistIntroSection() {
                 <div className="flex flex-wrap gap-1.5 mt-6">
                   {artistInfo.tags.map((tag, i) => (
                     <span key={i} className="px-2.5 py-1 rounded-full text-[12px]"
-                      style={{ background: '#f5f5f7', color: '#424245' }}>
+                      style={{ background: 'var(--color-surface)', color: 'var(--color-text-secondary)' }}>
                       {tag}
                     </span>
                   ))}

@@ -26,15 +26,96 @@
   --color-type-fanmeeting: #d6336c;
 }
 
+/* ============================================================
+   深色模式（Apple 官网同源反相色阶）
+   html.dark 由 useTheme 挂载；system 模式由 JS 依据
+   prefers-color-scheme 决定，不加 .dark 也走 @media 分支。
+   类型色在深色下重新取色，保证正文对比度 ≥ WCAG AA (4.5:1)。
+   ============================================================ */
+:root {
+  --d-bg: #000000;
+  --d-surface: #1c1c1e;
+  --d-surface-deep: #2c2c2e;
+  --d-text: #f5f5f7;
+  --d-text-secondary: #a1a1a6;
+  --d-text-muted: #8e8e93;
+  --d-hairline: #38383a;
+  --d-link: #2997ff;
+  --d-btn: #0a84ff;
+  --d-btn-hover: #409cff;
+  --d-type-filming: #8e8bff;
+  --d-type-variety: #4cd964;
+  --d-type-business: #ff9f0a;
+  --d-type-fanmeeting: #ff6482;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-bg: var(--d-bg);
+    --color-surface: var(--d-surface);
+    --color-surface-deep: var(--d-surface-deep);
+    --color-text: var(--d-text);
+    --color-text-secondary: var(--d-text-secondary);
+    --color-text-muted: var(--d-text-muted);
+    --color-hairline: var(--d-hairline);
+    --color-link: var(--d-link);
+    --color-btn: var(--d-btn);
+    --color-btn-hover: var(--d-btn-hover);
+    --color-type-filming: var(--d-type-filming);
+    --color-type-variety: var(--d-type-variety);
+    --color-type-business: var(--d-type-business);
+    --color-type-fanmeeting: var(--d-type-fanmeeting);
+    --shadow-switch: 0 1px 3px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* 手动选 dark：优先级高于 media 查询 */
+html.dark {
+  --color-bg: var(--d-bg);
+  --color-surface: var(--d-surface);
+  --color-surface-deep: var(--d-surface-deep);
+  --color-text: var(--d-text);
+  --color-text-secondary: var(--d-text-secondary);
+  --color-text-muted: var(--d-text-muted);
+  --color-hairline: var(--d-hairline);
+  --color-link: var(--d-link);
+  --color-btn: var(--d-btn);
+  --color-btn-hover: var(--d-btn-hover);
+  --color-type-filming: var(--d-type-filming);
+  --color-type-variety: var(--d-type-variety);
+  --color-type-business: var(--d-type-business);
+  --color-type-fanmeeting: var(--d-type-fanmeeting);
+  --shadow-switch: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* 手动选 light 时压过 media 查询（用户在深色系统上显式要浅色） */
+html.light {
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f7;
+  --color-surface-deep: #e8e8ed;
+  --color-text: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-text-muted: #86868b;
+  --color-hairline: #d2d2d7;
+  --color-link: #0066cc;
+  --color-btn: #0071e3;
+  --color-btn-hover: #0077ed;
+  --color-type-filming: #5856d6;
+  --color-type-variety: #248a3d;
+  --color-type-business: #b45309;
+  --color-type-fanmeeting: #d6336c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
     "Helvetica Neue", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  background: #ffffff;
-  color: #1d1d1f;
+  background: var(--color-bg);
+  color: var(--color-text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* 动效曲线令牌（与 src/lib/motion.js 对齐） */
@@ -46,7 +127,7 @@ body {
 
 /* 键盘可达性：统一蓝色焦点环 */
 :focus-visible {
-  outline: 2px solid #0071e3;
+  outline: 2px solid var(--color-btn);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -93,21 +174,21 @@ body {
 /* ===== 卡片表面（原玻璃类，改为 Apple 实底） ===== */
 
 .glass {
-  background: #ffffff;
-  border: 1px solid #d2d2d7;
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
   border-radius: 18px;
 }
 
 .glass-strong {
-  background: #ffffff;
-  border: 1px solid #d2d2d7;
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
   border-radius: 18px;
 }
 
 /* 浅灰表面分段卡 */
 .glass-warm {
-  background: #f5f5f7;
-  border: 1px solid #f5f5f7;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface);
   border-radius: 18px;
 }
 
@@ -131,8 +212,8 @@ body {
   font-size: 14px;
   font-weight: 400;
   border: none;
-  background: #e8e8ed;
-  color: #1d1d1f;
+  background: var(--color-surface-deep);
+  color: var(--color-text);
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
@@ -140,17 +221,17 @@ body {
 }
 
 .btn-pill:hover {
-  background: #dcdce1;
+  background: var(--color-surface-deep);
   transform: translateY(-1px);
 }
 
 .btn-pill-primary {
-  background: #0071e3;
-  color: #ffffff;
+  background: var(--color-btn);
+  color: var(--color-bg);
 }
 
 .btn-pill-primary:hover {
-  background: #0077ed;
+  background: var(--color-btn-hover);
   box-shadow: 0 4px 12px rgba(0, 113, 227, 0.28);
 }
 
@@ -174,7 +255,7 @@ body {
 
 /* Apple 蓝色文本链接（带 › 箭头） */
 .link-apple {
-  color: #0066cc;
+  color: var(--color-link);
   text-decoration: none;
 }
 .link-apple:hover {
@@ -193,32 +274,32 @@ body {
 /* ===== 导航链接 ===== */
 
 .nav-link-underline {
-  color: rgba(29, 29, 31, 0.8);
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
   text-decoration: none;
   transition: color 200ms ease;
 }
 .nav-link-underline:hover,
 .nav-link-underline.is-active {
-  color: #1d1d1f;
+  color: var(--color-text);
 }
 
 /* ===== 行程类型标签（细胶囊） ===== */
 
 .tag-filming {
-  background: rgba(88, 86, 214, 0.08);
-  color: #5856d6;
+  background: color-mix(in srgb, var(--color-type-filming) 12%, transparent);
+  color: var(--color-type-filming);
 }
 .tag-variety {
-  background: rgba(36, 138, 61, 0.08);
-  color: #248a3d;
+  background: color-mix(in srgb, var(--color-type-variety) 12%, transparent);
+  color: var(--color-type-variety);
 }
 .tag-business {
-  background: rgba(180, 83, 9, 0.08);
-  color: #b45309;
+  background: color-mix(in srgb, var(--color-type-business) 12%, transparent);
+  color: var(--color-type-business);
 }
 .tag-fanmeeting {
   background: rgba(214, 51, 108, 0.08);
-  color: #d6336c;
+  color: var(--color-type-fanmeeting);
 }
 .tag-filming, .tag-variety, .tag-business, .tag-fanmeeting {
   display: inline-flex;
@@ -231,26 +312,26 @@ body {
 
 /* ===== 日历：导航按钮与格子 hover（纯 CSS，替代 JS mouseenter） ===== */
 .cal-nav-btn {
-  color: #86868b;
+  color: var(--color-text-muted);
   transition: background-color 150ms var(--ease-standard), color 150ms var(--ease-standard), transform 150ms var(--ease-out-expo);
 }
 .cal-nav-btn:hover {
-  background: #f5f5f7;
-  color: #1d1d1f;
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 .cal-nav-btn:active {
   transform: scale(0.92);
 }
 
 .cal-cell {
-  background: #ffffff;
+  background: var(--color-bg);
   transition: background-color 150ms var(--ease-standard);
 }
 .cal-cell:hover:not(:disabled) {
-  background: #fafafa;
+  background: var(--color-surface);
 }
 .cal-cell:disabled {
-  background: #fafafa;
+  background: var(--color-surface);
   cursor: default;
 }
 
@@ -267,7 +348,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #0071e3;
+  background: var(--color-btn);
 }
 
 /* ===== 滚动条 ===== */
@@ -296,7 +377,7 @@ body {
 /* ===== 选中态 ===== */
 ::selection {
   background: rgba(0, 113, 227, 0.22);
-  color: #1d1d1f;
+  color: var(--color-text);
 }
 
 /* ===== 手机端日历格子缩小 ===== */
@@ -311,7 +392,7 @@ body {
 .skeleton-shimmer {
   position: relative;
   overflow: hidden;
-  background: #f5f5f7;
+  background: var(--color-surface);
 }
 
 .skeleton-shimmer::after {

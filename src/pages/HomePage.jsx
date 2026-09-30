@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } fr
 import NewsFeed from '../components/NewsFeed'
 import EventCard from '../components/EventCard'
 import CityPicker from '../components/CityPicker'
+import NotifyToggle from '../components/NotifyToggle'
+import SubscribeActions from '../components/SubscribeActions'
 import ArtistIntroSection from '../components/ArtistIntroSection'
 import { AnimateOnScroll } from '../components/ui'
 import { useLocalStorage } from '../hooks'
@@ -65,7 +67,7 @@ function Hero() {
           <motion.h1 className="hero-title m-0" variants={reduced ? undefined : titleItem}>
             嘉期如梦
           </motion.h1>
-          <motion.p className="text-[17px] sm:text-[21px] m-0 mt-4" style={{ color: '#6e6e73' }} variants={item}>
+          <motion.p className="text-[17px] sm:text-[21px] m-0 mt-4" style={{ color: 'var(--color-text-secondary)' }} variants={item}>
             行程、资讯、活动与出行，一站掌握。
           </motion.p>
           <motion.div className="flex items-center justify-center gap-8 mt-6" variants={item}>
@@ -113,7 +115,7 @@ function UpcomingSchedule() {
   const matchedCount = myCity ? schedule.filter(s => s.city === myCity).length : 0
 
   return (
-    <section style={{ background: '#ffffff', padding: '64px 0' }}>
+    <section style={{ background: 'var(--color-bg)', padding: '64px 0' }}>
       <div className="container-apple">
         <AnimateOnScroll y={10} duration={0.45}>
           <div className="flex items-baseline justify-between gap-4 flex-wrap mb-3">
@@ -124,7 +126,7 @@ function UpcomingSchedule() {
                   <motion.span
                     key={matchedCount}
                     className="text-[13px] font-medium inline-block"
-                    style={{ color: '#0066cc' }}
+                    style={{ color: 'var(--color-link)' }}
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0, transition: { duration: 0.25, ease: EASE_OUT_EXPO } }}
                     exit={{ opacity: 0, y: -4, transition: { duration: 0.15 } }}
@@ -134,8 +136,9 @@ function UpcomingSchedule() {
                 )}
               </AnimatePresence>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 flex-wrap">
               <CityPicker />
+              <NotifyToggle />
               <Link to="/schedule" className="link-apple text-[14px]">
                 查看全部 <span className="chevron">›</span>
               </Link>
@@ -144,7 +147,7 @@ function UpcomingSchedule() {
           {/* Apple 分段签名：发丝线从左划出 */}
           <motion.div
             className="h-px mb-6 origin-left"
-            style={{ background: '#d2d2d7' }}
+            style={{ background: 'var(--color-hairline)' }}
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -157,13 +160,13 @@ function UpcomingSchedule() {
             <motion.div
               key="skeleton"
               className="rounded-2xl overflow-hidden"
-              style={{ background: '#fff' }}
+              style={{ background: 'var(--color-bg)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.15 } }}
             >
               {[1, 2, 3].map(i => (
-                <div key={i} className="px-5 py-4" style={{ borderBottom: i < 3 ? '1px solid #f0f0f2' : 'none' }}>
+                <div key={i} className="px-5 py-4" style={{ borderBottom: i < 3 ? '1px solid var(--color-hairline)' : 'none' }}>
                   <div className="h-3.5 rounded skeleton-shimmer mb-2" style={{ width: '38%' }} />
                   <div className="h-4 rounded skeleton-shimmer" style={{ width: '72%' }} />
                 </div>
@@ -173,19 +176,22 @@ function UpcomingSchedule() {
             <motion.div
               key="empty"
               className="rounded-2xl text-center py-14"
-              style={{ background: '#fff' }}
+              style={{ background: 'var(--color-bg)' }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO } }}
               exit={{ opacity: 0, transition: { duration: 0.15 } }}
             >
-              <p className="text-[17px] font-semibold m-0" style={{ color: '#1d1d1f' }}>暂无近期行程</p>
-              <p className="text-[13px] m-0 mt-1.5" style={{ color: '#86868b' }}>
+              <p className="text-[17px] font-semibold m-0" style={{ color: 'var(--color-text)' }}>暂无近期行程</p>
+              <p className="text-[13px] m-0 mt-1.5" style={{ color: 'var(--color-text-muted)' }}>
                 行程数据来自工作室官方微博，发布后自动更新
               </p>
+              <div className="mt-5 flex justify-center">
+                <SubscribeActions />
+              </div>
             </motion.div>
           ) : (
             <AnimateOnScroll key="list" stagger staggerInterval={0.05} y={0} duration={0.4}>
-              <div className="rounded-2xl overflow-hidden" style={{ background: '#fff' }}>
+              <div className="rounded-2xl overflow-hidden" style={{ background: 'var(--color-bg)' }}>
                 {schedule.map((s, idx) => {
                   const isMine = myCity && s.city === myCity
                   return (
@@ -194,26 +200,26 @@ function UpcomingSchedule() {
                         to="/schedule"
                         className="flex items-center gap-4 px-5 py-4 no-underline"
                         style={{
-                          borderBottom: idx < schedule.length - 1 ? '1px solid #f0f0f2' : 'none',
+                          borderBottom: idx < schedule.length - 1 ? '1px solid var(--color-hairline)' : 'none',
                           background: isMine ? 'rgba(0,113,227,0.05)' : 'transparent',
                           transition: 'background-color 200ms ease',
                         }}
                       >
-                        <span className="text-[15px] font-semibold tabular-nums flex-shrink-0" style={{ color: '#1d1d1f', width: 48 }}>
+                        <span className="text-[15px] font-semibold tabular-nums flex-shrink-0" style={{ color: 'var(--color-text)', width: 48 }}>
                           {formatDate(s.date)}
                         </span>
                         <span className="flex-shrink-0" style={{ fontSize: 12, fontWeight: 500, padding: '2px 10px', borderRadius: 980, background: 'rgba(0,0,0,0.04)', color: typeColorVar[s.type] || 'var(--color-type-filming)' }}>
                           {s.typeName}
                         </span>
-                        <span className="flex-1 min-w-0 text-[15px] font-medium truncate" style={{ color: '#1d1d1f' }}>
+                        <span className="flex-1 min-w-0 text-[15px] font-medium truncate" style={{ color: 'var(--color-text)' }}>
                           {s.title}
                         </span>
                         {isMine && (
-                          <span className="flex-shrink-0" style={{ fontSize: 11, fontWeight: 500, color: '#0066cc', background: 'rgba(0,113,227,0.08)', padding: '3px 9px', borderRadius: 980 }}>
+                          <span className="flex-shrink-0" style={{ fontSize: 11, fontWeight: 500, color: 'var(--color-link)', background: 'rgba(0,113,227,0.08)', padding: '3px 9px', borderRadius: 980 }}>
                             就在你的城市
                           </span>
                         )}
-                        <span className="text-[13px] flex-shrink-0 hidden sm:block" style={{ color: '#86868b' }}>{s.city}</span>
+                        <span className="text-[13px] flex-shrink-0 hidden sm:block" style={{ color: 'var(--color-text-muted)' }}>{s.city}</span>
                       </Link>
                     </motion.div>
                   )
@@ -230,7 +236,7 @@ function UpcomingSchedule() {
 /* ===== 分段二：浅灰底 · 最新资讯 ===== */
 function LatestNews() {
   return (
-    <section style={{ background: '#f5f5f7', padding: '64px 0' }}>
+    <section style={{ background: 'var(--color-surface)', padding: '64px 0' }}>
       <div className="container-apple">
         <AnimateOnScroll y={10} duration={0.45}>
           <div className="flex items-baseline justify-between mb-3">
@@ -241,7 +247,7 @@ function LatestNews() {
           </div>
           <motion.div
             className="h-px mb-6 origin-left"
-            style={{ background: '#d2d2d7' }}
+            style={{ background: 'var(--color-hairline)' }}
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -257,10 +263,10 @@ function LatestNews() {
 /* ===== 分段四：浅灰底 · 活动门票 + 出行推荐 ===== */
 function EventsAndTravel() {
   return (
-    <section style={{ background: '#f5f5f7', padding: '64px 0 80px' }}>
+    <section style={{ background: 'var(--color-surface)', padding: '64px 0 80px' }}>
       <div className="container-apple">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-          <div className="rounded-2xl p-6 sm:p-8" style={{ background: '#fff' }}>
+          <div className="rounded-2xl p-6 sm:p-8" style={{ background: 'var(--color-bg)' }}>
             <div className="flex items-baseline justify-between mb-5">
               <h2 className="text-[21px] sm:text-[24px] font-semibold m-0" style={{ letterSpacing: '-0.01em' }}>活动门票</h2>
               <Link to="/events" className="link-apple text-[14px]">
@@ -270,10 +276,10 @@ function EventsAndTravel() {
             <EventCard limit={2} />
           </div>
 
-          <div className="rounded-2xl p-6 sm:p-8 flex flex-col justify-between" style={{ background: '#fff' }}>
+          <div className="rounded-2xl p-6 sm:p-8 flex flex-col justify-between" style={{ background: 'var(--color-bg)' }}>
             <div>
               <h2 className="text-[21px] sm:text-[24px] font-semibold m-0 mb-2" style={{ letterSpacing: '-0.01em' }}>出行推荐</h2>
-              <p className="text-[15px] leading-relaxed m-0" style={{ color: '#6e6e73' }}>
+              <p className="text-[15px] leading-relaxed m-0" style={{ color: 'var(--color-text-secondary)' }}>
                 选定要参加的活动与出发城市，一键跳转携程航班与 12306 高铁查询。
               </p>
             </div>

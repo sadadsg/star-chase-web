@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const navItems = [
   { path: '/', label: '首页' },
@@ -34,10 +35,12 @@ export default function Navbar() {
       }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       style={{
-        background: 'rgba(255,255,255,0.8)',
+        // 半透明底跟随主题：浅色下白、深色下近黑，配合 saturate blur 的 Apple 式磨砂
+        background: 'color-mix(in srgb, var(--color-bg) 80%, transparent)',
         backdropFilter: 'saturate(180%) blur(20px)',
         WebkitBackdropFilter: 'saturate(180%) blur(20px)',
-        borderBottom: '1px solid rgba(0,0,0,0.08)',
+        borderBottom: '1px solid var(--color-hairline)',
+        transitionProperty: 'background-color, border-color, box-shadow',
       }}
     >
       <div className="container-apple">
@@ -48,7 +51,7 @@ export default function Navbar() {
               className="inline-flex items-center justify-center"
               style={{
                 width: 26, height: 26, borderRadius: 6, background: '#b64400',
-                color: '#ffffff', fontSize: 16, lineHeight: 1, fontWeight: 600,
+                color: '#fff', fontSize: 16, lineHeight: 1, fontWeight: 600,
                 paddingTop: 1,
               }}
             >
@@ -58,7 +61,7 @@ export default function Navbar() {
               className="whitespace-nowrap"
               style={{
                 fontSize: 24, fontWeight: 600,
-                letterSpacing: '-0.01em', color: '#1d1d1f',
+                letterSpacing: '-0.01em', color: 'var(--color-text)',
               }}
             >
               嘉期如梦
@@ -76,6 +79,7 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <ThemeToggle />
           </nav>
         </div>
       </div>

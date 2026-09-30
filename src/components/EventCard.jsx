@@ -71,14 +71,14 @@ export default function EventCard({ limit }) {
               key={event.id}
               variants={staggerChild}
               className="rounded-2xl p-4 sm:p-5 card-hover"
-              style={{ background: '#fff', border: '1px solid #e8e8ed' }}
+              style={{ background: 'var(--color-bg)', border: '1px solid var(--color-surface-deep)' }}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <h3 className="font-semibold text-[15px] sm:text-[16px] m-0 mb-1.5 truncate" style={{ color: '#1d1d1f' }}>
+                  <h3 className="font-semibold text-[15px] sm:text-[16px] m-0 mb-1.5 truncate" style={{ color: 'var(--color-text)' }}>
                     {event.name}
                   </h3>
-                  <p className="text-[13px] m-0" style={{ color: '#86868b' }}>
+                  <p className="text-[13px] m-0" style={{ color: 'var(--color-text-muted)' }}>
                     {event.date} · {event.location || event.city}
                   </p>
                   <div className="flex gap-4 mt-2">
@@ -99,7 +99,7 @@ export default function EventCard({ limit }) {
                     查看来源 <span className="chevron">›</span>
                   </a>
                 ) : (
-                  <span className="text-[13px] flex-shrink-0" style={{ color: '#aeaeb2' }}>暂无链接</span>
+                  <span className="text-[13px] flex-shrink-0" style={{ color: 'var(--color-text-muted)' }}>暂无链接</span>
                 )}
               </div>
             </motion.div>

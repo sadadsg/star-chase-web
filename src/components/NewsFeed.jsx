@@ -71,7 +71,7 @@ export default function NewsFeed({ limit }) {
 
   const NewsCard = ({ news }) => {
     const inner = <NewsCardContent news={news} />
-    const cardStyle = { background: '#fff', border: '1px solid #e8e8ed' }
+    const cardStyle = { background: 'var(--color-bg)', border: '1px solid var(--color-surface-deep)' }
 
     if (newsUrl(news)) {
       return (
@@ -106,25 +106,25 @@ export default function NewsFeed({ limit }) {
         </div>
       )}
       <div className="p-4 sm:p-5 flex flex-col h-full">
-        <p className="text-[12px] font-medium m-0 mb-1.5" style={{ color: '#86868b' }}>
+        <p className="text-[12px] font-medium m-0 mb-1.5" style={{ color: 'var(--color-text-muted)' }}>
           {news.category || '资讯'} · {news.source}
         </p>
         {/* 标题/摘要均锁 2 行并预留 2 行高度，日期行贴底，保证同行卡片等高 */}
         <h3
-          className="font-semibold text-[16px] leading-snug mb-2 line-clamp-2 m-0 transition-colors group-hover:text-[#0066cc]"
-          style={{ color: '#1d1d1f', minHeight: '2.75em' }}
+          className="font-semibold text-[16px] leading-snug mb-2 line-clamp-2 m-0 transition-colors group-hover:text-[var(--color-link)]"
+          style={{ color: 'var(--color-text)', minHeight: '2.75em' }}
         >
           {news.title}
         </h3>
         {news.summary && news.summary !== news.title && (
           <p
             className="text-[14px] leading-relaxed line-clamp-2 mb-3 m-0"
-            style={{ color: '#6e6e73', minHeight: '3.25em' }}
+            style={{ color: 'var(--color-text-secondary)', minHeight: '3.25em' }}
           >
             {news.summary}
           </p>
         )}
-        <p className="text-[13px] m-0 mt-auto" style={{ color: '#86868b' }}>
+        <p className="text-[13px] m-0 mt-auto" style={{ color: 'var(--color-text-muted)' }}>
           {(news.time || news.date || '').slice(0, 10)}
         </p>
       </div>
@@ -168,7 +168,7 @@ export default function NewsFeed({ limit }) {
     <div>
       {!limit && (
         <div className="flex items-center justify-between flex-wrap gap-3 mb-6">
-          <div className="inline-flex flex-wrap gap-0 p-1 rounded-full relative" style={{ background: '#f5f5f7' }}>
+          <div className="inline-flex flex-wrap gap-0 p-1 rounded-full relative" style={{ background: 'var(--color-surface)' }}>
             {categories.map(cat => {
               const active = activeCategory === cat
               return (
@@ -177,7 +177,7 @@ export default function NewsFeed({ limit }) {
                   onClick={() => setActiveCategory(cat)}
                   className="relative px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-medium whitespace-nowrap cursor-pointer"
                   style={{
-                    color: active ? '#1d1d1f' : '#6e6e73',
+                    color: active ? 'var(--color-text)' : 'var(--color-text-secondary)',
                     background: 'transparent',
                     border: 'none',
                     transition: 'color 150ms ease',
@@ -187,7 +187,7 @@ export default function NewsFeed({ limit }) {
                     <motion.span
                       layoutId="news-seg-thumb"
                       className="absolute inset-0 rounded-full"
-                      style={{ background: '#ffffff', boxShadow: '0 1px 4px rgba(0,0,0,0.12)' }}
+                      style={{ background: 'var(--color-bg)', boxShadow: '0 1px 4px rgba(0,0,0,0.12)' }}
                       transition={SPRING_SNAP}
                     />
                   )}
@@ -200,7 +200,7 @@ export default function NewsFeed({ limit }) {
           {/* 只看官方（工作室/官方账号） */}
           <label
             className="inline-flex items-center gap-2 m-0 cursor-pointer"
-            style={{ fontSize: 13, color: '#6e6e73' }}
+            style={{ fontSize: 13, color: 'var(--color-text-secondary)' }}
           >
             <span className="whitespace-nowrap">只看官方</span>
             <input
@@ -211,7 +211,7 @@ export default function NewsFeed({ limit }) {
             />
             <motion.span
               style={{ width: 36, height: 21, borderRadius: 980, position: 'relative', flexShrink: 0, display: 'inline-block' }}
-              animate={{ backgroundColor: officialOnly ? '#0071e3' : '#e8e8ed' }}
+              animate={{ backgroundColor: officialOnly ? 'var(--color-btn)' : 'var(--color-surface-deep)' }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
             >
               <motion.span
@@ -246,8 +246,8 @@ export default function NewsFeed({ limit }) {
             animate={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO } }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
           >
-            <p className="font-semibold text-[17px] mb-1.5 m-0" style={{ color: '#1d1d1f' }}>暂无相关资讯</p>
-            <p className="text-[14px] m-0" style={{ color: '#86868b' }}>资讯来自工作室微博与百度资讯，更新后自动展示</p>
+            <p className="font-semibold text-[17px] mb-1.5 m-0" style={{ color: 'var(--color-text)' }}>暂无相关资讯</p>
+            <p className="text-[14px] m-0" style={{ color: 'var(--color-text-muted)' }}>资讯来自工作室微博与百度资讯，更新后自动展示</p>
           </motion.div>
         ) : limit ? (
           <motion.div key="limited" className={gridCls} {...gridPresence}>
@@ -258,11 +258,11 @@ export default function NewsFeed({ limit }) {
             {groupedByMonth.map((group) => (
               <section key={group.key}>
                 <div className="flex items-center gap-3 mb-4">
-                  <h2 className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: '#1d1d1f' }}>
+                  <h2 className="text-[21px] font-semibold m-0" style={{ letterSpacing: '-0.01em', color: 'var(--color-text)' }}>
                     {group.year}年{monthNames[group.month - 1]}
                   </h2>
-                  <span className="text-[14px]" style={{ color: '#86868b' }}>{group.items.length} 条</span>
-                  <div className="flex-1 h-px" style={{ background: '#d2d2d7' }} />
+                  <span className="text-[14px]" style={{ color: 'var(--color-text-muted)' }}>{group.items.length} 条</span>
+                  <div className="flex-1 h-px" style={{ background: 'var(--color-hairline)' }} />
                 </div>
                 <div className={gridCls}>
                   {renderCards(group.items)}

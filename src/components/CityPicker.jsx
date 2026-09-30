@@ -8,7 +8,7 @@ export default function CityPicker({ className = '' }) {
 
   return (
     <label className={`inline-flex items-center gap-1.5 m-0 ${className}`}
-      style={{ fontSize: 13, color: '#6e6e73' }}>
+      style={{ fontSize: 13, color: 'var(--color-text-secondary)' }}>
       <span className="whitespace-nowrap">我的城市</span>
       <select
         value={myCity}
@@ -19,8 +19,8 @@ export default function CityPicker({ className = '' }) {
           padding: '5px 26px 5px 12px',
           borderRadius: 980,
           border: 'none',
-          background: myCity ? 'rgba(0,113,227,0.08)' : '#f5f5f7',
-          color: myCity ? '#0066cc' : '#1d1d1f',
+          background: myCity ? 'rgba(0,113,227,0.08)' : 'var(--color-surface)',
+          color: myCity ? 'var(--color-link)' : 'var(--color-text)',
           appearance: 'none',
           WebkitAppearance: 'none',
           backgroundImage:
