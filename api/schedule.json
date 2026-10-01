@@ -818,13 +818,13 @@
     }
   ],
   "total": 68,
-  "updatedAt": "2026-09-30T22:44:53.424Z",
+  "updatedAt": "2026-10-01T01:42:59.185Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 39,
-    "dropped": 18,
+    "validated": 38,
+    "dropped": 19,
     "dropReasons": {
-      "date_out_of_window": 18
+      "date_out_of_window": 19
     },
     "glmCalls": 0,
     "glmTextItems": 0,
