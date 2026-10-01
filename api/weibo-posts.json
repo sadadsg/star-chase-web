@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T08:03:01.426Z",
+  "updatedAt": "2026-10-01T15:51:34.706Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -785,15 +785,6 @@
           "accountName": "爱奇艺",
           "accountType": "drama",
           "hint": null
-        },
-        {
-          "id": "5348531319082010",
-          "detailUrl": "https://www.sina.cn/news/detail/5348531319082010.html",
-          "time": "2026-09-29 17:05",
-          "text": "#剧集余红旧事#今日在爱奇艺开播！长假窝家里追迷雾剧场，爱奇艺VIP配锅包肉，那叫一个得劲！会员咋选、权益咋用，一篇给你整得明明白白！主演经典作品《错位》《低智商犯罪》《凡人歌》《奋斗》《老舅》《漂白》《少爷和我》《生命树》《我的阿勒泰》《我的前半生》《一年一度喜剧大赛2》《昨夜将至》 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama",
-          "hint": "filming"
         },
         {
           "id": "5297350324261267",
@@ -1792,6 +1783,102 @@
           "accountType": "drama"
         },
         {
+          "id": "5349337883481253",
+          "detailUrl": "https://www.sina.cn/news/detail/5349337883481253.html",
+          "time": "2026-10-01 22:30",
+          "text": "#猕猴talk show# [假期开启]假期打卡第一天✅ TA们的同款趣味游戏收集完毕，一起畅快玩乐，治愈所有疲惫[打call] http://t.cn/AXWSUgYD ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349330972312259",
+          "detailUrl": "https://www.sina.cn/news/detail/5349330972312259.html",
+          "time": "2026-10-01 22:02",
+          "text": "郝洁#桃厂排面#🈶。心心念念的远方，终会抵达。#剧集余红旧事#",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349330833903164",
+          "detailUrl": "https://www.sina.cn/news/detail/5349330833903164.html",
+          "time": "2026-10-01 22:01",
+          "text": "何警官#桃厂排面#🈶。从市局溜达到铁城，铁城溜达到屯儿，亮哥citywalk第一名！#剧集余红旧时#",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349330698374789",
+          "detailUrl": "https://www.sina.cn/news/detail/5349330698374789.html",
+          "time": "2026-10-01 22:01",
+          "text": "娟儿#桃厂排面#🈶。要小奇说，咱铁城警务届的fashion icon，非娟儿莫属！#剧集余红旧事#",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349287066340639",
+          "detailUrl": "https://www.sina.cn/news/detail/5349287066340639.html",
+          "time": "2026-10-01 19:08",
+          "text": "恭喜@歆芯炘焮 1名用户获得【剧集周边】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXWCDUNu",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349272452334870",
+          "detailUrl": "https://www.sina.cn/news/detail/5349272452334870.html",
+          "time": "2026-10-01 18:10",
+          "text": "#桃厂上新一瓯春# #一瓯春# 天下武功，唯快不破！沈润/严瑞 @许凯soso 打戏花絮送达！开拍前专注入状态，实拍时招式干净利落，超长打戏镜头一次看过瘾。戏外还不忘关心群演，认真的人最帅！每日18:00，@爱奇艺 正在热播，国庆假期第一天，横塘陪你开爽！ http://t.cn/AXWCmmEV ​​​​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349271193781129",
+          "detailUrl": "https://www.sina.cn/news/detail/5349271193781129.html",
+          "time": "2026-10-01 18:05",
+          "text": "#电视剧喜剧之王#沙浦小分队珍贵影像流出，听说内含当事人想出价购买的趣味片段，不看血亏！ 🥝预约指路👉🏻 http://t.cn/AXORMZGW [围脖]预约指路👉🏻 http://t.cn/AXPw6cmR http://t.cn/AXWCmHid ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349269936014526",
+          "detailUrl": "https://www.sina.cn/news/detail/5349269936014526.html",
+          "time": "2026-10-01 18:00",
+          "text": "#爱奇艺我不是大师# 有人以道服作伪装，有人借银幕藏阴谋，群像登场，各怀心事，一场横跨江湖与片场的迷局，缓缓铺开。每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349256095072953",
+          "detailUrl": "https://www.sina.cn/news/detail/5349256095072953.html",
+          "time": "2026-10-01 17:05",
+          "text": "#桃厂上新一瓯春# #一瓯春# 剧照送达[抱一抱]横塘风云里，有棋局也有真心。双强并肩的画面，每一帧都值得再看一遍。每日18:00，@爱奇艺 正在热播！ 领衔主演：许凯@许凯soso 周也@周也yeah（按姓氏笔画排序） 特别出演：陈柯颖（柯颖）@柯颖ii 张瑶@张瑶 黄晓娟@黄晓娟-蓉蓉 富大龙 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349255075332274",
+          "detailUrl": "https://www.sina.cn/news/detail/5349255075332274.html",
+          "time": "2026-10-01 17:00",
+          "text": "#爱奇艺我不是大师# 叮咚！您订购的小明哥@我不是大师是李现ing ×燕子姐@我不是大师是李一桐Q 情侣头像已到货，好评请扣1。速速用上！每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！http://t.cn/AXWCWegi ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349251270051772",
+          "detailUrl": "https://www.sina.cn/news/detail/5349251270051772.html",
+          "time": "2026-10-01 16:45",
+          "text": "#2026亚洲影艺创意大奖# 爱奇艺5部制播作品获9项荣誉！以匠心打磨精品，持续传递中国故事的力量！ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5349248390398977",
+          "detailUrl": "https://www.sina.cn/news/detail/5349248390398977.html",
+          "time": "2026-10-01 16:34",
+          "text": "#剧集余红旧事##桃厂排面# 忒体面了！咱铁城人儿就这样从余红广场一路亮相到北京、上海大都市！走过路过都来瞅瞅，还有各种错综复杂的关系等你细品~每日18:00，爱奇艺正在热播！ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5349239737291456",
           "detailUrl": "https://www.sina.cn/news/detail/5349239737291456.html",
           "time": "2026-10-01 16:00",
@@ -1919,116 +2006,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5349166756397788.html",
           "time": "2026-10-01 11:10",
           "text": "铁城这地方，有人急得直打转，有人愁得吃不下饭，有人感情获进展。还有一帮人，胡闹到最后，发现是瞎折腾。 领衔主演（按姓氏笔画排序）：@马伊琍 @王佳佳Esther @张哲华1649 特别出演（按姓氏笔画排序）：@付航脱口秀 @任彬white @向涵之 郭洪泽@真百分百土豆 董宝石@宝石Gem @蒋诗萌Panda ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349165498107287",
-          "detailUrl": "https://www.sina.cn/news/detail/5349165498107287.html",
-          "time": "2026-10-01 11:05",
-          "text": "#爱奇艺我不是大师# 追剧日历已更新！九大玄疑局逐一开启。局局相接，环环相扣，局中人迷雾遮眼，局外人身不由己。这盘终局，究竟会落向何处？10月1日起，VIP会员每日18:00更新1集。以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
-          "pics": [
-            "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmm612jdtj632s5gv4qv02.jpg"
-          ],
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349164407065619",
-          "detailUrl": "https://www.sina.cn/news/detail/5349164407065619.html",
-          "time": "2026-10-01 11:00",
-          "text": "#魅影神捕# 热浪裹挟，快乐不打烊！顶着高温拍戏，片场笑声不断，每一滴汗水，都在为正片蓄力。10月2日中午12点，爱奇艺全网独播，不见不散。 领衔主演：罗弋（罗云熙）@罗云熙Leo 特别出演：方逸伦 @方方方方方逸伦、沈羽洁 @沈羽洁er（按姓氏笔画排序） 出演：王海祥 @王海祥Ocean、杜玉明 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349161722970484",
-          "detailUrl": "https://www.sina.cn/news/detail/5349161722970484.html",
-          "time": "2026-10-01 10:50",
-          "text": "#上爱奇艺体育看欧国联# 26/27欧国联小组赛第3轮将于北京时间10月2日打响，多场焦点对决如期上演。法国战意大利，齐达内再遇宿敌，爱奇艺体育全媒体独播。 #爱奇艺体育全媒体独播欧国联# #欧国联# ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349160464417451",
-          "detailUrl": "https://www.sina.cn/news/detail/5349160464417451.html",
-          "time": "2026-10-01 10:45",
-          "text": "#魅影神捕制作特辑# 送达！见诡见美之东方悬奇探案宇宙，于此徐徐落成。以匠心造诡境，以细节塑迷踪。镜头下的连环谜局，源自幕后主创无数次打磨。10月2日中午12点，爱奇艺全网独播，#魅影神捕# 敬请期待！ 爱奇艺预约：http://t.cn/AXolvPEI 微博预约：http://t.cn/A6DPJdOh http://t.cn/AXW98MQ5 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349159205864133",
-          "detailUrl": "https://www.sina.cn/news/detail/5349159205864133.html",
-          "time": "2026-10-01 10:40",
-          "text": "逐日追凶循线索，步步拆解诡迷局，按期赴约查真相，全程相伴破阴霾。#魅影神捕#追剧日历送达，10月2日起，VIP会员周五至周三12:00各更新2集，周四12:00更新1集，首日VIP6集，爱奇艺全网独播[送花花] 爱奇艺预约：http://t.cn/AXolvPEI 微博预约：http://t.cn/A6DPJdOh ​",
-          "pics": [
-            "http://wx2.sinaimg.cn/middle/001TdeNzly1ihmnjknetqj61jk3n6hdx02.jpg"
-          ],
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349157948359410",
-          "detailUrl": "https://www.sina.cn/news/detail/5349157948359410.html",
-          "time": "2026-10-01 10:35",
-          "text": "#爱奇艺我不是大师# 国庆假期第一天，掉落一支独家福利花絮～上官诚明@我不是大师是李现ing 傻亮@刘冠麟 河边野餐，两人模拟捕鱼、撒辣椒……哥俩在片场的气氛不要太欢乐！每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！http://t.cn/AXW9QjmK ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349156689282747",
-          "detailUrl": "https://www.sina.cn/news/detail/5349156689282747.html",
-          "time": "2026-10-01 10:30",
-          "text": "#桃厂金秋舒服假日# 推荐片单来啦[假期开启]现在关注并带话题#爱奇艺黄金周推荐片单# 转发分享你假期必看的桃厂IP，就有机会获得小奇送出的「爱奇艺黄金会员年卡」哦[yeah]假期欢聚时刻有《爱情公寓5》《北上》《灿如繁星》等相伴，户外之行看《归路》《书卷一梦》《超燃青春的合唱》《哈哈哈哈哈6》等 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349150398615663",
-          "detailUrl": "https://www.sina.cn/news/detail/5349150398615663.html",
-          "time": "2026-10-01 10:05",
-          "text": "🏖️盼了好久的国庆假期终于来啦！无论坐高铁、上高速，还是去海边、宅家里，爱奇艺热剧、大片、综艺都已备好！一个人追剧选黄金VIP，全家大屏选白金VIP，免费看加更礼选星钻VIP 💗爱奇艺双节会员大促也在火热进行中，惊喜价格、超多礼赠等你解锁🔥在看世界的路上，爱奇艺VIP会员随时陪你💗 ​",
-          "pics": [
-            "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmeya9e6j61w02iokjr02.jpg",
-            "http://wx4.sinaimg.cn/middle/001TdeNzly1ihmmexcpovj61w02iox6t02.jpg",
-            "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmexviasj61w02ioe8602.jpg",
-            "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmexu9uxj61w02iob2e02.jpg",
-            "http://wx4.sinaimg.cn/middle/001TdeNzly1ihmmexsmnmj61w02io4qu02.jpg",
-            "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmex3zarj61w02iob2d02.jpg"
-          ],
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349149143742876",
-          "detailUrl": "https://www.sina.cn/news/detail/5349149143742876.html",
-          "time": "2026-10-01 10:00",
-          "text": "#爱奇艺我不是大师# 以片场为棋局，以演技作伪装。电影局迷雾重重，每一句对白、每一个神情，都可能是精心设计的圈套。每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349145364661442",
-          "detailUrl": "https://www.sina.cn/news/detail/5349145364661442.html",
-          "time": "2026-10-01 09:45",
-          "text": "#灵魂摆渡公主之梦上线#盛京繁梦，情起深宫？秘事暗流，阴谋潜伏！和无名 @于毅 yan 冬青 @刘智扬 阿娅 @肖茵的微博 一起揭开盛京百年秘闻！#灵魂摆渡公主之梦#今天10:00，爱奇艺电影频道全网独播！http://t.cn/AXW9Wfl3 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349141628059876",
-          "detailUrl": "https://www.sina.cn/news/detail/5349141628059876.html",
-          "time": "2026-10-01 09:30",
-          "text": "#灵魂摆渡公主之梦上线#灵灯封存尘世梦，朱雀桥上一双人。和无名@于毅yan 冬青@刘智扬 阿娅@肖茵的微博 一起再度入梦！今日10:00上线，爱奇艺电影频道全网独播！正片速戳http://t.cn/AXWVzUMR ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5349135349974542",
-          "detailUrl": "https://www.sina.cn/news/detail/5349135349974542.html",
-          "time": "2026-10-01 09:05",
-          "text": "#逆天邪神动画# 凤雪儿隆重登场！云澈踏入神凰，却引来凤凰神宗的刻意折辱。面对强敌凤赤火的挑衅与杀招，云澈从容迎战，撕破对手伪善的外衣。新的对手、新的羁绊一同登场，等待云澈的又会是何等凶险困局？#逆天邪神年番# 第57集已上线！每周四9点锁定爱奇艺！ http://t.cn/AXW9Cpyc ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -4785,15 +4762,6 @@
               "accountName": "爱奇艺",
               "accountType": "drama",
               "hint": null
-            },
-            {
-              "id": "5348531319082010",
-              "detailUrl": "https://www.sina.cn/news/detail/5348531319082010.html",
-              "time": "2026-09-29 17:05",
-              "text": "#剧集余红旧事#今日在爱奇艺开播！长假窝家里追迷雾剧场，爱奇艺VIP配锅包肉，那叫一个得劲！会员咋选、权益咋用，一篇给你整得明明白白！主演经典作品《错位》《低智商犯罪》《凡人歌》《奋斗》《老舅》《漂白》《少爷和我》《生命树》《我的阿勒泰》《我的前半生》《一年一度喜剧大赛2》《昨夜将至》 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama",
-              "hint": "filming"
             }
           ],
           "recentPosts": [
@@ -4810,6 +4778,102 @@
               "detailUrl": "https://www.sina.cn/news/detail/5348431917747468.html",
               "time": "2026-09-29 10:30",
               "text": "#周也回应和周深四搭# @卡布叻_周深 又又又给小也@周也yeah 的剧演唱主题曲啦[yeah] 对此小也在线开玩笑调侃：“华语乐坛还是我们的”[哈哈]@许凯soso 开团秒跟：“不愧是姓周的，这么厉害”👍 现在就和小奇一起单曲循环深深这首超超超好听的《一瓯春》吧🎵 #周也周深居然已经四搭了# 更多#一瓯春# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349337883481253",
+              "detailUrl": "https://www.sina.cn/news/detail/5349337883481253.html",
+              "time": "2026-10-01 22:30",
+              "text": "#猕猴talk show# [假期开启]假期打卡第一天✅ TA们的同款趣味游戏收集完毕，一起畅快玩乐，治愈所有疲惫[打call] http://t.cn/AXWSUgYD ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349330972312259",
+              "detailUrl": "https://www.sina.cn/news/detail/5349330972312259.html",
+              "time": "2026-10-01 22:02",
+              "text": "郝洁#桃厂排面#🈶。心心念念的远方，终会抵达。#剧集余红旧事#",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349330833903164",
+              "detailUrl": "https://www.sina.cn/news/detail/5349330833903164.html",
+              "time": "2026-10-01 22:01",
+              "text": "何警官#桃厂排面#🈶。从市局溜达到铁城，铁城溜达到屯儿，亮哥citywalk第一名！#剧集余红旧时#",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349330698374789",
+              "detailUrl": "https://www.sina.cn/news/detail/5349330698374789.html",
+              "time": "2026-10-01 22:01",
+              "text": "娟儿#桃厂排面#🈶。要小奇说，咱铁城警务届的fashion icon，非娟儿莫属！#剧集余红旧事#",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349287066340639",
+              "detailUrl": "https://www.sina.cn/news/detail/5349287066340639.html",
+              "time": "2026-10-01 19:08",
+              "text": "恭喜@歆芯炘焮 1名用户获得【剧集周边】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXWCDUNu",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349272452334870",
+              "detailUrl": "https://www.sina.cn/news/detail/5349272452334870.html",
+              "time": "2026-10-01 18:10",
+              "text": "#桃厂上新一瓯春# #一瓯春# 天下武功，唯快不破！沈润/严瑞 @许凯soso 打戏花絮送达！开拍前专注入状态，实拍时招式干净利落，超长打戏镜头一次看过瘾。戏外还不忘关心群演，认真的人最帅！每日18:00，@爱奇艺 正在热播，国庆假期第一天，横塘陪你开爽！ http://t.cn/AXWCmmEV ​​​​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349271193781129",
+              "detailUrl": "https://www.sina.cn/news/detail/5349271193781129.html",
+              "time": "2026-10-01 18:05",
+              "text": "#电视剧喜剧之王#沙浦小分队珍贵影像流出，听说内含当事人想出价购买的趣味片段，不看血亏！ 🥝预约指路👉🏻 http://t.cn/AXORMZGW [围脖]预约指路👉🏻 http://t.cn/AXPw6cmR http://t.cn/AXWCmHid ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349269936014526",
+              "detailUrl": "https://www.sina.cn/news/detail/5349269936014526.html",
+              "time": "2026-10-01 18:00",
+              "text": "#爱奇艺我不是大师# 有人以道服作伪装，有人借银幕藏阴谋，群像登场，各怀心事，一场横跨江湖与片场的迷局，缓缓铺开。每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349256095072953",
+              "detailUrl": "https://www.sina.cn/news/detail/5349256095072953.html",
+              "time": "2026-10-01 17:05",
+              "text": "#桃厂上新一瓯春# #一瓯春# 剧照送达[抱一抱]横塘风云里，有棋局也有真心。双强并肩的画面，每一帧都值得再看一遍。每日18:00，@爱奇艺 正在热播！ 领衔主演：许凯@许凯soso 周也@周也yeah（按姓氏笔画排序） 特别出演：陈柯颖（柯颖）@柯颖ii 张瑶@张瑶 黄晓娟@黄晓娟-蓉蓉 富大龙 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349255075332274",
+              "detailUrl": "https://www.sina.cn/news/detail/5349255075332274.html",
+              "time": "2026-10-01 17:00",
+              "text": "#爱奇艺我不是大师# 叮咚！您订购的小明哥@我不是大师是李现ing ×燕子姐@我不是大师是李一桐Q 情侣头像已到货，好评请扣1。速速用上！每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！http://t.cn/AXWCWegi ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349251270051772",
+              "detailUrl": "https://www.sina.cn/news/detail/5349251270051772.html",
+              "time": "2026-10-01 16:45",
+              "text": "#2026亚洲影艺创意大奖# 爱奇艺5部制播作品获9项荣誉！以匠心打磨精品，持续传递中国故事的力量！ ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5349248390398977",
+              "detailUrl": "https://www.sina.cn/news/detail/5349248390398977.html",
+              "time": "2026-10-01 16:34",
+              "text": "#剧集余红旧事##桃厂排面# 忒体面了！咱铁城人儿就这样从余红广场一路亮相到北京、上海大都市！走过路过都来瞅瞅，还有各种错综复杂的关系等你细品~每日18:00，爱奇艺正在热播！ ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -4941,116 +5005,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5349166756397788.html",
               "time": "2026-10-01 11:10",
               "text": "铁城这地方，有人急得直打转，有人愁得吃不下饭，有人感情获进展。还有一帮人，胡闹到最后，发现是瞎折腾。 领衔主演（按姓氏笔画排序）：@马伊琍 @王佳佳Esther @张哲华1649 特别出演（按姓氏笔画排序）：@付航脱口秀 @任彬white @向涵之 郭洪泽@真百分百土豆 董宝石@宝石Gem @蒋诗萌Panda ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349165498107287",
-              "detailUrl": "https://www.sina.cn/news/detail/5349165498107287.html",
-              "time": "2026-10-01 11:05",
-              "text": "#爱奇艺我不是大师# 追剧日历已更新！九大玄疑局逐一开启。局局相接，环环相扣，局中人迷雾遮眼，局外人身不由己。这盘终局，究竟会落向何处？10月1日起，VIP会员每日18:00更新1集。以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
-              "pics": [
-                "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmm612jdtj632s5gv4qv02.jpg"
-              ],
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349164407065619",
-              "detailUrl": "https://www.sina.cn/news/detail/5349164407065619.html",
-              "time": "2026-10-01 11:00",
-              "text": "#魅影神捕# 热浪裹挟，快乐不打烊！顶着高温拍戏，片场笑声不断，每一滴汗水，都在为正片蓄力。10月2日中午12点，爱奇艺全网独播，不见不散。 领衔主演：罗弋（罗云熙）@罗云熙Leo 特别出演：方逸伦 @方方方方方逸伦、沈羽洁 @沈羽洁er（按姓氏笔画排序） 出演：王海祥 @王海祥Ocean、杜玉明 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349161722970484",
-              "detailUrl": "https://www.sina.cn/news/detail/5349161722970484.html",
-              "time": "2026-10-01 10:50",
-              "text": "#上爱奇艺体育看欧国联# 26/27欧国联小组赛第3轮将于北京时间10月2日打响，多场焦点对决如期上演。法国战意大利，齐达内再遇宿敌，爱奇艺体育全媒体独播。 #爱奇艺体育全媒体独播欧国联# #欧国联# ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349160464417451",
-              "detailUrl": "https://www.sina.cn/news/detail/5349160464417451.html",
-              "time": "2026-10-01 10:45",
-              "text": "#魅影神捕制作特辑# 送达！见诡见美之东方悬奇探案宇宙，于此徐徐落成。以匠心造诡境，以细节塑迷踪。镜头下的连环谜局，源自幕后主创无数次打磨。10月2日中午12点，爱奇艺全网独播，#魅影神捕# 敬请期待！ 爱奇艺预约：http://t.cn/AXolvPEI 微博预约：http://t.cn/A6DPJdOh http://t.cn/AXW98MQ5 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349159205864133",
-              "detailUrl": "https://www.sina.cn/news/detail/5349159205864133.html",
-              "time": "2026-10-01 10:40",
-              "text": "逐日追凶循线索，步步拆解诡迷局，按期赴约查真相，全程相伴破阴霾。#魅影神捕#追剧日历送达，10月2日起，VIP会员周五至周三12:00各更新2集，周四12:00更新1集，首日VIP6集，爱奇艺全网独播[送花花] 爱奇艺预约：http://t.cn/AXolvPEI 微博预约：http://t.cn/A6DPJdOh ​",
-              "pics": [
-                "http://wx2.sinaimg.cn/middle/001TdeNzly1ihmnjknetqj61jk3n6hdx02.jpg"
-              ],
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349157948359410",
-              "detailUrl": "https://www.sina.cn/news/detail/5349157948359410.html",
-              "time": "2026-10-01 10:35",
-              "text": "#爱奇艺我不是大师# 国庆假期第一天，掉落一支独家福利花絮～上官诚明@我不是大师是李现ing 傻亮@刘冠麟 河边野餐，两人模拟捕鱼、撒辣椒……哥俩在片场的气氛不要太欢乐！每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！http://t.cn/AXW9QjmK ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349156689282747",
-              "detailUrl": "https://www.sina.cn/news/detail/5349156689282747.html",
-              "time": "2026-10-01 10:30",
-              "text": "#桃厂金秋舒服假日# 推荐片单来啦[假期开启]现在关注并带话题#爱奇艺黄金周推荐片单# 转发分享你假期必看的桃厂IP，就有机会获得小奇送出的「爱奇艺黄金会员年卡」哦[yeah]假期欢聚时刻有《爱情公寓5》《北上》《灿如繁星》等相伴，户外之行看《归路》《书卷一梦》《超燃青春的合唱》《哈哈哈哈哈6》等 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349150398615663",
-              "detailUrl": "https://www.sina.cn/news/detail/5349150398615663.html",
-              "time": "2026-10-01 10:05",
-              "text": "🏖️盼了好久的国庆假期终于来啦！无论坐高铁、上高速，还是去海边、宅家里，爱奇艺热剧、大片、综艺都已备好！一个人追剧选黄金VIP，全家大屏选白金VIP，免费看加更礼选星钻VIP 💗爱奇艺双节会员大促也在火热进行中，惊喜价格、超多礼赠等你解锁🔥在看世界的路上，爱奇艺VIP会员随时陪你💗 ​",
-              "pics": [
-                "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmeya9e6j61w02iokjr02.jpg",
-                "http://wx4.sinaimg.cn/middle/001TdeNzly1ihmmexcpovj61w02iox6t02.jpg",
-                "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmexviasj61w02ioe8602.jpg",
-                "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmexu9uxj61w02iob2e02.jpg",
-                "http://wx4.sinaimg.cn/middle/001TdeNzly1ihmmexsmnmj61w02io4qu02.jpg",
-                "http://wx1.sinaimg.cn/middle/001TdeNzly1ihmmex3zarj61w02iob2d02.jpg"
-              ],
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349149143742876",
-              "detailUrl": "https://www.sina.cn/news/detail/5349149143742876.html",
-              "time": "2026-10-01 10:00",
-              "text": "#爱奇艺我不是大师# 以片场为棋局，以演技作伪装。电影局迷雾重重，每一句对白、每一个神情，都可能是精心设计的圈套。每晚18点，以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349145364661442",
-              "detailUrl": "https://www.sina.cn/news/detail/5349145364661442.html",
-              "time": "2026-10-01 09:45",
-              "text": "#灵魂摆渡公主之梦上线#盛京繁梦，情起深宫？秘事暗流，阴谋潜伏！和无名 @于毅 yan 冬青 @刘智扬 阿娅 @肖茵的微博 一起揭开盛京百年秘闻！#灵魂摆渡公主之梦#今天10:00，爱奇艺电影频道全网独播！http://t.cn/AXW9Wfl3 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349141628059876",
-              "detailUrl": "https://www.sina.cn/news/detail/5349141628059876.html",
-              "time": "2026-10-01 09:30",
-              "text": "#灵魂摆渡公主之梦上线#灵灯封存尘世梦，朱雀桥上一双人。和无名@于毅yan 冬青@刘智扬 阿娅@肖茵的微博 一起再度入梦！今日10:00上线，爱奇艺电影频道全网独播！正片速戳http://t.cn/AXWVzUMR ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5349135349974542",
-              "detailUrl": "https://www.sina.cn/news/detail/5349135349974542.html",
-              "time": "2026-10-01 09:05",
-              "text": "#逆天邪神动画# 凤雪儿隆重登场！云澈踏入神凰，却引来凤凰神宗的刻意折辱。面对强敌凤赤火的挑衅与杀招，云澈从容迎战，撕破对手伪善的外衣。新的对手、新的羁绊一同登场，等待云澈的又会是何等凶险困局？#逆天邪神年番# 第57集已上线！每周四9点锁定爱奇艺！ http://t.cn/AXW9Cpyc ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
