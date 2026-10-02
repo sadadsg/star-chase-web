@@ -649,18 +649,6 @@
       "newsUrl": "https://www.sina.cn/news/detail/5346295338239904.html"
     },
     {
-      "date": "2026-09-30",
-      "type": "filming",
-      "title": "快乐[打call] 突破一页的距离出现在你面前！再来 重温帅气“反派”萧无敌 与阳光少女南星 的浪漫爱情故事吧~现在关注",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#我的反派男友开播四周年#快乐[打call] 突破一页的距离出现在你面前！再来@爱奇艺 重温帅气“反派”萧无敌@陈哲远- 与阳光少女南星@沈月 的浪漫爱情故事吧~现在关注并转发分享你心中的高甜名场面还有机会获得「随机主演签名照」1张哦~ #桃桃那年今日# http://t.cn/AXWXo9ek ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5348867282832133",
-      "newsUrl": "https://www.sina.cn/news/detail/5348867282832133.html"
-    },
-    {
       "date": "2026-10-01",
       "type": "filming",
       "title": "第三部 定档10月1日！朱墙华灯，掩不住深宫秘辛；灵灯引魂，爱恨跨越百年。三人组无名 冬青 阿娅 盛京集结，再探灵石踪迹",
@@ -961,11 +949,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5349515805589986.html"
     }
   ],
-  "total": 80,
-  "updatedAt": "2026-10-02T13:22:56.213Z",
+  "total": 79,
+  "updatedAt": "2026-10-02T18:50:00.901Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 50,
+    "validated": 49,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -973,7 +961,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 69,
+    "fallbackItems": 68,
     "errors": 0
   }
 }
