@@ -649,18 +649,6 @@
       "newsUrl": "https://www.sina.cn/news/detail/5346295338239904.html"
     },
     {
-      "date": "2026-10-01",
-      "type": "filming",
-      "title": "追剧日历已更新！九大玄疑局逐一开启。局局相接，环环相扣，局中人迷雾遮眼，局外人身不由己。这盘终局，究竟会落向何处？10月",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "#爱奇艺我不是大师# 追剧日历已更新！九大玄疑局逐一开启。局局相接，环环相扣，局中人迷雾遮眼，局外人身不由己。这盘终局，究竟会落向何处？10月1日起，VIP会员每日18:00更新1集。以骗制骗玄疑剧爱奇艺 #我不是大师# 正在热播！ ​",
-      "time": "18:00",
-      "source": "爱奇艺",
-      "postId": "5349165498107287",
-      "newsUrl": "https://www.sina.cn/news/detail/5349165498107287.html"
-    },
-    {
       "date": "2026-10-02",
       "type": "filming",
       "title": "一曲《诡面问心》穿透深沉墨色，萨顶顶 倾情吟唱，勾勒天荒城悬疑众生相。 今日12:00，爱奇艺全网独播， 敬请期待！ 爱",
@@ -783,18 +771,6 @@
     {
       "date": "2026-10-02",
       "type": "filming",
-      "title": "逐日追凶循线索，步步拆解诡迷局，按期赴约查真相，全程相伴破阴霾。 追剧日历送达，10月2日起，VIP会员周五至周三12:",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "逐日追凶循线索，步步拆解诡迷局，按期赴约查真相，全程相伴破阴霾。#魅影神捕#追剧日历送达，10月2日起，VIP会员周五至周三12:00各更新2集，周四12:00更新1集，首日VIP6集，爱奇艺全网独播[送花花] 爱奇艺预约：http://t.cn/AXolvPEI 微博预约：http://t.cn/A6DPJdOh ​",
-      "time": "12:00",
-      "source": "爱奇艺",
-      "postId": "5349159205864133",
-      "newsUrl": "https://www.sina.cn/news/detail/5349159205864133.html"
-    },
-    {
-      "date": "2026-10-02",
-      "type": "filming",
       "title": "闯进好莱坞，闯祸全世界，小黄人全新冒险！ 定档10月2日，云影院首映！小黄人闯荡 1920 年代好莱坞，立志拍摄怪兽大片",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -901,11 +877,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5349515805589986.html"
     }
   ],
-  "total": 75,
-  "updatedAt": "2026-10-03T07:19:57.017Z",
+  "total": 73,
+  "updatedAt": "2026-10-03T12:53:11.715Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 45,
+    "validated": 43,
     "dropped": 19,
     "dropReasons": {
       "date_out_of_window": 19
@@ -913,7 +889,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 64,
+    "fallbackItems": 62,
     "errors": 0
   }
 }
