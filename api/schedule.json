@@ -771,18 +771,6 @@
     {
       "date": "2026-10-02",
       "type": "filming",
-      "title": "闯进好莱坞，闯祸全世界，小黄人全新冒险！ 定档10月2日，云影院首映！小黄人闯荡 1920 年代好莱坞，立志拍摄怪兽大片",
-      "city": "待定",
-      "typeName": "影视拍摄",
-      "description": "闯进好莱坞，闯祸全世界，小黄人全新冒险！#电影小黄人与大怪兽#定档10月2日，云影院首映！小黄人闯荡 1920 年代好莱坞，立志拍摄怪兽大片，意外召唤真实怪兽，开启一场啼笑皆非的冒险。原版主创班底保驾护航，豪华配音阵容加持，高密度笑点 + 海量影史彩蛋，欢乐解压笑不停！ ​",
-      "time": "全天",
-      "source": "爱奇艺",
-      "postId": "5349179338528654",
-      "newsUrl": "https://www.sina.cn/news/detail/5349179338528654.html"
-    },
-    {
-      "date": "2026-10-02",
-      "type": "filming",
       "title": "闹市藏诡魅，长夜有追光。卷宗摊开，旧案牵连，傀儡背后藏着多少不为人知的故事？神捕就位，谜局开启。 今日12:00， 全网",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -877,19 +865,19 @@
       "newsUrl": "https://www.sina.cn/news/detail/5349515805589986.html"
     }
   ],
-  "total": 73,
-  "updatedAt": "2026-10-03T22:33:42.457Z",
+  "total": 72,
+  "updatedAt": "2026-10-04T02:16:28.756Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 43,
-    "dropped": 19,
+    "validated": 42,
+    "dropped": 18,
     "dropReasons": {
-      "date_out_of_window": 19
+      "date_out_of_window": 18
     },
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 62,
+    "fallbackItems": 60,
     "errors": 0
   }
 }
