@@ -771,6 +771,18 @@
     {
       "date": "2026-10-06",
       "type": "filming",
+      "title": "恭喜 爱奇艺站内预约量破939999.99！多亏大家，沙浦村才能热闹起来！今天中午12点锁定 ，不见不散！ 🥝预约指路",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#电视剧喜剧之王开播# 恭喜#电视剧喜剧之王# 爱奇艺站内预约量破939999.99！多亏大家，沙浦村才能热闹起来！今天中午12点锁定@爱奇艺 ，不见不散！ 🥝预约指路👉🏻 http://t.cn/AXORMZGW [围脖]预约指路👉🏻 http://t.cn/AXPw6cmR ​",
+      "time": "全天",
+      "source": "爱奇艺",
+      "postId": "5350990502953924",
+      "newsUrl": "https://www.sina.cn/news/detail/5350990502953924.html"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "filming",
       "title": "有人想让村子变个样，有人就想让它还是原来那个村。今天中午12点，村子的命运等你来看！ 🥝预约指路👉🏻 [围脖]预约",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -891,6 +903,18 @@
     {
       "date": "2026-10-09",
       "type": "filming",
+      "title": "在跋涉中求索真理，在脚步中坚定信仰。向着伟大而光明的未来，前进！10月9日起， 60集 重磅播出！ 领衔主演： （按演员",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#伟大的长征定档1009# 在跋涉中求索真理，在脚步中坚定信仰。向着伟大而光明的未来，前进！10月9日起，@爱奇艺 60集#电视剧伟大的长征# 重磅播出！ 领衔主演：@于和伟@演员王劲松@朱刚日尧@何政军@演员吴健@演员李泓良@演员郭广平@演员曹磊@翟小兴（按演员姓氏笔画排序） 特别出演：@万茜 ​",
+      "time": "全天",
+      "source": "爱奇艺",
+      "postId": "5351092714213951",
+      "newsUrl": "https://www.sina.cn/news/detail/5351092714213951.html"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "filming",
       "title": "英雄史诗，不朽丰碑。伟大远征，作答“长征何以永远”，纪念中国工农红军长征胜利90周年。10月9日起 ，CCTV-1黄金档",
       "city": "待定",
       "typeName": "影视拍摄",
@@ -901,11 +925,11 @@
       "newsUrl": "https://www.sina.cn/news/detail/5350753537363298.html"
     }
   ],
-  "total": 75,
-  "updatedAt": "2026-10-06T03:56:45.045Z",
+  "total": 77,
+  "updatedAt": "2026-10-06T10:57:53.998Z",
   "source": "studio_weibo",
   "runStats": {
-    "validated": 45,
+    "validated": 47,
     "dropped": 18,
     "dropReasons": {
       "date_out_of_window": 18
@@ -913,7 +937,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 63,
+    "fallbackItems": 65,
     "errors": 0
   }
 }
