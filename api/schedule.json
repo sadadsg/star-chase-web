@@ -1,13 +1,53 @@
 {
-  "data": [],
-  "total": 0,
-  "updatedAt": "2026-10-07T07:57:01.248Z",
+  "data": [
+    {
+      "date": "2026-09-09",
+      "type": "filming",
+      "title": "注视着这里发生的一切，直到被掩埋的真相穿过人海。李成 所相信的，是毋庸置疑的真相。 今日开播。 🔍",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#任嘉伦[超话]# 注视着这里发生的一切，直到被掩埋的真相穿过人海。李成@任嘉伦Allen 所相信的，是毋庸置疑的真相。#剧集深渊无间# 今日开播。#任嘉伦李成#🔍️#任嘉伦深渊无间# ​",
+      "time": "全天",
+      "source": "任嘉伦工作室",
+      "accountType": "studio",
+      "postId": "5341189856560208",
+      "newsUrl": "https://www.sina.cn/news/detail/5341189856560208.html"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "filming",
+      "title": "背负过往重量，毅然纵身入局。 且看混沌世事之中，李成 如何循着蛛丝马迹，拆解盘根错节的谜题。 🔍 🔍",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#任嘉伦[超话]#背负过往重量，毅然纵身入局。 且看混沌世事之中，李成@任嘉伦Allen 如何循着蛛丝马迹，拆解盘根错节的谜题。#深渊无间今日开播##任嘉伦李成#🔍️#任嘉伦深渊无间#🔍#剧集深渊无间#",
+      "time": "全天",
+      "source": "任嘉伦工作室",
+      "accountType": "studio",
+      "postId": "5341177970688386",
+      "newsUrl": "https://www.sina.cn/news/detail/5341177970688386.html"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "filming",
+      "title": "追剧日历已发送📶 您拨打的用户李成 提醒您，今晚18:00，锁定爱奇艺迷雾剧场 ，与李成静待谜底揭晓。 🔍",
+      "city": "待定",
+      "typeName": "影视拍摄",
+      "description": "#任嘉伦[超话]# 追剧日历已发送📶 您拨打的用户李成@任嘉伦Allen 提醒您，今晚18:00，锁定爱奇艺迷雾剧场️#剧集深渊无间#，与李成静待谜底揭晓。#任嘉伦李成#🔍️#任嘉伦深渊无间# ​",
+      "time": "18:00",
+      "source": "任嘉伦工作室",
+      "accountType": "studio",
+      "postId": "5341199482487268",
+      "newsUrl": "https://www.sina.cn/news/detail/5341199482487268.html"
+    }
+  ],
+  "total": 3,
+  "updatedAt": "2026-10-07T15:00:54.353Z",
   "source": "studio_weibo",
   "scheduleAccountTypes": [
     "studio"
   ],
   "runStats": {
-    "validated": 0,
+    "validated": 3,
     "dropped": 0,
     "dropReasons": {},
     "mergeDropped": {
@@ -18,7 +58,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 0,
+    "fallbackItems": 3,
     "errors": 0
   }
 }

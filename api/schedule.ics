@@ -4,4 +4,49 @@ PRODID:-//star-chase-web//schedule 2.0//CN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:嘉期如梦 · 任嘉伦行程
 X-WR-TIMEZONE:Asia/Shanghai
+BEGIN:VEVENT
+UID:star-chase-29613b6b81b2@star-chase-web
+DTSTAMP:20261007T150057Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:【影视拍摄】注视着这里发生的一切，直到被掩
+ 埋的真相穿过人海。李成 所相信的，是毋庸置疑的真
+ 相。 今日开播。 🔍
+DESCRIPTION:#任嘉伦[超话]# 注视着这里发生的一切，直到
+ 被掩埋的真相穿过人海。李成@任嘉伦Allen 所相信的，
+ 是毋庸置疑的真相。#剧集深渊无间# 今日开播。#任嘉
+ 伦李成#🔍️#任嘉伦深渊无间# ​
+URL:https://www.sina.cn/news/detail/5341189856560208.html
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:star-chase-66bd9d3cb364@star-chase-web
+DTSTAMP:20261007T150057Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:【影视拍摄】背负过往重量，毅然纵身入局。 且
+ 看混沌世事之中，李成 如何循着蛛丝马迹，拆解盘根
+ 错节的谜题。 🔍 🔍
+DESCRIPTION:#任嘉伦[超话]#背负过往重量，毅然纵身入局。
+  且看混沌世事之中，李成@任嘉伦Allen 如何循着蛛丝马
+ 迹，拆解盘根错节的谜题。#深渊无间今日开播##任嘉伦
+ 李成#🔍️#任嘉伦深渊无间#🔍#剧集深渊无间#
+URL:https://www.sina.cn/news/detail/5341177970688386.html
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:star-chase-016ba8f29674@star-chase-web
+DTSTAMP:20261007T150057Z
+DTSTART:20260909T100000Z
+DTEND:20260909T120000Z
+SUMMARY:【影视拍摄】追剧日历已发送📶 您拨打的用户李
+ 成 提醒您，今晚18:00，锁定爱奇艺迷雾剧场 ，与李成
+ 静待谜底揭晓。 🔍
+DESCRIPTION:#任嘉伦[超话]# 追剧日历已发送📶 您拨打的用
+ 户李成@任嘉伦Allen 提醒您，今晚18:00，锁定爱奇艺迷雾
+ 剧场️#剧集深渊无间#，与李成静待谜底揭晓。#任嘉伦
+ 李成#🔍️#任嘉伦深渊无间# ​
+URL:https://www.sina.cn/news/detail/5341199482487268.html
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
