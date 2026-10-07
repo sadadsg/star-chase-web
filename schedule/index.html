@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>行程日历 — 嘉期如梦</title>
+    <meta name="description" content="任嘉伦工作室官方微博发布的行程日历，支持 ICS 订阅到手机与电脑系统日历，发布后自动更新。" />
+    <link rel="canonical" href="https://sadadsg.github.io/star-chase-web/schedule" />
+
+    <!-- Open Graph / Twitter：分享卡片。单艺人，静态写死即可 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="嘉期如梦" />
+    <meta property="og:title" content="行程日历 — 嘉期如梦" />
+    <meta property="og:description" content="任嘉伦工作室官方微博发布的行程日历，支持 ICS 订阅到手机与电脑系统日历，发布后自动更新。" />
+    <meta property="og:url" content="https://sadadsg.github.io/star-chase-web/schedule" />
+    <meta property="og:image" content="https://sadadsg.github.io/star-chase-web/og-cover.png" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="行程日历 — 嘉期如梦" />
+    <meta name="twitter:description" content="任嘉伦工作室官方微博发布的行程日历，支持 ICS 订阅到手机与电脑系统日历，发布后自动更新。" />
+    <meta name="twitter:image" content="https://sadadsg.github.io/star-chase-web/og-cover.png" />
+
+    <!-- 主题色双声明：无 JS 时也能跟随系统深浅色 -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="嘉期如梦" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="alternate" type="application/rss+xml" title="嘉期如梦 · 资讯" href="/star-chase-web/api/rss.xml" />
+    <script type="module" crossorigin src="/star-chase-web/assets/index-Cna9ptXR.js"></script>
+    <link rel="stylesheet" crossorigin href="/star-chase-web/assets/index-DxZsDa6s.css">
+  </head>
+  <body>
+    <div id="root"><div data-prerendered="1"><div class="pr"><h1>行程日历</h1>
+<p class="pr-lead">任嘉伦工作室官方微博发布的行程日历，支持 ICS 订阅到手机与电脑系统日历，发布后自动更新。</p><p class="pr-empty">暂无行程数据。行程来自工作室官方微博，发布后自动更新。</p></div></div></div>
+<style>
+.pr{font:16px/1.6 -apple-system,"PingFang SC","Helvetica Neue",sans-serif;color:#1d1d1f;padding:24px;max-width:900px;margin:0 auto}
+.pr h1{font-size:30px;margin:0 0 6px;letter-spacing:-.02em}
+.pr-lead{color:#6e6e73;font-size:15px;margin:0 0 22px}
+.pr-list{list-style:none;padding:0;margin:0}
+.pr-sub{margin-top:34px;border-top:1px solid #d2d2d7;padding-top:22px}
+.pr-item{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;padding:11px 0;border-bottom:1px solid #f0f0f2;font-size:15px}
+.pr-date{font-variant-numeric:tabular-nums;color:#6e6e73;font-size:14px;min-width:88px}
+.pr-type{font-size:12px;padding:2px 9px;border-radius:980px;background:#f5f5f7;color:#424245}
+.pr-title{color:#1d1d1f}
+.pr-empty{color:#86868b;font-size:15px;padding:14px 0}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sadadsg.github.io/star-chase-web/#website","url":"https://sadadsg.github.io/star-chase-web/","name":"嘉期如梦","description":"任嘉伦官方行程聚合与日历","inLanguage":"zh-CN"},{"@type":"WebPage","@id":"https://sadadsg.github.io/star-chase-web/schedule#webpage","url":"https://sadadsg.github.io/star-chase-web/schedule","name":"行程日历 — 嘉期如梦","description":"任嘉伦工作室官方微博发布的行程日历，支持 ICS 订阅到手机与电脑系统日历，发布后自动更新。","isPartOf":{"@id":"https://sadadsg.github.io/star-chase-web/#website"},"inLanguage":"zh-CN"}]}</script>
+    <!-- 在 React 之前同步应用主题，避免深色模式下首帧闪白。
+         逻辑与 src/hooks/useTheme.js 的 apply() 保持一致。 -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('star_chase_theme');
+          if (t !== 'light' && t !== 'dark') t = 'system';
+          var dark = t === 'dark' ||
+            (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var root = document.documentElement;
+          root.classList.remove('light', 'dark');
+          if (t === 'light') root.classList.add('light');
+          else if (t === 'dark') root.classList.add('dark');
+          root.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (e) { /* 隐私模式下 localStorage 可能不可用 */ }
+      })();
+    </script>
+  </body>
+</html>

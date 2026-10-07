@@ -1,0 +1,11 @@
+# 嘉期如梦 (star-chase-web)
+# 仅聚合官方公开发布内容，不提供私人行程/航班/打榜/集资类功能。
+
+User-agent: *
+Allow: /
+
+# 数据接口是 JSON，不应被索引（避免爬虫把 API 当内容页）
+Disallow: /api/
+Disallow: /404.html
+
+Sitemap: https://sadadsg.github.io/star-chase-web/sitemap.xml
