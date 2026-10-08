@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T20:54:27.868Z",
+  "updatedAt": "2026-10-08T00:35:45.045Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5351663206141977",
+          "detailUrl": "https://www.sina.cn/news/detail/5351663206141977.html",
+          "time": "2026-10-08 08:30",
+          "text": "#桃桃早安说# 早安！今日元气开工，上官诚明@我不是大师是李现ing 江飞燕@我不是大师是李一桐Q 和你SayHi！[比耶]#我不是大师# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5351512210410199",
           "detailUrl": "https://www.sina.cn/news/detail/5351512210410199.html",
           "time": "2026-10-07 22:30",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5351157372816095.html",
           "time": "2026-10-06 23:00",
           "text": "#小奇晚班中# 要开开心心过好每一天哦~[期待] 台词来自@敖瑞鹏的微博 《师兄太稳健》 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5351149822808446",
-          "detailUrl": "https://www.sina.cn/news/detail/5351149822808446.html",
-          "time": "2026-10-06 22:30",
-          "text": "#猕猴talk show# 一眨眼国庆小长假就剩最后一天啦！告诉小奇你们明天准备怎么过呀？[淡淡的] http://t.cn/AXWR1vbK ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2860,6 +2860,14 @@
               "accountType": "drama"
             },
             {
+              "id": "5351663206141977",
+              "detailUrl": "https://www.sina.cn/news/detail/5351663206141977.html",
+              "time": "2026-10-08 08:30",
+              "text": "#桃桃早安说# 早安！今日元气开工，上官诚明@我不是大师是李现ing 江飞燕@我不是大师是李一桐Q 和你SayHi！[比耶]#我不是大师# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
               "id": "5351512210410199",
               "detailUrl": "https://www.sina.cn/news/detail/5351512210410199.html",
               "time": "2026-10-07 22:30",
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5351157372816095.html",
               "time": "2026-10-06 23:00",
               "text": "#小奇晚班中# 要开开心心过好每一天哦~[期待] 台词来自@敖瑞鹏的微博 《师兄太稳健》 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5351149822808446",
-              "detailUrl": "https://www.sina.cn/news/detail/5351149822808446.html",
-              "time": "2026-10-06 22:30",
-              "text": "#猕猴talk show# 一眨眼国庆小长假就剩最后一天啦！告诉小奇你们明天准备怎么过呀？[淡淡的] http://t.cn/AXWR1vbK ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
