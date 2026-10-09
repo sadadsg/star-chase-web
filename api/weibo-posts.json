@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T20:22:25.141Z",
+  "updatedAt": "2026-10-09T00:50:43.897Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5352025836749156",
+          "detailUrl": "https://www.sina.cn/news/detail/5352025836749156.html",
+          "time": "2026-10-09 08:30",
+          "text": "#桃桃早安说# 早安！周五到，今日份暖意已送达！[太开心]@张康乐_ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5351874598800960",
           "detailUrl": "https://www.sina.cn/news/detail/5351874598800960.html",
           "time": "2026-10-08 22:30",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5351496952581354.html",
           "time": "2026-10-07 21:29",
           "text": "恭喜#电视剧喜剧之王爱奇艺热度破6000# ！打起鼓，敲起锣，沙浦故事越来越火红！明晚18点精彩继续！#电视剧喜剧之王# http://t.cn/AXWByt8E ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5351459556425836",
-          "detailUrl": "https://www.sina.cn/news/detail/5351459556425836.html",
-          "time": "2026-10-07 19:00",
-          "text": "#一瓯春今日收官# #桃厂上新一瓯春# 大结局的圆满太好哭了[泪]每个人都过上了想要的生活，受过的苦都化成了往后的甜。横塘的春天，真的来了。@爱奇艺 #一瓯春# 正在热播！ 领衔主演：许凯@许凯soso 周也@周也yeah（按姓氏笔画排序） 特别出演：陈柯颖（柯颖）@柯颖ii 陈意涵@陈意涵Estelle 徐振轩 ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 102,
           "latestPostTime": "2026-09-29 14:00",
-          "keywordHitCount": 38,
-          "excludedCount": 38,
+          "keywordHitCount": 37,
+          "excludedCount": 37,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,14 @@
               "detailUrl": "https://www.sina.cn/news/detail/5349911664526092.html",
               "time": "2026-10-03 12:30",
               "text": "爱奇艺《爱撩专访》x《一瓯春》@许凯soso @周也yeah （按姓氏笔画排序）正片上线！ 现在关注并带#许凯周也二搭想演伪骨科##许凯周也粤语0级广东人# 话题转发，小奇随机抽送两人签名照各一张哦😉 🦚 谈角色沈润、谢清圆最吸引自己的特质～现场认证胆小到一起去了[不愧是你] 🦚 如果再合作，想演的 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5352025836749156",
+              "detailUrl": "https://www.sina.cn/news/detail/5352025836749156.html",
+              "time": "2026-10-09 08:30",
+              "text": "#桃桃早安说# 早安！周五到，今日份暖意已送达！[太开心]@张康乐_ ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5351496952581354.html",
               "time": "2026-10-07 21:29",
               "text": "恭喜#电视剧喜剧之王爱奇艺热度破6000# ！打起鼓，敲起锣，沙浦故事越来越火红！明晚18点精彩继续！#电视剧喜剧之王# http://t.cn/AXWByt8E ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5351459556425836",
-              "detailUrl": "https://www.sina.cn/news/detail/5351459556425836.html",
-              "time": "2026-10-07 19:00",
-              "text": "#一瓯春今日收官# #桃厂上新一瓯春# 大结局的圆满太好哭了[泪]每个人都过上了想要的生活，受过的苦都化成了往后的甜。横塘的春天，真的来了。@爱奇艺 #一瓯春# 正在热播！ 领衔主演：许凯@许凯soso 周也@周也yeah（按姓氏笔画排序） 特别出演：陈柯颖（柯颖）@柯颖ii 陈意涵@陈意涵Estelle 徐振轩 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
