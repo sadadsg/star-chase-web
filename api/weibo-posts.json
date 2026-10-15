@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T12:18:33.483Z",
+  "updatedAt": "2026-10-15T17:30:06.462Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,22 @@
           "accountType": "drama"
         },
         {
+          "id": "5354411313861001",
+          "detailUrl": "https://www.sina.cn/news/detail/5354411313861001.html",
+          "time": "2026-10-15 22:30",
+          "text": "#猕猴talk show# 秋日好戏开场！镜头定格瞬间，藏着千言万语~快来评论安利小奇TA们最有故事感的宝藏剧照，讲讲这张剧照背后的名场面[期待] ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5354382435551417",
+          "detailUrl": "https://www.sina.cn/news/detail/5354382435551417.html",
+          "time": "2026-10-15 20:35",
+          "text": "#魅影神捕##爱奇艺角色热度# 慧眼识诡案，赤诚胜千机，恭喜《魅影神捕》男主角——罗弋（罗云熙）饰演的神捕黎斯爱奇艺角色热度破两亿。 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5354373871308942",
           "detailUrl": "https://www.sina.cn/news/detail/5354373871308942.html",
           "time": "2026-10-15 20:01",
@@ -787,22 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5354237693527862.html",
           "time": "2026-10-15 11:00",
           "text": "#把黑夜点燃今日开播# #把黑夜点燃终极预告# 漫漫长夜之中，真相被刻意掩埋。在难分黑白的世事里，藏着哪些不为人知的隐情？冲破层层迷雾，这场真相追寻，即将拉开序幕！今日18点，@爱奇艺 全网独播！#把黑夜点燃# 领衔主演（按姓氏笔画排序）：陈哲远@陈哲远- 蒋欣@蒋欣 特别出演（按姓氏笔画排序） ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5354233391743198",
-          "detailUrl": "https://www.sina.cn/news/detail/5354233391743198.html",
-          "time": "2026-10-15 10:43",
-          "text": "#伟大的长征花絮#安全拍摄，高质输出。冲锋杀敌的“浴火战士”是这样拍出来的！@爱奇艺 60集#电视剧伟大的长征# 正在热播！#伟大的长征#http://t.cn/AXl0Vs96 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5354230119666875",
-          "detailUrl": "https://www.sina.cn/news/detail/5354230119666875.html",
-          "time": "2026-10-15 10:30",
-          "text": "当面摊牌，伪装尽数剥落。乱世危局当前，众人合力止祸。都城风起，储位之争暗流奔涌。旧物递入深宫，十七年执念在此刻迎来转机。#魅影神捕加更礼# 12点开启，来@爱奇艺 精彩继续。#魅影神捕# 领衔主演：罗弋（罗云熙）@罗云熙Leo 特别出演：方逸伦 @方方方方方逸伦 、沈羽洁 ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 101,
           "latestPostTime": "2026-10-14 10:00",
-          "keywordHitCount": 19,
-          "excludedCount": 19,
+          "keywordHitCount": 18,
+          "excludedCount": 18,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,22 @@
               "detailUrl": "https://www.sina.cn/news/detail/5348484762569320.html",
               "time": "2026-09-29 14:00",
               "text": "#爱奇艺10月推荐# #爱奇艺10月待播剧# 宝藏十月🥝桃厂必看片单重磅上新[打call]《魅影神捕》《伟大的长征》《小城良方》等新剧敬请期待，《我不是大师》《一瓯春》《余红旧事》《大哥小助理》等多部黄金周必看佳作轮番上线中，还有《给阿嬷的情书》《功夫女足》《空枪》等精彩影片火热加载，锁定 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5354411313861001",
+              "detailUrl": "https://www.sina.cn/news/detail/5354411313861001.html",
+              "time": "2026-10-15 22:30",
+              "text": "#猕猴talk show# 秋日好戏开场！镜头定格瞬间，藏着千言万语~快来评论安利小奇TA们最有故事感的宝藏剧照，讲讲这张剧照背后的名场面[期待] ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5354382435551417",
+              "detailUrl": "https://www.sina.cn/news/detail/5354382435551417.html",
+              "time": "2026-10-15 20:35",
+              "text": "#魅影神捕##爱奇艺角色热度# 慧眼识诡案，赤诚胜千机，恭喜《魅影神捕》男主角——罗弋（罗云熙）饰演的神捕黎斯爱奇艺角色热度破两亿。 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3064,22 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5354237693527862.html",
               "time": "2026-10-15 11:00",
               "text": "#把黑夜点燃今日开播# #把黑夜点燃终极预告# 漫漫长夜之中，真相被刻意掩埋。在难分黑白的世事里，藏着哪些不为人知的隐情？冲破层层迷雾，这场真相追寻，即将拉开序幕！今日18点，@爱奇艺 全网独播！#把黑夜点燃# 领衔主演（按姓氏笔画排序）：陈哲远@陈哲远- 蒋欣@蒋欣 特别出演（按姓氏笔画排序） ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5354233391743198",
-              "detailUrl": "https://www.sina.cn/news/detail/5354233391743198.html",
-              "time": "2026-10-15 10:43",
-              "text": "#伟大的长征花絮#安全拍摄，高质输出。冲锋杀敌的“浴火战士”是这样拍出来的！@爱奇艺 60集#电视剧伟大的长征# 正在热播！#伟大的长征#http://t.cn/AXl0Vs96 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5354230119666875",
-              "detailUrl": "https://www.sina.cn/news/detail/5354230119666875.html",
-              "time": "2026-10-15 10:30",
-              "text": "当面摊牌，伪装尽数剥落。乱世危局当前，众人合力止祸。都城风起，储位之争暗流奔涌。旧物递入深宫，十七年执念在此刻迎来转机。#魅影神捕加更礼# 12点开启，来@爱奇艺 精彩继续。#魅影神捕# 领衔主演：罗弋（罗云熙）@罗云熙Leo 特别出演：方逸伦 @方方方方方逸伦 、沈羽洁 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
