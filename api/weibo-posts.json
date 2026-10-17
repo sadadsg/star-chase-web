@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T11:52:00.548Z",
+  "updatedAt": "2026-10-17T14:40:50.930Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,22 @@
           "accountType": "drama"
         },
         {
+          "id": "5355100374832080",
+          "detailUrl": "https://www.sina.cn/news/detail/5355100374832080.html",
+          "time": "2026-10-17 20:08",
+          "text": "#马嘉祺的节气颂里藏着河南四季##一首歌领略河南之美# 从登封观星台出发，@时代少年团队长-马嘉祺 以一首《节气颂》串联二十四节气，把中原的春种、夏长、秋收、冬藏都揉进旋律里。一步一节气，一歌一四季。2026#重阳奇妙游#，步步登高，岁岁同游。一起来听 [打call] http://t.cn/AXlEIxRC ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355098634195827",
+          "detailUrl": "https://www.sina.cn/news/detail/5355098634195827.html",
+          "time": "2026-10-17 20:01",
+          "text": "陈善@陈哲远- 的超长台词原来是这样拍出来的！沉浸式演绎2分钟超长台词，情绪层层递进，一气呵成。#把黑夜点燃# @爱奇艺 正在热播！ http://t.cn/AXlEtrfC ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5355090051338485",
           "detailUrl": "https://www.sina.cn/news/detail/5355090051338485.html",
           "time": "2026-10-17 19:27",
@@ -787,22 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5354748862531245.html",
           "time": "2026-10-16 20:51",
           "text": "#把黑夜点燃爱奇艺热度破6000# 热度上新🔥！于迷雾之中追踪线索，在世事浮沉里读懂人心。锁定@爱奇艺，跟随#把黑夜点燃# 探寻长夜之下的隐秘。 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5354735952467577",
-          "detailUrl": "https://www.sina.cn/news/detail/5354735952467577.html",
-          "time": "2026-10-16 20:00",
-          "text": "#把黑夜点燃# 爱奇艺VIP专属追剧福利已解锁！会员积分免费兑陈善、陈英角色电子吧唧，让喜欢的角色常驻会员主页，看雾港姐弟联手追凶、撕开尘封真相。查收下方长图攻略，来爱奇艺带走心仪角色吧唧，一起点亮黑夜，把真相握在手里～ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5354729672542087",
-          "detailUrl": "https://www.sina.cn/news/detail/5354729672542087.html",
-          "time": "2026-10-16 19:35",
-          "text": "恭喜@澄箫深 1名用户获得【开学补给站惊喜好礼】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXlTK5jX",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 102,
           "latestPostTime": "2026-10-14 10:00",
-          "keywordHitCount": 26,
-          "excludedCount": 26,
+          "keywordHitCount": 25,
+          "excludedCount": 25,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,22 @@
               "detailUrl": "https://www.sina.cn/news/detail/5348484762569320.html",
               "time": "2026-09-29 14:00",
               "text": "#爱奇艺10月推荐# #爱奇艺10月待播剧# 宝藏十月🥝桃厂必看片单重磅上新[打call]《魅影神捕》《伟大的长征》《小城良方》等新剧敬请期待，《我不是大师》《一瓯春》《余红旧事》《大哥小助理》等多部黄金周必看佳作轮番上线中，还有《给阿嬷的情书》《功夫女足》《空枪》等精彩影片火热加载，锁定 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355100374832080",
+              "detailUrl": "https://www.sina.cn/news/detail/5355100374832080.html",
+              "time": "2026-10-17 20:08",
+              "text": "#马嘉祺的节气颂里藏着河南四季##一首歌领略河南之美# 从登封观星台出发，@时代少年团队长-马嘉祺 以一首《节气颂》串联二十四节气，把中原的春种、夏长、秋收、冬藏都揉进旋律里。一步一节气，一歌一四季。2026#重阳奇妙游#，步步登高，岁岁同游。一起来听 [打call] http://t.cn/AXlEIxRC ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355098634195827",
+              "detailUrl": "https://www.sina.cn/news/detail/5355098634195827.html",
+              "time": "2026-10-17 20:01",
+              "text": "陈善@陈哲远- 的超长台词原来是这样拍出来的！沉浸式演绎2分钟超长台词，情绪层层递进，一气呵成。#把黑夜点燃# @爱奇艺 正在热播！ http://t.cn/AXlEtrfC ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3064,22 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5354748862531245.html",
               "time": "2026-10-16 20:51",
               "text": "#把黑夜点燃爱奇艺热度破6000# 热度上新🔥！于迷雾之中追踪线索，在世事浮沉里读懂人心。锁定@爱奇艺，跟随#把黑夜点燃# 探寻长夜之下的隐秘。 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5354735952467577",
-              "detailUrl": "https://www.sina.cn/news/detail/5354735952467577.html",
-              "time": "2026-10-16 20:00",
-              "text": "#把黑夜点燃# 爱奇艺VIP专属追剧福利已解锁！会员积分免费兑陈善、陈英角色电子吧唧，让喜欢的角色常驻会员主页，看雾港姐弟联手追凶、撕开尘封真相。查收下方长图攻略，来爱奇艺带走心仪角色吧唧，一起点亮黑夜，把真相握在手里～ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5354729672542087",
-              "detailUrl": "https://www.sina.cn/news/detail/5354729672542087.html",
-              "time": "2026-10-16 19:35",
-              "text": "恭喜@澄箫深 1名用户获得【开学补给站惊喜好礼】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXlTK5jX",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
