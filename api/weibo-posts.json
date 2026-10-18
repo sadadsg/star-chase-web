@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T12:17:47.921Z",
+  "updatedAt": "2026-10-18T16:14:37.039Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5355498476933922",
+          "detailUrl": "https://www.sina.cn/news/detail/5355498476933922.html",
+          "time": "2026-10-18 22:30",
+          "text": "#小奇晚班中# 趁星星和月亮都在，阿珍@杨超越 来和大家说晚安咯~明天又会是超棒的一天！[打call]#电视剧喜剧之王# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5355461755011652",
           "detailUrl": "https://www.sina.cn/news/detail/5355461755011652.html",
           "time": "2026-10-18 20:04",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5355100374832080.html",
           "time": "2026-10-17 20:08",
           "text": "#马嘉祺的节气颂里藏着河南四季##一首歌领略河南之美# 从登封观星台出发，@时代少年团队长-马嘉祺 以一首《节气颂》串联二十四节气，把中原的春种、夏长、秋收、冬藏都揉进旋律里。一步一节气，一歌一四季。2026#重阳奇妙游#，步步登高，岁岁同游。一起来听 [打call] http://t.cn/AXlEIxRC ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355098634195827",
-          "detailUrl": "https://www.sina.cn/news/detail/5355098634195827.html",
-          "time": "2026-10-17 20:01",
-          "text": "陈善@陈哲远- 的超长台词原来是这样拍出来的！沉浸式演绎2分钟超长台词，情绪层层递进，一气呵成。#把黑夜点燃# @爱奇艺 正在热播！ http://t.cn/AXlEtrfC ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2860,6 +2860,14 @@
               "accountType": "drama"
             },
             {
+              "id": "5355498476933922",
+              "detailUrl": "https://www.sina.cn/news/detail/5355498476933922.html",
+              "time": "2026-10-18 22:30",
+              "text": "#小奇晚班中# 趁星星和月亮都在，阿珍@杨超越 来和大家说晚安咯~明天又会是超棒的一天！[打call]#电视剧喜剧之王# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
               "id": "5355461755011652",
               "detailUrl": "https://www.sina.cn/news/detail/5355461755011652.html",
               "time": "2026-10-18 20:04",
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5355100374832080.html",
               "time": "2026-10-17 20:08",
               "text": "#马嘉祺的节气颂里藏着河南四季##一首歌领略河南之美# 从登封观星台出发，@时代少年团队长-马嘉祺 以一首《节气颂》串联二十四节气，把中原的春种、夏长、秋收、冬藏都揉进旋律里。一步一节气，一歌一四季。2026#重阳奇妙游#，步步登高，岁岁同游。一起来听 [打call] http://t.cn/AXlEIxRC ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355098634195827",
-              "detailUrl": "https://www.sina.cn/news/detail/5355098634195827.html",
-              "time": "2026-10-17 20:01",
-              "text": "陈善@陈哲远- 的超长台词原来是这样拍出来的！沉浸式演绎2分钟超长台词，情绪层层递进，一气呵成。#把黑夜点燃# @爱奇艺 正在热播！ http://t.cn/AXlEtrfC ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
