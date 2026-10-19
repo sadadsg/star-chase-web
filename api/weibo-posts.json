@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T00:37:12.331Z",
+  "updatedAt": "2026-10-19T05:29:56.602Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -86,6 +86,14 @@
         }
       ],
       "recentPosts": [
+        {
+          "id": "5355705792987511",
+          "detailUrl": "https://www.sina.cn/news/detail/5355705792987511.html",
+          "time": "2026-10-19 12:13",
+          "text": "#任嘉伦[超话]# 恭喜@任嘉伦Allen 出任腾讯体育NBA代言人！以全新身份，继续奔赴篮球热爱。 #看NBA就在腾讯# #全新境界#",
+          "accountName": "任嘉伦工作室",
+          "accountType": "studio"
+        },
         {
           "id": "5354233026576850",
           "detailUrl": "https://www.sina.cn/news/detail/5354233026576850.html",
@@ -315,14 +323,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5343366997868921.html",
           "time": "2026-09-15 11:03",
           "text": "#任嘉伦[超话]# 走过八年的时间，李成@任嘉伦Allen 始终没有忘记当年留下的疑问。那些被堆积的淤泥，一点点重新浮出水面，也让他终于明白，有些“固执”之所以值得，是因为总要有人替过去讨一个结果。 #任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# ​",
-          "accountName": "任嘉伦工作室",
-          "accountType": "studio"
-        },
-        {
-          "id": "5343049170551359",
-          "detailUrl": "https://www.sina.cn/news/detail/5343049170551359.html",
-          "time": "2026-09-14 14:00",
-          "text": "#任嘉伦[超话]# 「李成日记Chapter 03」 路途坎坷，但布满光亮。李成@任嘉伦Allen 已上岗，他会成为想成为的人，做完他想做的事。#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# ​",
           "accountName": "任嘉伦工作室",
           "accountType": "studio"
         },
@@ -583,6 +583,150 @@
           "accountType": "drama"
         },
         {
+          "id": "5355717510825444",
+          "detailUrl": "https://www.sina.cn/news/detail/5355717510825444.html",
+          "time": "2026-10-19 13:00",
+          "text": "对抗路下属刘铮亮@肖战 强势来袭，龙院长你在看森么👀 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，@爱奇艺 全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXldSvQ3 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355707353269028",
+          "detailUrl": "https://www.sina.cn/news/detail/5355707353269028.html",
+          "time": "2026-10-19 12:20",
+          "text": "#金鸡奖提名# #金鸡奖#最佳女主角评委会提名名单公布[打call] @演员李思潼（《给阿嬷的情书》饰谢南枝） @宋佳 （《志愿军：浴血和平》饰林月明） @张子枫 （《捕风追影》饰何秋果） @陈丽君_点绛唇 （《镖人：风起大漠》饰阿育娅） @高叶ChLoe （《南京照相馆》饰林毓秀） ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355706095240184",
+          "detailUrl": "https://www.sina.cn/news/detail/5355706095240184.html",
+          "time": "2026-10-19 12:15",
+          "text": "#金鸡奖提名# #金鸡奖#最佳男主角评委会提名名单公布[打call] @吴磊LEO （《群星闪耀时》饰赵吉虎） 梁家辉 （《捕风追影》饰傅隆生） @蒋龙_Sunday （《10间敢死队》饰章小兵） @蒋奇明微博号 （《飞行家》饰李明奇） @MIC檀健次JC-T （《震耳欲聋》饰李淇） ​​​​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355703583113453",
+          "detailUrl": "https://www.sina.cn/news/detail/5355703583113453.html",
+          "time": "2026-10-19 12:05",
+          "text": "#电视剧喜剧之王# 沙浦村的热闹还在继续，第三周追剧日历请收好！每日18:00锁定爱奇艺，准时追更《喜剧之王》！ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355702747140580",
+          "detailUrl": "https://www.sina.cn/news/detail/5355702747140580.html",
+          "time": "2026-10-19 12:01",
+          "text": "片场众人发现陈善@陈哲远- 确实长得像妈妈@姜宏波 ，陈英@蒋欣 调侃自己不是陈家人，是耿剑@演员张国强 的女儿，耿剑当场认领！今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXldVtyb ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355688479687332",
+          "detailUrl": "https://www.sina.cn/news/detail/5355688479687332.html",
+          "time": "2026-10-19 11:05",
+          "text": "陈善@陈哲远- 虚心向耿剑@演员张国强 请教如何松弛表演。前辈也大方分享心得~真是认真又虚心的小善！今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXldL4qa ​​​​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355687228999804",
+          "detailUrl": "https://www.sina.cn/news/detail/5355687228999804.html",
+          "time": "2026-10-19 11:00",
+          "text": "当刘铮亮@肖战 向艾辰@姜妍二胖 发出挑战申请，两人的斗嘴日常又添新篇章[笑cry]来听听TA们事后咋放狠话的~ #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，@爱奇艺 全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXldLvMk ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355683445735838",
+          "detailUrl": "https://www.sina.cn/news/detail/5355683445735838.html",
+          "time": "2026-10-19 10:45",
+          "text": "#打歌2026第六期阵容官宣# @李晟Su @SNH48-杨冰怡 @TopBarry杨博睿 @胡夏 @种地吧鹭卓 @A2O_MAY （按姓氏笔画排序）旋律随晚风起伏，舞台之上书写热烈的序章！本周五@爱奇艺 不见不散~#打歌2026# #小奇今日推荐# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355680928367662",
+          "detailUrl": "https://www.sina.cn/news/detail/5355680928367662.html",
+          "time": "2026-10-19 10:35",
+          "text": "#听谁在唱歌2# 第2期正片送达！本期寻乐团 @吴克群 @陆虎ING @种地吧鹭卓 @陈卓璇 @刘凤瑶 @TF_ING张子墨MO 一起找寻散落民间的声音。他们带着音乐合伙人走进汕头小公园，把骑楼的风、童谣的尾音、街头追梦人的韧劲都唱出来。速戳链接，解锁本期正片[打call]http://t.cn/AXldzsGh ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355679675318516",
+          "detailUrl": "https://www.sina.cn/news/detail/5355679675318516.html",
+          "time": "2026-10-19 10:30",
+          "text": "#小城良方人生跷跷板海报# 一片雪花轻飘飘，落在心头却沉甸甸。稳住那股劲儿，再难的起落也能接得稳当。🥝快来预约，10月21日感受小城暖乎治愈。 领衔主演：@肖战 编剧：聂成帅 导演：张晓波 总制片人：苏晓 制片人：夏杰 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起， ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355678160912988",
+          "detailUrl": "https://www.sina.cn/news/detail/5355678160912988.html",
+          "time": "2026-10-19 10:24",
+          "text": "#李现1019生日快乐# 沉静外表下藏有炽热，克制言行中自有深情。祝孟弗渊@李现ing 生日快乐，愿始终保持那份清醒与坚定，在未来的每段旅程里，收获丰盈与欢喜。期待#雾里青#早日相见[打call] 预约链接：http://t.cn/AXldZzmJ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355676903147020",
+          "detailUrl": "https://www.sina.cn/news/detail/5355676903147020.html",
+          "time": "2026-10-19 10:19",
+          "text": "#宇宙闪烁请注意# 滴滴滴～宇宙信号锁定今日寿星！祝五邵爷@POLARIX-邵子恒 生日快乐🎉持续爆闪，永远自带高光。宇宙很大，快乐管够，继续冲冲冲呀！#宇宙闪烁请注意2# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355675896512679",
+          "detailUrl": "https://www.sina.cn/news/detail/5355675896512679.html",
+          "time": "2026-10-19 10:15",
+          "text": "#向内一公里# @杨澜 走进上海近郊农场，对话孙俪@turbosun ，秋日农场，烟火作序。一锅肉骨茶，一席家常谈。人间不过吃喝与爱，一饭一食间，藏着怎样安顿自我的生命力量？本周三中午12:00，锁定爱奇艺，敬请期待。 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355675141014523",
+          "detailUrl": "https://www.sina.cn/news/detail/5355675141014523.html",
+          "time": "2026-10-19 10:12",
+          "text": "#电视剧喜剧之王# 谁也不是一开始就懂彼此，可吵到最后，心里还是装着同一个村子。每晚18:00锁定爱奇艺 ，正在热播！ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355674386826606",
+          "detailUrl": "https://www.sina.cn/news/detail/5355674386826606.html",
+          "time": "2026-10-19 10:09",
+          "text": "各怀思量，共赴迷局。没有绝对的是非，每一步抉择都牵动全局走向。每晚18:00，@爱奇艺 正在热播！#把黑夜点燃# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355673631589002",
+          "detailUrl": "https://www.sina.cn/news/detail/5355673631589002.html",
+          "time": "2026-10-19 10:06",
+          "text": "#伟大的长征遵义会议# 生死攸关的伟大转折，于无声处响惊雷。@爱奇艺 60集#电视剧伟大的长征# 正在热播！#伟大的长征# 领衔主演：@于和伟@演员王劲松@朱刚日尧 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355672876614509",
+          "detailUrl": "https://www.sina.cn/news/detail/5355672876614509.html",
+          "time": "2026-10-19 10:03",
+          "text": "天地剑心1周年——限免福利来啦！ 《天地剑心》开启限时免费看活动~ 限免时间：10月25日0点-10月31日24点 活动期间全集免费看 快来🥝N刷《天地剑心》吧！ @成毅 #天地剑心一周年# #淇遇十五载富贵再重逢# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5355672376971685",
+          "detailUrl": "https://www.sina.cn/news/detail/5355672376971685.html",
+          "time": "2026-10-19 10:01",
+          "text": "#小城良方不差事预告# 几回碰面，几番磨合，闹着笑着就处成了自己人。快来预约➡️10月21日，来小城瞧瞧这群有趣的人！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强@演员张国强 、陈谨（陈瑾）、姜妍 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5355649576993521",
           "detailUrl": "https://www.sina.cn/news/detail/5355649576993521.html",
           "time": "2026-10-19 08:30",
@@ -659,150 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5355377815458761.html",
           "time": "2026-10-18 14:30",
           "text": "恭喜两位领证新新新新人~陈英@蒋欣 真·领证新人，全靠齐墨@任重 科普流程。最后\"咔嚓\"一声定格合照，又甜又好笑。今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXlusHUJ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355366356615626",
-          "detailUrl": "https://www.sina.cn/news/detail/5355366356615626.html",
-          "time": "2026-10-18 13:45",
-          "text": "#仿生人间开播三周年# 直面繁杂过往，探查人间百态！今天来@爱奇艺 重温程诺@宋威龙99 安秋@演员文淇 这段寻心之旅吧~ [心]#仿生人间# #桃桃那年今日# http://t.cn/AXlu619w http://t.cn/AXlu6npQ http://t.cn/AXwLqhIw ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355355162283582",
-          "detailUrl": "https://www.sina.cn/news/detail/5355355162283582.html",
-          "time": "2026-10-18 13:00",
-          "text": "刘铮亮@肖战 离职给同事赠礼道别，却听到了……我们小刘医生付出真心就这样被辜负 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，爱奇艺全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXluHr8Y ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355347936020682",
-          "detailUrl": "https://www.sina.cn/news/detail/5355347936020682.html",
-          "time": "2026-10-18 12:31",
-          "text": "陈善@陈哲远- 与马一鸣@郭丞 的摩托车祸戏现场实录，前方摄影组视角曝光~今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXluWWzS ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355339937219060",
-          "detailUrl": "https://www.sina.cn/news/detail/5355339937219060.html",
-          "time": "2026-10-18 12:00",
-          "text": "身边一圈实在人，日子越过越熨帖～点击预约，共候这份小城治愈！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强@演员张国强 、陈谨（陈瑾）、姜妍@姜妍二胖 、倪大红、菅韧姿@菅韧姿 出演（按姓氏笔画排序）： ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355337420111975",
-          "detailUrl": "https://www.sina.cn/news/detail/5355337420111975.html",
-          "time": "2026-10-18 11:50",
-          "text": "#听谁在唱歌# 潮汕街巷人声熙攘，寻乐团@吴克群 @陆虎ING @种地吧鹭卓 @陈卓璇 @刘凤瑶 @TF_ING张子墨MO 奔赴街头开启路演，旋律融进市井烟火，共同打造鲜活热烈的音乐现场🎵今晚锁定@爱奇艺 #听谁在唱歌2# ，解锁寻乐团首次路演！ #小奇今日推荐# ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355334899859841",
-          "detailUrl": "https://www.sina.cn/news/detail/5355334899859841.html",
-          "time": "2026-10-18 11:40",
-          "text": "#大哥小助理# 以真诚待人，以细致处事，将大小事务打理妥当，也为观众带来无数欢乐。祝@李乃文 生日快乐🎂愿乃助自在尽兴，继续解锁更多高光时刻！ #桃艺心动播报# ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355332886332694",
-          "detailUrl": "https://www.sina.cn/news/detail/5355332886332694.html",
-          "time": "2026-10-18 11:32",
-          "text": "一眼一念，皆是藏在岁月里的谜题。每晚18:00，@爱奇艺 热播进行中。#把黑夜点燃# ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355332483419194",
-          "detailUrl": "https://www.sina.cn/news/detail/5355332483419194.html",
-          "time": "2026-10-18 11:30",
-          "text": "名场面预定！亮神在发光！刘铮亮@肖战 变身宠物医生一秒找到羊驼爱吐口水的病因。 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，爱奇艺全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXlu6I2G ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355325336060666",
-          "detailUrl": "https://www.sina.cn/news/detail/5355325336060666.html",
-          "time": "2026-10-18 11:02",
-          "text": "这波儿主打一个“物理防御拉满”，眼瞅着刘铮亮@肖战 艾辰@姜妍二胖 要来一场“狠人”对决，连带着陈俊南@王彦霖 一起仨人直接开始整活！这事儿整的，画风直接跑偏，结尾的小彩蛋更是让人“笑发财了”🤣～预约请趁早，10月21日刘铮亮带你去小城乐呵乐呵～ #小城良方# 10月21日起， ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355324833533320",
-          "detailUrl": "https://www.sina.cn/news/detail/5355324833533320.html",
-          "time": "2026-10-18 11:00",
-          "text": "#把黑夜点燃众生浮沉海报# 长夜笼罩，全员皆在局中；一念取舍，命运交错纠缠。每晚18:00，#把黑夜点燃# @爱奇艺 正在热播！ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355322745029938",
-          "detailUrl": "https://www.sina.cn/news/detail/5355322745029938.html",
-          "time": "2026-10-18 10:51",
-          "text": "#桃艺心动播报# 祝@陈都灵 生日快乐~ 新的一岁，继续在镜头里演绎万般故事，收下属于你的鲜花与掌声！[送花花]今天一起来@爱奇艺 重温文潇、张海沫、乔婉娩等嘟嘟的经典角色吧~ #陈都灵1018生日快乐# 《大梦归离》http://t.cn/A6ntqaoX 《孤舟》http://t.cn/A6F1plne 《狐妖小红娘月红篇》 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355312250618455",
-          "detailUrl": "https://www.sina.cn/news/detail/5355312250618455.html",
-          "time": "2026-10-18 10:10",
-          "text": "#魅影神捕# 谜局渐深，悬案再起。旧年秘闻缓缓揭开，探案之人隐忍布局，拨开重重假象，向着最终真相不断靠近。加更礼现已开启，速来爱奇艺一键直通大结局！ 领衔主演：罗弋（罗云熙）@罗云熙Leo 特别出演：方逸伦@方方方方方逸伦 、沈羽洁@沈羽洁er （按姓氏笔画排序） 出演：马闻远 @马闻远 、王禹森 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355311243723156",
-          "detailUrl": "https://www.sina.cn/news/detail/5355311243723156.html",
-          "time": "2026-10-18 10:06",
-          "text": "#电影狄仁杰之不死军定档# 黑白无常来索命，死人刀下竟复活，狄仁杰抽丝剥茧破奇案，以智破局护国安！#电影狄仁杰之不死军# 爱奇艺电影频道10月20日上线，带你揭穿层层阴谋！http://t.cn/AXluGWdW ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355310488224512",
-          "detailUrl": "https://www.sina.cn/news/detail/5355310488224512.html",
-          "time": "2026-10-18 10:03",
-          "text": "#电视剧喜剧之王# 他们把日子过成了喜剧，也把喜剧过成了日子。今晚18:00，来爱奇艺继续追剧吧~ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355309738233147",
-          "detailUrl": "https://www.sina.cn/news/detail/5355309738233147.html",
-          "time": "2026-10-18 10:00",
-          "text": "#小城良方老热闹海报# 大伙儿心气拧一处，生活自然有奔头。各有各的活法，小城的日子不“寡淡”！预约安排上，一同等候小城暖心故事！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355295375360218",
-          "detailUrl": "https://www.sina.cn/news/detail/5355295375360218.html",
-          "time": "2026-10-18 09:02",
-          "text": "#财神窦占龙动画# 风雪漫天，白脸狼手下紧追围剿，窦占龙身受重伤困入绝境！阿褶现身引路，前路凶险难测，鳖宝是就地埋下，还是另寻生机？生死关头，窦占龙该如何抉择？#窦占龙憋宝# #财神窦占龙# #天下霸唱# 追番👉🏻http://t.cn/AXNrQuOv http://t.cn/AXluZapY ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355287084795746",
-          "detailUrl": "https://www.sina.cn/news/detail/5355287084795746.html",
-          "time": "2026-10-18 08:30",
-          "text": "#桃桃早安说# 早安！吃好早餐，加满元气！今天一切都会超顺利[yeah]@敖瑞鹏的微博 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355143638812883",
-          "detailUrl": "https://www.sina.cn/news/detail/5355143638812883.html",
-          "time": "2026-10-17 23:00",
-          "text": "#小奇晚班中# 愿你可以一直做自己想成为的人啊~ [心] 台词来自@陈都灵《大梦归离》 ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -1783,6 +1783,30 @@
           "accountType": "fanclub"
         },
         {
+          "id": "5355703223194090",
+          "detailUrl": "https://www.sina.cn/news/detail/5355703223194090.html",
+          "time": "2026-10-19 12:03",
+          "text": "赛季更迭，热爱不变，期待代言人@任嘉伦Allen 继续分享赛场感悟，静候揭幕战，一起聆听更多属于NBA的故事#任嘉伦腾讯体育NBA代言人# [打call]#任嘉伦#",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
+          "id": "5355700131987645",
+          "detailUrl": "https://www.sina.cn/news/detail/5355700131987645.html",
+          "time": "2026-10-19 11:51",
+          "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 10月21日，腾讯体育直播间，我们不见不散！#任嘉伦腾讯体育NBA代言人#[打call]#任嘉伦#",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
+          "id": "5355699493667285",
+          "detailUrl": "https://www.sina.cn/news/detail/5355699493667285.html",
+          "time": "2026-10-19 11:48",
+          "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 ⏰10月21日锁定腾讯体育APP，76人vs尼克斯揭幕战，一起看球，为热爱呐喊🏀#任嘉伦# [打call]#任嘉伦腾讯体育NBA代言人#",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
           "id": "5354751067688957",
           "detailUrl": "https://www.sina.cn/news/detail/5354751067688957.html",
           "time": "2026-10-16 21:00",
@@ -1979,30 +2003,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5348560813686880.html",
           "time": "2026-09-29 19:02",
           "text": "新剧顺利开机，拍摄工作已有序开展。为保障剧集正常拍摄进度，守护演员创作空间，维护剧组拍摄秩序，现向全体嘉人统一重申路透管理相关规范： 1⃣️🈲官方账号未发布的服装造型和官方账号未发布的场景内容和剧情内容(未官宣的人物造型、拍摄场景、剧情画面等），对于先于官方公开的造型、服装、剧情 ​",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5348443201210863",
-          "detailUrl": "https://www.sina.cn/news/detail/5348443201210863.html",
-          "time": "2026-09-29 11:14",
-          "text": "教程get✅三款摇摇乐，嘉人们快来收集吧#崂山品牌代言人任嘉伦# [打call]#任嘉伦#",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5348061975939353",
-          "detailUrl": "https://www.sina.cn/news/detail/5348061975939353.html",
-          "time": "2026-09-28 10:00",
-          "text": "#任嘉伦深渊无间# [给你小心心]#任嘉伦李成# 【截修 ep14-ep16】 怀揣埋藏心底的往事踏入警队， 以敏锐的洞察力拆解层层迷雾， 奔走探寻散落各处的蛛丝马迹。 兼具少年锐气与理性克制， 于暗流涌动的局势中坚守法理底线。 不被黑暗裹挟，执着追寻真相。 一腔孤勇与坚定信念，尽数融于李成每一次的追 ​",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5347866652444280",
-          "detailUrl": "https://www.sina.cn/news/detail/5347866652444280.html",
-          "time": "2026-09-27 21:03",
-          "text": "锦衣赴新程，绣春刀辨正邪，期待@任嘉伦Allen 静候#锦衣搜金录#与我们相见#任嘉伦#",
           "accountName": "任嘉伦全国后援会",
           "accountType": "fanclub"
         },
@@ -2253,7 +2253,7 @@
           "name": "任嘉伦工作室",
           "type": "studio",
           "postCount": 100,
-          "latestPostTime": "2026-10-15 10:41",
+          "latestPostTime": "2026-10-19 12:13",
           "keywordHitCount": 7,
           "excludedCount": 0,
           "scheduleCandidates": [
@@ -2339,6 +2339,14 @@
             }
           ],
           "recentPosts": [
+            {
+              "id": "5355705792987511",
+              "detailUrl": "https://www.sina.cn/news/detail/5355705792987511.html",
+              "time": "2026-10-19 12:13",
+              "text": "#任嘉伦[超话]# 恭喜@任嘉伦Allen 出任腾讯体育NBA代言人！以全新身份，继续奔赴篮球热爱。 #看NBA就在腾讯# #全新境界#",
+              "accountName": "任嘉伦工作室",
+              "accountType": "studio"
+            },
             {
               "id": "5354233026576850",
               "detailUrl": "https://www.sina.cn/news/detail/5354233026576850.html",
@@ -2568,14 +2576,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5343366997868921.html",
               "time": "2026-09-15 11:03",
               "text": "#任嘉伦[超话]# 走过八年的时间，李成@任嘉伦Allen 始终没有忘记当年留下的疑问。那些被堆积的淤泥，一点点重新浮出水面，也让他终于明白，有些“固执”之所以值得，是因为总要有人替过去讨一个结果。 #任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# ​",
-              "accountName": "任嘉伦工作室",
-              "accountType": "studio"
-            },
-            {
-              "id": "5343049170551359",
-              "detailUrl": "https://www.sina.cn/news/detail/5343049170551359.html",
-              "time": "2026-09-14 14:00",
-              "text": "#任嘉伦[超话]# 「李成日记Chapter 03」 路途坎坷，但布满光亮。李成@任嘉伦Allen 已上岗，他会成为想成为的人，做完他想做的事。#任嘉伦李成#🔍️#任嘉伦深渊无间#🔍️#剧集深渊无间# ​",
               "accountName": "任嘉伦工作室",
               "accountType": "studio"
             }
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 102,
           "latestPostTime": "2026-10-14 10:00",
-          "keywordHitCount": 19,
-          "excludedCount": 19,
+          "keywordHitCount": 16,
+          "excludedCount": 16,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,150 @@
               "detailUrl": "https://www.sina.cn/news/detail/5348484762569320.html",
               "time": "2026-09-29 14:00",
               "text": "#爱奇艺10月推荐# #爱奇艺10月待播剧# 宝藏十月🥝桃厂必看片单重磅上新[打call]《魅影神捕》《伟大的长征》《小城良方》等新剧敬请期待，《我不是大师》《一瓯春》《余红旧事》《大哥小助理》等多部黄金周必看佳作轮番上线中，还有《给阿嬷的情书》《功夫女足》《空枪》等精彩影片火热加载，锁定 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355717510825444",
+              "detailUrl": "https://www.sina.cn/news/detail/5355717510825444.html",
+              "time": "2026-10-19 13:00",
+              "text": "对抗路下属刘铮亮@肖战 强势来袭，龙院长你在看森么👀 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，@爱奇艺 全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXldSvQ3 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355707353269028",
+              "detailUrl": "https://www.sina.cn/news/detail/5355707353269028.html",
+              "time": "2026-10-19 12:20",
+              "text": "#金鸡奖提名# #金鸡奖#最佳女主角评委会提名名单公布[打call] @演员李思潼（《给阿嬷的情书》饰谢南枝） @宋佳 （《志愿军：浴血和平》饰林月明） @张子枫 （《捕风追影》饰何秋果） @陈丽君_点绛唇 （《镖人：风起大漠》饰阿育娅） @高叶ChLoe （《南京照相馆》饰林毓秀） ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355706095240184",
+              "detailUrl": "https://www.sina.cn/news/detail/5355706095240184.html",
+              "time": "2026-10-19 12:15",
+              "text": "#金鸡奖提名# #金鸡奖#最佳男主角评委会提名名单公布[打call] @吴磊LEO （《群星闪耀时》饰赵吉虎） 梁家辉 （《捕风追影》饰傅隆生） @蒋龙_Sunday （《10间敢死队》饰章小兵） @蒋奇明微博号 （《飞行家》饰李明奇） @MIC檀健次JC-T （《震耳欲聋》饰李淇） ​​​​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355703583113453",
+              "detailUrl": "https://www.sina.cn/news/detail/5355703583113453.html",
+              "time": "2026-10-19 12:05",
+              "text": "#电视剧喜剧之王# 沙浦村的热闹还在继续，第三周追剧日历请收好！每日18:00锁定爱奇艺，准时追更《喜剧之王》！ ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355702747140580",
+              "detailUrl": "https://www.sina.cn/news/detail/5355702747140580.html",
+              "time": "2026-10-19 12:01",
+              "text": "片场众人发现陈善@陈哲远- 确实长得像妈妈@姜宏波 ，陈英@蒋欣 调侃自己不是陈家人，是耿剑@演员张国强 的女儿，耿剑当场认领！今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXldVtyb ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355688479687332",
+              "detailUrl": "https://www.sina.cn/news/detail/5355688479687332.html",
+              "time": "2026-10-19 11:05",
+              "text": "陈善@陈哲远- 虚心向耿剑@演员张国强 请教如何松弛表演。前辈也大方分享心得~真是认真又虚心的小善！今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXldL4qa ​​​​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355687228999804",
+              "detailUrl": "https://www.sina.cn/news/detail/5355687228999804.html",
+              "time": "2026-10-19 11:00",
+              "text": "当刘铮亮@肖战 向艾辰@姜妍二胖 发出挑战申请，两人的斗嘴日常又添新篇章[笑cry]来听听TA们事后咋放狠话的~ #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，@爱奇艺 全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXldLvMk ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355683445735838",
+              "detailUrl": "https://www.sina.cn/news/detail/5355683445735838.html",
+              "time": "2026-10-19 10:45",
+              "text": "#打歌2026第六期阵容官宣# @李晟Su @SNH48-杨冰怡 @TopBarry杨博睿 @胡夏 @种地吧鹭卓 @A2O_MAY （按姓氏笔画排序）旋律随晚风起伏，舞台之上书写热烈的序章！本周五@爱奇艺 不见不散~#打歌2026# #小奇今日推荐# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355680928367662",
+              "detailUrl": "https://www.sina.cn/news/detail/5355680928367662.html",
+              "time": "2026-10-19 10:35",
+              "text": "#听谁在唱歌2# 第2期正片送达！本期寻乐团 @吴克群 @陆虎ING @种地吧鹭卓 @陈卓璇 @刘凤瑶 @TF_ING张子墨MO 一起找寻散落民间的声音。他们带着音乐合伙人走进汕头小公园，把骑楼的风、童谣的尾音、街头追梦人的韧劲都唱出来。速戳链接，解锁本期正片[打call]http://t.cn/AXldzsGh ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355679675318516",
+              "detailUrl": "https://www.sina.cn/news/detail/5355679675318516.html",
+              "time": "2026-10-19 10:30",
+              "text": "#小城良方人生跷跷板海报# 一片雪花轻飘飘，落在心头却沉甸甸。稳住那股劲儿，再难的起落也能接得稳当。🥝快来预约，10月21日感受小城暖乎治愈。 领衔主演：@肖战 编剧：聂成帅 导演：张晓波 总制片人：苏晓 制片人：夏杰 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起， ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355678160912988",
+              "detailUrl": "https://www.sina.cn/news/detail/5355678160912988.html",
+              "time": "2026-10-19 10:24",
+              "text": "#李现1019生日快乐# 沉静外表下藏有炽热，克制言行中自有深情。祝孟弗渊@李现ing 生日快乐，愿始终保持那份清醒与坚定，在未来的每段旅程里，收获丰盈与欢喜。期待#雾里青#早日相见[打call] 预约链接：http://t.cn/AXldZzmJ ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355676903147020",
+              "detailUrl": "https://www.sina.cn/news/detail/5355676903147020.html",
+              "time": "2026-10-19 10:19",
+              "text": "#宇宙闪烁请注意# 滴滴滴～宇宙信号锁定今日寿星！祝五邵爷@POLARIX-邵子恒 生日快乐🎉持续爆闪，永远自带高光。宇宙很大，快乐管够，继续冲冲冲呀！#宇宙闪烁请注意2# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355675896512679",
+              "detailUrl": "https://www.sina.cn/news/detail/5355675896512679.html",
+              "time": "2026-10-19 10:15",
+              "text": "#向内一公里# @杨澜 走进上海近郊农场，对话孙俪@turbosun ，秋日农场，烟火作序。一锅肉骨茶，一席家常谈。人间不过吃喝与爱，一饭一食间，藏着怎样安顿自我的生命力量？本周三中午12:00，锁定爱奇艺，敬请期待。 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355675141014523",
+              "detailUrl": "https://www.sina.cn/news/detail/5355675141014523.html",
+              "time": "2026-10-19 10:12",
+              "text": "#电视剧喜剧之王# 谁也不是一开始就懂彼此，可吵到最后，心里还是装着同一个村子。每晚18:00锁定爱奇艺 ，正在热播！ ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355674386826606",
+              "detailUrl": "https://www.sina.cn/news/detail/5355674386826606.html",
+              "time": "2026-10-19 10:09",
+              "text": "各怀思量，共赴迷局。没有绝对的是非，每一步抉择都牵动全局走向。每晚18:00，@爱奇艺 正在热播！#把黑夜点燃# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355673631589002",
+              "detailUrl": "https://www.sina.cn/news/detail/5355673631589002.html",
+              "time": "2026-10-19 10:06",
+              "text": "#伟大的长征遵义会议# 生死攸关的伟大转折，于无声处响惊雷。@爱奇艺 60集#电视剧伟大的长征# 正在热播！#伟大的长征# 领衔主演：@于和伟@演员王劲松@朱刚日尧 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355672876614509",
+              "detailUrl": "https://www.sina.cn/news/detail/5355672876614509.html",
+              "time": "2026-10-19 10:03",
+              "text": "天地剑心1周年——限免福利来啦！ 《天地剑心》开启限时免费看活动~ 限免时间：10月25日0点-10月31日24点 活动期间全集免费看 快来🥝N刷《天地剑心》吧！ @成毅 #天地剑心一周年# #淇遇十五载富贵再重逢# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5355672376971685",
+              "detailUrl": "https://www.sina.cn/news/detail/5355672376971685.html",
+              "time": "2026-10-19 10:01",
+              "text": "#小城良方不差事预告# 几回碰面，几番磨合，闹着笑着就处成了自己人。快来预约➡️10月21日，来小城瞧瞧这群有趣的人！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强@演员张国强 、陈谨（陈瑾）、姜妍 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -2936,150 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5355377815458761.html",
               "time": "2026-10-18 14:30",
               "text": "恭喜两位领证新新新新人~陈英@蒋欣 真·领证新人，全靠齐墨@任重 科普流程。最后\"咔嚓\"一声定格合照，又甜又好笑。今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXlusHUJ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355366356615626",
-              "detailUrl": "https://www.sina.cn/news/detail/5355366356615626.html",
-              "time": "2026-10-18 13:45",
-              "text": "#仿生人间开播三周年# 直面繁杂过往，探查人间百态！今天来@爱奇艺 重温程诺@宋威龙99 安秋@演员文淇 这段寻心之旅吧~ [心]#仿生人间# #桃桃那年今日# http://t.cn/AXlu619w http://t.cn/AXlu6npQ http://t.cn/AXwLqhIw ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355355162283582",
-              "detailUrl": "https://www.sina.cn/news/detail/5355355162283582.html",
-              "time": "2026-10-18 13:00",
-              "text": "刘铮亮@肖战 离职给同事赠礼道别，却听到了……我们小刘医生付出真心就这样被辜负 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，爱奇艺全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXluHr8Y ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355347936020682",
-              "detailUrl": "https://www.sina.cn/news/detail/5355347936020682.html",
-              "time": "2026-10-18 12:31",
-              "text": "陈善@陈哲远- 与马一鸣@郭丞 的摩托车祸戏现场实录，前方摄影组视角曝光~今日18点，锁定@爱奇艺 正在热播#把黑夜点燃# http://t.cn/AXluWWzS ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355339937219060",
-              "detailUrl": "https://www.sina.cn/news/detail/5355339937219060.html",
-              "time": "2026-10-18 12:00",
-              "text": "身边一圈实在人，日子越过越熨帖～点击预约，共候这份小城治愈！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强@演员张国强 、陈谨（陈瑾）、姜妍@姜妍二胖 、倪大红、菅韧姿@菅韧姿 出演（按姓氏笔画排序）： ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355337420111975",
-              "detailUrl": "https://www.sina.cn/news/detail/5355337420111975.html",
-              "time": "2026-10-18 11:50",
-              "text": "#听谁在唱歌# 潮汕街巷人声熙攘，寻乐团@吴克群 @陆虎ING @种地吧鹭卓 @陈卓璇 @刘凤瑶 @TF_ING张子墨MO 奔赴街头开启路演，旋律融进市井烟火，共同打造鲜活热烈的音乐现场🎵今晚锁定@爱奇艺 #听谁在唱歌2# ，解锁寻乐团首次路演！ #小奇今日推荐# ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355334899859841",
-              "detailUrl": "https://www.sina.cn/news/detail/5355334899859841.html",
-              "time": "2026-10-18 11:40",
-              "text": "#大哥小助理# 以真诚待人，以细致处事，将大小事务打理妥当，也为观众带来无数欢乐。祝@李乃文 生日快乐🎂愿乃助自在尽兴，继续解锁更多高光时刻！ #桃艺心动播报# ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355332886332694",
-              "detailUrl": "https://www.sina.cn/news/detail/5355332886332694.html",
-              "time": "2026-10-18 11:32",
-              "text": "一眼一念，皆是藏在岁月里的谜题。每晚18:00，@爱奇艺 热播进行中。#把黑夜点燃# ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355332483419194",
-              "detailUrl": "https://www.sina.cn/news/detail/5355332483419194.html",
-              "time": "2026-10-18 11:30",
-              "text": "名场面预定！亮神在发光！刘铮亮@肖战 变身宠物医生一秒找到羊驼爱吐口水的病因。 #小城良方# 由中央电视台、柠萌影视出品、@爱奇艺 联合出品，10月21日起，爱奇艺全网独播。 爱奇艺预约：http://t.cn/AXluMxm9 微博预约：http://t.cn/AXwyeexE http://t.cn/AXlu6I2G ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355325336060666",
-              "detailUrl": "https://www.sina.cn/news/detail/5355325336060666.html",
-              "time": "2026-10-18 11:02",
-              "text": "这波儿主打一个“物理防御拉满”，眼瞅着刘铮亮@肖战 艾辰@姜妍二胖 要来一场“狠人”对决，连带着陈俊南@王彦霖 一起仨人直接开始整活！这事儿整的，画风直接跑偏，结尾的小彩蛋更是让人“笑发财了”🤣～预约请趁早，10月21日刘铮亮带你去小城乐呵乐呵～ #小城良方# 10月21日起， ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355324833533320",
-              "detailUrl": "https://www.sina.cn/news/detail/5355324833533320.html",
-              "time": "2026-10-18 11:00",
-              "text": "#把黑夜点燃众生浮沉海报# 长夜笼罩，全员皆在局中；一念取舍，命运交错纠缠。每晚18:00，#把黑夜点燃# @爱奇艺 正在热播！ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355322745029938",
-              "detailUrl": "https://www.sina.cn/news/detail/5355322745029938.html",
-              "time": "2026-10-18 10:51",
-              "text": "#桃艺心动播报# 祝@陈都灵 生日快乐~ 新的一岁，继续在镜头里演绎万般故事，收下属于你的鲜花与掌声！[送花花]今天一起来@爱奇艺 重温文潇、张海沫、乔婉娩等嘟嘟的经典角色吧~ #陈都灵1018生日快乐# 《大梦归离》http://t.cn/A6ntqaoX 《孤舟》http://t.cn/A6F1plne 《狐妖小红娘月红篇》 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355312250618455",
-              "detailUrl": "https://www.sina.cn/news/detail/5355312250618455.html",
-              "time": "2026-10-18 10:10",
-              "text": "#魅影神捕# 谜局渐深，悬案再起。旧年秘闻缓缓揭开，探案之人隐忍布局，拨开重重假象，向着最终真相不断靠近。加更礼现已开启，速来爱奇艺一键直通大结局！ 领衔主演：罗弋（罗云熙）@罗云熙Leo 特别出演：方逸伦@方方方方方逸伦 、沈羽洁@沈羽洁er （按姓氏笔画排序） 出演：马闻远 @马闻远 、王禹森 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355311243723156",
-              "detailUrl": "https://www.sina.cn/news/detail/5355311243723156.html",
-              "time": "2026-10-18 10:06",
-              "text": "#电影狄仁杰之不死军定档# 黑白无常来索命，死人刀下竟复活，狄仁杰抽丝剥茧破奇案，以智破局护国安！#电影狄仁杰之不死军# 爱奇艺电影频道10月20日上线，带你揭穿层层阴谋！http://t.cn/AXluGWdW ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355310488224512",
-              "detailUrl": "https://www.sina.cn/news/detail/5355310488224512.html",
-              "time": "2026-10-18 10:03",
-              "text": "#电视剧喜剧之王# 他们把日子过成了喜剧，也把喜剧过成了日子。今晚18:00，来爱奇艺继续追剧吧~ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355309738233147",
-              "detailUrl": "https://www.sina.cn/news/detail/5355309738233147.html",
-              "time": "2026-10-18 10:00",
-              "text": "#小城良方老热闹海报# 大伙儿心气拧一处，生活自然有奔头。各有各的活法，小城的日子不“寡淡”！预约安排上，一同等候小城暖心故事！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355295375360218",
-              "detailUrl": "https://www.sina.cn/news/detail/5355295375360218.html",
-              "time": "2026-10-18 09:02",
-              "text": "#财神窦占龙动画# 风雪漫天，白脸狼手下紧追围剿，窦占龙身受重伤困入绝境！阿褶现身引路，前路凶险难测，鳖宝是就地埋下，还是另寻生机？生死关头，窦占龙该如何抉择？#窦占龙憋宝# #财神窦占龙# #天下霸唱# 追番👉🏻http://t.cn/AXNrQuOv http://t.cn/AXluZapY ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355287084795746",
-              "detailUrl": "https://www.sina.cn/news/detail/5355287084795746.html",
-              "time": "2026-10-18 08:30",
-              "text": "#桃桃早安说# 早安！吃好早餐，加满元气！今天一切都会超顺利[yeah]@敖瑞鹏的微博 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355143638812883",
-              "detailUrl": "https://www.sina.cn/news/detail/5355143638812883.html",
-              "time": "2026-10-17 23:00",
-              "text": "#小奇晚班中# 愿你可以一直做自己想成为的人啊~ [心] 台词来自@陈都灵《大梦归离》 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
@@ -4099,8 +4099,8 @@
           "type": "fanclub",
           "postCount": 102,
           "latestPostTime": "2023-08-24 15:43",
-          "keywordHitCount": 9,
-          "excludedCount": 9,
+          "keywordHitCount": 10,
+          "excludedCount": 10,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -4116,6 +4116,30 @@
               "detailUrl": "https://www.sina.cn/news/detail/5280061372503128.html",
               "time": "2026-03-24 18:29",
               "text": "【超话相关规则】 🅰️微博相关管理规则 ✅日常任务由@任嘉伦星辰研究院 （原网投组）每日总结发布 ✅热搜等其他任务由@任嘉伦丨唯伦特工 即时发布任务 ✅超话不当言论发给值日的主持人，值班表在下文。 ✅超话加精申请私信@任嘉伦全国后援会 ，超话加精细则http://t.cn/AXfE3dd9 ✅✅微博非超话 ​",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5355703223194090",
+              "detailUrl": "https://www.sina.cn/news/detail/5355703223194090.html",
+              "time": "2026-10-19 12:03",
+              "text": "赛季更迭，热爱不变，期待代言人@任嘉伦Allen 继续分享赛场感悟，静候揭幕战，一起聆听更多属于NBA的故事#任嘉伦腾讯体育NBA代言人# [打call]#任嘉伦#",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5355700131987645",
+              "detailUrl": "https://www.sina.cn/news/detail/5355700131987645.html",
+              "time": "2026-10-19 11:51",
+              "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 10月21日，腾讯体育直播间，我们不见不散！#任嘉伦腾讯体育NBA代言人#[打call]#任嘉伦#",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5355699493667285",
+              "detailUrl": "https://www.sina.cn/news/detail/5355699493667285.html",
+              "time": "2026-10-19 11:48",
+              "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 ⏰10月21日锁定腾讯体育APP，76人vs尼克斯揭幕战，一起看球，为热爱呐喊🏀#任嘉伦# [打call]#任嘉伦腾讯体育NBA代言人#",
               "accountName": "任嘉伦全国后援会",
               "accountType": "fanclub"
             },
@@ -4316,30 +4340,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5348560813686880.html",
               "time": "2026-09-29 19:02",
               "text": "新剧顺利开机，拍摄工作已有序开展。为保障剧集正常拍摄进度，守护演员创作空间，维护剧组拍摄秩序，现向全体嘉人统一重申路透管理相关规范： 1⃣️🈲官方账号未发布的服装造型和官方账号未发布的场景内容和剧情内容(未官宣的人物造型、拍摄场景、剧情画面等），对于先于官方公开的造型、服装、剧情 ​",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5348443201210863",
-              "detailUrl": "https://www.sina.cn/news/detail/5348443201210863.html",
-              "time": "2026-09-29 11:14",
-              "text": "教程get✅三款摇摇乐，嘉人们快来收集吧#崂山品牌代言人任嘉伦# [打call]#任嘉伦#",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5348061975939353",
-              "detailUrl": "https://www.sina.cn/news/detail/5348061975939353.html",
-              "time": "2026-09-28 10:00",
-              "text": "#任嘉伦深渊无间# [给你小心心]#任嘉伦李成# 【截修 ep14-ep16】 怀揣埋藏心底的往事踏入警队， 以敏锐的洞察力拆解层层迷雾， 奔走探寻散落各处的蛛丝马迹。 兼具少年锐气与理性克制， 于暗流涌动的局势中坚守法理底线。 不被黑暗裹挟，执着追寻真相。 一腔孤勇与坚定信念，尽数融于李成每一次的追 ​",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5347866652444280",
-              "detailUrl": "https://www.sina.cn/news/detail/5347866652444280.html",
-              "time": "2026-09-27 21:03",
-              "text": "锦衣赴新程，绣春刀辨正邪，期待@任嘉伦Allen 静候#锦衣搜金录#与我们相见#任嘉伦#",
               "accountName": "任嘉伦全国后援会",
               "accountType": "fanclub"
             }
