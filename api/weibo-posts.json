@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T22:02:57.018Z",
+  "updatedAt": "2026-10-20T01:22:03.613Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5356011859739702",
+          "detailUrl": "https://www.sina.cn/news/detail/5356011859739702.html",
+          "time": "2026-10-20 08:30",
+          "text": "#桃桃早安说# 早安！穿过黑夜，希望永远都会在！[太阳]今天继续走进陈善@陈哲远- 陈英@蒋欣 的故事吧~ #把黑夜点燃# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5355860863748466",
           "detailUrl": "https://www.sina.cn/news/detail/5355860863748466.html",
           "time": "2026-10-19 22:30",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5355675141014523.html",
           "time": "2026-10-19 10:12",
           "text": "#电视剧喜剧之王# 谁也不是一开始就懂彼此，可吵到最后，心里还是装着同一个村子。每晚18:00锁定爱奇艺 ，正在热播！ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5355674386826606",
-          "detailUrl": "https://www.sina.cn/news/detail/5355674386826606.html",
-          "time": "2026-10-19 10:09",
-          "text": "各怀思量，共赴迷局。没有绝对的是非，每一步抉择都牵动全局走向。每晚18:00，@爱奇艺 正在热播！#把黑夜点燃# ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 102,
           "latestPostTime": "2026-10-14 10:00",
-          "keywordHitCount": 14,
-          "excludedCount": 14,
+          "keywordHitCount": 13,
+          "excludedCount": 13,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,14 @@
               "detailUrl": "https://www.sina.cn/news/detail/5348484762569320.html",
               "time": "2026-09-29 14:00",
               "text": "#爱奇艺10月推荐# #爱奇艺10月待播剧# 宝藏十月🥝桃厂必看片单重磅上新[打call]《魅影神捕》《伟大的长征》《小城良方》等新剧敬请期待，《我不是大师》《一瓯春》《余红旧事》《大哥小助理》等多部黄金周必看佳作轮番上线中，还有《给阿嬷的情书》《功夫女足》《空枪》等精彩影片火热加载，锁定 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5356011859739702",
+              "detailUrl": "https://www.sina.cn/news/detail/5356011859739702.html",
+              "time": "2026-10-20 08:30",
+              "text": "#桃桃早安说# 早安！穿过黑夜，希望永远都会在！[太阳]今天继续走进陈善@陈哲远- 陈英@蒋欣 的故事吧~ #把黑夜点燃# ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5355675141014523.html",
               "time": "2026-10-19 10:12",
               "text": "#电视剧喜剧之王# 谁也不是一开始就懂彼此，可吵到最后，心里还是装着同一个村子。每晚18:00锁定爱奇艺 ，正在热播！ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5355674386826606",
-              "detailUrl": "https://www.sina.cn/news/detail/5355674386826606.html",
-              "time": "2026-10-19 10:09",
-              "text": "各怀思量，共赴迷局。没有绝对的是非，每一步抉择都牵动全局走向。每晚18:00，@爱奇艺 正在热播！#把黑夜点燃# ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
