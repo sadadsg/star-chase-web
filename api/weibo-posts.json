@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T13:57:02.354Z",
+  "updatedAt": "2026-10-23T18:04:08.688Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,22 @@
           "accountType": "drama"
         },
         {
+          "id": "5357317966793753",
+          "detailUrl": "https://www.sina.cn/news/detail/5357317966793753.html",
+          "time": "2026-10-23 23:00",
+          "text": "#小奇晚班中# 一直向着自己的热爱奔赴吧[打call] 台词来自@沈腾 《飞驰人生》 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5357310416523062",
+          "detailUrl": "https://www.sina.cn/news/detail/5357310416523062.html",
+          "time": "2026-10-23 22:30",
+          "text": "#小奇晚班中# “场景千百遍，结局是我任由你差遣~”今日的晚安曲来自@卡布叻_周深 @摩登兄弟刘宇宁 《自诩周全》[哇]祝你今晚一夜好眠哦~ http://t.cn/AXb7Bdti ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5357291832083239",
           "detailUrl": "https://www.sina.cn/news/detail/5357291832083239.html",
           "time": "2026-10-23 21:16",
@@ -787,22 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5357125569094598.html",
           "time": "2026-10-23 10:15",
           "text": "#风起刺桐城定档# 一块海青牌，引发六百年后的时空错位。海交馆研究员陈书桐@刘萧旭-Mr 和跨越时空而来的伊本·白图泰#哈利德·加纳姆# 、田承泽@尹一博_ 和林葭瑶@贺灵榣 相遇，被迫卷入一场限时谜局。10月29日锁定奇艺 #短剧风起刺桐城#，一起解谜破局！http://t.cn/AXjUkNgq ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5357124189946345",
-          "detailUrl": "https://www.sina.cn/news/detail/5357124189946345.html",
-          "time": "2026-10-23 10:10",
-          "text": "#电影空枪#今日上线！导演韩延首部犯罪力作，朱一龙、檀健次、梁家辉领衔超强阵容同台飙戏，颠覆形象正面硬碰硬！ 警匪富三方陷落绝地，眼神交锋火花四溅。欲望之都，遍地黄金，扳机扣响，谁的命运被改写？ ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5357123686629820",
-          "detailUrl": "https://www.sina.cn/news/detail/5357123686629820.html",
-          "time": "2026-10-23 10:08",
-          "text": "#一枕春华# 心事藏于青衿，新岁自有春华。祝莫子衿@刘些宁 生辰快乐，祝往后清风常伴，好景常逢。#刘些宁1023生日快乐# http://t.cn/AXjUD92l 爱奇艺预约戳：http://t.cn/A63pXEJT 微博预约：http://t.cn/A61qqP4a ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 101,
           "latestPostTime": "2026-10-21 19:28",
-          "keywordHitCount": 29,
-          "excludedCount": 29,
+          "keywordHitCount": 28,
+          "excludedCount": 28,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,22 @@
               "detailUrl": "https://www.sina.cn/news/detail/5356392342881995.html",
               "time": "2026-10-21 09:41",
               "text": "#小城良方今日开播# 外面纷纷扰扰，小城热热闹闹。你来我往，唠唠家常～这旮沓的日子，咋过都爽～#来了小城都是自己人# 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强@演员张国强 、陈谨（陈瑾）、姜妍 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5357317966793753",
+              "detailUrl": "https://www.sina.cn/news/detail/5357317966793753.html",
+              "time": "2026-10-23 23:00",
+              "text": "#小奇晚班中# 一直向着自己的热爱奔赴吧[打call] 台词来自@沈腾 《飞驰人生》 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5357310416523062",
+              "detailUrl": "https://www.sina.cn/news/detail/5357310416523062.html",
+              "time": "2026-10-23 22:30",
+              "text": "#小奇晚班中# “场景千百遍，结局是我任由你差遣~”今日的晚安曲来自@卡布叻_周深 @摩登兄弟刘宇宁 《自诩周全》[哇]祝你今晚一夜好眠哦~ http://t.cn/AXb7Bdti ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3064,22 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5357125569094598.html",
               "time": "2026-10-23 10:15",
               "text": "#风起刺桐城定档# 一块海青牌，引发六百年后的时空错位。海交馆研究员陈书桐@刘萧旭-Mr 和跨越时空而来的伊本·白图泰#哈利德·加纳姆# 、田承泽@尹一博_ 和林葭瑶@贺灵榣 相遇，被迫卷入一场限时谜局。10月29日锁定奇艺 #短剧风起刺桐城#，一起解谜破局！http://t.cn/AXjUkNgq ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5357124189946345",
-              "detailUrl": "https://www.sina.cn/news/detail/5357124189946345.html",
-              "time": "2026-10-23 10:10",
-              "text": "#电影空枪#今日上线！导演韩延首部犯罪力作，朱一龙、檀健次、梁家辉领衔超强阵容同台飙戏，颠覆形象正面硬碰硬！ 警匪富三方陷落绝地，眼神交锋火花四溅。欲望之都，遍地黄金，扳机扣响，谁的命运被改写？ ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5357123686629820",
-              "detailUrl": "https://www.sina.cn/news/detail/5357123686629820.html",
-              "time": "2026-10-23 10:08",
-              "text": "#一枕春华# 心事藏于青衿，新岁自有春华。祝莫子衿@刘些宁 生辰快乐，祝往后清风常伴，好景常逢。#刘些宁1023生日快乐# http://t.cn/AXjUD92l 爱奇艺预约戳：http://t.cn/A63pXEJT 微博预约：http://t.cn/A61qqP4a ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
