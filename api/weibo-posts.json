@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T22:16:44.097Z",
+  "updatedAt": "2026-10-25T00:41:50.275Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5357823958974833",
+          "detailUrl": "https://www.sina.cn/news/detail/5357823958974833.html",
+          "time": "2026-10-25 08:30",
+          "text": "#桃桃早安说# 早安！音乐之旅继续，今天听@种地吧鹭卓 把歌唱给你听呀！[比耶]#听谁在唱歌# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5357672804125478",
           "detailUrl": "https://www.sina.cn/news/detail/5357672804125478.html",
           "time": "2026-10-24 22:30",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5357283909308651.html",
           "time": "2026-10-23 20:44",
           "text": "难过未必有声，悲伤也不总以眼泪示人，越克制的悲伤越翻涌着不舍。 领衔主演：肖战@肖战 #小城良方# @爱奇艺 正在热播。 http://t.cn/AXjbFZcN ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5357258827106299",
-          "detailUrl": "https://www.sina.cn/news/detail/5357258827106299.html",
-          "time": "2026-10-23 19:05",
-          "text": "#大梦归离#开播两周年纪念周边企划确认！ 一梦起落，岁月两载； 那些忠于本心、舍身赴约的故事，仍在记忆中回响。 更多内容，敬请期待！ #大梦归离开播两周年# ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 102,
           "latestPostTime": "2026-10-21 19:28",
-          "keywordHitCount": 16,
-          "excludedCount": 16,
+          "keywordHitCount": 15,
+          "excludedCount": 15,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,14 @@
               "detailUrl": "https://www.sina.cn/news/detail/5356392342881995.html",
               "time": "2026-10-21 09:41",
               "text": "#小城良方今日开播# 外面纷纷扰扰，小城热热闹闹。你来我往，唠唠家常～这旮沓的日子，咋过都爽～#来了小城都是自己人# 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：丁嘉丽、王彦霖@王彦霖 、史彭元@史彭元 、刘桦@道哥刘桦 、任程伟@任程伟 、张国强@演员张国强 、陈谨（陈瑾）、姜妍 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5357823958974833",
+              "detailUrl": "https://www.sina.cn/news/detail/5357823958974833.html",
+              "time": "2026-10-25 08:30",
+              "text": "#桃桃早安说# 早安！音乐之旅继续，今天听@种地吧鹭卓 把歌唱给你听呀！[比耶]#听谁在唱歌# ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5357283909308651.html",
               "time": "2026-10-23 20:44",
               "text": "难过未必有声，悲伤也不总以眼泪示人，越克制的悲伤越翻涌着不舍。 领衔主演：肖战@肖战 #小城良方# @爱奇艺 正在热播。 http://t.cn/AXjbFZcN ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5357258827106299",
-              "detailUrl": "https://www.sina.cn/news/detail/5357258827106299.html",
-              "time": "2026-10-23 19:05",
-              "text": "#大梦归离#开播两周年纪念周边企划确认！ 一梦起落，岁月两载； 那些忠于本心、舍身赴约的故事，仍在记忆中回响。 更多内容，敬请期待！ #大梦归离开播两周年# ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
