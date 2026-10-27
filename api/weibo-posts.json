@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T22:13:47.397Z",
+  "updatedAt": "2026-10-27T01:44:00.807Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5358548575323922",
+          "detailUrl": "https://www.sina.cn/news/detail/5358548575323922.html",
+          "time": "2026-10-27 08:30",
+          "text": "#桃桃早安说# 早安！晨光升起，看刘铮亮医生@肖战 继续书写属于小城的良方[送花花]#小城良方# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5358405133796208",
           "detailUrl": "https://www.sina.cn/news/detail/5358405133796208.html",
           "time": "2026-10-26 23:00",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5358208849811108.html",
           "time": "2026-10-26 10:00",
           "text": "前路从不是一条直路，有转身，有停留，在烟火里慢慢找寻属于自己的方向，稳妥向前！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：王彦霖@王彦霖 、史彭元@史彭元 、张国强@演员张国强 、姜妍@姜妍二胖 、倪大红、菅韧姿@菅韧姿 #小城良方# @爱奇艺 正在热播。 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5358186187722522",
-          "detailUrl": "https://www.sina.cn/news/detail/5358186187722522.html",
-          "time": "2026-10-26 08:30",
-          "text": "#桃桃早安说# 早安！收到阳光投喂，新的一周万事顺心[期待] @王星越 ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2860,6 +2860,14 @@
               "accountType": "drama"
             },
             {
+              "id": "5358548575323922",
+              "detailUrl": "https://www.sina.cn/news/detail/5358548575323922.html",
+              "time": "2026-10-27 08:30",
+              "text": "#桃桃早安说# 早安！晨光升起，看刘铮亮医生@肖战 继续书写属于小城的良方[送花花]#小城良方# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
               "id": "5358405133796208",
               "detailUrl": "https://www.sina.cn/news/detail/5358405133796208.html",
               "time": "2026-10-26 23:00",
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5358208849811108.html",
               "time": "2026-10-26 10:00",
               "text": "前路从不是一条直路，有转身，有停留，在烟火里慢慢找寻属于自己的方向，稳妥向前！ 领衔主演：肖战@肖战 特别出演（按姓氏笔画排序）：王彦霖@王彦霖 、史彭元@史彭元 、张国强@演员张国强 、姜妍@姜妍二胖 、倪大红、菅韧姿@菅韧姿 #小城良方# @爱奇艺 正在热播。 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5358186187722522",
-              "detailUrl": "https://www.sina.cn/news/detail/5358186187722522.html",
-              "time": "2026-10-26 08:30",
-              "text": "#桃桃早安说# 早安！收到阳光投喂，新的一周万事顺心[期待] @王星越 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
