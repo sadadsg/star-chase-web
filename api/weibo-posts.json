@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T13:46:48.540Z",
+  "updatedAt": "2026-10-27T19:05:26.661Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5358759968248266",
+          "detailUrl": "https://www.sina.cn/news/detail/5358759968248266.html",
+          "time": "2026-10-27 22:30",
+          "text": "#猕猴talk show# 降温了，瑟瑟发抖ing ~要是有个像TA一样的暖宝宝该有多好吖[太开心] http://t.cn/AXjKzPZU ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5358723062040611",
           "detailUrl": "https://www.sina.cn/news/detail/5358723062040611.html",
           "time": "2026-10-27 20:03",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5358575251358040.html",
           "time": "2026-10-27 10:16",
           "text": "#上爱奇艺体育看亚冠# 本周中，亚冠精英联赛和亚冠二级联赛第3轮全面打响。中国三队此前两战全部保持不败，此番再次出征，能否延续佳绩呢。亚冠精英联赛第3轮，国安坐镇工体迎战全北，海港主场面对河内公安，申花遭遇日本球队町田泽维亚。多场焦点对决，爱奇艺体育将全程直播。#亚冠联赛# ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5358574253642686",
-          "detailUrl": "https://www.sina.cn/news/detail/5358574253642686.html",
-          "time": "2026-10-27 10:12",
-          "text": "【伟大的长征花絮】敌机来袭，主席霸气指挥，干它！@爱奇艺 60集#电视剧伟大的长征# 正在热播！#伟大的长征#http://t.cn/AXjoJIVQ ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2860,6 +2860,14 @@
               "accountType": "drama"
             },
             {
+              "id": "5358759968248266",
+              "detailUrl": "https://www.sina.cn/news/detail/5358759968248266.html",
+              "time": "2026-10-27 22:30",
+              "text": "#猕猴talk show# 降温了，瑟瑟发抖ing ~要是有个像TA一样的暖宝宝该有多好吖[太开心] http://t.cn/AXjKzPZU ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
               "id": "5358723062040611",
               "detailUrl": "https://www.sina.cn/news/detail/5358723062040611.html",
               "time": "2026-10-27 20:03",
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5358575251358040.html",
               "time": "2026-10-27 10:16",
               "text": "#上爱奇艺体育看亚冠# 本周中，亚冠精英联赛和亚冠二级联赛第3轮全面打响。中国三队此前两战全部保持不败，此番再次出征，能否延续佳绩呢。亚冠精英联赛第3轮，国安坐镇工体迎战全北，海港主场面对河内公安，申花遭遇日本球队町田泽维亚。多场焦点对决，爱奇艺体育将全程直播。#亚冠联赛# ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5358574253642686",
-              "detailUrl": "https://www.sina.cn/news/detail/5358574253642686.html",
-              "time": "2026-10-27 10:12",
-              "text": "【伟大的长征花絮】敌机来袭，主席霸气指挥，干它！@爱奇艺 60集#电视剧伟大的长征# 正在热播！#伟大的长征#http://t.cn/AXjoJIVQ ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
