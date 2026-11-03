@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T11:29:10.252Z",
+  "updatedAt": "2026-11-03T18:50:43.712Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,22 @@
           "accountType": "drama"
         },
         {
+          "id": "5361296687759956",
+          "detailUrl": "https://www.sina.cn/news/detail/5361296687759956.html",
+          "time": "2026-11-03 22:30",
+          "text": "#猕猴talk show# 寒风挡不住好心情！桃厂的初冬笑容源泉，等你一起解锁啊[哇] http://t.cn/AXjDuCWe ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5361268578061466",
+          "detailUrl": "https://www.sina.cn/news/detail/5361268578061466.html",
+          "time": "2026-11-03 20:38",
+          "text": "刘铮亮@肖战 带着小光@史彭元 来看父母，无论在哪里漂泊，家都是最后的终点与归宿，日子是自己的，想怎么活，就怎么活。 #小城良方# 加更礼已开启，来@爱奇艺 ，一键直通大结局！ http://t.cn/AXYhWfcg ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5361247620959309",
           "detailUrl": "https://www.sina.cn/news/detail/5361247620959309.html",
           "time": "2026-11-03 19:15",
@@ -787,22 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5360899835564856.html",
           "time": "2026-11-02 20:13",
           "text": "恭喜@一口燕子鱼 等2名用户获得【随机主演签名照】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXjkB5mU",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5360882018161090",
-          "detailUrl": "https://www.sina.cn/news/detail/5360882018161090.html",
-          "time": "2026-11-02 19:02",
-          "text": "刘铮亮@肖战 和艾辰@姜妍二胖 在医院里的一番交谈，道尽了生命的无常与温情。趁一切还来得及，用心陪伴每一分每一秒。 #小城良方# 加更礼已开启，来@爱奇艺 ，一键直通大结局！ http://t.cn/AXjkVokj ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5360878067384433",
-          "detailUrl": "https://www.sina.cn/news/detail/5360878067384433.html",
-          "time": "2026-11-02 18:46",
-          "text": "实地采风、查阅史料、武术预演、AI重建……#纳逗Pro# 如何复现戚继光抗倭史上这场著名的横屿岛之战？#桃厂智作人# 栏目对话#战神戚继光之不让江山# 四位主创，揭秘山东影视传媒集团试水首部AI电影幕后！ http://t.cn/AXjktOHT ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 100,
           "latestPostTime": "2026-11-01 09:30",
-          "keywordHitCount": 41,
-          "excludedCount": 41,
+          "keywordHitCount": 42,
+          "excludedCount": 42,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,22 @@
               "detailUrl": "https://www.sina.cn/news/detail/5360843703194047.html",
               "time": "2026-11-02 16:30",
               "text": "#史彭元谈从严良到刘铮光的成长##史彭元在肖战姜妍面前有点害羞# 爱奇艺《爱撩专访》 x @史彭元 正片上线！现在关注并带话题转发，小奇随机抽送刘铮光嘎嘎帅气签名拍立得1张哦😉 谈到和哥哥刘铮亮@肖战 拍戏的台前幕后，弟弟只有一个全肯定！说战哥人帅而且在工作上给了自己很多启发~ “看似e人实 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5361296687759956",
+              "detailUrl": "https://www.sina.cn/news/detail/5361296687759956.html",
+              "time": "2026-11-03 22:30",
+              "text": "#猕猴talk show# 寒风挡不住好心情！桃厂的初冬笑容源泉，等你一起解锁啊[哇] http://t.cn/AXjDuCWe ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5361268578061466",
+              "detailUrl": "https://www.sina.cn/news/detail/5361268578061466.html",
+              "time": "2026-11-03 20:38",
+              "text": "刘铮亮@肖战 带着小光@史彭元 来看父母，无论在哪里漂泊，家都是最后的终点与归宿，日子是自己的，想怎么活，就怎么活。 #小城良方# 加更礼已开启，来@爱奇艺 ，一键直通大结局！ http://t.cn/AXYhWfcg ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3064,22 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5360899835564856.html",
               "time": "2026-11-02 20:13",
               "text": "恭喜@一口燕子鱼 等2名用户获得【随机主演签名照】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXjkB5mU",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5360882018161090",
-              "detailUrl": "https://www.sina.cn/news/detail/5360882018161090.html",
-              "time": "2026-11-02 19:02",
-              "text": "刘铮亮@肖战 和艾辰@姜妍二胖 在医院里的一番交谈，道尽了生命的无常与温情。趁一切还来得及，用心陪伴每一分每一秒。 #小城良方# 加更礼已开启，来@爱奇艺 ，一键直通大结局！ http://t.cn/AXjkVokj ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5360878067384433",
-              "detailUrl": "https://www.sina.cn/news/detail/5360878067384433.html",
-              "time": "2026-11-02 18:46",
-              "text": "实地采风、查阅史料、武术预演、AI重建……#纳逗Pro# 如何复现戚继光抗倭史上这场著名的横屿岛之战？#桃厂智作人# 栏目对话#战神戚继光之不让江山# 四位主创，揭秘山东影视传媒集团试水首部AI电影幕后！ http://t.cn/AXjktOHT ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
