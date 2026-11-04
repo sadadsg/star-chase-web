@@ -1,15 +1,17 @@
 {
   "data": [],
   "total": 0,
-  "updatedAt": "2026-11-04T11:53:55.082Z",
+  "updatedAt": "2026-11-04T19:06:52.364Z",
   "source": "studio_weibo",
   "scheduleAccountTypes": [
     "studio"
   ],
   "runStats": {
     "validated": 0,
-    "dropped": 0,
-    "dropReasons": {},
+    "dropped": 3,
+    "dropReasons": {
+      "date_out_of_window": 3
+    },
     "mergeDropped": {
       "expired": 0,
       "duplicate": 0,
@@ -18,7 +20,7 @@
     "glmCalls": 0,
     "glmTextItems": 0,
     "glmPicItems": 0,
-    "fallbackItems": 0,
+    "fallbackItems": 3,
     "errors": 0
   }
 }
