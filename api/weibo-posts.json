@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T19:06:52.308Z",
+  "updatedAt": "2026-11-05T00:39:04.341Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,14 @@
           "accountType": "drama"
         },
         {
+          "id": "5361810066115026",
+          "detailUrl": "https://www.sina.cn/news/detail/5361810066115026.html",
+          "time": "2026-11-05 08:30",
+          "text": "#桃桃早安说# 早安！风捎来心动，今天与傅识则和云厘一起等月亮升起！🌙@卢昱晓_ @我是林一同学 （按姓氏笔画排序）#剧集折月亮# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5361666620654563",
           "detailUrl": "https://www.sina.cn/news/detail/5361666620654563.html",
           "time": "2026-11-04 23:00",
@@ -795,14 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5361501784507002.html",
           "time": "2026-11-04 12:05",
           "text": "#向内一公里# 第六期正片上线！ 命运重压下笃定，向内生长出力量。@杨澜 和@段睿 在景泰蓝工坊的手作时光里，直面人生的无常与抉择，聊亲密关系里的尊重与边界，深谈焦虑背后的修复力与自洽，这份坚韧的生命力、顺势而为的通透，正是一种向内探寻的方式，找到真正笃定且有光的自我。 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5361501029533075",
-          "detailUrl": "https://www.sina.cn/news/detail/5361501029533075.html",
-          "time": "2026-11-04 12:02",
-          "text": "从远远观望，到慢慢靠近， 雨天的这把伞，让我重新走进你的世界。 #剧集折月亮# 明日开播，11月5日起，@爱奇艺 不见不散~ 领衔主演（按姓氏笔画排序）：云厘@卢昱晓_ 傅识则@我是林一同学 爱奇艺预约：http://t.cn/AX0A26nV 微博预约：http://t.cn/AXvryCxT ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 101,
           "latestPostTime": "2026-11-01 09:30",
-          "keywordHitCount": 27,
-          "excludedCount": 27,
+          "keywordHitCount": 26,
+          "excludedCount": 26,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,14 @@
               "detailUrl": "https://www.sina.cn/news/detail/5360843703194047.html",
               "time": "2026-11-02 16:30",
               "text": "#史彭元谈从严良到刘铮光的成长##史彭元在肖战姜妍面前有点害羞# 爱奇艺《爱撩专访》 x @史彭元 正片上线！现在关注并带话题转发，小奇随机抽送刘铮光嘎嘎帅气签名拍立得1张哦😉 谈到和哥哥刘铮亮@肖战 拍戏的台前幕后，弟弟只有一个全肯定！说战哥人帅而且在工作上给了自己很多启发~ “看似e人实 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5361810066115026",
+              "detailUrl": "https://www.sina.cn/news/detail/5361810066115026.html",
+              "time": "2026-11-05 08:30",
+              "text": "#桃桃早安说# 早安！风捎来心动，今天与傅识则和云厘一起等月亮升起！🌙@卢昱晓_ @我是林一同学 （按姓氏笔画排序）#剧集折月亮# ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3072,14 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5361501784507002.html",
               "time": "2026-11-04 12:05",
               "text": "#向内一公里# 第六期正片上线！ 命运重压下笃定，向内生长出力量。@杨澜 和@段睿 在景泰蓝工坊的手作时光里，直面人生的无常与抉择，聊亲密关系里的尊重与边界，深谈焦虑背后的修复力与自洽，这份坚韧的生命力、顺势而为的通透，正是一种向内探寻的方式，找到真正笃定且有光的自我。 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5361501029533075",
-              "detailUrl": "https://www.sina.cn/news/detail/5361501029533075.html",
-              "time": "2026-11-04 12:02",
-              "text": "从远远观望，到慢慢靠近， 雨天的这把伞，让我重新走进你的世界。 #剧集折月亮# 明日开播，11月5日起，@爱奇艺 不见不散~ 领衔主演（按姓氏笔画排序）：云厘@卢昱晓_ 傅识则@我是林一同学 爱奇艺预约：http://t.cn/AX0A26nV 微博预约：http://t.cn/AXvryCxT ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
