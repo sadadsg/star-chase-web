@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T10:54:39.372Z",
+  "updatedAt": "2026-11-08T16:51:57.131Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -583,6 +583,30 @@
           "accountType": "drama"
         },
         {
+          "id": "5363108622634512",
+          "detailUrl": "https://www.sina.cn/news/detail/5363108622634512.html",
+          "time": "2026-11-08 22:30",
+          "text": "#小奇晚班中# 今晚的月光特别软，连梦都会变得很轻很甜[兔子]云厘@卢昱晓_ 来和大家说晚安啦~ #剧集折月亮# ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5363067110294518",
+          "detailUrl": "https://www.sina.cn/news/detail/5363067110294518.html",
+          "time": "2026-11-08 19:45",
+          "text": "恭喜@彼此森林WHITE 1名用户获得【爱奇艺月卡】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXYigDrE",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5363055800095126",
+          "detailUrl": "https://www.sina.cn/news/detail/5363055800095126.html",
+          "time": "2026-11-08 19:00",
+          "text": "漫天诡谲，皆为人心作祟， 执念层叠，化作彼岸花开。 #帝姬令# 杀青大吉，敬请期待！#帝姬令杀青# 领衔主演：@可可张可盈 @秦天宇Ty （按姓氏笔画排序） 特别出演：@胡春杨Young 出演：@邓宁_邓靖弘 张文博@张泠宇 @姚宇航_ （按姓氏笔画排序） 爱奇艺预约：http://t.cn/AXl0CDxZ ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5363034655821500",
           "detailUrl": "https://www.sina.cn/news/detail/5363034655821500.html",
           "time": "2026-11-08 17:36",
@@ -779,30 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5362632988557745.html",
           "time": "2026-11-07 15:00",
           "text": "#音乐缘计划# @薛之谦 @容祖儿 @卡布叻_周深 @摩登兄弟刘宇宁 @黄子弘凡_Lars @希林娜依高 @Kelly于文文 @蔡文静 @顏人中 @张弛zhangc @蒋龙_Sunday 开启上头KTV挑战，谁能更胜一筹？全新歌曲解锁，又将有怎样的精彩舞台上新🎵下周五锁定@爱奇艺 一起#小奇今日推荐#http://t.cn/AXYVd0AK ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5362617888803104",
-          "detailUrl": "https://www.sina.cn/news/detail/5362617888803104.html",
-          "time": "2026-11-07 14:00",
-          "text": "#共创桃厂冬日记忆# 立冬惊喜至！现在关注并带话题分享你的冬日小仪式，有机会获得「爱奇艺月卡」哦~《成何体统》《大梦归离》《冬去春来》《二十不惑2》《小城良方》《逍遥》《一生一世》《逐玉》同款入冬仪式感图鉴送达！吃糖葫芦、添厚外套、围炉煮茶、堆可爱雪人、窝在家里取暖追剧……快乐模式一 ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5362605306152643",
-          "detailUrl": "https://www.sina.cn/news/detail/5362605306152643.html",
-          "time": "2026-11-07 13:10",
-          "text": "#打歌2026# #打歌2026X舞台# 第8期正片送达！[送花花]@郭靜Claire 《临界点》细腻声线，唱出取舍之间；@门尼MONEY 《巴拉莱卡》浓烈氛围感扑面而来；@黄誉博YUBO 《高高的楼房》用少年声线叩问城市高处；@蓝盈莹Lyric 《借我一阵春风》借春风把暖意缓缓铺开；@歐陽娣娣Didi 《So What》把外界杂音唱成S ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5362602793762908",
-          "detailUrl": "https://www.sina.cn/news/detail/5362602793762908.html",
-          "time": "2026-11-07 13:00",
-          "text": "#自首真相今日开播#大家都在追剧吗？现在关注并为剧集打call，还有机会获得「随机主演签名照 or 爱奇艺会员月卡」哦~ 明天记得继续来@爱奇艺 来看题安@许魏洲ZZ 赵耀@郭俊辰_Fiction 联手破局[期待]#小奇今日推荐#http://t.cn/AXYVdSkX http://t.cn/AXYVdiA8 ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -2839,8 +2839,8 @@
           "type": "drama",
           "postCount": 101,
           "latestPostTime": "2026-11-01 09:30",
-          "keywordHitCount": 20,
-          "excludedCount": 20,
+          "keywordHitCount": 18,
+          "excludedCount": 18,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -2856,6 +2856,30 @@
               "detailUrl": "https://www.sina.cn/news/detail/5361943448914310.html",
               "time": "2026-11-05 17:20",
               "text": "#王彦霖说自己不搞笑但幽默##王彦霖说肖战帅气养人# 爱奇艺《爱撩专访》x @王彦霖 正片上线！现在关注并带话题转发，小奇随机抽送陈俊南·嘎嘎帅还在线比心版签名拍立得1张哦😎[手指比心] 聊到《小城良方》的演绎、聊到刘铮亮和陈俊南、聊到剧中治愈自己的瞬间，王彦霖忍不住红了眼眶[捂嘴哭][悲伤] ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5363108622634512",
+              "detailUrl": "https://www.sina.cn/news/detail/5363108622634512.html",
+              "time": "2026-11-08 22:30",
+              "text": "#小奇晚班中# 今晚的月光特别软，连梦都会变得很轻很甜[兔子]云厘@卢昱晓_ 来和大家说晚安啦~ #剧集折月亮# ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5363067110294518",
+              "detailUrl": "https://www.sina.cn/news/detail/5363067110294518.html",
+              "time": "2026-11-08 19:45",
+              "text": "恭喜@彼此森林WHITE 1名用户获得【爱奇艺月卡】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXYigDrE",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5363055800095126",
+              "detailUrl": "https://www.sina.cn/news/detail/5363055800095126.html",
+              "time": "2026-11-08 19:00",
+              "text": "漫天诡谲，皆为人心作祟， 执念层叠，化作彼岸花开。 #帝姬令# 杀青大吉，敬请期待！#帝姬令杀青# 领衔主演：@可可张可盈 @秦天宇Ty （按姓氏笔画排序） 特别出演：@胡春杨Young 出演：@邓宁_邓靖弘 张文博@张泠宇 @姚宇航_ （按姓氏笔画排序） 爱奇艺预约：http://t.cn/AXl0CDxZ ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             },
@@ -3056,30 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5362632988557745.html",
               "time": "2026-11-07 15:00",
               "text": "#音乐缘计划# @薛之谦 @容祖儿 @卡布叻_周深 @摩登兄弟刘宇宁 @黄子弘凡_Lars @希林娜依高 @Kelly于文文 @蔡文静 @顏人中 @张弛zhangc @蒋龙_Sunday 开启上头KTV挑战，谁能更胜一筹？全新歌曲解锁，又将有怎样的精彩舞台上新🎵下周五锁定@爱奇艺 一起#小奇今日推荐#http://t.cn/AXYVd0AK ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5362617888803104",
-              "detailUrl": "https://www.sina.cn/news/detail/5362617888803104.html",
-              "time": "2026-11-07 14:00",
-              "text": "#共创桃厂冬日记忆# 立冬惊喜至！现在关注并带话题分享你的冬日小仪式，有机会获得「爱奇艺月卡」哦~《成何体统》《大梦归离》《冬去春来》《二十不惑2》《小城良方》《逍遥》《一生一世》《逐玉》同款入冬仪式感图鉴送达！吃糖葫芦、添厚外套、围炉煮茶、堆可爱雪人、窝在家里取暖追剧……快乐模式一 ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5362605306152643",
-              "detailUrl": "https://www.sina.cn/news/detail/5362605306152643.html",
-              "time": "2026-11-07 13:10",
-              "text": "#打歌2026# #打歌2026X舞台# 第8期正片送达！[送花花]@郭靜Claire 《临界点》细腻声线，唱出取舍之间；@门尼MONEY 《巴拉莱卡》浓烈氛围感扑面而来；@黄誉博YUBO 《高高的楼房》用少年声线叩问城市高处；@蓝盈莹Lyric 《借我一阵春风》借春风把暖意缓缓铺开；@歐陽娣娣Didi 《So What》把外界杂音唱成S ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5362602793762908",
-              "detailUrl": "https://www.sina.cn/news/detail/5362602793762908.html",
-              "time": "2026-11-07 13:00",
-              "text": "#自首真相今日开播#大家都在追剧吗？现在关注并为剧集打call，还有机会获得「随机主演签名照 or 爱奇艺会员月卡」哦~ 明天记得继续来@爱奇艺 来看题安@许魏洲ZZ 赵耀@郭俊辰_Fiction 联手破局[期待]#小奇今日推荐#http://t.cn/AXYVdSkX http://t.cn/AXYVdiA8 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
