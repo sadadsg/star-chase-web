@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T11:43:45.365Z",
+  "updatedAt": "2026-11-13T18:57:45.405Z",
   "source": "sina_mirror",
   "artists": {
     "rjl": {
@@ -86,6 +86,14 @@
         }
       ],
       "recentPosts": [
+        {
+          "id": "5364925897641200",
+          "detailUrl": "https://www.sina.cn/news/detail/5364925897641200.html",
+          "time": "2026-11-13 22:51",
+          "text": "#任嘉伦[超话]# 晚宴胶片送达，@任嘉伦Allen 在线营业！夜色落幕，收好优雅，帅气入眠！[月亮]#任苒时光# ​",
+          "accountName": "任嘉伦工作室",
+          "accountType": "studio"
+        },
         {
           "id": "5364846670386540",
           "detailUrl": "https://www.sina.cn/news/detail/5364846670386540.html",
@@ -315,14 +323,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5344816021898820.html",
           "time": "2026-09-19 11:01",
           "text": "#任嘉伦[超话]# 从一个执着于答案的年轻人，到一个始终没有偏离内心选择的人，这一路走来，李成@任嘉伦Allen 改变的是看待世界的方式，不曾改变的是心里那条界线。 #剧集深渊无间#今日收官。这一程暂别，愿李成带着最初的笃定继续向前。 #任嘉伦李成#🔍️#任嘉伦深渊无间# ​",
-          "accountName": "任嘉伦工作室",
-          "accountType": "studio"
-        },
-        {
-          "id": "5344212100843113",
-          "detailUrl": "https://www.sina.cn/news/detail/5344212100843113.html",
-          "time": "2026-09-17 19:01",
-          "text": "铭记历史，缅怀先烈。#19310918# 不能忘，不敢忘！",
           "accountName": "任嘉伦工作室",
           "accountType": "studio"
         },
@@ -575,6 +575,46 @@
           "accountType": "drama"
         },
         {
+          "id": "5364920561960281",
+          "detailUrl": "https://www.sina.cn/news/detail/5364920561960281.html",
+          "time": "2026-11-13 22:30",
+          "text": "#小奇晚班中# 和相爱的人肩并肩地走下去吧~[兔子] 台词来自@余承恩 @王子璇 《漫城》 ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5364890534936941",
+          "detailUrl": "https://www.sina.cn/news/detail/5364890534936941.html",
+          "time": "2026-11-13 20:30",
+          "text": "#张弛蒋龙唱了一场温暖又治愈的葬礼##音乐缘计划# @张弛zhangc @蒋龙_Sunday 《葬礼》舞台送达！用细腻演唱缓缓道尽与故人告别的心声，藏在旋律里的思念安静而有力量~#音乐缘计划3#http://t.cn/AXYmyecv ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5364887959896597",
+          "detailUrl": "https://www.sina.cn/news/detail/5364887959896597.html",
+          "time": "2026-11-13 20:20",
+          "text": "#听了刘宇宁归期雨抄想入江湖了##论刘宇宁与白西装的适配度##音乐缘计划#@摩登兄弟刘宇宁 《归期雨抄》舞台送达！以深情唱腔诠释一场没有归期的等候，落笔尽是思念，藏于纸页的牵挂，经年不散。http://t.cn/AXYmyHtm ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5364885354448767",
+          "detailUrl": "https://www.sina.cn/news/detail/5364885354448767.html",
+          "time": "2026-11-13 20:10",
+          "text": "#周深新歌上桌了##这歌给周深急成啥了##音乐缘计划#@卡布叻_周深 《失语症》舞台送达！充满戏剧张力的歌剧式演绎瞬间将人拉入故事，随声线起伏翻涌的情绪，都指向那句酝酿许久，却迟迟没能说出的告白。http://t.cn/AXYmyKbV ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
+          "id": "5364883018219550",
+          "detailUrl": "https://www.sina.cn/news/detail/5364883018219550.html",
+          "time": "2026-11-13 20:00",
+          "text": "#音乐缘计划#第三季EP02上线，歌手与音乐人全员就位，当旋律响起，便是心意相通的序曲，无数动人的瞬间正在上演。#音乐缘计划3# EP02上: http://t.cn/AXYmycpH EP02中：http://t.cn/AXYmycpQ EP02下: http://t.cn/AXYmycpT ​",
+          "accountName": "爱奇艺",
+          "accountType": "drama"
+        },
+        {
           "id": "5364867713994555",
           "detailUrl": "https://www.sina.cn/news/detail/5364867713994555.html",
           "time": "2026-11-13 19:00",
@@ -763,46 +803,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5364490238689727.html",
           "time": "2026-11-12 18:00",
           "text": "恭喜@Conz_x 等3名用户获得【随机艺人签名照或爱奇艺季卡或爱奇艺周边】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXYQLlGH",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5364465060021128",
-          "detailUrl": "https://www.sina.cn/news/detail/5364465060021128.html",
-          "time": "2026-11-12 16:20",
-          "text": "#从前有座灵剑山开播七周年#啦！现在关注并转发还有机会获得「随机主演签名照」1张哦~万梗齐发，热血高燃[期待]还记得王陆@许凯soso 王舞@張榕容 海云帆@朱元冰Ryan 风铃@高雨儿高雨儿 琉璃仙@郭晓婷 笑点与燃点并存的修炼之旅吗？快来@爱奇艺 一起重温吧~#桃桃那年今日#http://t.cn/AXV7ALfr ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5364450175746909",
-          "detailUrl": "https://www.sina.cn/news/detail/5364450175746909.html",
-          "time": "2026-11-12 15:20",
-          "text": "#爱奇艺一起聊# 高能预警！今日追剧搭子已上线，傅识则@我是林一同学 今晚21:30惊喜空降直播间陪看，解读傅识则克制外表下的心动细节，聊聊名场面背后的小心思！锁定爱奇艺，等你来赴约[不愧是你][不愧是你]#剧集折月亮# http://t.cn/AXYHdswT ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5364446185915095",
-          "detailUrl": "https://www.sina.cn/news/detail/5364446185915095.html",
-          "time": "2026-11-12 15:05",
-          "text": "傅识则@我是林一同学 牵着狗和云厘@卢昱晓_ 一起散步，耶耶只用了1秒就获得了云厘的摸摸！另一边唐琳@卢洋洋_Hanna 和傅正初@李歌洋Lee 轮番上阵撸狗，修狗：我不凑......不凑......#剧集折月亮# @爱奇艺 正在热播。 http://t.cn/AXYHrfik ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5364431086682401",
-          "detailUrl": "https://www.sina.cn/news/detail/5364431086682401.html",
-          "time": "2026-11-12 14:05",
-          "text": "#逆天邪神动画# 第64集预告来袭！玄舟逃亡开启！凤雪儿受到重创，云澈带其闯过围追堵截，夏元霸独当一面硬撼追兵，迷幻诡计、姬千柔暗中窥伺，多方纠缠角力，这一场逃亡究竟结局如何？每周四9点锁定爱奇艺，#逆天邪神年番#高能继续 http://t.cn/AXYT8Jkv ​",
-          "accountName": "爱奇艺",
-          "accountType": "drama"
-        },
-        {
-          "id": "5364429828657082",
-          "detailUrl": "https://www.sina.cn/news/detail/5364429828657082.html",
-          "time": "2026-11-12 14:00",
-          "text": "#铁男篝火八卦局没轻没重# 夜幕降临，篝火烧烤局准时开唠，12位铁男@铁男-王博文宽宽 @铁男-蒙恩 @铁男-Jeffrey董又霖 @铁男-李希侃 @铁男-于洋Eayon @铁男-刘旭威 @铁男-高梓添 @铁男-黄河源HHY @铁男-彭泽华 @铁男-任泓锜 @铁男-梁云滔 @铁男-冯元 围坐一团，八卦与笑声齐飞，属于他们的打铁试炼故事 ​",
           "accountName": "爱奇艺",
           "accountType": "drama"
         },
@@ -1055,6 +1055,14 @@
           "accountType": "brand"
         },
         {
+          "id": "5364898326645411",
+          "detailUrl": "https://www.sina.cn/news/detail/5364898326645411.html",
+          "time": "2026-11-13 21:01",
+          "text": "时间流转，风格各有表达 每一种精彩，都值得被珍视 MIDO瑞士美度表全球品牌代言人@任嘉伦Allen 以从容自信的姿态，演绎摩登型格 腕间佩戴舵手系列TV瑞士官方天文台认证腕表-极昼蓝 以鲜明设计与精准实力，彰显坚定态度 同系列TV28纤影女士腕表-流霞金 以精巧轮廓与细腻光泽，诠释优雅魅力 一份利落 ​",
+          "accountName": "瑞士美度表MIDO",
+          "accountType": "brand"
+        },
+        {
           "id": "5364007047004258",
           "detailUrl": "https://www.sina.cn/news/detail/5364007047004258.html",
           "time": "2026-11-11 10:00",
@@ -1275,14 +1283,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5343743520802377.html",
           "time": "2026-09-16 12:00",
           "text": "好奇心没有固定方向，今天去城市，明天去旷野 舵手系列TV锋野腕表 黑色PVD表壳，利落有型 渐变古铜色表盘，带着旷野的温度 做旧米色皮革表带，更接近探索的本能 黑色织物表带，回到都市节奏 便捷快拆系统，几秒切换，风格也随之改变 自由，不是只能选一条路 每一次改变，都可能遇见新的风景 #MIDO# ​",
-          "accountName": "瑞士美度表MIDO",
-          "accountType": "brand"
-        },
-        {
-          "id": "5343713321814231",
-          "detailUrl": "https://www.sina.cn/news/detail/5343713321814231.html",
-          "time": "2026-09-16 10:00",
-          "text": "美好的旅程，从不始于地图 一个转角，一次偶遇，一个突然想出发的念头 好奇心在前，脚步自然跟上 舵手系列TV锋野腕表，延续经典 TV 轮廓 黑色PVD精钢表壳搭配渐变古铜色表盘 利落线条里，多了一份旷野气息 搭载Calibre 80自动机械机芯，80小时动力储备 从城市出发，也为下一场探索留足余量 不追随既 ​",
           "accountName": "瑞士美度表MIDO",
           "accountType": "brand"
         },
@@ -1783,6 +1783,30 @@
           "accountType": "fanclub"
         },
         {
+          "id": "5364940103745698",
+          "detailUrl": "https://www.sina.cn/news/detail/5364940103745698.html",
+          "time": "2026-11-13 23:47",
+          "text": "【2026年11月13日@任嘉伦Allen ins发布一则】 上海 TASAKI #任嘉伦2026嘉倍闪耀# @任嘉伦Allen 配文：图1 配图：图2-6 #任嘉伦# 有ins的嘉人们多多互动！ ​",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
+          "id": "5364938815046605",
+          "detailUrl": "https://www.sina.cn/news/detail/5364938815046605.html",
+          "time": "2026-11-13 23:42",
+          "text": "【2026年11月13日@任嘉伦Allen ins发布一则】 努力不一定会成功 但会增加成功的概率 #任嘉伦2026嘉倍闪耀# @任嘉伦Allen 配文：图1 配图：图2-10 #任嘉伦# 有ins的嘉人们多多互动！ ​",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
+          "id": "5364928854625209",
+          "detailUrl": "https://www.sina.cn/news/detail/5364928854625209.html",
+          "time": "2026-11-13 23:02",
+          "text": "今夜帅气已签收，晚安好梦@任嘉伦Allen 💤#任嘉伦# [打call]#任嘉伦2026嘉倍闪耀#",
+          "accountName": "任嘉伦全国后援会",
+          "accountType": "fanclub"
+        },
+        {
           "id": "5364852084441094",
           "detailUrl": "https://www.sina.cn/news/detail/5364852084441094.html",
           "time": "2026-11-13 17:57",
@@ -1979,30 +2003,6 @@
           "detailUrl": "https://www.sina.cn/news/detail/5355732562350083.html",
           "time": "2026-10-19 14:00",
           "text": "【2026年 10月19日@任嘉伦Allen ins发布一则】 腾讯体育NBA代言人 今年真的不一样 其实每年都这样 积累，沉淀，分享 像朋友一样 未来每一次的回看 都会感谢现在的自己 球员一样 我也一样 #任嘉伦2026嘉倍闪耀# @任嘉伦Allen 配文：图1 配频：频2 #任嘉伦# 有ins的嘉人们多多互动！ ​",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5355703223194090",
-          "detailUrl": "https://www.sina.cn/news/detail/5355703223194090.html",
-          "time": "2026-10-19 12:03",
-          "text": "赛季更迭，热爱不变，期待代言人@任嘉伦Allen 继续分享赛场感悟，静候揭幕战，一起聆听更多属于NBA的故事#任嘉伦腾讯体育NBA代言人# [打call]#任嘉伦#",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5355700131987645",
-          "detailUrl": "https://www.sina.cn/news/detail/5355700131987645.html",
-          "time": "2026-10-19 11:51",
-          "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 10月21日，腾讯体育直播间，我们不见不散！#任嘉伦腾讯体育NBA代言人#[打call]#任嘉伦#",
-          "accountName": "任嘉伦全国后援会",
-          "accountType": "fanclub"
-        },
-        {
-          "id": "5355699493667285",
-          "detailUrl": "https://www.sina.cn/news/detail/5355699493667285.html",
-          "time": "2026-10-19 11:48",
-          "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 ⏰10月21日锁定腾讯体育APP，76人vs尼克斯揭幕战，一起看球，为热爱呐喊🏀#任嘉伦# [打call]#任嘉伦腾讯体育NBA代言人#",
           "accountName": "任嘉伦全国后援会",
           "accountType": "fanclub"
         },
@@ -2253,7 +2253,7 @@
           "name": "任嘉伦工作室",
           "type": "studio",
           "postCount": 100,
-          "latestPostTime": "2026-11-13 17:36",
+          "latestPostTime": "2026-11-13 22:51",
           "keywordHitCount": 7,
           "excludedCount": 0,
           "scheduleCandidates": [
@@ -2339,6 +2339,14 @@
             }
           ],
           "recentPosts": [
+            {
+              "id": "5364925897641200",
+              "detailUrl": "https://www.sina.cn/news/detail/5364925897641200.html",
+              "time": "2026-11-13 22:51",
+              "text": "#任嘉伦[超话]# 晚宴胶片送达，@任嘉伦Allen 在线营业！夜色落幕，收好优雅，帅气入眠！[月亮]#任苒时光# ​",
+              "accountName": "任嘉伦工作室",
+              "accountType": "studio"
+            },
             {
               "id": "5364846670386540",
               "detailUrl": "https://www.sina.cn/news/detail/5364846670386540.html",
@@ -2568,14 +2576,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5344816021898820.html",
               "time": "2026-09-19 11:01",
               "text": "#任嘉伦[超话]# 从一个执着于答案的年轻人，到一个始终没有偏离内心选择的人，这一路走来，李成@任嘉伦Allen 改变的是看待世界的方式，不曾改变的是心里那条界线。 #剧集深渊无间#今日收官。这一程暂别，愿李成带着最初的笃定继续向前。 #任嘉伦李成#🔍️#任嘉伦深渊无间# ​",
-              "accountName": "任嘉伦工作室",
-              "accountType": "studio"
-            },
-            {
-              "id": "5344212100843113",
-              "detailUrl": "https://www.sina.cn/news/detail/5344212100843113.html",
-              "time": "2026-09-17 19:01",
-              "text": "铭记历史，缅怀先烈。#19310918# 不能忘，不敢忘！",
               "accountName": "任嘉伦工作室",
               "accountType": "studio"
             }
@@ -2852,6 +2852,46 @@
               "accountType": "drama"
             },
             {
+              "id": "5364920561960281",
+              "detailUrl": "https://www.sina.cn/news/detail/5364920561960281.html",
+              "time": "2026-11-13 22:30",
+              "text": "#小奇晚班中# 和相爱的人肩并肩地走下去吧~[兔子] 台词来自@余承恩 @王子璇 《漫城》 ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5364890534936941",
+              "detailUrl": "https://www.sina.cn/news/detail/5364890534936941.html",
+              "time": "2026-11-13 20:30",
+              "text": "#张弛蒋龙唱了一场温暖又治愈的葬礼##音乐缘计划# @张弛zhangc @蒋龙_Sunday 《葬礼》舞台送达！用细腻演唱缓缓道尽与故人告别的心声，藏在旋律里的思念安静而有力量~#音乐缘计划3#http://t.cn/AXYmyecv ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5364887959896597",
+              "detailUrl": "https://www.sina.cn/news/detail/5364887959896597.html",
+              "time": "2026-11-13 20:20",
+              "text": "#听了刘宇宁归期雨抄想入江湖了##论刘宇宁与白西装的适配度##音乐缘计划#@摩登兄弟刘宇宁 《归期雨抄》舞台送达！以深情唱腔诠释一场没有归期的等候，落笔尽是思念，藏于纸页的牵挂，经年不散。http://t.cn/AXYmyHtm ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5364885354448767",
+              "detailUrl": "https://www.sina.cn/news/detail/5364885354448767.html",
+              "time": "2026-11-13 20:10",
+              "text": "#周深新歌上桌了##这歌给周深急成啥了##音乐缘计划#@卡布叻_周深 《失语症》舞台送达！充满戏剧张力的歌剧式演绎瞬间将人拉入故事，随声线起伏翻涌的情绪，都指向那句酝酿许久，却迟迟没能说出的告白。http://t.cn/AXYmyKbV ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
+              "id": "5364883018219550",
+              "detailUrl": "https://www.sina.cn/news/detail/5364883018219550.html",
+              "time": "2026-11-13 20:00",
+              "text": "#音乐缘计划#第三季EP02上线，歌手与音乐人全员就位，当旋律响起，便是心意相通的序曲，无数动人的瞬间正在上演。#音乐缘计划3# EP02上: http://t.cn/AXYmycpH EP02中：http://t.cn/AXYmycpQ EP02下: http://t.cn/AXYmycpT ​",
+              "accountName": "爱奇艺",
+              "accountType": "drama"
+            },
+            {
               "id": "5364867713994555",
               "detailUrl": "https://www.sina.cn/news/detail/5364867713994555.html",
               "time": "2026-11-13 19:00",
@@ -3040,46 +3080,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5364490238689727.html",
               "time": "2026-11-12 18:00",
               "text": "恭喜@Conz_x 等3名用户获得【随机艺人签名照或爱奇艺季卡或爱奇艺周边】。微博官方唯一抽奖工具@微博抽奖平台 对本次抽奖进行监督，结果公正有效。公示链接：http://t.cn/AXYQLlGH",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5364465060021128",
-              "detailUrl": "https://www.sina.cn/news/detail/5364465060021128.html",
-              "time": "2026-11-12 16:20",
-              "text": "#从前有座灵剑山开播七周年#啦！现在关注并转发还有机会获得「随机主演签名照」1张哦~万梗齐发，热血高燃[期待]还记得王陆@许凯soso 王舞@張榕容 海云帆@朱元冰Ryan 风铃@高雨儿高雨儿 琉璃仙@郭晓婷 笑点与燃点并存的修炼之旅吗？快来@爱奇艺 一起重温吧~#桃桃那年今日#http://t.cn/AXV7ALfr ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5364450175746909",
-              "detailUrl": "https://www.sina.cn/news/detail/5364450175746909.html",
-              "time": "2026-11-12 15:20",
-              "text": "#爱奇艺一起聊# 高能预警！今日追剧搭子已上线，傅识则@我是林一同学 今晚21:30惊喜空降直播间陪看，解读傅识则克制外表下的心动细节，聊聊名场面背后的小心思！锁定爱奇艺，等你来赴约[不愧是你][不愧是你]#剧集折月亮# http://t.cn/AXYHdswT ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5364446185915095",
-              "detailUrl": "https://www.sina.cn/news/detail/5364446185915095.html",
-              "time": "2026-11-12 15:05",
-              "text": "傅识则@我是林一同学 牵着狗和云厘@卢昱晓_ 一起散步，耶耶只用了1秒就获得了云厘的摸摸！另一边唐琳@卢洋洋_Hanna 和傅正初@李歌洋Lee 轮番上阵撸狗，修狗：我不凑......不凑......#剧集折月亮# @爱奇艺 正在热播。 http://t.cn/AXYHrfik ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5364431086682401",
-              "detailUrl": "https://www.sina.cn/news/detail/5364431086682401.html",
-              "time": "2026-11-12 14:05",
-              "text": "#逆天邪神动画# 第64集预告来袭！玄舟逃亡开启！凤雪儿受到重创，云澈带其闯过围追堵截，夏元霸独当一面硬撼追兵，迷幻诡计、姬千柔暗中窥伺，多方纠缠角力，这一场逃亡究竟结局如何？每周四9点锁定爱奇艺，#逆天邪神年番#高能继续 http://t.cn/AXYT8Jkv ​",
-              "accountName": "爱奇艺",
-              "accountType": "drama"
-            },
-            {
-              "id": "5364429828657082",
-              "detailUrl": "https://www.sina.cn/news/detail/5364429828657082.html",
-              "time": "2026-11-12 14:00",
-              "text": "#铁男篝火八卦局没轻没重# 夜幕降临，篝火烧烤局准时开唠，12位铁男@铁男-王博文宽宽 @铁男-蒙恩 @铁男-Jeffrey董又霖 @铁男-李希侃 @铁男-于洋Eayon @铁男-刘旭威 @铁男-高梓添 @铁男-黄河源HHY @铁男-彭泽华 @铁男-任泓锜 @铁男-梁云滔 @铁男-冯元 围坐一团，八卦与笑声齐飞，属于他们的打铁试炼故事 ​",
               "accountName": "爱奇艺",
               "accountType": "drama"
             }
@@ -3343,8 +3343,8 @@
           "type": "brand",
           "postCount": 101,
           "latestPostTime": "2024-07-17 10:00",
-          "keywordHitCount": 15,
-          "excludedCount": 15,
+          "keywordHitCount": 14,
+          "excludedCount": 14,
           "scheduleCandidates": [],
           "recentPosts": [
             {
@@ -3352,6 +3352,14 @@
               "detailUrl": "https://www.sina.cn/news/detail/5057064521172162.html",
               "time": "2024-07-17 10:00",
               "text": "视界跃升，灵感新程。 热爱如初，追求卓越，无畏探索，开启崭新视野。 MIDO瑞士美度表荣幸宣布@任嘉伦Allen 成为首位全球品牌代言人，继续以多元魅力演绎非凡时计，用先锋视角点亮理性之光，共同解锁灵感新篇章。 评论区留言分享你的灵感合拍时刻，平台将于2024年7月24日12时随机抽取5位粉丝，各送上 ​",
+              "accountName": "瑞士美度表MIDO",
+              "accountType": "brand"
+            },
+            {
+              "id": "5364898326645411",
+              "detailUrl": "https://www.sina.cn/news/detail/5364898326645411.html",
+              "time": "2026-11-13 21:01",
+              "text": "时间流转，风格各有表达 每一种精彩，都值得被珍视 MIDO瑞士美度表全球品牌代言人@任嘉伦Allen 以从容自信的姿态，演绎摩登型格 腕间佩戴舵手系列TV瑞士官方天文台认证腕表-极昼蓝 以鲜明设计与精准实力，彰显坚定态度 同系列TV28纤影女士腕表-流霞金 以精巧轮廓与细腻光泽，诠释优雅魅力 一份利落 ​",
               "accountName": "瑞士美度表MIDO",
               "accountType": "brand"
             },
@@ -3576,14 +3584,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5343743520802377.html",
               "time": "2026-09-16 12:00",
               "text": "好奇心没有固定方向，今天去城市，明天去旷野 舵手系列TV锋野腕表 黑色PVD表壳，利落有型 渐变古铜色表盘，带着旷野的温度 做旧米色皮革表带，更接近探索的本能 黑色织物表带，回到都市节奏 便捷快拆系统，几秒切换，风格也随之改变 自由，不是只能选一条路 每一次改变，都可能遇见新的风景 #MIDO# ​",
-              "accountName": "瑞士美度表MIDO",
-              "accountType": "brand"
-            },
-            {
-              "id": "5343713321814231",
-              "detailUrl": "https://www.sina.cn/news/detail/5343713321814231.html",
-              "time": "2026-09-16 10:00",
-              "text": "美好的旅程，从不始于地图 一个转角，一次偶遇，一个突然想出发的念头 好奇心在前，脚步自然跟上 舵手系列TV锋野腕表，延续经典 TV 轮廓 黑色PVD精钢表壳搭配渐变古铜色表盘 利落线条里，多了一份旷野气息 搭载Calibre 80自动机械机芯，80小时动力储备 从城市出发，也为下一场探索留足余量 不追随既 ​",
               "accountName": "瑞士美度表MIDO",
               "accountType": "brand"
             }
@@ -4120,6 +4120,30 @@
               "accountType": "fanclub"
             },
             {
+              "id": "5364940103745698",
+              "detailUrl": "https://www.sina.cn/news/detail/5364940103745698.html",
+              "time": "2026-11-13 23:47",
+              "text": "【2026年11月13日@任嘉伦Allen ins发布一则】 上海 TASAKI #任嘉伦2026嘉倍闪耀# @任嘉伦Allen 配文：图1 配图：图2-6 #任嘉伦# 有ins的嘉人们多多互动！ ​",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5364938815046605",
+              "detailUrl": "https://www.sina.cn/news/detail/5364938815046605.html",
+              "time": "2026-11-13 23:42",
+              "text": "【2026年11月13日@任嘉伦Allen ins发布一则】 努力不一定会成功 但会增加成功的概率 #任嘉伦2026嘉倍闪耀# @任嘉伦Allen 配文：图1 配图：图2-10 #任嘉伦# 有ins的嘉人们多多互动！ ​",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
+              "id": "5364928854625209",
+              "detailUrl": "https://www.sina.cn/news/detail/5364928854625209.html",
+              "time": "2026-11-13 23:02",
+              "text": "今夜帅气已签收，晚安好梦@任嘉伦Allen 💤#任嘉伦# [打call]#任嘉伦2026嘉倍闪耀#",
+              "accountName": "任嘉伦全国后援会",
+              "accountType": "fanclub"
+            },
+            {
               "id": "5364852084441094",
               "detailUrl": "https://www.sina.cn/news/detail/5364852084441094.html",
               "time": "2026-11-13 17:57",
@@ -4316,30 +4340,6 @@
               "detailUrl": "https://www.sina.cn/news/detail/5355732562350083.html",
               "time": "2026-10-19 14:00",
               "text": "【2026年 10月19日@任嘉伦Allen ins发布一则】 腾讯体育NBA代言人 今年真的不一样 其实每年都这样 积累，沉淀，分享 像朋友一样 未来每一次的回看 都会感谢现在的自己 球员一样 我也一样 #任嘉伦2026嘉倍闪耀# @任嘉伦Allen 配文：图1 配频：频2 #任嘉伦# 有ins的嘉人们多多互动！ ​",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5355703223194090",
-              "detailUrl": "https://www.sina.cn/news/detail/5355703223194090.html",
-              "time": "2026-10-19 12:03",
-              "text": "赛季更迭，热爱不变，期待代言人@任嘉伦Allen 继续分享赛场感悟，静候揭幕战，一起聆听更多属于NBA的故事#任嘉伦腾讯体育NBA代言人# [打call]#任嘉伦#",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5355700131987645",
-              "detailUrl": "https://www.sina.cn/news/detail/5355700131987645.html",
-              "time": "2026-10-19 11:51",
-              "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 10月21日，腾讯体育直播间，我们不见不散！#任嘉伦腾讯体育NBA代言人#[打call]#任嘉伦#",
-              "accountName": "任嘉伦全国后援会",
-              "accountType": "fanclub"
-            },
-            {
-              "id": "5355699493667285",
-              "detailUrl": "https://www.sina.cn/news/detail/5355699493667285.html",
-              "time": "2026-10-19 11:48",
-              "text": "恭喜@任嘉伦Allen 成为腾讯体育NBA代言人 ⏰10月21日锁定腾讯体育APP，76人vs尼克斯揭幕战，一起看球，为热爱呐喊🏀#任嘉伦# [打call]#任嘉伦腾讯体育NBA代言人#",
               "accountName": "任嘉伦全国后援会",
               "accountType": "fanclub"
             }
